@@ -52,7 +52,7 @@ header nav .cat:hover {
 }
 
 header nav .cat1 {
-  top: 20%;
+  top: 10%;
   left: 5%;
   transform: translateX(-200%);
   animation: nav 1s ease-in forwards;
@@ -60,7 +60,7 @@ header nav .cat1 {
   transition: all 1s;
 }
 header nav .cat2 {
-  top: 28%;
+  top: 18%;
   left: 7%;
   transform: translateX(-200%);
   animation: nav 1s ease-in forwards;
@@ -68,7 +68,7 @@ header nav .cat2 {
   transition: all 1s;
 }
 header nav .cat3 {
-  top: 36%;
+  top: 26%;
   left: 9%;
   transform: translateX(-200%);
   animation: nav 1s ease-in forwards;
@@ -76,7 +76,7 @@ header nav .cat3 {
   transition: all 1s;
 }
 header nav .cat4 {
-  top: 44%;
+  top: 34%;
   left: 11%;
   transform: translateX(-200%);
   animation: nav 1s ease-in forwards;
@@ -115,6 +115,13 @@ header nav .cat4 {
   text-align: center;
   height: fit-content;
 }
+.container section .caption h1 {
+  margin-bottom: 5%;
+  font-size: 1.5em;
+}
+.container section .caption p {
+  font-size: 1.2em;
+}
 
 .container .no1 {
   background-color: #ff000045;
@@ -136,4 +143,42 @@ header nav .cat4 {
   color: #ff8ad4;
   text-shadow: 2px 2px 0px#000000;
 }
+.container .no5 {
+  background-color: #ff00b345;
+  color: #ffffff;
+  text-shadow: 2px 2px 0px#000000;
+}
 
+.sentence {
+  width: 100%;
+  height: 100%;
+  height: 50vh;
+  background-color: #333;
+  font-size: 1.2em;
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+}
+.sentence h2,p {
+  color: #fff;
+}
+
+.sentence span {
+  background-color: #fff;
+  padding: 5%;
+  border-radius: 50%;
+  box-shadow: 5px 5px 15px #fff, -5px -5px 15px #fff;
+  position: absolute;
+  display: inline-block;
+  transition: all 5s ease;
+  font-weight: bold;
+  animation: move 5s infinite linear;
+}
+@keyframes move {
+  0% {
+      transform: translate(0, 0);
+  }
+  100% {
+      transform: translate(0, 0);
+  }
+}
