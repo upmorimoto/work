@@ -1,0 +1,366 @@
+@charset "utf-8";
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  width: 100%;
+}
+
+body {
+  font-family: 'Poppins', 'Noto Sans JP', sans-serif;
+  width: 100vw;
+  height: auto;
+  font-size: 16px;
+  color: #333;
+  overflow-x: hidden;
+  /* overflow-y: auto; */
+  position: relative;
+}
+
+header {
+  width: 100%;
+  position: absolute;
+  margin: auto;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+}
+header .logo-space {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-left: 10%;
+}
+header .list {
+  width: 50%;
+  margin-right: 10%;
+  text-align: right;
+}
+header .list a {
+  margin-left: 8%;
+  position: relative;
+}
+header .list a .border {
+  position: absolute;
+  bottom: -10%;
+  left: 0;
+  display: inline-block;
+  width: 0%;
+  height: 10%;
+  background: -webkit-linear-gradient(left, #ff26fb, #00b3ff);
+  z-index: 10;
+  transition: all 0.5s;
+}
+header .list a:hover {
+  background: -webkit-linear-gradient(left, #ff26fb, #00b3ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: color_position 5s linear 1s infinite alternate;
+  transition: all 5s;
+}
+header .list a:hover .border {
+  width: 100%;
+}
+
+/* MENUボタン */
+.toggleMenu {
+  width: 15%;
+  height: 8vh;
+  margin-right: 3%;
+  display: none;
+  font-size: 2rem;
+}
+.toggleMenu span {
+  font-size: 36px;
+  padding: 15%;
+}
+
+main {
+  width: 100vw;
+  height: auto;
+  background-image: url(../img/jean-philippe.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.hero h1 {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3.2rem;
+  white-space: nowrap;
+  background: -webkit-linear-gradient(left, #ff26fb, #00b3ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: color_position 5s linear 1s infinite alternate;
+  transition: all 5s;
+  word-spacing: 1.1rem;
+}
+.hero .caption-list {
+  width: 70%;
+  height: 30%;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  gap: 10%;
+}
+.hero .caption-list .caption {
+  width: 25%;
+  font-size: 1.5rem;
+  line-height: 2;
+  text-align: center;
+  padding: 2%;
+  background-color: #9191915e;
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  transform: translateY(100%);
+  transition: all 0.5s;
+  opacity: 0;
+}
+.caption-list .caption h2 {
+  font-weight: 400;
+}
+.caption-list .caption p {
+  font-size: 1.2rem;
+}
+.hero .caption.highlighted {
+  transform: translateY(0);
+  opacity: 1;
+}
+.hero .caption.highlighted:nth-child(2) {
+  transition-delay: 0.3s;
+}
+.hero .caption.highlighted:nth-child(3) {
+  transition-delay: 0.6s;
+}
+
+.hero .caption-list .caption:hover {
+  background: -webkit-linear-gradient(left, #ff26fb, #00b3ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: color_position 5s linear 1s infinite alternate;
+  transition: all 5s;
+
+}
+
+/* カラーアニメーション */
+@keyframes color_position {
+  20% {
+    background: -webkit-linear-gradient(left, #ff2626, #0051ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+  }
+  40% {
+    background: -webkit-linear-gradient(left, #5cff26, #ffa600);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+  }
+  60% {
+    background: -webkit-linear-gradient(left, #269dff, #ff00a6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+  }
+  80% {
+    background: -webkit-linear-gradient(left, #9226ff, #00ff51);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+  }
+}
+
+/* Container共通 */
+.container {
+  width: 100%;
+  height: 100vh;
+}
+.container .contents-title {
+  width: 100%;
+  text-align: center;
+  padding: 5%;
+}
+.contents {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto 5% auto;
+}
+
+/* Aboutセクション */
+.about-container {
+  width: 100%;
+  background-color: #ff797938;
+}
+.about-container .contents-list {
+  width: 80%;
+  margin-bottom: 5%;
+  position: relative;
+}
+
+.contents-list .material-symbols-outlined {
+  width: 10%;
+  aspect-ratio: 1;
+  display: block;
+  font-size: 4rem;
+  background-color: #cb4b4b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.contents-list .material-symbols-outlined:hover {
+  transform: scale(1.5);
+} 
+.contents-list .list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30%;
+  
+  transform: translateX(0);
+  transition: all 0.5s;
+  opacity: 0;
+}
+.contents-list .list.active {
+  transform: translateX(50%);
+  width: 80%;
+  opacity: 1;
+}
+.contents-list .list p {
+  font-size: 2rem;
+  padding-bottom: 20px;
+}
+.contents-list .list a {
+  font-size: 1.7rem;
+  margin-left: 20%;
+}
+
+/* htmlセクション */
+#html {
+  width: 100%;
+  height: 100vh;
+  background-color: #edff7938;
+}
+
+/* cssセクション */
+#css {
+  width: 100%;
+  height: 100vh;
+  background-color: #79ccff38;
+}
+
+/* javaScriptセクション */
+#javascript {
+  width: 100%;
+  height: 100vh;
+  background-color: #ffb87938;
+}
+
+/* Footer */
+.site-map {
+  width: 100%;
+  height: 50vh;
+  background-color: #9191915e;
+}
+
+
+@media screen and (max-width: 768px) {
+  
+  /* Toggleメニュー */
+  .toggleMenu {
+    display: block;
+    cursor: pointer;
+  }
+  .menu,
+  .close {
+    display: none;
+  }
+  .menu.active,
+  .close.active {
+    display: block;
+  }
+
+  /* Headerロゴ */
+  header .logo-space {
+    font-size: 1.8rem;
+    opacity: 0.7;
+    transform: translateY(0);
+  }
+
+  /* Headerリスト */
+  header .list {
+    position: absolute;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    top: 100%;
+    right: 0;
+    transform: translateX(150%);
+    transition: all 0.5s;
+  }
+  header .list.active {
+    transform: translateX(0);
+  }
+  header .list a {
+    margin-left: 0;
+  }
+
+  /* Heroヘッドライン */
+  .hero {
+    background-color: #00ff512e;
+    height: 150vh;
+  }
+  .hero h1 {
+    top: 23%;
+    font-size: 2rem;
+    white-space: inherit;
+  }
+
+  /* Captionリスト */
+  .hero .caption-list {
+    width: 80%;
+    flex-direction: column;
+    top: 60%;
+  }
+  .hero .caption-list .caption {
+    width: 100%;
+    font-size: 1rem;
+  }
+  
+    /* Aboutセクション */
+  .about-container .contents-list {
+    margin-bottom: 15%;
+  }
+  .contents-list .material-symbols-outlined {
+    width: 30%;
+  }
+  
+
+}
+

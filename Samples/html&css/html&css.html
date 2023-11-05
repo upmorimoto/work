@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML&CSS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;400;800&family=Poppins:ital,wght@0,100;0,200;0,400;0,600;0,800;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  
+  <header id="header">
+    <div id="scrollingElement" class="logo-space">
+      <a class="logo" href="#logo">Web Site</a>
+    </div>
+    <div class="list">
+      <a href="#about">About<span class="border"></span></a>
+      <a href="#html">HTML<span class="border"></span></a>
+      <a href="#css">CSS<span class="border"></span></a>
+      <a href="#javascript">javaScript<span class="border"></span></a>
+    </div>
+    <div class="toggleMenu">
+      <span class="menu active material-symbols-outlined">menu</span>
+      <span class="close material-symbols-outlined">close</span>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="hero" id="logo">
+      <h1>Let's create a website</h1>
+      <ul class="caption-list">
+        <li class="caption"><h2>Step1</h2><p>Basic structure using html.</p></li>
+        <li class="caption"><h2>Step2</h2><p>Decoration with css.</p></li>
+        <li class="caption"><h2>Step3</h2><p>Add movement with javascript.</p></li>
+      </ul>
+      <div class="clock">
+
+      </div>
+    </div>
+
+    <section class="about-container container">
+      <div id="about" class="contents-title">
+        <h1>About</h1>
+      </div>
+      <div class="contents">
+        <div class="contents-list tools">
+          <span class="material-symbols-outlined">
+            service_toolbox
+          </span>
+          <div class="list active">
+            <p>Design Tools</p>
+            <a href="">Canva</a>
+            <a href="">Figma</a>
+          </div>
+        </div>
+        <div class="contents-list materials">
+          <span class="material-symbols-outlined">
+            stock_media
+          </span>
+          <div class="list">
+            <p>Material Media</p>
+            <a href="">ODAN</a>
+            <a href="">GoogleFonts</a>
+          </div>
+        </div>
+        <div class="contents-list frame-work">
+          <span class="material-symbols-outlined">
+            frame_source
+          </span>
+          <div class="list">
+            <p>Frame Work</p>
+            <a href="">Bootstrap</a>
+            <a href="">UIkit</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div id="html" class="contents-title">
+        <h1>html</h1>
+      </div>
+    </section>
+    <section class="container">
+      <div id="css" class="contents-title">
+        <h1>css</h1>
+      </div>
+    </section>
+    <section class="container">
+      <div id="javascript" class="contents">
+        <h1>javaScript</h1>
+      </div>
+    </section>
+  </main>
+<footer>
+  <div class="site-map">
+
+  </div>
+</footer>
+</body>
+</html>

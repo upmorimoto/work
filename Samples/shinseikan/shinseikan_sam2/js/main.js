@@ -6,8 +6,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
   function animateElements() {
       senElements.forEach((senElement) => {
           // ランダムな座標を生成
-          const randomX = Math.random() * (window.innerWidth - 0); // 400はセクションの幅
-          const randomY = Math.random() * (window.innerHeight - 0); // 200はセクションの高さ
+          const randomX = Math.random() * (window.innerWidth - 100); // 400はセクションの幅
+          const randomY = Math.random() * (window.innerHeight - 100); // 200はセクションの高さ
 
           // 要素をランダムな座標に配置
           senElement.style.left = `${randomX}px`;
@@ -19,7 +19,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
   }
 
   // アニメーションの更新間隔を調整
-  const animationInterval = 1000 / 3; // 5フレーム/秒に設定（5秒ごとに要素がランダムに配置）
+  const animationInterval = 1000 / 5; // 5フレーム/秒に設定（5秒ごとに要素がランダムに配置）
 
   // 初回のアニメーション開始
   setTimeout(function() {

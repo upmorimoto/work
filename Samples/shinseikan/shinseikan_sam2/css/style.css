@@ -170,15 +170,15 @@ header nav .cat4 {
   box-shadow: 5px 5px 15px #fff, -5px -5px 15px #fff;
   position: absolute;
   display: inline-block;
-  transition: all 5s ease;
+  /* transition: all 5s ease; */
   font-weight: bold;
-  animation: move 5s infinite linear;
+  /* animation: move 5s infinite linear; */
 }
-@keyframes move {
+/* @keyframes move {
   0% {
       transform: translate(0, 0);
   }
   100% {
       transform: translate(0, 0);
   }
-}
+} */
