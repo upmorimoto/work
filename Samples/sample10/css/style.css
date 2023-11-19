@@ -137,11 +137,17 @@ header .list .toggle-icon {
   background-position: center;
   background-size: cover;
 }
+.scroll-container .gallery .frame-media video {
+  width: 100%;
+}
 .scroll-container .gallery .frame-media-left {
   right: calc(var(--side-small) /2 * var(--index));
 }
 .scroll-container .gallery .frame-media-right {
   left: calc(var(--side-small) /2 * var(--index));
+}
+.scroll-container .gallery .frame-bg {
+  background-color: #000000d9;
 }
 
 
