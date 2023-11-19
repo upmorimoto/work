@@ -1,53 +1,44 @@
 // クリックイベント動作（ToggleButtonの場合）
 const toggleMenuButton = document.querySelector('.menu');
 const toggleCloseButton = document.querySelector('.close');
-const headerList = document.querySelector('header .list')
-
-toggleMenuButton.addEventListener('click', () => {
-  if (toggleMenuButton.classList.contains('active')) {
-    toggleMenuButton.classList.remove('active');
-    toggleCloseButton.classList.add('active');
-    headerList.classList.add('active');
-  } else {
-    toggleMenuButton.classList.add('active');
-    toggleCloseButton.classList.remove('active');
-    headerList.classList.remove('active');
-  }
-});
-toggleCloseButton.addEventListener('click', () => {
-  if (toggleCloseButton.classList.contains('active')) {
-    toggleCloseButton.classList.remove('active');
-    headerList.classList.remove('active');
-    toggleMenuButton.classList.add('active');
-  } else {
-    toggleCloseButton.classList.add('active');
-    headerList.classList.add('active');
-    toggleMenuButton.classList.remove('active');
-  }
-});
+const headerList = document.querySelector('header .list');
+const bubbleClick = document.querySelector('.css-container .bubble2');
+const sliderAnimation = document.querySelector('.css-container h2');
+const sliderAnimationText = document.querySelector('.css-container .text');
+const pieceClick = document.querySelector('.piece');
+const sliderBubble = document.querySelector('.css-container .bubble');
 
 // 効率よく記述すると
+function toggleActiveClass(element) {
+  if (element.classList.contains('active')) {
+    element.classList.remove('active');
+  } else {
+    element.classList.add('active');
+  }
+}
 
-// const toggleMenuButton = document.querySelector('.menu');
-// const toggleCloseButton = document.querySelector('.close');
+toggleMenuButton.addEventListener('click', () => {
+  toggleActiveClass(toggleMenuButton);
+  toggleActiveClass(toggleCloseButton);
+  toggleActiveClass(headerList);
+});
 
-// function toggleActiveClass(element) {
-//   if (element.classList.contains('active')) {
-//     element.classList.remove('active');
-//   } else {
-//     element.classList.add('active');
-//   }
-// }
+toggleCloseButton.addEventListener('click', () => {
+  toggleActiveClass(toggleCloseButton);
+  toggleActiveClass(toggleMenuButton);
+  toggleActiveClass(headerList);
+});
 
-// toggleMenuButton.addEventListener('click', () => {
-//   toggleActiveClass(toggleMenuButton);
-//   toggleActiveClass(toggleCloseButton);
-// });
 
-// toggleCloseButton.addEventListener('click', () => {
-//   toggleActiveClass(toggleCloseButton);
-//   toggleActiveClass(toggleMenuButton);
-// });
+bubbleClick.addEventListener('click', () => {
+  toggleActiveClass(sliderAnimation);
+  toggleActiveClass(sliderAnimationText);
+});
+
+pieceClick.addEventListener('click', () => {
+  toggleActiveClass(sliderBubble);
+});
+
 
 // Scrollイベント（CaptionListの場合）
 const targetElements = document.querySelectorAll('.caption');
@@ -55,13 +46,13 @@ const targetElements = document.querySelectorAll('.caption');
 // スクロール位置を格納するオブジェクト
 const scrollPositions = {
   smallScreen: 30,  // スモールスクリーン用のスクロール位置
-  mediumScreen: 150, // ミディアムスクリーン用のスクロール位置
-  largeScreen: 200   // ラージスクリーン用のスクロール位置
+  mediumScreen: 100, // ミディアムスクリーン用のスクロール位置
+  largeScreen: 100   // ラージスクリーン用のスクロール位置
 };
 
 // スクロールイベントリスナーを追加
 window.addEventListener('scroll', () => {
-  const currentScrollPosition = window.scrollY || window.pageYOffset;
+  const currentScrollPosition = window.scrollY;
 
   // メディアクエリに基づいて適切なスクロール位置を選択
   let scrollPosition;
@@ -91,5 +82,5 @@ window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
 
   // スクロール位置に応じてtranslateプロパティを設定
-  scrollingElement.style.transform = `translateY(${scrollY / 5}px)`;
+  scrollingElement.style.transform = `translateY(${scrollY / 6.5}px)`;
 });

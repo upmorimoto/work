@@ -18,6 +18,12 @@ img {
   width: 100%;
 }
 
+:root {
+  --about-background-color: #91919131;
+  --html-background-color: #91919131;
+  --css-background-color: #91919131;
+  --js-background-color: #91919131;
+}
 body {
   font-family: 'Poppins', 'Noto Sans JP', sans-serif;
   width: 100vw;
@@ -41,9 +47,13 @@ header {
   z-index: 10;
 }
 header .logo-space {
+  width: 15%;
   font-size: 2rem;
   font-weight: bolder;
-  margin-left: 10%;
+  margin: 2%;
+}
+header .logo-space .logo {
+  width: 100%;
 }
 header .list {
   width: 50%;
@@ -61,15 +71,15 @@ header .list a .border {
   display: inline-block;
   width: 0%;
   height: 10%;
-  background: -webkit-linear-gradient(left, #ff26fb, #00b3ff);
+  background: -webkit-linear-gradient(left, #ff26fb, #00b3ff, #96cb4b);
   z-index: 10;
   transition: all 0.5s;
 }
 header .list a:hover {
-  background: -webkit-linear-gradient(left, #ff26fb, #00b3ff);
+  background: -webkit-linear-gradient(left, #ff26fb, #00b3ff, #96cb4b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: color_position 5s linear 1s infinite alternate;
+  animation: color_position 5s ease-in infinite alternate;
   transition: all 5s;
 }
 header .list a:hover .border {
@@ -96,12 +106,32 @@ main {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 main .hero {
   width: 100%;
   height: 100vh;
   position: relative;
 }
+main .hero::after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  top: 0;
+  left: 0;
+  background-color: #000000ca;
+  backdrop-filter: blur(10px);
+  z-index: 10;
+  animation: open 1.5s ease-in 1s forwards;
+}
+@keyframes open {
+  100% {
+    width: 0;
+    opacity: 0;
+  }
+}
+
 .hero h1 {
   position: absolute;
   top: 30%;
@@ -109,10 +139,10 @@ main .hero {
   transform: translate(-50%, -50%);
   font-size: 3.2rem;
   white-space: nowrap;
-  background: -webkit-linear-gradient(left, #ff26fb, #00b3ff);
+  background: -webkit-linear-gradient(left, #ff26fb, #00b3ff, #96cb4b);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: color_position 5s linear 1s infinite alternate;
+  color: transparent;
+  animation: color_position 5s ease-in infinite alternate;
   transition: all 5s;
   word-spacing: 1.1rem;
 }
@@ -134,8 +164,8 @@ main .hero {
   line-height: 2;
   text-align: center;
   padding: 2%;
-  background-color: #9191915e;
-  backdrop-filter: blur(10px);
+  background-color: #91919131;
+  backdrop-filter: blur(5px);
   border-radius: 15px;
   transform: translateY(100%);
   transition: all 0.5s;
@@ -159,71 +189,73 @@ main .hero {
 }
 
 .hero .caption-list .caption:hover {
-  background: -webkit-linear-gradient(left, #ff26fb, #00b3ff);
+  background: -webkit-linear-gradient(left, #ff26fb, #00b3ff, #96cb4b);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: color_position 5s linear 1s infinite alternate;
+  color: transparent;
+  animation: color_position 5s ease-in infinite alternate;
   transition: all 5s;
-
 }
 
 /* カラーアニメーション */
 @keyframes color_position {
-  20% {
-    background: -webkit-linear-gradient(left, #ff2626, #0051ff);
+  0% {
+    background: -webkit-linear-gradient(left, #ff26fb, #00b3ff, #96cb4b);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    
+    color: transparent;
   }
-  40% {
-    background: -webkit-linear-gradient(left, #5cff26, #ffa600);
+  50% {
+    background: -webkit-linear-gradient(right, #ff26fb, #00b3ff, #96cb4b);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
+    color: transparent;  
   }
-  60% {
-    background: -webkit-linear-gradient(left, #269dff, #ff00a6);
+  100% {
+    background: -webkit-linear-gradient(left, #ff26fb, #00b3ff, #96cb4b);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-  }
-  80% {
-    background: -webkit-linear-gradient(left, #9226ff, #00ff51);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
+    color: transparent;  
   }
 }
 
 /* Container共通 */
 .container {
   width: 100%;
-  height: 100vh;
+  height: auto;
 }
 .container .contents-title {
   width: 100%;
   text-align: center;
-  padding: 5%;
+  padding-bottom: 10%;
+  font-size: 1.5rem;
 }
 .contents {
-  width: 80%;
+  width: 100%;
   height: 100%;
-  margin: 0 auto 5% auto;
+  margin: 0 auto 0 auto;
+}
+
+/* Container-bar */
+.container-bar {
+  width: 100%;
+  height: 5vh;
+  background-image: url(../img/bar-back.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 /* Aboutセクション */
 .about-container {
   width: 100%;
-  background-color: #ff797938;
+  height: 100%;
+  background-color: var(--about-background-color);
 }
 .about-container .contents-list {
-  width: 80%;
-  margin-bottom: 5%;
+  width: 90%;
+  padding-bottom: 10%;
   position: relative;
 }
 
-.contents-list .material-symbols-outlined {
-  width: 10%;
+.contents-list .icon {
+  width: 15%;
   aspect-ratio: 1;
   display: block;
   font-size: 4rem;
@@ -234,18 +266,19 @@ main .hero {
   cursor: pointer;
   transition: all 0.3s;
 }
-.contents-list .material-symbols-outlined:hover {
+
+.contents-list .icon:hover {
   transform: scale(1.5);
 } 
 .contents-list .list {
   position: absolute;
   top: 0;
   left: 0;
-  width: 30%;
-  
+  width: 0%;
   transform: translateX(0);
   transition: all 0.5s;
   opacity: 0;
+  transition: all 0.8s ease-in-out;
 }
 .contents-list .list.active {
   transform: translateX(50%);
@@ -262,24 +295,105 @@ main .hero {
 }
 
 /* htmlセクション */
-#html {
+.html-container {
   width: 100%;
   height: 100vh;
-  background-color: #edff7938;
+  background-color: var(--html-background-color);
+  position: relative;
 }
+.html-container .contents i {
+  display: block;
+  width: 20px;
+  color: #cb4b4b;
+}
+
 
 /* cssセクション */
-#css {
+.css-container {
   width: 100%;
   height: 100vh;
-  background-color: #79ccff38;
+  background-color: var(--css-background-color);
+  position: relative;
+}
+.css-container .bubble {
+  width: 40%;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url(../img/bubble2.png) no-repeat 50% 50%;
+  background-size: cover;
+  mix-blend-mode: difference;
+  transform-origin: center;
+}
+.css-container .bubble.active {
+  animation: moveBubble 8s linear infinite alternate;
+}
+@keyframes moveBubble {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 150%;
+  }
 }
 
+
+.css-container h2 {
+  padding: 0 15%;
+  font-size: 3rem;
+  color: #00ffe5b3;
+  text-align: center;
+  word-spacing: 0.5em;
+}
+.css-container .text {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 2% 15%;
+  color: #ff0000;
+}
+
+.css-container h2.active {
+  animation: slider 8s linear infinite alternate;
+}
+.css-container .text.active {
+  animation: slider 8s linear infinite alternate-reverse;
+}
+@keyframes slider {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.css-container .bubble2 {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 20%;
+  cursor: pointer;
+  z-index: 100;
+}
+.css-container .piece {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 10%;
+  cursor: pointer;
+  margin-right: 5%;
+  z-index: 100;
+}
+
+
 /* javaScriptセクション */
-#javascript {
+.js-container {
   width: 100%;
   height: 100vh;
-  background-color: #ffb87938;
+  background-color: var(--js-background-color);
+  position: relative;
 }
 
 /* Footer */
@@ -308,8 +422,8 @@ main .hero {
 
   /* Headerロゴ */
   header .logo-space {
+    width: 20%;
     font-size: 1.8rem;
-    opacity: 0.7;
     transform: translateY(0);
   }
 
