@@ -45,3 +45,22 @@ window.onscroll = function() {
 
 // スクロール
 window.scrollTo(0, 1);
+
+// 横スクロール
+
+const scrollElement = document.querySelector("#scrollX");
+
+scrollElement.addEventListener("wheel", (e) => {
+  if (Math.abs(e.deltaY) < Math.abs(e.deltaX)) return;
+
+  const maxScrollLeft = scrollElement.scrollWidth - scrollElement.clientWidth;
+
+  if (
+    (scrollElement.scrollLeft <= 0 && e.deltaY < 0) ||
+    (scrollElement.scrollLeft >= maxScrollLeft && e.deltaY > 0)
+  )
+    return;
+
+  e.preventDefault();
+  scrollElement.scrollLeft += e.deltaY;
+});
