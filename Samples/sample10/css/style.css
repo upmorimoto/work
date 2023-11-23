@@ -59,12 +59,12 @@ header .list a .border {
   display: inline-block;
   width: 0%;
   height: 10%;
-  background: -webkit-linear-gradient(left, #ff26fb, #00b3ff, #96cb4b);
+  background: -webkit-linear-gradient(left, #ff35b5, #00b3ff, #96cb4b);
   z-index: 10;
   transition: all 0.5s;
 }
 header .list a:hover {
-  background: -webkit-linear-gradient(left, #ff26fb, #00b3ff, #96cb4b);
+  background: -webkit-linear-gradient(left, #ff35b5, #00b3ff, #96cb4b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: color_position 5s ease-in infinite alternate;
@@ -84,7 +84,7 @@ header .list .toggle-icon {
   --gutter: 30px;
   --side-small: 26;
   --site-big: 36;
-  --depth: 4000px;
+  --depth: 3000px;
   --transition: .75s cubic-bezier(.075, .5, 0, 1)
 }
 
@@ -119,7 +119,7 @@ header .list .toggle-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: var(--transition), opacity .75s ease;
+  transition: var(--transition), opacity 1s ease;
   will-change: transform;
   transform-style: preserve-3d;
 }
@@ -131,6 +131,19 @@ header .list .toggle-icon {
   font-size:  calc(var(--index) * 3.3);
   width: min-content;
 }
+.scroll-container .gallery .frame_content h3 {
+  font-weight: 100;
+  text-transform: uppercase;
+  text-align: center;
+  font-size:  calc(var(--index) * 2.5);
+  text-align: left;
+}
+.scroll-container .gallery .frame_content p {
+  font-weight: 100;
+  font-size:  calc(var(--index) * 1.2);
+}
+
+
 .scroll-container .gallery .frame-media {
   position: relative;
   width: calc(var(--index) * var(--side-small));
@@ -159,8 +172,10 @@ video.frame-media_right {
   left: calc(var(--side-big) / 2 * var(--index) + var(--gutter));
 }
 video.frame-media_left {
-  left: calc(var(--side-small) / 2 * var(--index) + var(--gutter));
+  right: calc(var(--side-small) / 2 * var(--index) + var(--gutter));
 }
+
+
 
 
 
@@ -169,13 +184,17 @@ video.frame-media_left {
 .contents {
   width: 100%;
   height: 100vh;
+  font-weight: 200;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
   padding: 0 10%;
   position: relative;
-  background-image: url(../img/pawel-czerwinski.jpg);
+  background-image: url(../img/feather-3010848_1920.jpg);
+  background-size: cover;
+  overflow-y: hidden;
+  mix-blend-mode: exclusion;
 }
 .contents .hero {
   width: 80%;
@@ -194,7 +213,7 @@ video.frame-media_left {
   text-wrap: nowrap;
 }
 .contents-title span {
-  color: rgb(176, 95, 146);
+  color: #ff35b5;
 }
 .contents-sub-title span {
   color: #338fb7;
@@ -212,6 +231,33 @@ video.frame-media_left {
   margin-bottom: 3%;
   cursor: pointer;
 }
+.contents .caption-list .caption h2 {
+  position: relative;
+}
+
+
+.contents .caption-list .caption h2 .border {
+  position: absolute;
+  bottom: -10%;
+  left: 0;
+  display: inline-block;
+  width: 0%;
+  height: 10%;
+  background: -webkit-linear-gradient(left, #ff35b5, #00b3ff, #96cb4b);
+  z-index: 10;
+  transition: all 0.5s;
+}
+.contents .caption-list .caption h2:hover {
+  background: -webkit-linear-gradient(left, #ff35b5, #00b3ff, #96cb4b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: color_position 5s ease-in infinite alternate;
+  transition: all 5s;
+}
+.contents .caption-list .caption h2:hover .border {
+  width: 100%;
+}
+
 
 .contents .hero .img {
   width: 25%;
@@ -249,16 +295,27 @@ video.frame-media_left {
 .step .content {
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  background-color: #ffffff5d;
+  backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
   /* border: 3px solid #338fb7; */
-  overflow-x: scroll;
+  /* overflow-x: scroll; */
+  position: relative;
 }
 
-.step .step.active {
+.step .close-icon {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  width: 5%;
+  color: #000000;
+  z-index: 10;
+}
+
+.step.active {
   transform: rotate(0deg);
 }
 
@@ -270,7 +327,7 @@ video.frame-media_left {
   border: none;
 }
 .step .btn:hover {
-  background: -webkit-linear-gradient(left, #ff26fb, #00b3ff, #96cb4b);
+  background: -webkit-linear-gradient(left, #ff35b5, #00b3ff, #96cb4b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: color_position 5s ease-in infinite alternate;

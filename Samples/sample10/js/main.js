@@ -1,25 +1,66 @@
 const clickElements = document.querySelectorAll('.caption');
-const stepContents = document.querySelectorAll('.step-contents');
+const stepContents = document.querySelectorAll('.step');
 
+// クラスの追加と削除を切り替える関数
 function toggleActiveClass(element) {
-  if (element.classList.contains('active')) {
-    element.classList.remove('active');
-  } else {
-    element.classList.add('active');
-  }
+  element.classList.toggle('active');
 }
 
 // clickElementsの各要素に対してクリックイベントを追加
 clickElements.forEach((element, index) => {
-  element.addEventListener('click', () => {
+  element.addEventListener('click', (event) => {
     // クリックされた要素に対応するstepContentsの要素にクラスを切り替える
     toggleActiveClass(element);
     toggleActiveClass(stepContents[index]);
+
+    // 他のcaption要素と対応するstepContents要素から'active'クラスを削除する
+    clickElements.forEach((otherElement, otherIndex) => {
+      if (otherIndex !== index) {
+        otherElement.classList.remove('active');
+        stepContents[otherIndex].classList.remove('active');
+      }
+    });
+
+    // イベントの伝播を停止する
+    event.stopPropagation();
   });
 });
 
+// ドキュメント全体に対してクリックイベントを追加
+document.addEventListener('click', () => {
+  // すべてのcaption要素とstepContents要素から'active'クラスを削除する
+  clickElements.forEach((element) => {
+    element.classList.remove('active');
+  });
+
+  stepContents.forEach((element) => {
+    element.classList.remove('active');
+  });
+});
+
+
 //3da scroll
 
+// scroll Speed
+  // スクロール速度の設定
+  document.addEventListener('DOMContentLoaded', function() {
+    const scrollContainer = document.querySelector('.scroll3d');
+    const scrollSpeed = 0.2; // 速度の調整
+  
+    let lastScrollTop = 0;
+  
+    scrollContainer.addEventListener('scroll', function() {
+      const st = scrollContainer.scrollTop;
+      const delta = st - lastScrollTop;
+      lastScrollTop = st;
+  
+      // スクロール速度を制御
+      scrollContainer.scrollTop += delta * scrollSpeed;
+    });
+  });
+  
+
+// scroll Action
 const zSpacing = -1000;
 let lastPos = zSpacing / 5;
 const frames = Array.from(document.getElementsByClassName('frame'));
