@@ -1,5 +1,7 @@
 const clickElements = document.querySelectorAll('.caption');
 const stepContents = document.querySelectorAll('.step');
+const blend = document.querySelector('contents');
+const toggle = document.querySelector('.toggle-icon');
 
 // クラスの追加と削除を切り替える関数
 function toggleActiveClass(element) {
@@ -38,6 +40,28 @@ document.addEventListener('click', () => {
   });
 });
 
+// hero-change
+document.addEventListener('DOMContentLoaded', function () {
+  var toggleIcon = document.getElementById('toggleButton');
+  var contentsTitle = document.getElementById('change');
+
+  toggleIcon.addEventListener('click', function () {
+    contentsTitle.classList.toggle('active');
+  });
+});
+
+const element = document.querySelector('.contents');
+
+    // Add an event listener to detect when the .active class is removed
+    element.addEventListener('transitionend', () => {
+      // Check if the .active class has been removed
+      if (!element.classList.contains('active')) {
+        // If it's removed, add it back after a short delay to trigger the animation
+        setTimeout(() => {
+          element.classList.add('active');
+        }, 100); // Adjust the delay as needed
+      }
+    });
 
 //3da scroll
 
@@ -45,7 +69,7 @@ document.addEventListener('click', () => {
   // スクロール速度の設定
   document.addEventListener('DOMContentLoaded', function() {
     const scrollContainer = document.querySelector('.scroll3d');
-    const scrollSpeed = 0.2; // 速度の調整
+    const scrollSpeed = -5; // 速度の調整
   
     let lastScrollTop = 0;
   
@@ -89,19 +113,19 @@ window.scrollTo(0, 1);
 
 // 横スクロール
 
-const scrollElement = document.querySelector("#scrollX");
+// const scrollElement = document.querySelector("#scrollX");
 
-scrollElement.addEventListener("wheel", (e) => {
-  if (Math.abs(e.deltaY) < Math.abs(e.deltaX)) return;
+// scrollElement.addEventListener("wheel", (e) => {
+//   if (Math.abs(e.deltaY) < Math.abs(e.deltaX)) return;
 
-  const maxScrollLeft = scrollElement.scrollWidth - scrollElement.clientWidth;
+//   const maxScrollLeft = scrollElement.scrollWidth - scrollElement.clientWidth;
 
-  if (
-    (scrollElement.scrollLeft <= 0 && e.deltaY < 0) ||
-    (scrollElement.scrollLeft >= maxScrollLeft && e.deltaY > 0)
-  )
-    return;
+//   if (
+//     (scrollElement.scrollLeft <= 0 && e.deltaY < 0) ||
+//     (scrollElement.scrollLeft >= maxScrollLeft && e.deltaY > 0)
+//   )
+//     return;
 
-  e.preventDefault();
-  scrollElement.scrollLeft += e.deltaY;
-});
+//   e.preventDefault();
+//   scrollElement.scrollLeft += e.deltaY;
+// });

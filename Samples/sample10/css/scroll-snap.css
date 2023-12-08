@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+  background-image: url(../img/antelope-canyon.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+header {
+  background-color: transparent;
+}
+.header a {
+  display: block;
+}
+
+header nav .cat {
+  position: absolute;
+  z-index: 10;
+  width: fit-content;
+  color: #fff;
+  margin-bottom: 3%;
+  text-shadow: 3px 3px 2px#000000;
+  transition: all 0.3s;
+  opacity: 0;
+}
+header nav .cat:hover {
+  color: black;
+}
+
+header nav .cat1 {
+  top: 20%;
+  left: 5%;
+  transform: translateX(-200%);
+  animation: nav 1s linear forwards;
+  animation-delay: 0.5s;
+  transition: all 1s;
+}
+header nav .cat2 {
+  top: 28%;
+  left: 7%;
+  transform: translateX(-200%);
+  animation: nav 1s ease-in forwards;
+  animation-delay: 1s;
+  transition: all 1s;
+}
+header nav .cat3 {
+  top: 36%;
+  left: 9%;
+  transform: translateX(-200%);
+  animation: nav 1s ease-in forwards;
+  animation-delay: 1.5s;
+  transition: all 1s;
+}
+header nav .cat4 {
+  top: 44%;
+  left: 11%;
+  transform: translateX(-200%);
+  animation: nav 1s ease-in forwards;
+  animation-delay: 2s;
+  transition: all 1s;
+}
+
+@keyframes nav {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+.container::-webkit-scrollbar{
+  display: none;
+}
+.container section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  scroll-margin-left: 100px;
+}
+.container section .caption {
+  text-align: center;
+  height: fit-content;
+  width: 50%;
+}
+.container section .caption p {
+  margin-top: 5%;
+}
+
+.container .no1 {
+  background-color: #ff000045;
+  color: #ffffff;
+  text-shadow: 2px 2px 0px#000000;
+}
+.container .no2 {
+  background-color: #f2ff0045;
+  color: #ff9100;
+  text-shadow: 2px 2px 0px#000000;
+}
+.container .no3 {
+  background-color: #00ff4c45;
+  color: #f6ff00;
+  text-shadow: 2px 2px 0px#000000;
+}
+.container .no4 {
+  background-color: #8800ff45;
+  color: #ff8ad4;
+  text-shadow: 2px 2px 0px#000000;
+}

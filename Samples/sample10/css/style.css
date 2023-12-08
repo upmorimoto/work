@@ -51,6 +51,7 @@ header .list {
 header .list a {
   margin-left: 6%;
   position: relative;
+  /* mix-blend-mode: hard-light; */
 }
 header .list a .border {
   position: absolute;
@@ -266,6 +267,23 @@ video.frame-media_left {
   right: 0;
 }
 
+/* contents.active */
+.contents.active {
+  animation: filter 1.5s ease-in 0.2s forwards;
+}
+@keyframes filter {
+  0% {
+    filter: invert(0%);
+  }
+  100% {
+    filter: invert(100%);
+  }
+  
+}
+.contents.active .header {
+  background-color: #fff;
+}
+
 /* step-contents */
 .step {
   width: 70%;
@@ -319,19 +337,28 @@ video.frame-media_left {
   transform: rotate(0deg);
 }
 
-.step .btn {
-  width: 10%;
-  padding: 10px 0;
+.step a {
+  width: 15%;
+  background-color: #bebebe;
+  padding: 10px 3%;
+  border-radius: 10px;
   margin-bottom: 5%;
+}
+.step .btn {
+  width: 100%;
   font-size: 1.2rem;
   border: none;
+  background-color: transparent;
 }
-.step .btn:hover {
+.step a:hover {
   background: -webkit-linear-gradient(left, #ff35b5, #00b3ff, #96cb4b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: color_position 5s ease-in infinite alternate;
   transition: all 5s;
-  
 }
+.step .btn:hover a {
+  background-color: transparent;
+}
+
 

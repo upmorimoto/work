@@ -1,0 +1,198 @@
+@charset "utf-8";
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Sawarabi Mincho", sans-serif;
+  font-size: 16px;
+}
+main {
+  width: 100%;
+  position: relative;
+}
+main::after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  top: 0;
+  left: 0;
+  background-color: #c6c6c6ca;
+  backdrop-filter: blur(10px);
+  z-index: 10;
+  animation: open 1.5s ease-in 1s forwards;
+}
+@keyframes open {
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+header {
+  width: 100%;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.logo {
+  width: 8%;
+  margin-top: 2%;
+}
+
+header nav {
+  width: 70%;
+  text-align: end;
+}
+nav a {
+  margin-left: 10%;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* PARALLAX_WRAPPERセクション */
+.parallax_wrapper {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 300px;
+}
+
+/* HERO-TOP */
+.hero_top {
+  width: 100%;
+  height: 100vh;
+  background-color: #c0c0c0;
+  background-image: url(../img/monochrome/jess-bailey-6ijyKzeRiBo.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+.hero_top h2 {
+  font-size: 4.5rem;
+  color: #fff;
+  mix-blend-mode: difference;
+
+}
+
+/* PARALLAX_GROUP */
+.parallax_group {
+  height: 200vh;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+/* LAYER */
+.parallax_group .layer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ /* scale calculation: 1 + ((Z transform value * -1) / perspective) */
+.parallax_group .base {
+  transform: translateZ(-300px) scale(2);
+  background-image: url(../img/monochrome/white-flowers-6944139_1920.jpg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.parallax_group .mid {
+  transform: translateZ(0);
+}
+.parallax_group .top {
+  transform: translateZ(210px) scale(0.3);
+}
+
+#top {
+  z-index: 0;
+}
+#group1 {
+  z-index: -1;
+}
+#group1 > .base {
+  height: 300vh;
+  background-color: #8d8d8da0;
+  background-image: url(../img/monochrome/white-flowers-6944139_1920.jpg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+/* #group2 {
+
+} */
+#group2 > .mid {
+  background-image: url(../img/monochrome/dog-2178696_1920.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+/* #bottom {
+
+} */
+
+
+/* ABOUTセクション */
+.hero-bottom {
+  width: 100%;
+  height: 100vh;
+  background-color: #7ff6ffb8;
+  /* background-image: url(../img/gummy-bear_1920.jpg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; */
+
+}
+.hero-bottom h2 {
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 5%;
+}
+
+.figure-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10% auto;
+}
+figure {
+  width: 30%;
+  flex-direction: column;
+}
