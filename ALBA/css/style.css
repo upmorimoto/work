@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poiret One', sans-serif;
 }
 li {
   list-style: none;
@@ -21,64 +21,6 @@ img {
   width: 100%;
 }
 
-/* header */
-header {
-  width: 100%;
-  position: absolute;
-  margin: auto;
-  background-color: transparent;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  z-index: 10;
-}
-header .logo-space {
-  width: 10%;
-  margin: 1.5%;
-}
-header .logo-space .logo {
-  width: 100%;
-}
-header .list {
-  width: 50%;
-  margin-right: 5%;
-  text-align: right;
-  display: flex;
-  justify-content: end;
-  cursor: pointer;
-}
-header .list a {
-  margin-left: 6%;
-  position: relative;
-  /* mix-blend-mode: hard-light; */
-}
-header .list a .border {
-  position: absolute;
-  bottom: -10%;
-  left: 0;
-  display: inline-block;
-  width: 0%;
-  height: 10%;
-  background: -webkit-linear-gradient(left, #ff35b5, #00b3ff, #96cb4b);
-  z-index: 10;
-  transition: all 0.5s;
-}
-header .list a:hover {
-  background: -webkit-linear-gradient(left, #ff35b5, #00b3ff, #96cb4b);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: color_position 5s ease-in infinite alternate;
-  transition: all 5s;
-}
-header .list a:hover .border {
-  width: 100%;
-}
-
-header .list .toggle-icon {
-  margin: 0 5%;
-  font-size: 1.2rem;
-}
 
 :root {
   --index: calc(1vw + 1vh);
@@ -107,8 +49,9 @@ header .list .toggle-icon {
   width: 100%;
   height: 100%;
   position: fixed;
-  perspective: 1500px;
+  perspective: 2000px;
 }
+
 .scroll-container .gallery {
   transform-style: preserve-3d;
   height: 100%;
@@ -176,7 +119,9 @@ video.frame-media_left {
   right: calc(var(--side-small) / 2 * var(--index) + var(--gutter));
 }
 
-
+.top-movie {
+  filter: invert(100%);
+}
 
 
 
@@ -192,11 +137,12 @@ video.frame-media_left {
   align-items: start;
   padding: 0 10%;
   position: relative;
-  background-image: url(../img/feather-3010848_1920.jpg);
+  background-image: url(../img/Horizontal/feather-3010848_1920.jpg);
   background-size: cover;
   overflow-y: hidden;
-  mix-blend-mode: exclusion;
+  mix-blend-mode: difference;
 }
+
 .contents .hero {
   width: 80%;
   display: flex;
@@ -261,7 +207,7 @@ video.frame-media_left {
 
 
 .contents .hero .img {
-  width: 25%;
+  width: 20%;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -269,8 +215,9 @@ video.frame-media_left {
 
 /* contents.active */
 .contents.active {
-  animation: filter 1.5s ease-in 0.2s forwards;
+  animation: filter 1.5s forwards;
 }
+
 @keyframes filter {
   0% {
     filter: invert(0%);
@@ -278,14 +225,15 @@ video.frame-media_left {
   100% {
     filter: invert(100%);
   }
-  
-}
-.contents.active .header {
-  background-color: #fff;
 }
 
-/* step-contents */
-.step {
+.contents.active header {
+  background-color: #fff;
+  filter: invert(100%);
+}
+
+/* part-contents */
+.part {
   width: 70%;
   height: auto;
   position: absolute;
@@ -299,18 +247,21 @@ video.frame-media_left {
   align-items: center;
   transition: all .6s;
 }
-.step-contents {
+.part-contents {
   width: 100%;
 }
-.step .step-contents h2 {
+.part .part-contents h2 {
   font-size: 2rem;
   padding-top: 1.5em;
 }
-.step .step-contents p {
-  line-height: 2;
-  padding: 8%;
+.part .part-contents .text {
+  margin: 8%;
 }
-.step .content {
+.part .part-contents p {
+  line-height: 2;
+  padding-bottom: 2%;
+}
+.part .content {
   width: 100%;
   height: 100%;
   background-color: #ffffff5d;
@@ -324,7 +275,8 @@ video.frame-media_left {
   position: relative;
 }
 
-.step .close-icon {
+
+.part .close-icon {
   position: absolute;
   top: 10%;
   right: 10%;
@@ -333,31 +285,32 @@ video.frame-media_left {
   z-index: 10;
 }
 
-.step.active {
+.part.active {
   transform: rotate(0deg);
 }
 
-.step a {
+.part a {
   width: 15%;
-  background-color: #bebebe;
+  background-color: #bebebea9;
   padding: 10px 3%;
   border-radius: 10px;
   margin-bottom: 5%;
 }
-.step .btn {
+.part .btn {
   width: 100%;
   font-size: 1.2rem;
   border: none;
   background-color: transparent;
+  padding-bottom: 5%;;
 }
-.step a:hover {
+.part a:hover {
   background: -webkit-linear-gradient(left, #ff35b5, #00b3ff, #96cb4b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: color_position 5s ease-in infinite alternate;
   transition: all 5s;
 }
-.step .btn:hover a {
+.part .btn:hover a {
   background-color: transparent;
 }
 

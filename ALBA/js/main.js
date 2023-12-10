@@ -1,3 +1,51 @@
+const clickElements = document.querySelectorAll('.caption');
+const stepContents = document.querySelectorAll('.part');
+const toggle = document.querySelector('.toggle-icon');
+const close = document.querySelector('.close-icon');
+
+// クラスの追加と削除を切り替える関数
+function toggleActiveClass(element) {
+  element.classList.toggle('active');
+}
+
+// clickElementsの各要素に対してクリックイベントを追加
+const blend = document.querySelector('contents');
+clickElements.forEach((element, index) => {
+  element.addEventListener('click', (event) => {
+    // クリックされた要素に対応するstepContentsの要素にクラスを切り替える
+    toggleActiveClass(element);
+    toggleActiveClass(stepContents[index]);
+
+    // 他のcaption要素と対応するstepContents要素から'active'クラスを削除する
+    clickElements.forEach((otherElement, otherIndex) => {
+      if (otherIndex !== index) {
+        otherElement.classList.remove('active');
+        stepContents[otherIndex].classList.remove('active');
+      }
+    });
+    // クリックイベントがclose-iconまたはstep以外の要素に伝播した場合、activeクラスを削除する
+    document.addEventListener('click', (event) => {
+      if (!event.target.matches('.close-icon, .step')) {
+        element.classList.remove('active');
+        stepContents[index].classList.remove('active');
+      }
+    });
+
+    // イベントの伝播を停止する
+    event.stopPropagation();
+  });
+});
+
+// hero-change
+document.addEventListener('DOMContentLoaded', function () {
+  const toggleIcon = document.getElementById('toggleButton');
+  const contentsTitle = document.getElementById('change');
+
+  toggleIcon.addEventListener('click', function () {
+    contentsTitle.classList.toggle('active');
+  });
+});
+
 //3da scroll
 
 // scroll Speed
