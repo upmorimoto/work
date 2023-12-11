@@ -196,6 +196,7 @@ video.frame-media_left {
 }
 .contents .caption-list .caption h2:hover {
   background: -webkit-linear-gradient(left, #ff35b5, #00b3ff, #96cb4b);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: color_position 5s ease-in infinite alternate;
@@ -305,6 +306,7 @@ video.frame-media_left {
 }
 .part a:hover {
   background: -webkit-linear-gradient(left, #ff35b5, #00b3ff, #96cb4b);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: color_position 5s ease-in infinite alternate;
