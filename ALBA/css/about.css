@@ -1,5 +1,13 @@
+@charset "utf-8";
+
+.handling {
+    background-image: url(../img/Horizontal/feather-3010848_1920.jpg);
+}
 
 .sighn {
+    width: 50%;
+    height: 130px;
+    z-index: 10;
     background-color: #ff7f7f;
     clip-path: polygon(0 97%, 90% 97%, 90% 90%, 100% 100%, 60% 100%, 60% 100%, 0 100%);
 }
