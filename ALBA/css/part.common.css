@@ -133,8 +133,9 @@ header {
     font-size: 1rem;
     margin: 3% auto 3%;
 }
-.sub-title .bx {
+.bx {
     font-size: 0.8rem;
+    margin-right: 0.2em;
 }
 
 /* handling-contents */
@@ -174,6 +175,10 @@ header {
 }
 .main-contents .contents-description {
     line-height: 2;
+    margin-left: 1em;
+}
+.main-contents .contents-description p {
+    margin-bottom: 2em;
 }
 
 /* side menu */
