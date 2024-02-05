@@ -12,34 +12,36 @@
 .card-wrapper {
     width: 90%;
     margin: 0 auto 5%;
-    display: flex;
-    flex-direction: row;
-    gap: 3%;
-    flex-basis: auto;
 }
 .card {
     box-shadow: 2px 2px 5px #0000006a;
-    padding: 2%;
-    min-width: 20%;
+    width: 70%;
+    margin-bottom: 5%;
 }
 .card img {
-    display: block;
-    width: 90%;
-    margin: 0 auto;
-    aspect-ratio: 1;
-    object-fit: cover;
-    flex-grow: 1;
-    max-height: 400px;
+    width: 100%;
 }
-.card p {
-    padding: 3%;
-    text-align: center;
+
+.card:nth-child(2) {
+    margin: 0 0 5% auto;
 }
 
 .type-description p {
     line-height: 2;
 }
 
+.contents-description dt {
+    font-size: 1rem;
+    font-weight: bold;
+}
+.contents-description dd {
+    font-size: 1rem;
+    margin-left: 1.5em;
+}
+.contents-description .bx {
+    font-size: 1rem;
+    margin-right: 0.5em;
+}
   
 
   @media screen and (max-width: 600px) {

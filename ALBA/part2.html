@@ -11,20 +11,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;400;800&family=Poiret+One&display=swap" rel="stylesheet">  <script src="./js/main.js" defer></script>
     <script src="./js/part.js" defer></script>
+    <script src="./js/main.js" defer></script>
 </head>
 <body>
     
   <header id="header">
-      <div id="scrollingElement" class="logo-space">
-        <a class="logo" href="./index.html#change"><img src="./img/Alba-logo.set/Alba-cat-shadow-removebg-preview.png" alt=""></a>
-      </div>
-      <div class="list">
-        <a href="#about.html">About<span class="border"></span></a>
+    <div id="scrollingElement" class="logo-space">
+      <a class="logo" href="./index.html#change"><img src="./img/Alba-logo.set/Alba-notcat-removebg-preview.png" alt=""></a>
+    </div>
+    <ul class="list">
+      <li><a href="about.html">About<span class="border"></span></a></li>
+      <li id="menu">
         <a href="#menu.html">Menu<span class="border"></span></a>
-        <a href="#contact.html">Contact<span class="border"></span></a>
-        <a href="#sns.html">SNS<span class="border"></span></a>
-      </div>
-    </header>
+        <div class="menu">
+          <a href="part1.html"><i class='bx bx-plus-medical'></i>Part1</a>
+          <a href="part2.html"><i class='bx bx-plus-medical'></i>Part2</a>
+          <a href="part3.html"><i class='bx bx-plus-medical'></i>Part3</a>
+        </div>
+      </li>
+      <li><a href="#contact.html">Contact<span class="border"></span></a></li>
+      <li><a href="#sns.html">SNS<span class="border"></span></a></li>
+    </ul>
+  </header>
 
   <div class="handling">
     <div class="part-title">
@@ -37,10 +45,11 @@
 
     <!-- main -->
     <div class="main-contents">
-      <h2 class="contents-title">Product type</h2>
+      <h2 class="contents-title">Product</h2>
       <p class="contents-description">
-        Albaの現在取り扱っているボディアートラインナップで使用している溶液のそれぞれの特質と品質、
-              機材や手順を紹介します。
+        Albaの現在取り扱っているボディアートラインナップ「シール」「インク」「ティント」「ジャグア」
+        それぞれの使用しているcolor溶液や、使用している機材について説明します。
+        それぞれの違いと、シチュエーションに合ったものを私たちと一緒に選びましょう。
       </p>
 
       <div class="sub-title">
@@ -49,26 +58,35 @@
 
       <div class="card-wrapper">
         <div class="card">
-          <img src="./img/part/part-sticker1.jpg" alt="">
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, aliquid.</p>
+          <img src="./img/part/sticker1.png" alt="">
         </div>
         <div class="card">
-          <img src="./img/part/part-sticker2.jpg" alt="">
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, aliquid.</p>
-        </div>
-        <div class="card">
-          <img src="./img/part/part-sticker3.jpg" alt="">
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, aliquid.</p>
+          <img src="./img/part/sticker2.png" alt="">
         </div>
       </div>
 
       <div class="contents-description">
         <p>
-          Body jewelry(ボディジュエリー)としてとても取り入れやすく、シールなのですぐに落とせるのが特徴です。
-          たくさんの種類のサイズやモチーフが安価で販売されているので入手しやすく手軽です。
-          シール自体も手軽に買え、自宅のプリンターで印刷してすぐに使えるので、オリジナルタトゥー
-          を作成するのも簡単です。沢山のカラーを楽しむことが出来ます。
+          Tatoo Stickerの材質はポリオレフィン・アクリル系粘着剤で、絆創膏と同じ肌への安全性が検証されたテープ素材に印刷したシールで、
+          絵柄だけを肌の上に転写するシールです。
         </p>
+        <p>
+          シールなので多少テカリがでます。定着させたタトゥーシールの表面にベビーパウダーなどを軽くまぶしテカリを防止することができます。</br>
+          タトゥーシールは、3日から長くて1週間程度持続し、その間は水で濡らしても、お風呂に入ってもこすらなければ簡単には取れません。 取りたい時はセロハンテープを、
+          絵の部分に貼って頂き、ゆっくり剥がすと肌を傷めずに取れますが、少量のベビーオイル又はクレンジングオイルをタトゥーシールの上に塗って1分ほど待ち、 
+          コットンやペーパータオルで優しく拭き取ると取れます。 </br>
+          ※1回で完全に落としきれない場合は、数回繰り返してください。 落とす前にお風呂に浸かったり、暖かいお湯で皮膚を温めるとタトゥーシールが落ちやすくなります。
+        </p>
+        <p>
+          皮膚の弱い方は同じ場所に繰り返し貼らないでください。また、はがすときは無理にこすったりしないでください。
+        </p>
+
+        <dl>
+          <dt><i class='bx bx-bot'></i>Good points!</dt>
+          <dd>はがしたい時にはがせるので気軽に楽しめます。</dd>
+          <dt><i class='bx bxs-bot'></i>Bad points</dt>
+          <dd>洋服と擦れるとシールが布に転移することがあります。</dd>
+        </dl>
       </div>
 
 
@@ -78,26 +96,36 @@
 
       <div class="card-wrapper">
         <div class="card">
-          <img src="./img/part/part-paint1.jpg" alt="">
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, aliquid.</p>
+          <img src="./img/part/paint1.png" alt="">
         </div>
         <div class="card">
-          <img src="./img/part/part-paint2.jpg" alt="">
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, aliquid.</p>
-        </div>
-        <div class="card">
-          <img src="./img/part/part-paint3.jpg" alt="">
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, aliquid.</p>
+          <img src="./img/part/paint2.png" alt="">
         </div>
       </div>
 
       <div class="contents-description">
         <p>
-          ボディアートで使用しているインクをステンシルに合わせてカラーをのせていきます。
-          ひとつのカラーや簡単な形状のものは自分でも簡単に描くことが出来ます。
-          エアブラシでのせたり、複数のカラーを合わせたりしやすくオリジナルアイデアで同じモチーフでも自分だけのものが
-          仕上がります。もちろんボディだけでなくTシャツやバックにも描けます。
+          Ink-paint Tatooの溶液はポ化粧品由来のアルコール系インクで、化粧品やアルコールによるアレルギーがなければ手軽に楽しめます。
+          メイクを落とすのと同じようにクレンジング剤で落とせます。
         </p>
+        <p>
+          好きなステンシルシートを肌にのせ、インクで好きな色をのせていくだけなので、自分でも簡単に楽しめます。Albaでは好きなステンシルを作成することが出来るので、あなたの好みの
+          デザインをクリエイトすることが出来ます。使い捨てシールを使用する場合や、何度も使えるプラスチック素材のステンシルもあります。</br>
+          
+          インクは、1日から長くて3日程度持続し、水で濡らすと多少落ちるインクもあれば、お風呂に入っても取れないインクもあります。 取りたい時はメイク用クレンジング剤を、
+          使ってゆっくり落とすと肌を傷めずに取れます。</br>
+          ※1回で完全に落としきれない場合は、数回繰り返してください。 落とす前にお風呂に浸かったり、暖かいお湯で皮膚を温めるとインクが落ちやすくなります。
+        </p>
+        <p>
+          洋服に転移しないものを使用しますが、こすりつけたりすると転移することもあります。
+        </p>
+
+        <dl>
+          <dt><i class='bx bx-bot'></i>Good points!</dt>
+          <dd>発色がよく、蛍光色や好きなカラーをパーツごとにチョイス出来てオリジナリティが出せます。</dd>
+          <dt><i class='bx bxs-bot'></i>Bad points</dt>
+          <dd>日持ちがしないので、普段使いにはあまりむきません。</dd>
+        </dl>
       </div>
 
 
@@ -107,26 +135,35 @@
 
       <div class="card-wrapper">
         <div class="card">
-          <img src="./img/part/part-tint1.jpg" alt="">
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, aliquid.</p>
+          <img src="./img/part/paint1.png" alt="">
         </div>
         <div class="card">
-          <img src="./img/part/part-tint2.jpg" alt="">
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, aliquid.</p>
-        </div>
-        <div class="card">
-          <img src="./img/part/part-tint3.jpg" alt="">
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, aliquid.</p>
+          <img src="./img/part/paint2.png" alt="">
         </div>
       </div>
       
       <div class="contents-description">
         <p>
-          Tatooシールと同じようにシール状になっており、水に浸してから貼ります。色が出てくるのに一日ほど待ちますが
-          ステッカーやインクとは違って果汁で皮下を染めるので2週間ほど落ちずに楽しめるのがTintやJaguaの特徴です。
-          カラーは藍色淡色なので願い事や自分へのメッセージなんかを描いたりすることもあります。
-          フェイクだからこそ出来るそれぞれの楽しみ方を見つけてください。
+          Tint Tatooの素材は数種類あり、インクを使用しているものと、ジャグアで使用する果汁を用いているものがあります。 PVA・BG・ソルビトール・トレハロース・TG・エタノール・アセトン・ PEG-40水添ヒマシ油・水・青色1号・黄色5号・黄色6号・赤7号
+          などの構成で、表皮を染めるためターンオーバーの2週間ほどもちます。（個人差あり）発色は紺色で4時間～24時間ほどかけて徐々に発色し始めます。
         </p>
+        <p>
+          シールを貼り付けて転写するためとても使いやすく、表皮を染めるのでインクをのせるより長持ちします。</br>
+          ステッカーと違い、水に濡れてヨレたり、1日で消えてしまう心配はありません。個人差はありますが、こすったりしなければ2週間程度持続し、その間は水で濡らしても、お風呂に入っても取れません。 取りたい時はベビーオイル又はクレンジングオイルを 
+          コットンやペーパータオルで優しく拭き取ります。 </br>
+          
+          ※落とす前にお風呂に浸かったり、暖かいお湯で皮膚を温めると落ちやすくなります。
+        </p>
+        <p>
+          皮膚の弱い方、アレルギーをお持ちの方は使用しないでください。
+        </p>
+
+        <dl>
+          <dt><i class='bx bx-bot'></i>Good points!</dt>
+          <dd>染めているため他に転移せず長持ちするので安心して楽しめます。</dd>
+          <dt><i class='bx bxs-bot'></i>Bad points</dt>
+          <dd>アレルギーの疑いのある場合はパッチテストを必ずしてください。素材によって違いがあるためそれぞれのテストが必要になります。</dd>
+        </dl>
       </div>
 
 
@@ -136,25 +173,35 @@
 
       <div class="card-wrapper">
         <div class="card">
-          <img src="./img/part/part-jagua1.jpg" alt="">
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, aliquid.</p>
+          <img src="./img/part/paint1.png" alt="">
         </div>
         <div class="card">
-          <img src="./img/part/part-jagua2.jpg" alt="">
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, aliquid.</p>
-        </div>
-        <div class="card">
-          <img src="./img/part/part-jagua3.jpg" alt="">
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, aliquid.</p>
+          <img src="./img/part/paint2.png" alt="">
         </div>
       </div>
       
-      <div class="type-description">
+      <div class="contents-description">
         <p>
-          使用している溶液はtintと同じですが、ステンシルシートと溶液を使うことで、市販にはないオリジナルの
-          フェイクタトゥーが楽しめます。Albaではまだ取り扱っておりませんが、白色も存在していてウェディングなどで
-          使用されています。2色のコントラストでさらに沢山のアイデアが形になります。
+          Tatoo Stickerの材質はポリオレフィン・アクリル系粘着剤で、絆創膏と同じ肌への安全性が検証されたテープ素材に印刷したシールで、
+          絵柄だけを肌の上に転写するシールです。
         </p>
+        <p>
+          シールなので多少テカリがでます。定着させたタトゥーシールの表面にベビーパウダーなどを軽くまぶしテカリを防止することができます。</br>
+          タトゥーシールは、3日から長くて1週間程度持続し、その間は水で濡らしても、お風呂に入っても取れません。 取りたい時はセロハンテープを、
+          絵の部分に貼って頂き、ゆっくり剥がすと肌を傷めずに取れますが、少量のベビーオイル又はクレンジングオイルをタトゥーシールの上に塗って1分ほど待ち、 
+          コットンやペーパータオルで優しく拭き取ると取れます。 </br>
+          ※1回で完全に落としきれない場合は、数回繰り返してください。 落とす前にお風呂に浸かったり、暖かいお湯で皮膚を温めるとタトゥーシールが落ちやすくなります。
+        </p>
+        <p>
+          皮膚の弱い方は同じ場所に繰り返し貼らないでください。また、はがすときは無理にこすったりしないでください。
+        </p>
+
+        <dl>
+          <dt><i class='bx bx-bot'></i>Good points!</dt>
+          <dd>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, distinctio.</dd>
+          <dt><i class='bx bxs-bot'></i>Bad points</dt>
+          <dd>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, distinctio.</dd>
+        </dl>
       </div>
 
       

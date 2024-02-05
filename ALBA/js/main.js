@@ -2,11 +2,19 @@ const clickElements = document.querySelectorAll('.caption');
 const stepContents = document.querySelectorAll('.part');
 const toggle = document.querySelector('.toggle-icon');
 const close = document.querySelector('.close-icon');
+const menu = document.getElementById('menu');
 
 // クラスの追加と削除を切り替える関数
 function toggleActiveClass(element) {
   element.classList.toggle('active');
 }
+
+// menuをクリックしたときの処理を追加
+menu.addEventListener('click', (event) => {
+  // クリックされたメニューにactiveクラスを追加
+  toggleActiveClass(menu);
+});
+
 
 // clickElementsの各要素に対してクリックイベントを追加
 const blend = document.querySelector('contents');
@@ -25,7 +33,7 @@ clickElements.forEach((element, index) => {
     });
     // クリックイベントがclose-iconまたはstep以外の要素に伝播した場合、activeクラスを削除する
     document.addEventListener('click', (event) => {
-      if (!event.target.matches('.close-icon, .step')) {
+      if (!event.target.matches('#menu, .close-icon, .step')) {
         element.classList.remove('active');
         stepContents[index].classList.remove('active');
       }

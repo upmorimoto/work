@@ -47,7 +47,7 @@ header {
     justify-content: end;
     cursor: pointer;
   }
-  header .list a {
+  header .list li {
     margin-left: 6%;
     position: relative;
     /* mix-blend-mode: hard-light; */
@@ -66,6 +66,7 @@ header {
   header .list a:hover {
     background: -webkit-linear-gradient(left, #ff35b5, #00b3ff, #96cb4b);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: color_position 5s ease-in infinite alternate;
     transition: all 5s;
@@ -79,6 +80,26 @@ header {
     font-size: 1.2rem;
   }
 
+  /* menu sub*/
+  
+#menu .menu a {
+  display: block;
+  padding: 10%;
+  white-space: nowrap
+}
+#menu .menu {
+  position: absolute;
+  bottom: -6em;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  display: none;
+}
+
+#menu.active .menu{
+  display: block;
+}
   
 /* Handling */
 .handling {
@@ -136,6 +157,14 @@ header {
 .bx {
     font-size: 0.8rem;
     margin-right: 0.2em;
+}
+.toggle-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#toggleButton {
+  font-size: 1.5rem;
 }
 
 /* handling-contents */
@@ -260,6 +289,7 @@ footer {
   footer .list a:hover {
     background: -webkit-linear-gradient(left, #ff35b5, #00b3ff, #96cb4b);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: color_position 5s ease-in infinite alternate;
     transition: all 5s;

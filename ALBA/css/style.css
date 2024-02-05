@@ -196,8 +196,8 @@ video.frame-media_left {
 }
 .contents .caption-list .caption h2:hover {
   background: -webkit-linear-gradient(left, #ff35b5, #00b3ff, #96cb4b);
-  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: color_position 5s ease-in infinite alternate;
   transition: all 5s;
@@ -267,6 +267,7 @@ video.frame-media_left {
   height: 100%;
   background-color: #ffffff5d;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -285,6 +286,10 @@ video.frame-media_left {
   color: #000000;
   z-index: 10;
 }
+.part .close-icon .bx {
+  font-size: 2rem;
+
+}
 
 .part.active {
   transform: rotate(0deg);
@@ -292,27 +297,29 @@ video.frame-media_left {
 
 .part a {
   width: 15%;
-  background-color: #bebebea9;
-  padding: 10px 3%;
+  background-color: rgba(219, 190, 239, 0.668);
+  padding: 5px 3%;
   border-radius: 10px;
   margin-bottom: 5%;
+  transition: all 0.3s;
 }
 .part .btn {
   width: 100%;
   font-size: 1.2rem;
   border: none;
   background-color: transparent;
-  padding-bottom: 5%;;
+  padding-bottom: 5%;
 }
 .part a:hover {
   background: -webkit-linear-gradient(left, #ff35b5, #00b3ff, #96cb4b);
-  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: color_position 5s ease-in infinite alternate;
   transition: all 5s;
 }
-.part .btn:hover a {
+.part .btn:hover .part a {
+  border: 2px solid rgba(219, 190, 239, 0.668);
   background-color: transparent;
 }
 
