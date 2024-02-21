@@ -1,0 +1,173 @@
+@charset "utf-8";
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:root {
+  --backColor: #fdbe8ad8;
+  --accentColor: #7a2424;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: #303030;
+  line-height: 1;
+  background-color: #ffffff;
+}
+
+img {
+  width: 100%;
+}
+
+.header-inner {
+  max-width: 1400px;;
+  height: 8vh;
+  margin: 0 auto;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle-menu-button {
+  display: none;
+}
+
+.header-logo {
+  display: block;
+  width: 5%;
+}
+
+.site-menu ul {
+  display: flex;
+}
+
+.site-menu ul li {
+  margin-left: 20px;
+  margin-right: 20px;
+  color: var(--accentColor);
+}
+
+.site-menu ul li a {
+  font-weight: bold;;
+}
+
+.footer {
+  color: #7a2424;
+  background-color: #fdbe8ad8;
+  padding-top: 5%;
+  padding-bottom: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo {
+  display: block;
+  width: 10%;
+  margin-top: 5%;
+}
+
+.footer-tel {
+  font-size: 1.6em;
+  font-weight: bold;
+  margin-top: 5%;
+}
+
+.footer-time {
+  font-size: 13px;
+  margin-top: 16px;
+}
+
+.copyright {
+  font-size: 0.8em;
+  font-weight: bold;
+  margin-top: 5%;
+}
+
+@media (max-width: 800px) {
+  .site-menu ul {
+    display: block;
+    text-align: center;
+  }
+
+  .site-menu li {
+    margin-top: 20px;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    height: 8vh;
+    z-index: 10;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .header-inner {
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 100%;
+    position: relative;
+  }
+
+  .header-logo {
+    width: 50px;
+  }
+
+  .header-site-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #ff882664;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    display: none;
+  }
+
+  .header-site-menu.is-show {
+    display: block;
+  }
+
+  .header-site-menu.is-show ul li {
+    color: #fff;
+  }
+
+  .toggle-menu-button {
+    display: block;
+    width: 44px;
+    height: 34px;
+    background-image: url(../img/menu-burger.png);
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    outline: none;
+  }
+
+  .main {
+    padding-top: 10%;
+  }
+
+}

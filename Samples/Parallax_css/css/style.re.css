@@ -1,0 +1,165 @@
+@charset "utf-8";
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+}
+main {
+  width: 100%;
+  position: relative;
+}
+main::after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  top: 0;
+  left: 0;
+  background-color: #ffffffca;
+  backdrop-filter: blur(10px);
+  z-index: 10;
+  animation: open 1.5s ease-in 1s forwards;
+}
+@keyframes open {
+  100% {
+    width: 0;
+    opacity: 0;
+  }
+}
+
+header {
+  width: 100%;
+  padding: 0 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: #fff;
+  z-index: 100;
+}
+.logo {
+  color: #ffffffca;
+  text-shadow: 2px 2px 0px #0000007a;
+
+}
+
+header nav {
+  width: 60%;
+}
+nav a {
+  margin-left: 10%;
+  font-weight: 500;
+}
+
+
+/* HERO-TOP */
+.hero_top {
+  width: 100%;
+  height: 100vh;
+  background-color: #ff0000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+/* PARALLAX_WRAPPERセクション */
+.parallax_wrapper {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 300px;
+}
+/* PARALLAX_GROUP */
+.parallax_group {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+/* LAYER */
+.parallax_group .layer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ /* scale calculation: 1 + ((Z transform value * -1) / perspective) */
+.parallax_group .base {
+  transform: translateZ(-300px) scale(2);
+}
+.parallax_group .mid {
+  transform: translateZ(0);
+}
+.parallax_group .top {
+  transform: translateZ(210px) scale(0.3);
+}
+
+#top {
+  z-index: 0;
+}
+#group1 {
+  z-index: -1;
+}
+#group1 > .base {
+  background-color: #ffa246;
+}
+/* #group2 {
+
+} */
+#group2 > .mid {
+  background-color: #edff26;
+}
+/* #bottom {
+
+} */
+
+
+/* ABOUTセクション */
+.hero-bottom {
+  width: 100%;
+  height: 100vh;
+  background-color: #7ffbff;
+}
+.hero-bottom h2 {
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 5%;
+}
+
+.figure-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10% auto;
+}
+figure {
+  width: 30%;
+  flex-direction: column;
+}
