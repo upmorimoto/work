@@ -1,0 +1,201 @@
+
+
+
+:root {
+  --primary-color: #ffffff;
+  --font-color: #515151;
+  --border-color: #000000;
+  /* --main-background-color: #639745; */
+  --main-background-color: #fafafa;
+  --sub-background-color: #e9dcc0;
+  --accent-color: #fafafa3;
+}
+
+a {
+  color: inherit;
+  text-decoration: solid;
+}
+
+body {
+  font-family: 'Dosis','Klee One', cursive;
+}
+
+.main {
+  color: var(--font-color);
+}
+
+.specified {
+  margin-top: 240px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 150px;
+  width: 70%;
+}
+
+.specified h1 {
+  text-align: center;
+  padding-bottom: 50px;
+  font-size: 25px;
+}
+
+/* .specified h2 {
+  line-height: 1.5;
+  font-size: 20px;
+} */
+
+.specified p {
+  line-height: 1.8;
+}
+
+.specified ul li {
+  /* border-bottom: solid;
+  border-width: 1px;
+  border-color: #515151; */
+  padding-bottom: 20px;
+}
+
+.specified ul li:nth-child(1) {
+  border-top: solid;
+  border-width: 1px;
+  border-color: #515151;
+  padding-top: 30px;
+}
+
+.specified-name ul li:nth-child(9) {
+  padding-bottom: 22px;
+}
+
+.specified-name ul li:nth-child(10) {
+  padding-bottom: 22px;
+}
+
+.specified-name ul li:nth-child(11) {
+  padding-bottom: 23px;
+}
+
+.specified-name ul li:nth-child(12) {
+  padding-bottom: 18px;
+}
+
+.specified-name ul li:nth-child(13) {
+  padding-bottom: 30.5px;
+}
+
+.specified-company p {
+  font-size: 15px;
+  /* line-height: 3; */
+}
+
+.specified-company li {
+  border-bottom: 1px solid #515151;
+}
+
+.specified-name {
+  width: 280px;
+}
+
+  /* text-align-last: justify; */
+  /* padding-left: 20px; */
+/* } */
+
+.specified-company {
+  display: flex;
+  justify-content: center;
+  /* margin-bottom: 80px; */
+}
+
+.specified-text {
+  width: 920px;
+}
+
+.kochira {
+  border-bottom: 1px solid #515151;
+}
+
+.specified h1 br {
+  display: none;
+}
+
+.specified p br {
+  display: none;
+}
+
+
+
+@media (max-width: 800px) {
+  .specified {
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -50px;
+    width: 80%;
+  }
+
+  .specified h1 {
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: 20px;
+  }
+  
+
+  .specified h1 br {
+    display: inline-block;
+  }
+
+  .specified p br {
+    display: inline-block;
+  }
+
+
+  .specified p {
+    line-height: 1.5;
+    font-size: 12px;
+  }
+  
+  .specified-name ul li:nth-child(2) {
+    padding-bottom: 38px;
+}
+
+  .specified-name ul li:nth-child(3) {
+    padding-bottom: 20px;
+}
+
+.specified-name ul li:nth-child(4) {
+   padding-bottom: 20px;
+}
+
+.specified-name ul li:nth-child(5) {
+  padding-bottom: 20px;
+}
+
+.specified-name ul li:nth-child(6) {
+  padding-bottom: 2px;
+}
+
+.specified-name ul li:nth-child(10) {
+  padding-bottom: 220px;
+}
+
+.specified-name ul li:nth-child(11) {
+  padding-bottom: 86px;
+}
+
+.specified-name ul li:nth-child(12) {
+  padding-bottom: 108px;
+}
+
+.specified-name ul li:nth-child(13) {
+  padding-bottom: 220px;
+}
+
+.specified-text p {
+  padding-left: 12px;
+}
+
+
+
+
+
+
+
+}

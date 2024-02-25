@@ -1,0 +1,61 @@
+
+
+:root {
+  --primary-color: #ffffff;
+  --font-color: #515151;
+  --border-color: #000000;
+  /* --main-background-color: #639745; */
+  --main-background-color: #fafafa;
+  --sub-background-color: #e9dcc0;
+  --accent-color: #fafafa;
+}
+
+body {
+  font-family: 'Dosis','Klee One', cursive;
+}
+
+.main {
+  color: var(--font-color);
+}
+
+.policy {
+  margin-top: 240px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 150px;
+  width: 70%;
+}
+
+.policy h1 {
+  text-align: center;
+  font-size: 25px;
+}
+.policy h1 br{
+  display: block;
+}
+
+.policy h2 {
+  line-height: 1.5;
+  font-size: 20px;
+}
+
+.policy p {
+  line-height: 1.8;
+}
+
+@media (max-width:800px){
+  .policy h1{
+    font-size: 20px;
+    text-align: center;
+  }
+  .policy h2{
+    font-size: 15px;
+  }
+  .policy p{
+    font-size: 13px;
+    line-height: 1.3;
+  }
+  .policy{
+    margin-top: 180px;
+  }
+}

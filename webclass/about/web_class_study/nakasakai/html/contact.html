@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>中坂井商店トップページ</title>
+  <meta name="description" content="近畿地方の地酒を扱う酒店、中坂井酒店のサイトです。こちらはお問い合わせページです"> 
+  <link rel="stylesheet" href="../css/contact.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="./img/favicon.ico" sizes="any">
+  <script src="../js/button.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+</head>
+<body>
+  <!-- -------------------------------ヘッダー -->
+<header>
+  <div class="shop-name-area">
+    <a class="shop-name-text" href="../index.html">中坂井酒店</a>
+    <a class="shop-name-image" href="./shop_cart.html"><img src="../img/cart-mark.png" alt="買い物カート"></a>
+  </div>
+  
+  <!-- ハンバーガーメニューの設定 -->
+  <div class="media-button">
+    <p class="button1"></p>
+    <p class="button2"></p>
+    <p class="button3"></p>
+  </div>
+
+  <nav class="nav2">
+    <a class="navLink" href="./menu.html"><li>メニュー</li></a>
+    <a class="navLink" href="./event.html"><li>イベント</li></a>
+    <a class="navLink" href="./concept.html"><li>コンセプト</li></a>
+  </nav>
+    <!-- ハンバーガーメニューの設定終わり -->
+  <!------------------------------------------------- ヘッター終わり -->
+</header>
+  <!-- ---------------------------ヘッダー終 -->
+
+
+
+  <!-- ----------------------------------------メイン -->
+  <main>
+  <!-- -----トップへ戻るボタン-------クリックすればここに戻ってくる -->
+  <p class="pagetop"><a href="#section1">▲</a></p>
+
+    <article class="contact">
+      <h1 class="title">お問い合わせ</h1>
+        
+      <form id="dataForm">
+    
+        <div class="input-record">
+          <p class="hissu">必須</p>
+          <label for="name">お名前</label>
+          <input type="text" id="name" required>
+        </div>
+        <div class="input-record">
+          <p class="hissu">必須</p>
+          <label for="sname">フリガナ</label>
+          <input type="text" id="sname" required>
+        </div>
+        <div class="input-record">
+          <p class="hissu">必須</p>
+          <label for="email">メールアドレス</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="input-record">
+          <p class="hissu none">必須</p>
+          <label for="tel">電話番号</label>
+          <input type="tel" id="tel" required>
+        </div>
+        <div class="input-record">
+          <p class="hissu none">必須</p>
+          <label for="smessage">お問い合わせ種別</label>
+          <select id="smessage">
+            <option>商品について</option>
+            <option>返金・返品について</option>
+            <option>その他</option>
+          </select>
+        </div>
+        <div class="input-record">
+          <p class="hissu">必須</p>
+          <label for="message m0">お問い合わせ内容</label>
+          <textarea id="message" required></textarea>
+        </div>
+        <div class="input-record">
+          <button type="button" id="confirmButton">確認</button>
+        </div>
+    
+      </form>
+    
+      <div class="in-form">
+        <h2>お問い合わせ内容の確認</h2>
+        <dl class="name">
+          <dt>名前</dt>
+          <dd></dd>
+        </dl>
+        <dl class="sname">
+          <dt>フリガナ</dt>
+          <dd></dd>
+        </dl>
+        <dl class="email">
+          <dt>メールアドレス</dt>
+          <dd></dd>
+        </dl>
+        <dl class="tel">
+          <dt>電話番号</dt>
+          <dd></dd>
+        </dl>
+        <dl class="smessage">
+          <dt>お問い合わせ種別</dt>
+          <dd></dd>
+        </dl>
+        <dl class="message">
+          <dt>お問い合わせ内容</dt>
+          <dd></dd>
+        </dl>
+        <div class="sendButton">
+          <button type="button" id="sendButton">キャンセル</button>
+          <button type="button" id="sendButton1">送信</button>
+        </div>
+      </div>
+    
+    </article>
+
+    <div class="map1">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62774.75245622157!2d135.54994373513415!3d34.2181279043444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6006d8c73c814c5d%3A0xdce24fdf8a7ba5d5!2z5ZKM5q2M5bGx55yM5LyK6YO96YOh6auY6YeO55S6!5e0!3m2!1sja!2sjp!4v1693547786365!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="address">
+        <a href="./index.html"><img class="logo1" src="../img/logo.png" alt=""></a>
+        <p>住所:和歌山県高野町123<br>
+        電話番号:00-0000-0000<br>
+        営業時間:10:00～22:00<br>
+        定休日：水曜日<br>
+        駐車場:10台</p>
+      </div>
+    </div>
+  </main>
+  <!-- ----------------------------------メイン終 -->
+
+
+
+
+<!-- ------------------フッター-------------------------- -->
+<footer id="footer">
+  <div class="footer-area">
+    <div class="footer-top">
+      <a href="../index.html"><img class="footer-logo" src="../img/logo.png" alt="中坂井商店ロゴ"></a>
+       <h1 class="since">since2023&emsp;</h1>
+    </div>
+
+    <div class="footer-middle">
+      <div class="footer-link">
+        <div class="footer-contact">
+          <a href="./contact.html"><p>お問い合わせ</p></a>
+          <a href="./menu.html#guide"><p>ショッピングガイド</p></a>
+        </div>
+        <div class="footer-menu">
+          <a href="./menu.html"><p>メニュー</p></a>
+          <a href="./menu.html#season3"><p>季節限定商品</p></a>
+          <a href="./menu.html#kinki"><p>近畿7府県の地酒</p></a>
+        </div>
+        <div class="footer-event">
+          <a href="./event.html"><p>イベント</p></a>
+        </div>
+        <div class="footer-concept">
+          <a href="./concept.html"><p>コンセプト</p></a>
+        </div>
+        <div class="footer-add">
+          <p class="add">中坂井酒店<br>
+            定休日： 水曜日<br>
+            営業時間： 10:00～22:00<br>
+            住所： 和歌山県高野町123<br>
+            電話番号： 00-0000-0000<br>
+            駐車場： 10台</p>
+        </div>
+      </div>
+
+    </div>
+    
+    <div class="footer-bottom">
+      <a href="./privacy.html">プライバシーポリシー</a>
+      <a href="./tokutei.html">特定商取引法に基づく表記</a>
+    </div>
+    <!-- コピーライト -->
+    <div class="copyright">
+      <p>このページは職業訓練生が作成した架空のサイトです</p>
+      <p>&copy;中坂井酒店</p>
+    </div>
+  </div>
+  
+</footer>
+
+<!-- 押すと戻るボタン -->
+<script>
+  $(document).ready(function() {
+    var pagetop = $('.pagetop');
+      $(window).scroll(function () {
+         if ($(this).scrollTop() > 100) {
+            pagetop.fadeIn();
+         } else {
+              pagetop.fadeOut();
+              }
+         });
+         pagetop.click(function () {
+             $('body, html').animate({ scrollTop: 0 }, 300);
+                return false;
+     });
+  });
+  </script>
+</body>
+</html>

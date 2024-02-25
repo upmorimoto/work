@@ -1,0 +1,1903 @@
+
+
+:root {
+  --primary-color: #ffffff;
+  --font-color: #515151;
+  --border-color: #000000;
+  --main-background-color: #fafafa;
+  --sub-background-color: #e9dcc0;
+  --accent-color: #fafafa;
+}
+
+body {
+  font-family: 'Dosis','Klee One', cursive;
+}
+
+
+.main-picture {
+height: 650px;
+background-image: url(../image/main_picture.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+width: 70%;
+margin-top: 120px;
+margin-right: auto;
+margin-left: auto;
+margin-bottom: 180px;
+}
+
+
+.item h1 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #515151;
+}
+
+
+.item-text p {
+  font-size: 16px;
+  line-height: 3;
+  text-align: center;
+  border-bottom: 2px solid #000000;
+  margin-right: 220px;
+  margin-left: 220px;
+  color: var(--font-color);
+}
+
+.item-list {
+  margin-bottom: 180px;
+}
+
+.item-list h1 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 50px;
+  margin-top: 120px;
+  color: var(--font-color);
+}
+
+
+.item-list-menu {
+  border: solid 1.5px var(--font-color);
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 80px;
+}
+
+.flower-list-3000 {
+  width: 70%;
+  max-width: 90%;
+  height: 240px;
+  margin-top: 75px;
+  margin-right: auto;
+  margin-left: 175px;
+  margin-bottom: 20px;
+  padding-top: 40px;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  row-gap: 70px;
+  position: relative;
+}
+
+.yen-3000-text {
+  position: absolute;
+  top: 30px;
+  left: -60px;
+  z-index: 2;
+  font-size: 20px;
+}
+
+.yen-3000-text2 {
+  display: none;
+}
+
+.flower-list-5000 {
+  width: 70%;
+  max-width: 90%;
+  height: 240px;
+  margin-top: 75px;
+  margin-right: auto;
+  margin-left: 175px;
+  margin-bottom: 20px;
+  padding-top: 40px;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  row-gap: 70px;
+  position: relative;
+}
+
+.yen-5000-text {
+  position: absolute;
+  top: 30px;
+  left: -60px;
+  z-index: 2;
+  font-size: 20px;
+}
+
+.yen-5000-text2 {
+  display: none;
+}
+
+.flower-list-10000 {
+  width: 70%;
+  max-width: 90%;
+  height: 240px;
+  margin-top: 75px;
+  margin-right: auto;
+  margin-left: 175px;
+  margin-bottom: 20px;
+  padding-top: 40px;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  /* column-gap: 95px; */
+  row-gap: 70px;
+  /* background-color: var(--primary-color); */
+  position: relative;
+}
+
+.yen-10000-text {
+  position: absolute;
+  top: 30px;
+  left: -60px;
+  z-index: 2;
+  font-size: 20px;
+}
+
+.yen-10000-text2 {
+  display: none;
+}
+
+.cart {
+  margin-left: 500px;
+}
+
+.gift-card {
+  margin-bottom: 120px;
+}
+
+.gift-card h1 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 10px;
+  margin-top: 120px;
+  color: var(--font-color);
+}
+
+.gift-card h2 {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.cart p {
+  display: none;
+}
+
+
+.container {
+  margin: 50px auto 0;
+  max-width: 70%;
+  width: 100%;
+}
+
+.slider {
+  height: 200px;
+}
+
+/* 中央以外のスライド */
+.slick-img img {
+  height: auto;
+  opacity: .3;
+  transform: scale(.6);
+  transition: opacity .5s, transform .5s;
+  width: 100%;
+}
+/* 中央のスライド */
+.slider .slick-center img {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+/* 　　　　       　　以下すべてモーダル内のＣＳＳ　       　　 */
+
+
+/* 　　　ラジオボタンのCSS　　　 */
+.radio-button1 {
+  display: block;
+  margin-top: 20px;
+  position: absolute;
+  top: 245px;
+  left: 450px;
+}
+  
+.radio-button1:first-child {
+  margin-top: 0;
+}
+  
+.radio-button1 input {
+  margin-right: 8px;
+}
+
+.radio-button2 {
+  display: block;
+  margin-top: 20px;
+  position: absolute;
+  top: 315px;
+  left: 450px;
+}
+  
+.radio-button2:first-child {
+  margin-top: 0;
+}
+  
+.radio-button2 input {
+  margin-right: 8px;
+}
+
+/* 　　　数量変更ボタンのCSS　　　 */
+.orders {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 10px 0;
+  position: absolute;
+  top: 320px;
+  left: 725px;
+}
+
+.quantity {
+  width: 60px;
+  text-align: center;
+}
+
+.plus_btn, .minus_btn {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}  
+
+
+/* 　　　カートへ追加ボタン　　　 */
+.cart1 img {
+  width: 200px;
+  position: absolute;
+  top: 355px;
+  left: 720px;
+  cursor: pointer;
+}
+
+/* カートに追加ボタンを押した際の動き */
+
+.btn-container {
+  text-align: center;
+}
+
+.btn1, .btn2, .btn3, .btn4, .btn5, .btn6, .btn7, .btn8, .btn9 {
+  width: 80%;
+  height: 50px;
+  font-size: 18px;
+  font-weight: bold;
+
+  /* ボタンにカーソルを当てると、カーソルがポインターに変わる */
+  cursor: pointer;
+}
+
+/* ボタンにカーソルを当てたとき、ボタンを半透明にする */
+.btn1:hover, .btn2:hover, .btn3:hover, .btn4:hover, .btn5:hover, .btn6:hover, .btn7:hover, .btn8:hover, .btn9:hover {
+ opacity: 0.7;
+}
+
+/* クリックで表示させるテキストを隠す */
+.hidden {
+  display: none;
+}
+
+#btn1-text, #btn2-text, #btn3-text, #btn4-text, #btn5-text, #btn6-text, #btn7-text, #btn8-text, #btn9-text {
+  margin: 16px 0;
+  font-size: 14px;
+  color: red;
+}
+
+.btn-container p {
+  position: absolute;
+  top: 390px;
+  left: 750px;
+}
+
+/* 　　　　　商品画像ホバー効果　　　 */
+
+.image_link {
+  display:block; 
+  position:relative;
+  text-decoration:none;
+}
+
+.image_link img {
+  display:block;
+  width:200px;
+}
+
+.image_link:before {
+  content:"";
+  display:block;
+  width:200px;
+  height:200px;
+  position:absolute;
+  z-index:2;
+  background:#ffffff;/*好みの色に変えてください。*/
+  opacity:0;
+  transition:0.3s;
+}
+
+.image_link:after {
+  content:"READ MORE";/*好みの文章に変更してください。*/
+  display:block;
+  color:#000000;
+  line-height:48px;
+  width:120px;
+  border:solid 1px #000000;
+  border-radius:5px;
+  text-align:center;
+  position:absolute;
+  top:42%;
+  left:15%;
+  opacity:0;
+  z-index:3;
+  transition:0.3s;
+  font-weight:bold;
+  letter-spacing:0.2em;
+}
+
+.image_link:hover:before {
+  opacity:0.5;
+}
+
+.image_link:hover:after {
+  opacity:1;
+  margin-top:-0.5em;
+}
+
+
+
+
+/* 　　　　３０００円プランのモーダル　　　　 */
+
+.pu1 {
+  background-color: #efefef;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, .8);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 80%;
+  height: 80%;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.pu-content1 {
+  position: relative;
+}
+
+/* チェックボックスの初期設定 */
+#pu-on1{
+  display: none;
+}
+/* チェックされたらポップアップウインドウを開く */
+#pu-on1:checked + .pu1{
+  display: block;
+}
+
+/* 閉じるアイコン（右上） */
+.icon-close1 {
+  background: #515151;
+  color: #fff;
+  font-size: 30px;
+  padding: 0 10px;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
+/* 開くボタン */
+.btn-open1 {
+  /* background: #fff; */
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px auto;
+  width: 95%;
+  text-align: center;
+}
+
+/* ポップアップの内容 */
+.pu-content1 {
+  margin: 60px auto 60px 120px;
+  width: 90%;
+}
+
+.pu-name1  {
+  margin-left: 450px;
+  font-size: 24px;
+  letter-spacing: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.pu-price1 {
+  margin-left: 500px;
+  font-size: 20px;
+  position: absolute;
+  top: 40px;
+  left: 280px;
+}
+
+.pu-text1  {
+  margin-left: 450px;
+  line-height: 1.5;
+  position: absolute;
+  top: 80px;
+  left: 0;
+}
+.explanation1 {
+  position: absolute;
+  top: 195px;
+  left: 450px;
+}
+
+.destination1 {
+  position: absolute;
+  top: 225px;
+  left: 450px;
+}
+
+.gift1 {
+  position: absolute;
+  top: 295px;
+  left: 450px;
+}
+
+
+.select-box1 {
+  width: 160px;
+  height: 40px;
+  position: absolute;
+  top: 360px;
+  left: 450px;
+  color: #515151;
+}
+
+
+.pu2 {
+  background-color: #efefef;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, .8);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 80%;
+  height: 80%;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.pu-content2 {
+  position: relative;
+}
+
+/* チェックボックスの初期設定 */
+#pu-on2{
+  display: none;
+}
+/* チェックされたらポップアップウインドウを開く */
+#pu-on2:checked + .pu2{
+  display: block;
+}
+
+/* 閉じるアイコン（右上） */
+.icon-close2 {
+  background: #515151;
+  color: #fff;
+  font-size: 30px;
+  padding: 0 10px;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
+/* 開くボタン */
+.btn-open2 {
+  /* background: #fff; */
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px auto;
+  width: 95%;
+  text-align: center;
+}
+
+/* ポップアップの内容 */
+.pu-content2 {
+  margin: 60px auto 60px 120px;
+  width: 90%;
+}
+
+.pu-name2  {
+  margin-left: 450px;
+  font-size: 24px;
+  letter-spacing: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.pu-price2 {
+  margin-left: 500px;
+  font-size: 20px;
+  position: absolute;
+  top: 40px;
+  left: 280px;
+}
+
+.pu-text2  {
+  margin-left: 450px;
+  line-height: 1.5;
+  position: absolute;
+  top: 80px;
+  left: 0;
+}
+.explanation2 {
+  position: absolute;
+  top: 195px;
+  left: 450px;
+}
+
+.destination2 {
+  position: absolute;
+  top: 225px;
+  left: 450px;
+}
+
+.gift2 {
+  position: absolute;
+  top: 295px;
+  left: 450px;
+}
+
+.select-box2 {
+  width: 160px;
+  height: 40px;
+  position: absolute;
+  top: 360px;
+  left: 450px;
+  color: #515151;
+}
+  
+
+.pu3 {
+  background-color: #efefef;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, .8);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 80%;
+  height: 80%;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.pu-content3 {
+  position: relative;
+}
+
+/* チェックボックスの初期設定 */
+#pu-on3{
+  display: none;
+}
+/* チェックされたらポップアップウインドウを開く */
+#pu-on3:checked + .pu3{
+  display: block;
+}
+
+/* 閉じるアイコン（右上） */
+.icon-close3 {
+  background: #515151;
+  color: #fff;
+  font-size: 30px;
+  padding: 0 10px;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
+/* 開くボタン */
+.btn-open3 {
+  /* background: #fff; */
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px auto;
+  width: 95%;
+  text-align: center;
+}
+
+/* ポップアップの内容 */
+.pu-content3 {
+  margin: 60px auto 60px 120px;
+  width: 90%;
+}
+
+.pu-name3  {
+  margin-left: 450px;
+  font-size: 24px;
+  letter-spacing: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.pu-price3 {
+  margin-left: 500px;
+  font-size: 20px;
+  position: absolute;
+  top: 40px;
+  left: 280px;
+}
+
+.pu-text3  {
+  margin-left: 450px;
+  line-height: 1.5;
+  position: absolute;
+  top: 80px;
+  left: 0;
+}
+.explanation3 {
+  position: absolute;
+  top: 195px;
+  left: 450px;
+}
+
+.destination3 {
+  position: absolute;
+  top: 225px;
+  left: 450px;
+}
+
+.gift3 {
+  position: absolute;
+  top: 295px;
+  left: 450px;
+}
+
+.select-box3 {
+  width: 160px;
+  height: 40px;
+  position: absolute;
+  top: 360px;
+  left: 450px;
+  color: #515151;
+}
+
+
+
+
+/* 　　　　５０００円プランのモーダル　　　　 */
+
+.pu4 {
+  background-color: #efefef;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, .8);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 80%;
+  height: 80%;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.pu-content4 {
+  position: relative;
+}
+
+/* チェックボックスの初期設定 */
+#pu-on4{
+  display: none;
+}
+/* チェックされたらポップアップウインドウを開く */
+#pu-on4:checked + .pu4{
+  display: block;
+}
+
+/* 閉じるアイコン（右上） */
+.icon-close4 {
+  background: #515151;
+  color: #fff;
+  font-size: 30px;
+  padding: 0 10px;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
+/* 開くボタン */
+.btn-open4 {
+  /* background: #fff; */
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px auto;
+  width: 95%;
+  text-align: center;
+}
+
+/* ポップアップの内容 */
+.pu-content4 {
+  margin: 60px auto 60px 120px;
+  width: 90%;
+}
+
+.pu-name4  {
+  margin-left: 450px;
+  font-size: 24px;
+  letter-spacing: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.pu-price4 {
+  margin-left: 500px;
+  font-size: 20px;
+  position: absolute;
+  top: 40px;
+  left: 280px;
+}
+
+.pu-text4  {
+  margin-left: 450px;
+  line-height: 1.5;
+  position: absolute;
+  top: 80px;
+  left: 0;
+}
+.explanation4 {
+  position: absolute;
+  top: 195px;
+  left: 450px;
+}
+
+.destination4 {
+  position: absolute;
+  top: 225px;
+  left: 450px;
+}
+
+.gift4 {
+  position: absolute;
+  top: 295px;
+  left: 450px;
+}
+
+.select-box4 {
+  width: 160px;
+  height: 40px;
+  position: absolute;
+  top: 360px;
+  left: 450px;
+  color: #515151;
+}
+
+.pu5 {
+  background-color: #efefef;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, .8);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 80%;
+  height: 80%;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.pu-content5 {
+  position: relative;
+}
+
+/* チェックボックスの初期設定 */
+#pu-on5{
+  display: none;
+}
+/* チェックされたらポップアップウインドウを開く */
+#pu-on5:checked + .pu5{
+  display: block;
+}
+
+/* 閉じるアイコン（右上） */
+.icon-close5 {
+  background: #515151;
+  color: #fff;
+  font-size: 30px;
+  padding: 0 10px;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
+/* 開くボタン */
+.btn-open5 {
+  /* background: #fff; */
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px auto;
+  width: 95%;
+  text-align: center;
+}
+
+/* ポップアップの内容 */
+.pu-content5 {
+  margin: 60px auto 60px 120px;
+  width: 90%;
+}
+
+.pu-name5  {
+  margin-left: 450px;
+  font-size: 24px;
+  letter-spacing: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.pu-price5 {
+  margin-left: 500px;
+  font-size: 20px;
+  position: absolute;
+  top: 40px;
+  left: 280px;
+}
+
+.pu-text5  {
+  margin-left: 450px;
+  line-height: 1.5;
+  position: absolute;
+  top: 80px;
+  left: 0;
+}
+.explanation5 {
+  position: absolute;
+  top: 195px;
+  left: 450px;
+}
+
+.destination5 {
+  position: absolute;
+  top: 225px;
+  left: 450px;
+}
+
+.gift5 {
+  position: absolute;
+  top: 295px;
+  left: 450px;
+}
+
+.select-box5 {
+  width: 160px;
+  height: 40px;
+  position: absolute;
+  top: 360px;
+  left: 450px;
+  color: #515151;
+}
+
+.pu6 {
+  background-color: #efefef;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, .8);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 80%;
+  height: 80%;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.pu-content6 {
+  position: relative;
+}
+
+/* チェックボックスの初期設定 */
+#pu-on6{
+  display: none;
+}
+/* チェックされたらポップアップウインドウを開く */
+#pu-on6:checked + .pu6{
+  display: block;
+}
+
+/* 閉じるアイコン（右上） */
+.icon-close6 {
+  background: #515151;
+  color: #fff;
+  font-size: 30px;
+  padding: 0 10px;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
+/* 開くボタン */
+.btn-open6 {
+  /* background: #fff; */
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px auto;
+  width: 95%;
+  text-align: center;
+}
+
+/* ポップアップの内容 */
+.pu-content6 {
+  margin: 60px auto 60px 120px;
+  width: 90%;
+}
+
+.pu-name6  {
+  margin-left: 450px;
+  font-size: 24px;
+  letter-spacing: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.pu-price6  {
+  margin-left: 500px;
+  font-size: 20px;
+  position: absolute;
+  top: 40px;
+  left: 280px;
+}
+
+.pu-text6  {
+  margin-left: 450px;
+  line-height: 1.5;
+  position: absolute;
+  top: 80px;
+  left: 0;
+}
+.explanation6 {
+  position: absolute;
+  top: 195px;
+  left: 450px;
+}
+
+.destination6 {
+  position: absolute;
+  top: 225px;
+  left: 450px;
+}
+
+.gift6 {
+  position: absolute;
+  top: 295px;
+  left: 450px;
+}
+
+.select-box6 {
+  width: 160px;
+  height: 40px;
+  position: absolute;
+  top: 360px;
+  left: 450px;
+  color: #515151;
+}
+
+
+/* 　　　　１００００円プランのモーダル　　　　 */
+
+.pu7 {
+  background-color: #efefef;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, .8);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 80%;
+  height: 80%;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.pu-content7 {
+  position: relative;
+}
+
+/* チェックボックスの初期設定 */
+#pu-on7{
+  display: none;
+}
+/* チェックされたらポップアップウインドウを開く */
+#pu-on7:checked + .pu7{
+  display: block;
+}
+
+/* 閉じるアイコン（右上） */
+.icon-close7 {
+  background: #515151;
+  color: #fff;
+  font-size: 30px;
+  padding: 0 10px;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
+/* 開くボタン */
+.btn-open7 {
+  /* background: #fff; */
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px auto;
+  width: 95%;
+  text-align: center;
+}
+
+/* ポップアップの内容 */
+.pu-content7 {
+  margin: 60px auto 60px 120px;
+  width: 90%;
+}
+
+.pu-name7  {
+  margin-left: 450px;
+  font-size: 24px;
+  letter-spacing: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.pu-price7  {
+  margin-left: 500px;
+  font-size: 20px;
+  position: absolute;
+  top: 40px;
+  left: 280px;
+}
+
+.pu-text7  {
+  margin-left: 450px;
+  line-height: 1.5;
+  position: absolute;
+  top: 80px;
+  left: 0;
+}
+.explanation7 {
+  position: absolute;
+  top: 195px;
+  left: 450px;
+}
+
+.destination7 {
+  position: absolute;
+  top: 225px;
+  left: 450px;
+}
+
+.gift7 {
+  position: absolute;
+  top: 295px;
+  left: 450px;
+}
+
+.select-box7 {
+  width: 160px;
+  height: 40px;
+  position: absolute;
+  top: 360px;
+  left: 450px;
+  color: #515151;
+}
+
+
+.pu8 {
+  background-color: #efefef;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, .8);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 80%;
+  height: 80%;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.pu-content8 {
+  position: relative;
+}
+
+/* チェックボックスの初期設定 */
+#pu-on8{
+  display: none;
+}
+/* チェックされたらポップアップウインドウを開く */
+#pu-on8:checked + .pu8{
+  display: block;
+}
+
+/* 閉じるアイコン（右上） */
+.icon-close8 {
+  background: #515151;
+  color: #fff;
+  font-size: 30px;
+  padding: 0 10px;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
+/* 開くボタン */
+.btn-open8 {
+  /* background: #fff; */
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px auto;
+  width: 95%;
+  text-align: center;
+}
+
+/* ポップアップの内容 */
+.pu-content8 {
+  margin: 60px auto 60px 120px;
+  width: 90%;
+}
+
+.pu-name8  {
+  margin-left: 450px;
+  font-size: 24px;
+  letter-spacing: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.pu-price8  {
+  margin-left: 500px;
+  font-size: 20px;
+  position: absolute;
+  top: 40px;
+  left: 280px;
+}
+
+.pu-text8  {
+  margin-left: 450px;
+  line-height: 1.5;
+  position: absolute;
+  top: 80px;
+  left: 0;
+}
+.explanation8 {
+  position: absolute;
+  top: 195px;
+  left: 450px;
+}
+
+.destination8 {
+  position: absolute;
+  top: 225px;
+  left: 450px;
+}
+
+.gift8 {
+  position: absolute;
+  top: 295px;
+  left: 450px;
+}
+
+.select-box8 {
+  width: 160px;
+  height: 40px;
+  position: absolute;
+  top: 360px;
+  left: 450px;
+  color: #515151;
+}
+
+
+.pu9 {
+  background-color: #efefef;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, .8);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 80%;
+  height: 80%;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.pu-content9 {
+  position: relative;
+}
+
+/* チェックボックスの初期設定 */
+#pu-on9{
+  display: none;
+}
+/* チェックされたらポップアップウインドウを開く */
+#pu-on9:checked + .pu9{
+  display: block;
+}
+
+/* 閉じるアイコン（右上） */
+.icon-close9{
+  background: #515151;
+  color: #fff;
+  font-size: 30px;
+  padding: 0 10px;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
+/* 開くボタン */
+.btn-open9{
+  /* background: #fff; */
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px auto;
+  width: 95%;
+  text-align: center;
+}
+
+/* ポップアップの内容 */
+.pu-content9{
+  margin: 60px auto 60px 120px;
+  width: 90%;
+}
+
+.pu-name9  {
+  margin-left: 450px;
+  font-size: 24px;
+  letter-spacing: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.pu-price9  {
+  margin-left: 500px;
+  font-size: 20px;
+  position: absolute;
+  top: 40px;
+  left: 280px;
+}
+
+.pu-text9  {
+  margin-left: 450px;
+  line-height: 1.5;
+  position: absolute;
+  top: 80px;
+  left: 0;
+}
+.explanation9 {
+  position: absolute;
+  top: 195px;
+  left: 450px;
+}
+
+.destination9 {
+  position: absolute;
+  top: 225px;
+  left: 450px;
+}
+
+.gift9 {
+  position: absolute;
+  top: 295px;
+  left: 450px;
+}
+
+.select-box9 {
+  width: 160px;
+  height: 40px;
+  position: absolute;
+  top: 360px;
+  left: 450px;
+  color: #515151;
+}
+
+
+/* カートに追加 */
+.in_cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}
+.in_cart img {
+  display: block;
+  width: 10%;
+  aspect-ratio: 1;
+  margin: 0 5%;
+}
+
+/* マイカートGOボタン */
+.cart {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10%;
+}
+.cart img {
+  width: 30%;
+  aspect-ratio: 1;
+  display: block;
+  margin: 10% auto;
+}
+
+
+
+.list-title {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  margin: 0 auto 5% auto;
+  background-image: url(../img/product-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.product_list {
+  margin: 0 auto 8% auto;
+}
+.list ul {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin: 0 5%;
+}
+
+.item {
+  padding: 15px;
+}
+.item img {
+  aspect-ratio: 1.5;
+}
+.item p {
+  font-size: 0.9rem;
+  margin: 10px;
+}
+
+
+
+
+@media (max-width:800px){
+
+  /* トップ画像 */
+  .main-picture{
+    height: auto;
+    padding-bottom: 70px;
+    padding-top: 30px;
+  }
+
+  .item-list {
+    margin-top: -150px;
+    margin-bottom: 80px;
+  }
+
+  .item-list h1 {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+/* ３０００円の商品リスト */
+  .flower-list-3000 {
+    grid-template-columns: repeat(3, 180px);
+    padding-left: 260px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin-left: 0px;
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+
+  .yen-3000-text {
+    display: none;
+  }
+
+  .yen-3000 {
+    position: relative;
+  }
+
+  .yen-3000-text2 {
+    display: block;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+  }
+
+/* ５０００円の商品リスト */
+  .flower-list-5000 {
+    grid-template-columns: repeat(3, 180px);
+    padding-left: 260px;
+    margin-right: 250px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin-left: 0px;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+
+  .yen-5000-text {
+    display: none;
+  }
+
+  .yen-5000-text2 {
+    display: block;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+  }
+
+/* １００００円の商品リスト */
+  .flower-list-10000 {
+    grid-template-columns: repeat(3, 180px);
+    padding-left: 260px;
+    margin-right: 250px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin-left: 0px;
+    margin-top: 10px;
+    margin-bottom: -20px;
+  }
+
+  .yen-10000-text {
+    display: none;
+  }
+
+  .yen-10000-text2 {
+    display: block;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+  }
+
+/* ギフトカード */
+
+  .gift-card {
+    margin-top: 0;
+  }
+
+
+  .gift-card h1{
+    font-size: 20px;
+    margin-bottom: 30px;
+    margin-top: 0px;
+  }
+
+
+/* スライダー ドット */
+  .slider {
+    height: 130px;
+  }
+
+  /* 中央以外のスライド */
+  .slick-img img {
+    height: auto;
+    opacity: .3;
+    transform: scale(.6);
+    transition: opacity .5s, transform .5s;
+    width: 100%;
+  }
+  /* 中央のスライド */
+  .slider .slick-center img {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+/* 　　　　　商品画像ホバー効果　　　 */
+
+.image_link {
+  display:block; 
+  position:relative;
+  text-decoration:none;
+}
+
+.image_link img {
+  display:block;
+  width:180px;
+}
+
+.image_link:before {
+  content:"";
+  display:block;
+  width:180px;
+  height:180px;
+  position:absolute;
+  z-index:2;
+  background:#ffffff;/*好みの色に変えてください。*/
+  opacity:0;
+  transition:0.3s;
+}
+
+.image_link:after {
+  content:"READ MORE";/*好みの文章に変更してください。*/
+  display:block;
+  color:#000000;
+  line-height:48px;
+  width:120px;
+  border:solid 1px #000000;
+  border-radius:5px;
+  text-align:center;
+  position:absolute;
+  top:42%;
+  left:15%;
+  opacity:0;
+  z-index:3;
+  transition:0.3s;
+  font-weight:bold;
+  letter-spacing:0.2em;
+}
+
+.image_link:hover:before {
+  opacity:0.5;
+}
+
+.image_link:hover:after {
+  opacity:1;
+  margin-top:-0.5em;
+}
+
+
+
+.pu1, .pu2, .pu3, .pu4, .pu5, .pu6, .pu7, .pu8, .pu9 {
+  overflow-y: scroll;
+}
+
+
+
+/* 　　　　       　　以下すべてモーダル内のＣＳＳ　       　　 */
+
+ .pu-content1 img {
+    width: 200px;
+    margin-left: -70px;
+    position: relative;
+  }
+
+ .pu-content2 img {
+  width: 200px;
+  margin-left: -70px;
+  position: relative;
+  }
+
+  .pu-content3 img {
+    width: 200px;
+    margin-left: -70px;
+    position: relative;
+  }
+
+  .pu-content4 img {
+    width: 200px;
+    margin-left: -70px;
+    position: relative;
+  }
+
+ .pu-content5 img {
+  width: 200px;
+  margin-left: -70px;
+  position: relative;
+}
+
+  .pu-content6 img {
+    width: 200px;
+    margin-left: -70px;
+    position: relative;
+  }
+
+ .pu-content7 img {
+  width: 200px;
+  margin-left: -70px;
+  position: relative;
+}
+
+ .pu-content8 img {
+  width: 200px;
+  margin-left: -70px;
+  position: relative;
+}
+
+  .pu-content9 img {
+    width: 200px;
+    margin-left: -70px;
+    position: relative;
+  }
+
+  .pu-name1, .pu-name2, .pu-name3, .pu-name4, .pu-name5, .pu-name6, .pu-name7, .pu-name8, .pu-name9  {
+    margin-left: -75px;
+    font-size: 24px;
+    letter-spacing: 3px;
+    position: absolute;
+    top: 210px;
+    left: 0px;
+  }
+
+  .pu-price1, .pu-price2, .pu-price3, .pu-price4, .pu-price5, .pu-price6, .pu-price7, .pu-price8, .pu-price9 {
+    margin-left: -75px;
+    font-size: 20px;
+    position: absolute;
+    top: 210px;
+    left: 150px;
+  }
+
+  .pu-text1 {
+    margin-left: -75px;
+    line-height: 1.5;
+    font-size: 12px;
+    position: absolute;
+    top: 255px;
+    left: 0px;
+  }
+
+  .pu-text2 {
+    margin-left: -75px;
+    line-height: 1.5;
+    font-size: 12px;
+    position: absolute;
+    top: 255px;
+    left: -25px;
+  }
+
+  .pu-text3 {
+    margin-left: -75px;
+    line-height: 1.5;
+    font-size: 12px;
+    position: absolute;
+    top: 255px;
+    left: -18px;
+  }
+
+  .pu-text4 {
+    margin-left: -75px;
+    line-height: 1.5;
+    font-size: 12px;
+    position: absolute;
+    top: 255px;
+    left: -20px;
+  }
+
+  .pu-text5 {
+    margin-left: -75px;
+    line-height: 1.5;
+    font-size: 12px;
+    position: absolute;
+    top: 255px;
+    left: -30px;
+  }
+
+  .pu-text6{
+    margin-left: -75px;
+    line-height: 1.5;
+    font-size: 12px;
+    position: absolute;
+    top: 255px;
+    left: 0px;
+  }
+
+  .pu-text7{
+    margin-left: -75px;
+    line-height: 1.5;
+    font-size: 12px;
+    position: absolute;
+    top: 255px;
+    left: -10px;
+  }
+
+  .pu-text8 {
+    margin-left: -75px;
+    line-height: 1.5;
+    font-size: 12px;
+    position: absolute;
+    top: 255px;
+    left: -5px;
+  }
+
+  .pu-text9 {
+    margin-left: -75px;
+    line-height: 1.5;
+    font-size: 12px;
+    position: absolute;
+    top: 255px;
+    left: -25px;
+  }
+  
+
+  .explanation1, .explanation2, .explanation3, .explanation4, .explanation5, .explanation6, .explanation7, .explanation8, .explanation9 {
+    position: absolute;
+    top: 325px;
+    left: -100px;
+    font-size: 12px;
+  }
+
+  .destination1, .destination2, .destination3, .destination4, .destination5, .destination6, .destination7, .destination8, .destination9  {
+    position: absolute;
+    top: 345px;
+    font-size: 14px;
+    left: -100px;
+  }
+
+  .gift1, .gift2, .gift3, .gift4, .gift5, .gift6, .gift7, .gift8, .gift9 {
+    position: absolute;
+    top: 345px;
+    font-size: 14px;
+    left: -10px;
+  }
+
+  .select-box1, .select-box2, .select-box3, .select-box4, .select-box5, .select-box6, .select-box7, .select-box8, .select-box9 {
+    width: 100px;
+    height: 35px;
+    font-size: 10px;
+    position: absolute;
+    top: 360px;
+    left: 70px;
+    color: #515151;
+  }
+
+
+  /* 　　　ラジオボタンのCSS　　　 */
+  .radio-button1 {
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+
+    position: absolute;
+    top: 360px;
+    left: -100px;
+  }
+
+  .radio-button1:first-child {
+    margin-top: 0;
+  }
+
+  .radio-button1 input {
+    margin-right: 8px;
+  }
+
+  .radio-button2 {
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    position: absolute;
+    top: 360px;
+    left: -10px;
+  }
+
+  .radio-button2:first-child {
+    margin-top: 0;
+  }
+
+  .radio-button2 input {
+    margin-right: 8px;
+  }
+
+  /* 　　　数量変更ボタンのCSS　　　 */
+  .orders {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 10px 0;
+    position: absolute;
+    top: 395px;
+    left: 10px;
+  }
+
+  .quantity {
+    width: 60px;
+    text-align: center;
+  }
+
+  .plus_btn, .minus_btn {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+  }  
+
+  /* 　　　カートへ追加ボタン　　　 */
+  .cart1 img {
+    width: 120px;
+    position: absolute;
+    top: 425px;
+    left: 45px;
+    cursor: pointer;
+  }
+
+  /* クリックで表示させるテキストを隠す */
+  .hidden {
+    display: none;
+  }
+
+  #btn1-text, #btn2-text, #btn3-text, #btn4-text, #btn5-text, #btn6-text, #btn7-text, #btn8-text, #btn9-text {
+    margin: 16px 0;
+    font-size: 14px;
+    color: red;
+    position: absolute;
+    top: 440px;
+    left: -30px;
+  }
+
+  .btn-container p {
+    position: absolute;
+    top: 390px;
+    left: 750px;
+  }
+
+
+
+
+}

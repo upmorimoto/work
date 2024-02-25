@@ -1,0 +1,261 @@
+@charset "utf-8";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Dosis','Klee One', cursive;
+  font-size: 16px;
+  color: #050505;
+  line-height: 1;
+  background-color: var(--main-background-color);
+}
+
+img {
+  max-width: 100%;
+}
+
+
+/* ヘッダー */
+
+:root {
+  --primary-color: #ffffff;
+  --font-color: #515151;
+  --border-color: #000000;
+  /* --main-background-color: #639745; */
+  --main-background-color: #fafafa;
+  --sub-background-color: #e9dcc0;
+  --accent-color: #fafafa;
+}
+
+.header-inner {
+  background-color: #fafafa;
+  background-color: rgba(250, 250, 250, 0.5);
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  z-index: 3;
+  width: 40%;
+  color: var(--font-color);
+  max-width: 100vw;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.toggle-menu-button {
+  display: none;
+}
+
+.header-logo {
+  margin-left: 60px;
+  display: block;
+  width: 120px;
+}
+
+.header-logo:hover {
+	opacity: 0.5 ;
+}
+
+.site-menu {
+  padding-left: 20px;
+  display: flex;
+}
+
+.site-menu ul li {
+  font-size: 18px;
+  line-height: 1.2;
+  display: inline-block;
+  text-align: center;
+  padding-left: 40px;
+  
+}
+
+.site-menu ul li:hover {
+  text-decoration: underline;
+}
+
+.site-menu ul li span {
+  font-weight: bold;
+}
+
+.body {
+  background-color: var(--main-background-color);
+}
+
+.heater-logo-img {
+  position   : relative;                /* 指定した分だけ相対的に移動 */
+}
+.heater-logo-img:hover .balloon {
+  display: inline;                /* インライン要素として表示 */
+}
+.balloon {
+  position   : absolute;                /* 親要素を基準 */
+  display: none;                        /* 要素を非表示 */
+  padding: 2px;                         /* テキストの前後の余白 */
+  background-color: rgba(250, 250, 250, 0.5);  /* 背景色（透明度） */
+  width:80px;                          /* 吹き出し全体の幅 */
+  top: 100px; 
+  left: 75px;                         /* 表示位置 */
+  font-size: 80%;                       /* 文字サイズ */
+}
+
+.balloon:after{
+  border-left: 12px solid rgba(250, 250, 250, 0.5);   /* 吹き出し口の幅・色 */
+  border-top: 10px solid transparent;     /* 吹き出し口の高さ１／２ */
+  border-bottom: 10px solid transparent;  /* 吹き出し口の高さ１／２ */
+  right: -12px;                           /* 吹き出し口の位置調整 */
+  top: 5%; 
+  left: 40px;                               /* 吹き出し口の縦位置 */
+  content: "";                       /* コンテンツの挿入 */
+  position: absolute;                /* 親要素を基準 */
+}
+
+.shopping-cart {
+  position: fixed;
+  top: 45px;
+  left: 1250px;
+}
+
+.cart-link {
+  display: flex;
+  justify-content: center;
+  width: 30px;
+  position: fixed;
+}
+
+.popup {
+  width: 18px;
+  height: 15px;
+  font-weight: 500;
+  line-height: 0.9;
+  text-align: center;
+  color: var(--font-color);
+  background-color: var(--main-background-color);
+  border-radius: 30%;
+  z-index: 50;
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 35px;
+  border-left: solid 0.5px var(--font-color);
+  border-right: solid 0.5px var(--font-color);
+  border-radius: 6px;
+}
+
+
+
+/* フッター */
+
+.footer {
+  color: var(--font-color);
+  background-color: var(--main-background-color);
+  padding-top: 60px;
+  padding-bottom: 15px;
+  margin-bottom: 80px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-site-menu ul {
+  margin-left: 200px;
+  line-height: 1.5;
+}
+
+.footer-site-menu ul li:hover {
+  text-decoration: underline;
+}
+
+.copy {
+  margin-top: 30px;
+  text-align: center;
+}
+
+
+
+@media (max-width:800px){
+
+.header-inner {
+  background-color: rgba(250, 250, 250, 0.5);
+  width: 80%;
+}
+
+.header-logo {
+  width: 80px;
+  margin-left: 20px;
+}
+
+.site-menu ul {
+  display: flex;
+  justify-content: left;
+}
+
+.site-menu ul li {
+  margin-left:-20px;
+}
+
+.shopping-cart {
+  position: fixed;
+  top: 45px;
+  left: 320px;
+}
+
+.cart-link {
+  display: flex;
+  justify-content: center;
+  width: 30px;
+  position: fixed;
+}
+
+.popup {
+  width: 18px;
+  height: 15px;
+  font-weight: 500;
+  line-height: 0.9;
+  text-align: center;
+  color: var(--font-color);
+  background-color: var(--main-background-color);
+  border-radius: 30%;
+  z-index: 50;
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 35px;
+  border-left: solid 0.5px var(--font-color);
+  border-right: solid 0.5px var(--font-color);
+  border-radius: 6px;
+}
+
+
+.footer-site-menu ul {
+  margin-left: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

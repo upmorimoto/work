@@ -1,0 +1,62 @@
+.unit-hero {
+    background-image: url(../images/image/unit-hero.jpg);
+}
+.unit-legion {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10% auto 10% auto;
+    position: relative;  
+}
+.unit-card {
+    width: 40%;
+}
+.unit-legion .card-img {
+    width: 40%;
+    aspect-ratio: 1.5;
+    border: 1px solid var(--border-color);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10%;
+    margin: 0 auto;
+    box-shadow: 5px 5px 10px #000000a4;
+    transition: all 0.5s;
+}
+.card1 .card-img {
+    background-image: url(../unit/unit_img/boss-top.png);
+}
+.card2 .card-img {
+    background-image: url(../unit/unit_img/ruri-top.jpg);
+}
+.card3 .card-img {
+    background-image: url(../unit/unit_img/ippo-top.jpg);
+}
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff58;
+    border-radius: 10%;
+    opacity: 0;
+}
+.card-img:hover {
+    transform: scale(150%);
+}
+.card-img:hover .overlay {
+    opacity: 1;
+}
+
+/* アセット */
+.asset {
+    width: 40px;
+    height: 40px;
+    background-color: var(--border-color);
+    margin: 5% auto;
+    clip-path: polygon(50% 50%, 100% 0, 100% 25%, 50% 75%, 0 25%, 0 0);
+    animation: asset 1.5s linear infinite;
+}
+@keyframes asset {
+    from {transform:translateY(0px)}
+    to {transform: translateY(30px);}
+}

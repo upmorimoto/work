@@ -1,0 +1,923 @@
+@charset "UTF-8";
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F4F3F0;
+  width: 100%;
+  font-family: serif;
+}
+
+nav {
+  list-style-type: none
+}
+
+ul {
+  list-style-type: none
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+/* ★★★★★★基本設定ここまで★★★★★★★★★★★★★★★★★★★★★★★★ */
+
+
+/* ----------------------------------------ヘッダー----------------- */
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  position: fixed;
+  z-index: 100;
+  transition-duration: 0.6s;
+}
+
+/* -----------------------------------中坂井酒店　店名エリア--------------- */
+.shop-name-area {
+  position: absolute;
+  width: 100%;
+  height: 212px;
+  background-color: #19264a;
+  transition-duration: 0.6s;
+}
+
+.shop-name-text {
+  position: absolute;
+  top: 25%;
+  left: 30%;
+  font-size: 6.5rem;
+  color: #ffffff;
+  font-family: "HG行書体","HGP行書体",cursive;
+  transition-duration: 0.6s;
+}
+
+.shop-name-image {
+  position: absolute;
+  display: none;
+  top: 20px;
+  left: 90%;
+  width: 40px;
+}
+
+.shop-name-image.is-show {
+  display: block;
+}
+
+/* -----------------スクロールした時のヘッダーの変化(トップページのみ) */
+header.is-show {
+  transition-duration: 0.2s;
+  height: 130px;
+}
+
+.shop-name-area.is-show {
+  transition-duration: 0.2s;
+  height: 80px;
+}
+
+.shop-name-text.is-show {
+  transition-duration: 0.2s;
+  font-size: 3rem;
+  top: 20%;
+  left: 40%;
+}
+
+/* ----------------------------------------ナビゲーション----------- */
+.nav1 {
+  font-family: "HG行書体","HGP行書体",cursive;
+  width: 100%;
+  top: 170px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 50px;
+  font-size: 14px;
+}
+
+.navLink {
+  width: 140px;
+  text-align: center;
+  display: block;
+  margin-right: 10px;
+  padding: 10px 20px;
+  color: #fff;
+}
+
+.navLink:hover {
+  background-color: #cccccc9c;
+}
+
+/* ----------------スクロールしたらnav1が消えます(代わりにnav2が現れます) */
+.nav1.is-show {
+  transition-duration: 0.6s;
+  display: none;
+}
+
+
+/* -------------------------------ハンバーガーメニューCSS始まり------------- */
+
+.media-button {
+  margin: 25px 0 0 40px;
+  width: 36px;
+  height: 30px;
+  font-size: 40px;
+  line-height: 3;
+  font-weight: bold;
+  z-index: 100;
+  display: none;
+  transition-duration: 0.6s;
+  cursor: pointer;
+}
+
+.media-button p {
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+.media-button.is-show {
+  display: block;
+  transition-duration: 0.6s;
+}
+
+.button1 {
+  margin-bottom: auto;
+}
+
+.button2 {
+  margin-top: 12px;
+}
+
+.button3 {
+  margin-top: 12px;
+}
+
+.button1.is-show {
+  transform-origin: left;
+  transform: rotate(50deg);
+  transition: 0.3s;
+}
+
+.button2.is-show {
+  opacity: 0;
+}
+
+.button3.is-show {
+  transform-origin: left;
+  transform: rotate(-50deg);
+  transition: 0.3s;
+}
+
+.nav2 {
+  position: absolute;
+  top: 80px;
+  left: -200px;
+  width: 140px;
+  height: 138px;
+  background-color: #19264a;
+  z-index: 100;
+  bottom: 20px;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.nav2.is-show {
+  opacity: 1;
+  transform: translateX(200px);
+  transition: 0.5s;
+}
+/* --------------------------------ハンバーガーメニューCSS終わり-------- */
+
+/* -----------------------------------サイトトップバナー終わり--------------- */
+
+/* ----------------------------------------------ヘッダー終わり----------------- */
+
+
+
+/* -----------文字を横スライド--------*/
+/* スライドレールの枠 */
+.text {
+  width: 800px;
+  font-size: 16px;
+}
+
+.t-slide {
+  padding-top: 226px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+/* text2つをまとめたスライドブロック */
+.slide-text:hover {
+  font-weight: bold;
+}
+
+
+.slide-text {
+  display: flex;
+  -webkit-animation: loop-slide 20s infinite linear 1s both;
+  animation: loop-slide 20s infinite linear 1s both;
+}
+@-webkit-keyframes loop-slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes loop-slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+/*------ ヒーローイメージ--------- */
+.hero img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+}
+
+/* サイト一言 */
+.siteconcept{
+  margin-top:30px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+
+/* --------------------------------------季節限定-------------- */
+.season3{
+  margin-top: 100px;
+  text-align: center;
+}
+
+.kisetsu {
+  width: 80%;
+  height: 300px;
+  margin: 20px auto 40px;
+  background-color: #fff;
+}
+
+.kisetsu-contents {
+  display: flex;
+  justify-content: space-around;
+}
+
+.kisetsu-contents img {
+  margin: 10px;
+  width: 250px;
+  height: 250px;
+  margin-right: 20px;
+}
+
+.form {
+  text-align: center;
+  margin-bottom: 200px;
+}
+
+/* -----------商品写真ホバー時設定------季節----- */
+.kisetsu-contents img:hover {
+  transform-origin: center center;
+  transition-duration: 0.3s;
+  transform: scale(1.1);
+  border-radius: 10px;
+  opacity: 1;
+  cursor: pointer;
+}
+/* --------------------------------------季節限定終わり-------------- */
+
+
+/* ---------------------------------------近畿７種----------------- */
+.list7{
+  margin-top: 80px;
+  text-align: center;
+}
+
+.seven {
+  width: 90%;
+  height: 220px;
+  margin: 20px auto 40px;
+  background-color: #fff;
+}
+/* スライドする要素 */
+.content {
+  width: 200px;
+  height: 200px;
+  background-color: #8d8d8d;
+  background-size: contain;
+}
+
+.content:nth-child(1) {
+  background-image: url(../img/紀土画像.png);
+}
+.content:nth-child(2) {
+  background-image: url(../img/作画像.png);
+}
+.content:nth-child(3) {
+  background-image: url(../img/不老泉画像.png);
+}
+.content:nth-child(4) {
+  background-image: url(../img/日日画像.png);
+}
+.content:nth-child(5) {
+  background-image: url(../img/吉村画像.png);
+}
+.content:nth-child(6) {
+  background-image: url(../img/小鼓画像.png);
+}
+.content:nth-child(7) {
+  background-image: url(../img/風の森画像.png);
+}
+
+
+/* スライドレールの枠 */
+.wrap {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  height: 220px;
+}
+/* content4つをまとめたスライドブロック */
+.slideshow {
+  display: flex;
+  -webkit-animation: loop-slide 28s infinite linear 1s both;
+  animation: loop-slide 28s infinite linear 1s both;
+}
+@-webkit-keyframes loop-slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes loop-slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+
+/* ホバー時の装飾------７種-------） */
+.content-hover {
+  transition-duration: 0.2s;
+  margin-right: 20px;
+}
+.content-hover:hover {
+  transform-origin: center center;
+  transform: scale(1.05);
+  box-shadow: 0 3px 10px 0 #333;
+  opacity: 0.8;
+  cursor: pointer;
+}
+/* ---------------------------------------近畿７種終わり---------------- */
+
+
+
+/* -------------------------------------ニュース----------- */
+.news {
+  background-color: #fff;
+  width: 60%;
+  /* height: 200px; */
+  margin: 20px auto 80px;
+  display: flex;
+}
+
+.news h2 {
+  background-color: #19264A;
+  color: #fff;
+  writing-mode: vertical-rl;
+  width: 80px;
+  text-align: center;
+  padding: 0 0px;
+}
+
+.news p {
+  padding: 20px;
+}
+
+.news p span {
+  font-size: 1.2rem;
+}
+
+/* ---------------------------------------------フッター------------- */
+footer {   /* フッター全体 */
+  background-image: url(../img/波模様70.png);
+  width: 100%;
+  height:580px;
+  font-size: 0.9rem;
+  position: relative;
+}
+
+
+.footer-area {
+  width: 90%;
+  position: absolute;
+  margin-top: 65px;
+  background-color: #b7acb8ea;
+  margin-left: 5%;
+}
+
+.footer-logo {
+  width: 150px;
+}
+
+.footer-logo:hover { /* フッターのロゴマーク */
+  transition-duration: 0.3s;
+  transform: scale(1.05);
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.footer-top {
+  border-bottom: 1px solid #19264a;
+  width: 90%;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.since {
+  margin-top: auto;
+}
+
+.footer-middle{
+  width: 90%;
+  margin: 10px auto;  
+  border-bottom: 1px solid #19264a;
+}
+
+
+.footer-bottom{
+  width: 90%;
+  margin: 10px auto; 
+  display: flex;
+  column-gap: 100px;
+}
+
+.footer-bottom a {
+  font-weight: bold;
+}
+
+/* コピーライト */
+.copyright { 
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+/* フッターリンクCSS */
+
+.footer-link {
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 5%;
+  line-height: 3;
+}
+
+.footer-add {
+  margin: 50px 0 20px 0;
+  text-align: end;
+  line-height: 1.5;
+}
+
+
+.add {
+  text-align: left;
+}
+
+
+
+/* ---------------------------------------------フッター終わり------------- */
+
+
+
+
+
+/* -------------------------------押すとトップへ戻るボタン------------------------ */
+.pagetop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  z-index: 500;
+}
+.pagetop a {
+  display: block;
+  background-color: #fff;
+  text-align: center;
+  color: #222;
+  font-size: 12px;
+  text-decoration: none;
+  padding: 5px 10px;
+  opacity: 0.8;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px #000;
+}
+
+.pagetop a:hover {
+  background-color: #19264a;
+  color: #fff;
+}
+
+
+/* -------------------------------トップへ戻るボタン終わり------------------- */
+
+
+/* ---------------------------------立体リンクボタン設定 */
+.link-button {
+  background-color: #19264A;
+  display: inline-block;
+  color: #fff;
+  padding: 18px 40px;
+  box-shadow: 4px 4px 1px #000;
+  /* border: outset #576999; */
+  border-radius: 50px;
+}
+.link-button:hover {
+  transform: translate(3px ,3px);
+  opacity: 0.8;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+  /* ---------------------------------立体リンクボタン設定終わり */
+
+
+
+
+  
+/*---------------------------------------------------------レスポンシブ始まり★★★*/
+
+@media (max-width:800px){
+ 
+  header {
+  transition-duration: 0.2s;
+  height: 0px;
+}
+
+.shop-name-area {
+  transition-duration: 0.2s;
+  height: 212px;
+}
+
+.shop-name-text{
+  font-family: "HG行書体","HGP行書体",cursive;
+  transition-duration: 0.2s;
+  font-size: 4rem;
+  top: 35%;
+  left: 10%;
+}
+
+.shop-name-image {
+  position: absolute;
+  display: none;
+  top: 25px;
+  left: 85%;
+  width: 35px;
+}
+
+/* -----------------スクロールした時のヘッダーの変化(トップページのみ) */
+header.is-show {
+  height: 80px;
+}
+
+.shop-name-area.is-show {
+  transition-duration: 0.2s;
+  height: 80px;
+}
+
+.shop-name-text.is-show {
+  transition-duration: 0.2s;
+  font-size: 2rem;
+  top: 23%;
+  left: 30%;
+}
+
+/* ----------------------------------------ナビゲーション----------- */
+.nav1 {
+  column-gap: 10px;
+}
+
+.navLink {
+  width: 110px;  padding: 5px 15px;
+}
+
+.navLink:hover {
+  background-color: #cccccc9c;
+}
+
+/* ----------------スクロールしたらnav1が消えます(代わりにnav2が現れます) */
+.nav1.is-show {
+  transition-duration: 0.6s;
+  display: none;
+}
+
+
+/* -------------------------------ハンバーガーメニューCSS始まり------------- */
+
+.media-button {
+  margin: 25px 0 0 20px;
+  width: 36px;
+  height: 30px;
+  font-size: 40px;
+  line-height: 3;
+  font-weight: bold;
+  z-index: 100;
+  /* display: block; */
+  transition-duration: 0.6s;
+  cursor: pointer;
+}
+
+.media-button p {
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+/* .media-button.is-show {
+  display: block;
+  transition-duration: 0.6s;
+} */
+
+.button1 {
+  margin-bottom: auto;
+}
+
+.button2 {
+  margin-top: 12px;
+}
+
+.button3 {
+  margin-top: 12px;
+}
+
+.button1.is-show {
+  transform-origin: left;
+  transform: rotate(50deg);
+  transition: 0.3s;
+}
+
+.button2.is-show {
+  opacity: 0;
+}
+
+.button3.is-show {
+  transform-origin: left;
+  transform: rotate(-50deg);
+  transition: 0.3s;
+}
+
+.nav2 {
+  position: absolute;
+  top: 80px;
+  left: -200px;
+  width: 150px;
+  height: 138px;
+  background-color: #19264a;
+  z-index: 100;
+  bottom: 20px;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.nav2 .navLink {
+  margin: 5px auto;
+  width: 150px;
+}
+
+
+.nav2.is-show {
+  opacity: 1;
+  transform: translateX(200px);
+  transition: 0.5s;
+}
+
+/*ハンバーガー食べ終わり*/
+
+
+
+/* -----------文字を横スライド--------*/
+/* スライドレールの枠 */
+.text {
+  font-size: 20px;
+}
+
+.t-slide {
+  padding-top: 250px;
+}
+
+
+/*------ ヒーローイメージ--------- */
+.hero img {
+  height: 300px;
+}
+
+/* サイト一言 */
+.siteconcept{
+  font-family: "HG行書体","HGP行書体",cursive;
+  font-size: 1.5rem;
+}
+
+/* -----------季節限定-------------- */
+
+.kisetsu {
+  width: 90%;
+  height: 150px;
+  margin: 20px auto 40px;
+}
+
+.kisetsu-contents img {
+  width:120px;
+  height:120px;
+}
+
+
+/* -----近畿７種----------------- */
+.list7{
+  margin-top: -150px;
+}
+
+
+/* ---ニュース----------- */
+.news {
+  width: 90%;
+  /* height: 450px; */
+  margin: 20px auto 60px;
+  display: flex;
+  flex-direction: column;
+  margin-top: -150px;
+}
+
+.news h2 {
+  writing-mode: inherit;
+  width: 100%;
+  text-align: center;
+}
+
+.news p {
+  padding: 20px;
+}
+
+.news p span {
+  font-size: 1.2rem;
+}
+
+
+}
+
+
+/*メイン画像下の一言改行*/
+@media screen and (min-width:800px){
+  .u-sp-only{
+    display: none;
+  }
+}
+/**/
+
+
+
+@media (max-width: 400px) {
+
+
+  
+  /* --------------------フッター------------- */
+  footer {   /* フッター全体 */
+    background-image: url(../img/波模様70.png);
+    width: 100%;
+    height:730px;
+    font-size: 0.9rem;
+    position: relative;
+  }
+  
+  
+  .footer-area {
+    width: 90%;
+    position: absolute;
+    margin-top: 90px;
+    background-color: #b7acb8ea;
+    margin-left: 5%;
+  }
+  
+  .footer-logo {
+    width: 130px;
+  }
+  
+  .footer-logo:hover { /* フッターのロゴマーク */
+    transition-duration: 0.3s;
+    transform: scale(1.05);
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  
+  .footer-top {
+    border-bottom: 1px solid #19264a;
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .since {
+    margin-top: auto;
+  }
+  
+  .footer-middle{
+    width: 95%;
+    border-bottom: 1px solid #19264a;
+  }
+  
+  .footer-bottom{
+    width: 90%;
+    margin: 10px auto; 
+    display: flex;
+    column-gap: 100px;
+    font-weight: bold;
+  }
+  
+  
+  /* コピーライト */
+  .copyright { 
+    text-align: center;
+    font-size: 0.8rem;
+  }
+  
+  /* フッターリンクCSS */
+  
+  .footer-link {
+    margin: 0 3%;
+    font-weight: bold;
+  
+    display: grid;
+    grid-template-rows: 85px;
+    grid-template-areas: 
+    "area1 area5"
+    "area2 area5"
+    "area3 area5"
+    "area4 area4"
+    ;
+    line-height: 2;
+  }
+  
+  .footer-menu {
+    grid-area: area1;
+  }
+  
+  .footer-concept {
+    grid-area: area2;
+  }
+  
+  .footer-event {
+  grid-area: area3;
+  }
+  
+  .footer-contact {
+  margin-top: 10px;
+  display: flex;
+  column-gap: 20%;
+  grid-area: area4;
+  }
+  
+  .footer-add {
+    line-height: 1.5;
+    grid-area: area5;
+    margin: 0;
+  }
+  
+  
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  /* ジャンプ先 */
+#guide {
+  top:1080px;
+}
+  
+    
+  }

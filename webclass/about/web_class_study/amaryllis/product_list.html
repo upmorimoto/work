@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product list</title>
+    <link rel="icon" href="./image/favicon.ico" sizes="any">
+    <link rel="stylesheet" href="./css/product_list.css">
+    <script src="./js/product_list.js" defer></script>
+</head>
+<body>
+    <!-- 商品リスト -->
+    <h2 class="list-title">Product List</h2>
+    <div class="product_list">
+        <div class="product">
+            <div class="list">
+                <ul>
+                    <li class="item">
+                        <a href="details">
+                        <h3>Binder</h3>
+                            <img src="./img/product_list/binder.jpg" alt="">
+                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        </a>
+                        <p>￥840</p>
+                        <div class="orders">
+                            <button class="minus_btn">-</button>
+                            <input type="text" class="quantity" value="0">
+                            <button class="plus_btn">+</button>
+                        </div>
+                        <div class="in_cart">
+                            <img src="./img/icon/cart-minus.png" alt="">
+                            <button class="add-to-cart" data-product="Binder" data-image="./img/product_list/binder.jpg" data-price="￥840">カートに追加</button>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <a href="details">
+                        <h3>Fountain pen</h3>
+                            <img src="./img/product_list/fountain-pen.jpg" alt="">
+                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        </a>
+                        <p>￥2,200</p>
+                        <div class="orders">
+                            <button class="minus_btn">-</button>
+                            <input type="text" class="quantity" value="0">
+                            <button class="plus_btn">+</button>
+                        </div>
+                        <div class="in_cart">
+                            <img src="./img/icon/cart-minus.png" alt="">
+                            <button class="add-to-cart" data-product="Fountain-pen" data-image="./img/product_list/fountain-pen.jpg" data-price="￥2,200">カートに追加</button>
+                        </div>
+
+                    </li>
+                    <li class="item">
+                        <a href="details">
+                        <h3>Rubber stamp</h3>
+                            <img src="./img/product_list/rubber-stamp.jpg" alt="">
+                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        </a>
+                        <p>￥1,800</p>
+                        <div class="orders">
+                            <button class="minus_btn">-</button>
+                            <input type="text" class="quantity" value="0">
+                            <button class="plus_btn">+</button>
+                        </div>
+                        <div class="in_cart">
+                            <img src="./img/icon/cart-minus.png" alt="">
+                            <button class="add-to-cart" data-product="Rubber-stamp" data-image="./img/product_list/rubber-stamp.jpg" data-price="￥1,800">カートに追加</button>
+                        </div>
+
+                    </li>
+                    <li class="item">
+                        <a href="details">
+                        <h3>Post it notes</h3>
+                            <img src="./img/product_list/post-it-notes.png" alt="">
+                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                        </a>
+                        <p>￥980</p>
+                        <div class="orders">
+                            <button class="minus_btn">-</button>
+                            <input type="text" class="quantity" value="0">
+                            <button class="plus_btn">+</button>
+                        </div>
+                        <div class="in_cart">
+                            <img src="./img/icon/cart-minus.png" alt="">
+                            <button class="add-to-cart" data-product="Post-it-notes" data-image="./img/product_list/post-it-notes.png" data-price="￥980">カートに追加</button>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 商品リスト終わり -->
+
+    <!-- カートボタン -->
+    <div class="cart">
+        <a href="./shop_cart.html" target="_blank">
+            <p>マイカート => GO!</p>
+            <img src="./img/icon/cart-shopping-fast.png" alt="">
+        </a>
+    </div>
+</body>
+</html>

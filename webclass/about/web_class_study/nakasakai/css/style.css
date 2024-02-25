@@ -1,0 +1,700 @@
+/* このCSSは
+１．トップページ以外のヘッダーフッター設定(スクロールイベントがない)と
+２．トップへ戻るボタン
+３．お買い物カート設定
+４．ショッピングガイドエリアがついています */
+
+@charset "UTF-8";
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F4F3F0;
+  width: 100%;
+  font-family: serif;
+}
+
+nav {
+  list-style-type: none
+}
+
+ul {
+  list-style-type: none
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+/* ★★★★★★基本設定ここまで★★★★★★★★★★★★★★★★★★★★★★★★ */
+
+
+/* ----------------------------------------ヘッダー----------------- */
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  position: fixed;
+  z-index: 100;
+  transition-duration: 0.6s;
+}
+
+/* -----------------------------------中坂井酒店　店名エリア--------------- */
+.shop-name-area {
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  background-color: #19264a;
+}
+
+.shop-name-text {
+  position: absolute;
+  font-size: 3rem;
+  top: 20%;
+  left: 40%;
+  color: #ffffff;
+  font-family: "HG行書体","HGP行書体",cursive;
+}
+
+.shop-name-image {
+  position: absolute;
+  display: block;
+  top: 25px;
+  left: 90%;
+  width: 40px;
+}
+
+/* ----------------------------------------ナビゲーション----------- */
+.navLink {
+  width: 140px;
+  text-align: center;
+  display: block;
+  margin-right: 10px;
+  padding: 10px 20px;
+  color: #fff;
+}
+
+.navLink:hover {
+  background-color: #cccccc9c;
+}
+
+/* -------------------------------ハンバーガーメニューCSS始まり------------- */
+
+.media-button {
+  margin: 25px 0 0 20px;
+  width: 36px;
+  height: 30px;
+  font-size: 40px;
+  line-height: 3;
+  font-weight: bold;
+  z-index: 100;
+  /* display: block; */
+  transition-duration: 0.6s;
+  cursor: pointer;
+}
+
+.media-button p {
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+/* .media-button.is-show {
+  display: block;
+  transition-duration: 0.6s;
+} */
+
+.button1 {
+  margin-bottom: auto;
+}
+
+.button2 {
+  margin-top: 12px;
+}
+
+.button3 {
+  margin-top: 12px;
+}
+
+.button1.is-show {
+  transform-origin: left;
+  transform: rotate(50deg);
+  transition: 0.3s;
+}
+
+.button2.is-show {
+  opacity: 0;
+}
+
+.button3.is-show {
+  transform-origin: left;
+  transform: rotate(-50deg);
+  transition: 0.3s;
+}
+
+.nav2 {
+  position: absolute;
+  top: 80px;
+  left: -200px;
+  width: 150px;
+  height: 138px;
+  background-color: #19264a;
+  z-index: 100;
+  bottom: 20px;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.nav2.is-show {
+  opacity: 1;
+  transform: translateX(200px);
+  transition: 0.5s;
+}
+
+/*ハンバーガー食べ終わり*/
+
+
+
+/* ----------------------------------------------ヘッダー終わり----------------- */
+
+
+/* ---------------------------------------------フッター------------- */
+footer {   /* フッター全体 */
+  background-image: url(../img/波模様70.png);
+  width: 100%;
+  height:580px;
+  font-size: 0.9rem;
+  position: relative;
+}
+
+
+.footer-area {
+  width: 90%;
+  position: absolute;
+  margin-top: 65px;
+  background-color: #b7acb8ea;
+  margin-left: 5%;
+}
+
+.footer-logo {
+  width: 150px;
+}
+
+.footer-logo:hover { /* フッターのロゴマーク */
+  transition-duration: 0.3s;
+  transform: scale(1.05);
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.footer-top {
+  border-bottom: 1px solid #19264a;
+  width: 90%;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.since {
+  margin-top: auto;
+}
+
+.footer-middle{
+  width: 90%;
+  margin: 10px auto;  
+  border-bottom: 1px solid #19264a;
+}
+
+
+.footer-bottom{
+  width: 90%;
+  margin: 10px auto; 
+  display: flex;
+  column-gap: 100px;
+  font-weight: bold;
+}
+
+
+/* コピーライト */
+.copyright { 
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+/* フッターリンクCSS */
+
+.footer-link {
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 5%;
+  line-height: 3;
+}
+
+.footer-add {
+  margin: 50px 0 20px 0;
+  text-align: end;
+  line-height: 1.5;
+}
+
+
+.add {
+  text-align: left;
+}
+
+
+
+/* ---------------------------------------------フッター終わり------------- */
+
+
+
+
+
+/* -------------------------------押すとトップへ戻るボタン------------------------ */
+.pagetop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  z-index: 500;
+}
+.pagetop a {
+  display: block;
+  background-color: #fff;
+  text-align: center;
+  color: #222;
+  font-size: 12px;
+  text-decoration: none;
+  padding: 5px 10px;
+  opacity: 0.8;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px #000;
+}
+
+.pagetop a:hover {
+  background-color: #19264a;
+  color: #fff;
+}
+
+
+/* -------------------------------トップへ戻るボタン終わり------------------- */
+
+
+/* ---------------------------------立体リンクボタン設定 */
+.link-button {
+  background-color: #19264A;
+  display: inline-block;
+  color: #fff;
+  padding: 18px 40px;
+  border: outset #576999;
+  border-radius: 50px;
+}
+.link-button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/* ---------------------------------立体リンクボタン設定終わり */
+
+
+
+
+/* ------------------------------お買い物カート----------------------- */
+
+.orders {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 10px 0;
+}
+input {
+  width: 30%;
+  margin: 0 10%;
+  text-align: center;
+}
+
+.plus_btn, .minus_btn {
+  margin: 0 5%;
+  padding: 0 5%;
+}
+
+/* カートに追加 */
+.in_cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}
+.in_cart img {
+  display: block;
+  width: 10%;
+  aspect-ratio: 1;
+  margin: 0 5%;
+}
+
+/* マイカートGOボタン */
+.cart {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10%;
+}
+.cart img {
+  width: 30%;
+  aspect-ratio: 1;
+  display: block;
+  margin: 10% auto;
+}
+
+
+@media (max-width: 600px) {
+/* 600pxより小さい場合のスタイル指定 */
+ body {
+  font-size: 0.8rem;
+ } 
+ .list ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  margin: 0 auto 5% auto;
+  }
+  .product {
+  width: 80%;
+  margin: 0 auto;
+  }
+  .item {
+      padding: 8%;
+      border-bottom: 1px dotted #ff7474c0;
+  }
+}
+
+/* ------------------------------お買い物カート終わり----------------------- */
+
+
+
+/* ---------------------------ショッピングガイドエリア-------------------- */
+.shop-guide {
+  margin: 30px auto 20px;
+  width: 90%;
+  text-align: center;
+}
+
+
+.shop-guide h3 { /*見出し「ショッピングガイド」*/
+  background-color: #19264A;
+  color: #fff;
+}
+
+
+.shop-info { /*「ショッピングガイド(見出し)」より下のエリア全体*/
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.shop-info h3 { /*見出し「お支払方法について」「ご注文方法について」*/
+  margin: 15px 0 6px;
+}
+
+.shop-info p {
+  display: block;
+  width: 100%;
+  padding-right: 5px;
+}
+
+.shop-info-each {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.credit {
+  display: flex;
+  flex-direction: column;
+}
+
+.creditImage {
+  width: 300px;
+  margin: 10px 0 0 100px
+}
+
+
+
+
+/*---------------------------------------------------------レスポンシブ始まり*/
+
+@media (max-width:800px){
+ 
+  header {
+  transition-duration: 0.2s;
+  height: 0px;
+}
+
+.shop-name-area {
+  transition-duration: 0.2s;
+  height: 80px;
+}
+
+.shop-name-text{
+  font-family: "HG行書体","HGP行書体",cursive;
+  transition-duration: 0.2s;
+  font-size: 30px;
+  top: 23%;
+  left: 30%;
+}
+
+.shop-name-image {
+  top: 25px;
+  left: 85%;
+  width: 35px;
+}
+
+/* -------------------------------ハンバーガーメニューCSS始まり------------- */
+
+.media-button {
+  margin: 25px 0 0 20px;
+  width: 36px;
+  height: 30px;
+  font-size: 40px;
+  line-height: 3;
+  font-weight: bold;
+  z-index: 100;
+  /* display: block; */
+  transition-duration: 0.6s;
+  cursor: pointer;
+}
+
+.media-button p {
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+.media-button.is-show {
+  display: block;
+  transition-duration: 0.6s;
+}
+
+.button1 {
+  margin-bottom: auto;
+}
+
+.button2 {
+  margin-top: 12px;
+}
+
+.button3 {
+  margin-top: 12px;
+}
+
+.button1.is-show {
+  transform-origin: left;
+  transform: rotate(50deg);
+  transition: 0.3s;
+}
+
+.button2.is-show {
+  opacity: 0;
+}
+
+.button3.is-show {
+  transform-origin: left;
+  transform: rotate(-50deg);
+  transition: 0.3s;
+}
+
+.nav2 {
+  position: absolute;
+  top: 80px;
+  left: -200px;
+  width: 150px;
+  height: 138px;
+  background-color: #19264a;
+  z-index: 100;
+  bottom: 20px;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.nav2.is-show {
+  opacity: 1;
+  transform: translateX(200px);
+  transition: 0.5s;
+}
+
+/*ハンバーガー食べ終わり*/
+
+/* ---------------------------ショッピングガイドエリア-------------------- */
+.shop-guide {
+  margin: 30px auto 20px;
+  width: 90%;
+  text-align: center;
+}
+
+
+.shop-guide h3 { /*見出し「ショッピングガイド」*/
+  background-color: #19264A;
+  color: #fff;
+}
+
+
+.shop-info { /*「ショッピングガイド(見出し)」より下のエリア全体*/
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.shop-info h3 { /*見出し「お支払方法について」「ご注文方法について」*/
+  margin: 15px 0 6px;
+}
+
+.shop-info p {
+  display: block;
+  width: 100%;
+}
+
+.shop-info-each {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.credit {
+  display: flex;
+  flex-direction: column;
+}
+
+.creditImage {
+  width: 300px;
+  margin: 10px 0 0 30px;
+}
+  
+  
+/* --------------------フッター------------- */
+footer {   /* フッター全体 */
+  background-image: url(../img/波模様70.png);
+  width: 100%;
+  height:700px;
+  font-size: 0.9rem;
+  position: relative;
+}
+
+
+.footer-area {
+  width: 90%;
+  position: absolute;
+  margin-top: 90px;
+  background-color: #b7acb8ea;
+  margin-left: 5%;
+}
+
+.footer-logo {
+  width: 130px;
+}
+
+.footer-logo:hover { /* フッターのロゴマーク */
+  transition-duration: 0.3s;
+  transform: scale(1.05);
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.footer-top {
+  border-bottom: 1px solid #19264a;
+  width: 90%;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.since {
+  margin-top: auto;
+}
+
+.footer-middle{
+  width: 95%;
+  border-bottom: 1px solid #19264a;
+}
+
+.footer-bottom{
+  width: 90%;
+  margin: 10px auto; 
+  display: flex;
+  column-gap: 100px;
+  font-weight: bold;
+}
+
+
+/* コピーライト */
+.copyright { 
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+/* フッターリンクCSS */
+
+.footer-link {
+  margin: 0 3%;
+  font-weight: bold;
+
+  display: grid;
+  grid-template-rows: 85px;
+  grid-template-areas: 
+  "area1 area5"
+  "area2 area5"
+  "area3 area5"
+  "area4 area4"
+  ;
+  line-height: 2;
+}
+
+.footer-menu {
+  grid-area: area1;
+}
+
+.footer-concept {
+  grid-area: area2;
+}
+
+.footer-event {
+grid-area: area3;
+}
+
+.footer-contact {
+margin-top: 10px;
+display: flex;
+column-gap: 20%;
+grid-area: area4;
+}
+
+.footer-add {
+  line-height: 1.5;
+  grid-area: area5;
+  margin: 0;
+}
+
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+
+  }

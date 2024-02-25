@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>アマリリス</title>
+  <meta name="description" content="概要文">
+  <link rel="icon" href="./image/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/feature.css">
+  <script src="./js/modal.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Klee+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ヘッダー始まり -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="heater-logo-img">
+        <a class="header-logo" href="./index.html"><img src="./image/header_logo.png" alt="header-logo-logo"></a>
+        <span class="balloon">TOPページへ></span>
+      </div>
+      <button class="toggle-menu-button"></button>
+        <div class="header-site-menu">
+            <nav class="site-menu">
+                <ul>
+                  <li><a href="./feature.html"><span>FLOWER</span></a></li>
+                  <li><a href="./contact.html"><span>CONTACT</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+  </header>
+
+
+  <!-- メイン始まり -->
+  <main class="main">
+    <div class="shopping-cart">
+      <nav>
+        <a class="cart-link" href="./shop-cart.html"><img src="./image/shopping_cart.png" alt=""></a>
+        <div class="popup"></div>     
+      </nav>
+   </div>
+
+    <div class="main-picture">
+      <a class="image"><img src="./image/main_picture2.png" alt="mothersday"></a>
+    </div>
+  
+    <div class="item-list">
+      <h1>FLOWER</h1>
+      <div class="item-list-menu">
+        <div class="yen-3000">
+         <ul class="flower-list-3000">
+          <p class="yen-3000-text">3,000yen</p>
+          <p class="yen-3000-text2">3,000yen</p>
+          <li>
+            <div class="pu-box1">
+              <label for="pu-on1">
+                <div class="btn-open1">
+                  <a class="image_link">
+                    <img src="./image/feature_1.jpg" width="200" alt="" class="feature-img">
+                  </a>
+                </div>
+              </label>
+              <input type="checkbox" id="pu-on1">
+              <div class="pu1">
+                <label for="pu-on1" class="icon-close1">×</label>
+                <!-- ポップアップの中身 -->
+                <div class="pu-content1">
+                  <img src="./image/feature_1.jpg" width="380" alt="" class="feature-img">
+                  <p class="pu-name1">laetitia</p>
+                  <p class="pu-price1">3,000yen</p>
+                  <p class="pu-text1">柔らかに香るポプリです。インテリアの<br>アクセントになるフレグランスアイテム。<br>（ケースの大きさ直径約12cm）</p>
+                  <dt class="explanation1">以下ご選択の上、カートへボタンを押してください</dt>
+                  <dt class="destination1">送り先</dt>
+                    <dd>
+                      <label class="radio-button1"><input type="radio" name="user-type1" value=ご自宅" checked>ご自宅</label>
+                      <label class="radio-button1"><input type="radio" name="user-type1" value="ギフト">ギフト</label>
+                    </dd>
+                    <dt class="gift1">ギフトカード</dt>
+                    <dd>
+                      <label class="radio-button2"><input type="radio" name="user-type2" value=あり" checked>あり</label>
+                      <label class="radio-button2"><input type="radio" name="user-type2" value="なし">なし</label>
+                    </dd>
+                  <select class="select-box1" name="genre">
+                    <option value="ありの場合選択" selected>ありの場合 選択</option>
+                    <option value="No.1">No.1</option>
+                    <option value="No.2">No.2</option>
+                    <option value="No.3">No.3</option>
+                    <option value="No.4">No.4</option>
+                    <option value="No.5">No.5</option>
+                    <option value="No.5">No.6</option>
+                    <option value="No.5">No.7</option>
+                    <option value="No.5">No.8</option>
+                    <option value="No.5">No.9</option>
+                </select>
+                  <div class="orders">
+                    <button class="minus_btn">-</button>
+                    <input type="text" class="quantity" value="0">
+                    <button class="plus_btn">+</button>
+                  </div>
+                  <div class="btn-container">
+                    <button class="add-to-cart cart1" id="btn1" data-product="laetitia" data-image="./image/feature_1.jpg" data-price="￥3,000"><img src="./image/cart.png" alt=""></button>
+                    <p id="btn1-text" class="hidden">カートに追加しました</p>
+                  </div>
+                    <!-- ./ポップアップの中身　ここまで -->
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="pu-box2">
+              <label for="pu-on2">
+                <div class="btn-open2">
+                  <a class="image_link">
+                    <img src="./image/feature_2.jpg" width="200" alt="" class="feature-img">
+                  </a>
+                </div>
+              </label>
+              <input type="checkbox" id="pu-on2">
+              <div class="pu2">
+                <label for="pu-on2" class="icon-close2">×</label>
+                <!-- ポップアップの中身 -->
+                <div class="pu-content2">
+                  <img src="./image/feature_2.jpg" width="380" alt="" class="feature-img">
+                  <p class="pu-name2">hestia</p>
+                  <p class="pu-price2">3,000yen</p>
+                  <p class="pu-text2">「Baby's breath=愛しい人の吐息」<br>　とも呼ばれるカスミソウをたっぷりと。<br>「いつまでもお幸せに」（ブーケの大きさ約30cm）</p>
+                  <dt class="explanation2">以下ご選択の上、カートへボタンを押してください</dt>
+                  <dt class="destination2">送り先</dt>
+                    <dd>
+                      <label class="radio-button1"><input type="radio" name="user-type1" value=ご自宅" checked>ご自宅</label>
+                      <label class="radio-button1"><input type="radio" name="user-type1" value="ギフト">ギフト</label>
+                    </dd>
+                    <dt class="gift2">ギフトカード</dt>
+                    <dd>
+                      <label class="radio-button2"><input type="radio" name="user-type2" value=あり" checked>あり</label>
+                      <label class="radio-button2"><input type="radio" name="user-type2" value="なし">なし</label>
+                    </dd>
+                  <select class="select-box2" name="genre">
+                    <option value="ありの場合選択" selected>ありの場合 選択</option>
+                    <option value="No.1">No.1</option>
+                    <option value="No.2">No.2</option>
+                    <option value="No.3">No.3</option>
+                    <option value="No.4">No.4</option>
+                    <option value="No.5">No.5</option>
+                    <option value="No.5">No.6</option>
+                    <option value="No.5">No.7</option>
+                    <option value="No.5">No.8</option>
+                    <option value="No.5">No.9</option>
+                </select>
+                  <div class="orders">
+                    <button class="minus_btn">-</button>
+                    <input type="text" class="quantity" value="0">
+                    <button class="plus_btn">+</button>
+                  </div>
+                  <div class="btn-container">
+                    <button class="add-to-cart cart1" id="btn2" data-product="hestia" data-image="./image/feature_2.jpg" data-price="￥3,000"><img src="./image/cart.png" alt=""></button>
+                    <p id="btn2-text" class="hidden">カートに追加しました</p>
+                  </div>
+                    <!-- ./ポップアップの中身　ここまで -->
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="pu-box3">
+              <label for="pu-on3">
+                <div class="btn-open3">
+                  <a class="image_link">
+                    <img src="./image/feature_3.jpg" width="200" alt="" class="feature-img">
+                  </a>
+                </div>
+              </label>
+              <input type="checkbox" id="pu-on3">
+              <div class="pu3">
+                <label for="pu-on3" class="icon-close3">×</label>
+                <!-- ポップアップの中身 -->
+                <div class="pu-content3">
+                  <img src="./image/feature_3.jpg" width="380" alt="" class="feature-img">
+                  <p class="pu-name3">harmonia</p>
+                  <p class="pu-price3">3,000yen</p>
+                  <p class="pu-text3">終わりがなく続くリースの形は「永遠」の象徴、<br>幸せがずっと続きますようにと願いを込めて。<br>（直径約15cm +フック）</p>
+                  <dt class="explanation3">以下ご選択の上、カートへボタンを押してください</dt>
+                  <dt class="destination3">送り先</dt>
+                    <dd>
+                      <label class="radio-button1"><input type="radio" name="user-type1" value=ご自宅" checked>ご自宅</label>
+                      <label class="radio-button1"><input type="radio" name="user-type1" value="ギフト">ギフト</label>
+                    </dd>
+                    <dt class="gift3">ギフトカード</dt>
+                    <dd>
+                      <label class="radio-button2"><input type="radio" name="user-type2" value=あり" checked>あり</label>
+                      <label class="radio-button2"><input type="radio" name="user-type2" value="なし">なし</label>
+                    </dd>
+                  <select class="select-box3" name="genre">
+                    <option value="ありの場合選択" selected>ありの場合 選択</option>
+                    <option value="No.1">No.1</option>
+                    <option value="No.2">No.2</option>
+                    <option value="No.3">No.3</option>
+                    <option value="No.4">No.4</option>
+                    <option value="No.5">No.5</option>
+                    <option value="No.5">No.6</option>
+                    <option value="No.5">No.7</option>
+                    <option value="No.5">No.8</option>
+                    <option value="No.5">No.9</option>
+                </select>
+                  <div class="orders">
+                    <button class="minus_btn">-</button>
+                    <input type="text" class="quantity" value="0">
+                    <button class="plus_btn">+</button>
+                  </div>
+                  <div class="btn-container">
+                    <button class="add-to-cart cart1" id="btn3" data-product="harmonia" data-image="./image/feature_3.jpg" data-price="￥3,000"><img src="./image/cart.png" alt=""></button>
+                    <p id="btn3-text" class="hidden">カートに追加しました</p>
+                  </div>
+                  <!-- ./ポップアップの中身　ここまで -->
+                </div>
+              </div>
+            </div>
+          </li>
+         </ul>
+        </div>
+
+        <div class="yen-5000">
+          <ul class="flower-list-5000">
+            <p class="yen-5000-text">5,000yen</p>
+            <p class="yen-5000-text2">5,000yen</p>
+            <li>
+              <div class="pu-box4">
+                <label for="pu-on4">
+                  <div class="btn-open4">
+                    <a class="image_link">
+                      <img src="./image/feature_4.jpg" width="200" alt="" class="feature-img">
+                    </a>
+                    </div>
+                </label>
+                <input type="checkbox" id="pu-on4">
+                <div class="pu4">
+                  <label for="pu-on4" class="icon-close4">×</label>
+                  <!-- ポップアップの中身 -->
+                  <div class="pu-content4">
+                    <img src="./image/feature_4.jpg" width="380" alt="" class="feature-img">
+                    <p class="pu-name4">panakeia</p>
+                    <p class="pu-price4">5,000yen</p>
+                    <p class="pu-text4">アートのようにお花を飾れるウッドフレームの<br>ドライフラワー。<br>（フレームサイズ:W15cm H25cm）</p>
+                    <dt class="explanation4">以下ご選択の上、カートへボタンを押してください</dt>
+                    <dt class="destination4">送り先</dt>
+                      <dd>
+                        <label class="radio-button1"><input type="radio" name="user-type1" value=ご自宅" checked>ご自宅</label>
+                        <label class="radio-button1"><input type="radio" name="user-type1" value="ギフト">ギフト</label>
+                      </dd>
+                      <dt class="gift4">ギフトカード</dt>
+                      <dd>
+                        <label class="radio-button2"><input type="radio" name="user-type2" value=あり" checked>あり</label>
+                        <label class="radio-button2"><input type="radio" name="user-type2" value="なし">なし</label>
+                      </dd>
+                    <select class="select-box4" name="genre">
+                      <option value="ありの場合選択" selected>ありの場合 選択</option>
+                      <option value="No.1">No.1</option>
+                      <option value="No.2">No.2</option>
+                      <option value="No.3">No.3</option>
+                      <option value="No.4">No.4</option>
+                      <option value="No.5">No.5</option>
+                      <option value="No.5">No.6</option>
+                      <option value="No.5">No.7</option>
+                      <option value="No.5">No.8</option>
+                      <option value="No.5">No.9</option>
+                    </select>
+                    <div class="orders">
+                      <button class="minus_btn">-</button>
+                      <input type="text" class="quantity" value="0">
+                      <button class="plus_btn">+</button>
+                    </div>
+                    <div class="btn-container">
+                      <button class="add-to-cart cart1" id="btn4" data-product="panakeia" data-image="./image/feature_4.jpg" data-price="￥5,000"><img src="./image/cart.png" alt=""></button>
+                      <p id="btn4-text" class="hidden">カートに追加しました</p>
+                    </div>
+                    <!-- ./ポップアップの中身　ここまで -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="pu-box5">
+                <label for="pu-on5">
+                  <div class="btn-open5">
+                    <a class="image_link">
+                      <img src="./image/feature_5.jpg" width="200" alt="" class="feature-img">
+                    </a>
+                    </div>
+                </label>
+                <input type="checkbox" id="pu-on5">
+                <div class="pu5">
+                  <label for="pu-on5" class="icon-close5">×</label>
+                  <!-- ポップアップの中身 -->
+                  <div class="pu-content5">
+                    <img src="./image/feature_5.jpg" width="380" alt="" class="feature-img">
+                    <p class="pu-name5">moira</p>
+                    <p class="pu-price5">5,000yen</p>
+                    <p class="pu-text5">&ensp;たんぽぽに似た花を咲かせるサントリナの<br>「さりげない魅力」という意味合いを込めたブーケ。<br>&ensp;（ブーケの大きさ約40cm）</p>
+                    <dt class="explanation5">以下ご選択の上、カートへボタンを押してください</dt>
+                    <dt class="destination5">送り先</dt>
+                      <dd>
+                        <label class="radio-button1"><input type="radio" name="user-type1" value=ご自宅" checked>ご自宅</label>
+                        <label class="radio-button1"><input type="radio" name="user-type1" value="ギフト">ギフト</label>
+                      </dd>
+                      <dt class="gift5">ギフトカード</dt>
+                      <dd>
+                        <label class="radio-button2"><input type="radio" name="user-type2" value=あり" checked>あり</label>
+                        <label class="radio-button2"><input type="radio" name="user-type2" value="なし">なし</label>
+                      </dd>
+                    <select class="select-box5" name="genre">
+                      <option value="ありの場合選択" selected>ありの場合 選択</option>
+                      <option value="No.1">No.1</option>
+                      <option value="No.2">No.2</option>
+                      <option value="No.3">No.3</option>
+                      <option value="No.4">No.4</option>
+                      <option value="No.5">No.5</option>
+                      <option value="No.5">No.6</option>
+                      <option value="No.5">No.7</option>
+                      <option value="No.5">No.8</option>
+                      <option value="No.5">No.9</option>
+                    </select>
+                    <div class="orders">
+                      <button class="minus_btn">-</button>
+                      <input type="text" class="quantity" value="0">
+                      <button class="plus_btn">+</button>
+                    </div>
+                    <div class="btn-container">
+                      <button class="add-to-cart cart1" id="btn5" data-product="moira" data-image="./image/feature_5.jpg" data-price="￥5,000"><img src="./image/cart.png" alt=""></button>
+                      <p id="btn5-text" class="hidden">カートに追加しました</p>
+                    </div>
+                      <!-- ./ポップアップの中身　ここまで -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="pu-box6">
+                <label for="pu-on6">
+                  <div class="btn-open6">
+                    <a class="image_link">
+                      <img src="./image/feature_6.jpg" width="200" alt="" class="feature-img">
+                    </a>
+                    </div>
+                </label>
+                <input type="checkbox" id="pu-on6">
+                <div class="pu6">
+                  <label for="pu-on6" class="icon-close6">×</label>
+                  <!-- ポップアップの中身 -->
+                  <div class="pu-content6">
+                    <img src="./image/feature_6.jpg" width="380" alt="" class="feature-img">
+                    <p class="pu-name6">hermes</p>
+                    <p class="pu-price6">5,000yen</p>
+                    <p class="pu-text6">小さな可愛らしい花びらのアナベル、<br>ヴィンテージカラーのブルーグリーン系を<br>組み合わせたリース。（直径約30cm）</p>
+                    <dt class="explanation6">以下ご選択の上、カートへボタンを押してください</dt>
+                    <dt class="destination6">送り先</dt>
+                      <dd>
+                        <label class="radio-button1"><input type="radio" name="user-type1" value=ご自宅" checked>ご自宅</label>
+                        <label class="radio-button1"><input type="radio" name="user-type1" value="ギフト">ギフト</label>
+                      </dd>
+                      <dt class="gift6">ギフトカード</dt>
+                      <dd>
+                        <label class="radio-button2"><input type="radio" name="user-type2" value=あり" checked>あり</label>
+                        <label class="radio-button2"><input type="radio" name="user-type2" value="なし">なし</label>
+                      </dd>
+                    <select class="select-box6" name="genre">
+                      <option value="ありの場合選択" selected>ありの場合 選択</option>
+                      <option value="No.1">No.1</option>
+                      <option value="No.2">No.2</option>
+                      <option value="No.3">No.3</option>
+                      <option value="No.4">No.4</option>
+                      <option value="No.5">No.5</option>
+                      <option value="No.5">No.6</option>
+                      <option value="No.5">No.7</option>
+                      <option value="No.5">No.8</option>
+                      <option value="No.5">No.9</option>
+                    </select>
+                    <div class="orders">
+                      <button class="minus_btn">-</button>
+                      <input type="text" class="quantity" value="0">
+                      <button class="plus_btn">+</button>
+                    </div>
+                    <div class="btn-container">
+                      <button class="add-to-cart cart1" id="btn6" data-product="hermes" data-image="./image/feature_6.jpg" data-price="￥5,000"><img src="./image/cart.png" alt=""></button>
+                      <p id="btn6-text" class="hidden">カートに追加しました</p>
+                    </div>
+                      <!-- ./ポップアップの中身　ここまで -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            </ul>
+        </div>
+
+        <div class="yen-10000">
+          <ul class="flower-list-10000">
+            <p class="yen-10000-text">10,000yen</p>
+            <p class="yen-10000-text2">10,000yen</p>
+            <li>
+              <div class="pu-box7">
+                <label for="pu-on7">
+                  <div class="btn-open7">
+                    <a class="image_link">
+                      <img src="./image/feature_7.jpg" width="200" alt="" class="feature-img">
+                    </a>
+                    </div>
+                </label>
+                <input type="checkbox" id="pu-on7">
+                <div class="pu7">
+                  <label for="pu-on7" class="icon-close7">×</label>
+                  <!-- ポップアップの中身 -->
+                  <div class="pu-content7">
+                    <img src="./image/feature_7.jpg" width="380" alt="" class="feature-img">
+                    <p class="pu-name7">gaia</p>
+                    <p class="pu-price7">10,000yen</p>
+                    <p class="pu-text7">ミルクポットにナチュラルなブラウン系の<br>色合いでまとめました。<br>飾るだけでアンティークな雰囲気に。<br>（ミルクポット込みサイズ約70～80cm）</p>
+                    <dt class="explanation7">以下ご選択の上、カートへボタンを押してください</dt>
+                    <dt class="destination7">送り先</dt>
+                      <dd>
+                        <label class="radio-button1"><input type="radio" name="user-type1" value=ご自宅" checked>ご自宅</label>
+                        <label class="radio-button1"><input type="radio" name="user-type1" value="ギフト">ギフト</label>
+                      </dd>
+                      <dt class="gift7">ギフトカード</dt>
+                      <dd>
+                        <label class="radio-button2"><input type="radio" name="user-type2" value=あり" checked>あり</label>
+                        <label class="radio-button2"><input type="radio" name="user-type2" value="なし">なし</label>
+                      </dd>
+                    <select class="select-box7" name="genre">
+                      <option value="ありの場合選択" selected>ありの場合 選択</option>
+                      <option value="No.1">No.1</option>
+                      <option value="No.2">No.2</option>
+                      <option value="No.3">No.3</option>
+                      <option value="No.4">No.4</option>
+                      <option value="No.5">No.5</option>
+                      <option value="No.5">No.6</option>
+                      <option value="No.5">No.7</option>
+                      <option value="No.5">No.8</option>
+                      <option value="No.5">No.9</option>
+                    </select>
+                    <div class="orders">
+                      <button class="minus_btn">-</button>
+                      <input type="text" class="quantity" value="0">
+                      <button class="plus_btn">+</button>
+                    </div>
+                    <div class="btn-container">
+                      <button class="add-to-cart cart1" id="btn7" data-product="gaia" data-image="./image/feature_7.jpg" data-price="￥10,000"><img src="./image/cart.png" alt=""></button>
+                      <p id="btn7-text" class="hidden">カートに追加しました</p>
+                    </div>
+                      <!-- ./ポップアップの中身　ここまで -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="pu-box8">
+                <label for="pu-on8">
+                  <div class="btn-open8">
+                    <a class="image_link">
+                      <img src="./image/feature_8.jpg" width="200" alt="" class="feature-img">
+                    </a>
+                    </div>
+                </label>
+                <input type="checkbox" id="pu-on8">
+                <div class="pu8">
+                  <label for="pu-on8" class="icon-close8">×</label>
+                  <!-- ポップアップの中身 -->
+                  <div class="pu-content5">
+                    <img src="./image/feature_8.jpg" width="380" alt="" class="feature-img">
+                    <p class="pu-name8">aphrodite</p>
+                    <p class="pu-price8">10,000yen</p>
+                    <p class="pu-text8">フェミニンな薔薇とガーベラを合わせた、<br>心地よいニュアンスカラーが魅力的な<br>ドライブーケ。（ブーケの大きさ約50cm）</p>
+                    <dt class="explanation8">以下ご選択の上、カートへボタンを押してください</dt>
+                    <dt class="destination8">送り先</dt>
+                      <dd>
+                        <label class="radio-button1"><input type="radio" name="user-type1" value=ご自宅" checked>ご自宅</label>
+                        <label class="radio-button1"><input type="radio" name="user-type1" value="ギフト">ギフト</label>
+                      </dd>
+                      <dt class="gift8">ギフトカード</dt>
+                      <dd>
+                        <label class="radio-button2"><input type="radio" name="user-type2" value=あり" checked>あり</label>
+                        <label class="radio-button2"><input type="radio" name="user-type2" value="なし">なし</label>
+                      </dd>
+                    <select class="select-box8" name="genre">
+                      <option value="ありの場合選択" selected>ありの場合 選択</option>
+                      <option value="No.1">No.1</option>
+                      <option value="No.2">No.2</option>
+                      <option value="No.3">No.3</option>
+                      <option value="No.4">No.4</option>
+                      <option value="No.5">No.5</option>
+                      <option value="No.5">No.6</option>
+                      <option value="No.5">No.7</option>
+                      <option value="No.5">No.8</option>
+                      <option value="No.5">No.9</option>
+                    </select>
+                    <div class="orders">
+                      <button class="minus_btn">-</button>
+                      <input type="text" class="quantity" value="0">
+                      <button class="plus_btn">+</button>
+                    </div>
+                    <div class="btn-container">
+                      <button class="add-to-cart cart1" id="btn8" data-product="aphrodite" data-image="./image/feature_8.jpg" data-price="￥10,000"><img src="./image/cart.png" alt=""></button>
+                      <p id="btn8-text" class="hidden">カートに追加しました</p>
+                    </div>
+                      <!-- ./ポップアップの中身　ここまで -->
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="pu-box9">
+                <label for="pu-on9">
+                  <div class="btn-open9">
+                    <a class="image_link">
+                      <img src="./image/feature_9.jpg" width="200" alt="" class="feature-img">
+                    </a>
+                    </div>
+                </label>
+                <input type="checkbox" id="pu-on9">
+                <div class="pu9">
+                  <label for="pu-on9" class="icon-close9">×</label>
+                  <!-- ポップアップの中身 -->
+                  <div class="pu-content9">
+                    <img src="./image/feature_9.jpg" width="380" alt="" class="feature-img">
+                    <p class="pu-name9">apsaras</p>
+                    <p class="pu-price9">10,000yen</p>
+                    <p class="pu-text9">バラの花言葉には、「愛」や「美しさ」、「感謝」<br>があります。愛情や感謝を伝えたいという時に。<br>（ブーケの大きさ約50cm）</p>
+                    <dt class="explanation9">以下ご選択の上、カートへボタンを押してください</dt>
+                    <dt class="destination9">送り先</dt>
+                      <dd>
+                        <label class="radio-button1"><input type="radio" name="user-type1" value=ご自宅" checked>ご自宅</label>
+                        <label class="radio-button1"><input type="radio" name="user-type1" value="ギフト">ギフト</label>
+                      </dd>
+                    <dt class="gift9">ギフトカード</dt>
+                      <dd>
+                        <label class="radio-button2"><input type="radio" name="user-type2" value=あり" checked>あり</label>
+                        <label class="radio-button2"><input type="radio" name="user-type2" value="なし">なし</label>
+                      </dd>
+                    <select class="select-box9" name="genre">
+                      <option value="ありの場合選択" selected>ありの場合 選択</option>
+                      <option value="No.1">No.1</option>
+                      <option value="No.2">No.2</option>
+                      <option value="No.3">No.3</option>
+                      <option value="No.4">No.4</option>
+                      <option value="No.5">No.5</option>
+                      <option value="No.5">No.6</option>
+                      <option value="No.5">No.7</option>
+                      <option value="No.5">No.8</option>
+                      <option value="No.5">No.9</option>
+                    </select>
+                    <div class="orders">
+                      <button class="minus_btn">-</button>
+                      <input type="text" class="quantity" value="0">
+                      <button class="plus_btn">+</button>
+                    </div>
+                    <div class="btn-container">
+                      <button class="add-to-cart cart1" id="btn9" data-product="apsaras" data-image="./image/feature_9.jpg" data-price="￥10,000"><img src="./image/cart.png" alt="cart"></button>
+                      <p id="btn9-text" class="hidden">カートに追加しました</p>
+                    </div>
+                      <!-- ./ポップアップの中身　ここまで -->
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="gift-card">
+      <h1>GIFT CARD</h1>
+
+      <div class="container">
+        <div class="slider">
+          <div class="slick-img">
+            <img src="./image/giftcard_1.jpg" alt=""/>
+          </div>
+          <div class="slick-img">
+            <img src="./image/giftcard_2.jpg" alt=""/>
+          </div>
+          <div class="slick-img">
+            <img src="./image/giftcard_3.jpg" alt=""/>
+          </div>
+          <div class="slick-img">
+            <img src="./image/giftcard_4.jpg" alt=""/>
+          </div>
+          <div class="slick-img">
+            <img src="./image/giftcard_5.jpg" alt=""/>
+          </div>
+          <div class="slick-img">
+            <img src="./image/giftcard_6.jpg" alt=""/>
+          </div>
+          <div class="slick-img">
+            <img src="./image/giftcard_7.jpg" alt=""/>
+          </div>
+          <div class="slick-img">
+            <img src="./image/giftcard_8.jpg" alt=""/>
+          </div>
+          <div class="slick-img">
+            <img src="./image/giftcard_9.jpg" alt=""/>
+          </div>
+        </div>
+      </div> 
+      <div class="cart">
+        <a href="./shop_cart.html" target="_blank">
+            <p>マイカート => GO!</p>
+        </a>
+      </div>
+
+  </main>
+  
+  <!-- フッター始まり -->
+  <footer class="footer">
+    <nav class="footer-site-menu">
+      <ul>
+        <li><a href="./index.html">トップ</a></li>
+        <li><a href="./feature.html">特集</a></li>
+        <li><a href="./contact.html">お問い合わせ</a></li>
+        <li><a href="./contact.html#info">企業情報</a></li>
+        <li><a href="./policy.html">プライバシーポリシー</a></li>
+        <li><a href="./specified.html">特定商取引法に基づく表記</a></li>
+      </ul>
+    </nav>
+    <p class="copy"><small>&copy</small>AMARYLLIS</p>
+
+
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"> </script>
+  <script src="./js/main2.js"></script>
+  <script src="./js/cart_list.js"></script>
+  <script src="./js/product_list.js"></script>
+  <script src="./js/cart-button.js"></script>
+</body>
+</html>

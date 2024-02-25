@@ -1,0 +1,65 @@
+
+/* メイン始まり----------------------------------------- */
+.main {
+  width: 100%;
+}
+
+.title {
+  padding-top:120px;
+  margin: 0px auto;
+  font-size: 20px;
+  text-align: center;
+  color: #19264A;
+}
+
+
+.sub-title {
+  margin: 40px 8% 0;
+  font-size: 20px;
+  color: #19264A;
+  text-align: center;
+  border-bottom: 5px solid #19264A;
+}
+
+.explan {
+  width: 80%;
+  margin: 30px auto 0 auto; 
+}
+
+.explan dl {
+ font-size: 16px;
+ margin-bottom: 10px;
+ margin-top: 10px;
+}
+.explan-last {
+ margin-top: 30px;
+ margin-bottom: 50px;
+  text-align: center;
+}
+.explan-last h4 {
+  font-size: 20px;
+}
+
+
+
+
+
+
+/* フッター始まり */
+.fbutton {
+  background-image: url(../img/ロゴ下.png);
+  height: 250px;
+  padding-left: 2%;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.fbutton p {
+  color: #fff;
+  text-shadow: 2px 1px 1px #000;
+}
+
+.fbutton a :hover {
+  color: red;
+}

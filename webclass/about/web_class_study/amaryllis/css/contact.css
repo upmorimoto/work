@@ -1,0 +1,307 @@
+
+:root {
+  --primary-color: #ffffff;
+  --font-color: #515151;
+  --border-color: #515151;
+  /* --main-background-color: #639745; */
+  --main-background-color: #fafafa;
+  --sub-background-color: #e9dcc0;
+  --accent-color: #fafafa;
+}
+
+body {
+  font-family: 'Dosis','Klee One', cursive;
+}
+
+.main {
+  padding-top: 80px;
+  color: var(--font-color);
+}
+
+.contact h1 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.contact {
+  width: 930px;
+  max-width: 90%;
+  margin-top: 75px;
+  margin-left: auto;
+  margin-right: auto;
+}
+  
+.form-area {
+  margin-top: 25px;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 150px;
+  margin-right: auto;
+}
+  
+.form-area dt {
+  width: 200px;
+  padding: 15px 0;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 24px;
+}
+  
+.form-area dd {
+  width: calc(100% - 200px);
+  padding: 15px 0;
+}
+  
+.form-area dt .required::after {
+  content: '必須';
+  font-size: 11px;
+  color: #eb4f32;
+  margin-left: 10px;
+}
+  
+.input-text {
+  width: 100%;
+  max-width: 280px;
+  height: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+  
+.select-box {
+  width: 200px;
+  height: 40px;
+  color: var(--font-color);
+}
+  
+.radio-button {
+  /* display: block; */
+  margin-top: 20px;
+}
+  
+.radio-button:first-child {
+  margin-top: 0;
+}
+  
+.radio-button input {
+  margin-right: 8px;
+}
+  
+.message {
+  width: 350px;
+  height: 200px;
+  padding: 10px;
+  line-height: 1.5;
+  color: var(--font-color);
+}
+  
+.confirm-text {
+  font-size: 14px;
+  line-height: 22px;
+  margin-top: 30px;
+  text-align: center;
+}
+  
+.submit-button {
+  background-color: #919191;
+  color: #ffffff;
+  display: inline-block;
+  min-width: 180px;
+  line-height: 48px;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 25px;
+  cursor: pointer;
+  border: none;
+  margin-left: 375px;
+  border-radius: 15px;
+}
+  
+.submit-button:hover {
+  background-color: #b8b8b8;
+}
+
+.contact {
+  padding-bottom: 120px;
+}
+
+.infomation h1 {
+  font-size: 30px;
+}
+
+.infomation-company p {
+  font-size: 18px;
+  line-height: 3;
+  border-bottom: 1px solid #515151;
+}
+
+.information {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.company-title {
+  width: 120px;
+}
+
+.company-title p {
+  text-align-last: justify;
+  padding-left: 20px;
+}
+
+.infomation-company {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+.company-info {
+  width: 370px;
+}
+
+/* ここからレスポンシブ */
+
+@media (max-width: 800px) {
+
+  .contact {
+    width: 90%;
+    max-width: 90%;
+    margin-top: 75px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+  }
+
+  .contact h1 {
+    font-size: 20px;
+  }
+
+  .form-area {
+    margin-top: 5px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .form-area dt {
+    width: 80%;
+    padding: 10px 0;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 12px;
+  }
+
+  .form-area dd {
+    /* width: calc(100% - 200px); */
+    width: 80%;
+    padding: 5px 0;
+  }
+
+  .input-text {
+    width: 100%;
+    max-width: 400px;
+    height: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .okyaku {
+    margin-top: 5px;
+  }
+
+  .otoi {
+    margin-top: 5px;
+  }
+
+  .select-box {
+    width: 200px;
+    height: 20px;
+  }
+
+  .message {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    line-height: 1.5;
+    color: var(--font-color);
+  }
+
+  .submit-button {
+    margin: 20px auto 0px auto;
+    border-radius: 15px;
+    min-width: 100px;
+    line-height: 40px;
+    border-radius: 12px;
+    }
+
+  .button-div {
+    text-align: center;
+  }
+
+  .company-title {
+    width: 95px;
+  }
+
+  /* .company-title p {
+    font-size: 15px;
+  } */
+
+  .infomation-company {
+    width: 100%;
+    display: flex;
+    justify-content: calc(100%-10px);
+    padding: 0 auto;
+    margin-bottom: 80px;
+  }
+
+  .information h1 {
+    font-size: 20px;
+    padding-bottom: 30px;
+  }
+  
+  .company-info {
+    width: 250px;
+  }
+
+  .company-info .shopname span {
+    display: inline-block;
+  }
+
+  /* .shopname p {
+    font-size: 15px;
+  } */
+
+  .infomation-company .company-info .shopname {
+    font-size: 15px;
+    line-height: 27px;
+    border-bottom: 1px solid #515151;
+    text-align: start;
+  }
+
+  .dry {
+    padding-left: 10px;
+  }
+
+  .name {
+    padding-left: 52px;
+  }
+
+  /* .company-info .shopaddress span {
+    display: inline-block;
+  } */
+
+ 
+
+  .infomation-company .company-info .shopadress {
+    font-size: 12px;
+    line-height: 54px;
+    border-bottom: 1px solid #515151;
+    text-align: center;
+  }
+  
+
+}

@@ -1,0 +1,228 @@
+@charset "utf-8";
+
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;  
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 18px;
+  color: #291400;
+  line-height: 2;
+  background-color: #FFF;
+}
+
+main {
+  width: 100%;
+}
+
+/* 商品リスト */
+.title {
+  height: 100px;
+  margin-bottom: 30px;
+}
+
+.title h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 380%;
+  text-align: center;
+}
+.shopping_list {
+  margin: 10% auto 5% auto;
+}
+.cart_list {
+  width: 80%;
+  margin: 0 auto;
+}
+.cart-item {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+.cart-item img {
+  width: 25%;
+  margin-right: 5%;
+}
+.cart-item h3 {
+  width: 30%;
+}
+.cart-item p {
+  width: 20%;
+  text-align: end;
+  padding-right: 5%;
+}
+.cart-item button {
+  padding: 3px;
+  background-color: #fff;
+}
+
+.remove {
+  width: 10%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 3px;
+  margin-top: 5%;
+  margin-left: 80%;
+}
+.price-all, .quantity-all {
+  width: 80%;
+  text-align: right;
+  padding: 5px;
+  margin-left: 10%;
+}
+
+.returnarea {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  margin: 60px auto 0 auto;
+}
+
+.return-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 60px;
+  margin: 0 auto 40px auto;
+  background-color: #DBB13D;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+.return-main:hover {
+  transform: scale(0.98);
+  background-color: #c49e37;
+}
+.return-family {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 60px;
+  margin: 0 auto 40px auto;
+  background-color: #DBB13D;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+.return-family:hover {
+  transform: scale(0.98);
+  background-color: #c49e37;
+}
+.return-couple {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 60px;
+  margin: 0 auto 40px auto;
+  background-color: #DBB13D;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+.return-couple:hover {
+  transform: scale(0.98);
+  background-color: #c49e37;
+}
+
+@media (max-width: 700px) {
+  /* 600pxより小さい場合のスタイル指定 */
+     .mainarea {
+      font-size: 0.6rem;
+     }
+     
+     .cart_list button {
+      font-size: 0.5rem;
+    }    
+     .list ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      text-align: center;
+      margin: 0 auto 5% auto;
+      }
+      .product {
+      width: 80%;
+      margin: 0 auto;
+      }
+      .item {
+          padding: 8%;
+          border-bottom: 1px dotted #ff7474c0;
+      }
+      .remove {
+        width: 30%;
+        margin-left: 60%;
+      } 
+      .title {
+        height: 200px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+      .title h1 {
+        line-height: 1;
+      }
+      .returnarea {
+        display: block;
+        justify-content: space-around;
+        width: 100%;
+        margin: 50px auto 30px auto;
+      }
+      .return-main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+        height: 50px; 
+        padding: 0 20px;
+        margin: 10px auto;
+      }
+      .return-main p {
+        font-size: 120%;
+      }
+      .return-family {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+        height: 50px; 
+        padding: 0 20px;
+        margin: 20px auto;
+      }
+      .return-family p {
+        font-size: 120%;
+      }
+      .return-couple {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+        height: 50px; 
+        padding: 0 20px;
+        margin: 10px auto;
+      }
+      .return-couple p {
+        font-size: 120%;
+      }
+  
+  }

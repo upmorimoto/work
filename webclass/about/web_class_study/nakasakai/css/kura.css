@@ -1,0 +1,120 @@
+/* -----------------------------------------メイン始まり------------- */
+main {
+  font-family: 'Zen Antique', serif;
+  font-weight: bold;
+  margin: 0;
+}
+
+.title {
+  padding-top: 90px;  
+  margin: 0px 0 10px 60px;
+  font-size: 1.4rem;
+}
+
+.top-img {
+  text-align: center;
+}
+
+.top-img img {
+  width: 70%;
+}
+
+.place {
+  font-size: 1.2rem;
+  width: 90%;
+  margin-top: 20px;
+  margin-left: 50px;
+  border-bottom: 5px solid #19264A;
+}
+
+.sub-title {
+  margin-top: 10px;
+  width: 95%;
+  text-align: center;
+  font-size: 1.4rem;
+  color: #19264A;
+}
+
+.explan {
+  width: 80%;
+  margin: 25px auto 0 auto;
+  font-size: 1.4rem;
+}
+
+.explan2 { /*清水用*/
+  width: 80%;
+  margin: 10px auto 0 auto;
+  font-size: 1.4rem;
+}
+
+.text1 {
+  color: red;
+  font-size: 1.6rem;
+}
+
+.sub-img {
+  width: 80%;
+  display: flex;
+  justify-content:space-evenly;
+  margin: 25px auto;
+}
+
+.sub-img img { /*上原、浪花、西山、油調、日日用*/
+  width: 370px;
+}
+/* -----------------------------------------メイン終わり------------- */
+
+
+/* ----------------------------------------レスポンシブデザイン */
+@media (max-width: 800px) {
+  .top-img {
+    display: block;
+    width: 400px;
+    margin-top: 40px;
+    align-items: center;
+  }
+  
+.title {
+  padding-top: 90px;  
+  margin: 0px 0 10px 20px;
+  font-size: 0.8rem;
+}
+
+.place {
+  font-size: 1.2rem;
+  width: 75%;
+  margin:20px 0 0 50px;
+  margin-left: 50px;
+}
+
+
+  .sub-title {
+    display: block;
+    font-size: 0.8rem;
+    padding-left: 50px;
+  }
+  .explan {
+    display: block;
+    width: 90%;
+    padding: 0 7.5px;
+    line-height: 1.5rem;
+  }
+  .explan p {
+    font-size: 15px;
+  }
+  .text1 {
+    font-size: 18px;
+
+  }
+  .sub-title h2 u-sp-only {
+    display: none;
+  }
+  
+.sub-img {
+  display: block;
+  width: 80%;
+  align-items: center;
+  padding: 5px 15px;
+
+  }
+}

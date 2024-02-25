@@ -1,0 +1,299 @@
+@charset "utf-8";
+
+:root {
+  --primary-color: #ffffff;
+  --font-color: #515151;
+  --border-color: #000000;
+  /* --main-background-color: #639745; */
+  --main-background-color: #fafafa;
+  --sub-background-color: #e9dcc0;
+  --accent-color: #fafafa;
+}
+
+body {
+  font-family: 'Dosis','Klee One', cursive;
+}
+
+/* トップ画像２枚 */
+.main-picture {
+  margin-top: 120px;
+  padding-left: auto;
+  padding-right: auto;
+  position: relative;
+  width: 70%;
+  height: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.slider {
+  padding-bottom: 20px;
+}
+
+
+
+/* 母の日特集 */
+.mother-day h1 {
+  text-align: center;
+  color: var(--font-color);
+  font-size: 30px;
+  margin-bottom: 60px;
+}
+
+.flower {
+  border: solid 1.5px var(--font-color);
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 160px;
+}
+
+.flower-list {
+  width: 90%;
+  max-width: 90%;
+  margin-top: 75px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  column-gap: 75px;
+  row-gap: 70px;
+}
+
+.flower-list li p {
+  font-size: 16px;
+  text-align: left;
+  color: var(--font-color);
+  margin-top: 5px;
+}
+
+.shop-button {
+  width: 120px;
+  height: 40px;
+  text-align: center;
+  align-items: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  font-size: 14px;
+  color: var(--font-color);
+  margin-bottom: 20px;
+}
+
+.shop-button:hover {
+  text-decoration: underline;
+}
+
+
+/* ABOUTテキスト */
+.about h1 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 50px;
+  color: var(--font-color);
+}
+
+.about p {
+  font-size: 16px;
+  line-height: 3;
+  text-align: center;
+  margin-right: 220px;
+  margin-left: 220px;
+  color: var(--font-color);
+}
+
+.about {
+  margin-bottom: 160px;
+}
+
+
+/* POINTテキスト */
+.point h1 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: var(--font-color);
+}
+
+.point-list {
+  width: 90%;
+  max-width: 90%;
+  margin-top: 75px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 160px;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 240px);
+  column-gap: 70px;
+}
+
+.point-top {
+  text-align: center;
+}
+
+.point-text {
+  padding-top: 15px;
+  color: var(--font-color);
+}
+
+.point-text br{
+  display: none;
+}
+
+.point-1 {
+  padding: 20px;
+  width: 240px;
+  border: solid 1.5px var(--font-color);
+  line-height: 1.2;
+}
+
+.point-1 img {
+  width: 130px;
+  margin-left: 35px;
+  margin-top: 20px;
+}
+
+.point-2 {
+  padding: 20px;
+  width: 240px;
+  border: solid 1.5px var(--font-color);
+  line-height: 1.2;
+}
+
+.point-2 img {
+  width: 130px;
+  margin-left: 35px;
+  margin-top: 20px;
+}
+
+.point-3 {
+  padding: 20px;
+  width: 240px;
+  border: solid 1.5px var(--font-color);
+  line-height: 1.2;
+}
+
+.point-3 img {
+  width: 130px;
+  margin-left: 35px;
+  margin-top: 20px;
+}
+
+.ppoint ul li img {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (max-width:800px){
+  /* トップ画像2枚 */
+  .main-picture{
+      height: auto;
+      padding-bottom: 70px;
+      padding-top: 30px;
+    }
+
+    /* 母の日特集 */
+  .mother-day h1{
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  .flower{
+    margin-bottom: 100px;
+  }
+  .flower-list{
+    grid-template-columns: repeat(2, 100px);
+    column-gap: 25px;
+    row-gap: 25px;
+    margin-top: 30px;
+  } 
+  .shop-button{
+    font-size: 13px;
+  }  
+
+    /* ABOUTページ */
+  .about h1{
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .about p{
+      font-size: 13px;
+      margin-right: 50px;
+      margin-left: 50px;
+      text-align: start;
+      line-height: 2.5;
+    }
+  .about span{
+      display: inline-block;
+    }
+  .about br{
+      display: none;
+    }
+    .about{
+      margin-bottom: 70px;
+    }
+
+    /* Pointページ */
+  .point h1{
+    font-size: 20px;
+  }  
+  .point-text{
+    display: none;
+  }
+  .point-top{
+    display: block;
+  }
+  .point-text{
+    font-size: 13px;
+  }
+  .point-list{
+    display: grid;
+    column-gap: 20px;
+    margin-top: 0;
+  }
+  .point-1 img{
+    width: 50px;
+    margin-top: 35px;
+    margin-left: 15px;
+  }
+  .point-1 {
+    padding: 10px;
+    width: 100px;
+    border: solid 1.5px var(--font-color);
+    line-height: 1.2;
+  }
+  .point-2 img{
+    width: 50px;
+    margin-top: 35px;
+    margin-left: 15px;
+  }
+  .point-2 {
+    padding: 10px;
+    width: 100px;
+    border: solid 1.5px var(--font-color);
+    line-height: 1.2;
+  }
+  .point-3 img{
+    width: 50px;
+    margin-top: 20px;
+    margin-left: 15px;
+  }
+  .point-3 {
+    padding: 10px;
+    width: 100px;
+    border: solid 1.5px var(--font-color);
+    line-height: 1.2;
+  }
+  .point-list{
+    grid-template-columns: repeat(3, 100px);
+    column-gap: 20px;
+  }
+  .point-text br{
+    display: inline-block;
+  }
+}

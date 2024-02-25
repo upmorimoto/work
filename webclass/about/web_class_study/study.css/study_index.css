@@ -1,0 +1,84 @@
+/* .figure-legion {
+} */
+.gallary-hero {
+    background-image: url(../study.img/study-hero.jpg);
+}
+.gallery {
+    width: 100%;
+    margin-bottom: 15%;
+    display: flex;
+    align-items: center;
+    padding-bottom: 5%;
+}
+.gallery:last-child {
+    margin-bottom: 0;
+}
+.gallery-caption{
+    width: 55%;
+    height: 80%;
+    margin-left: 5%;
+    align-items: center;
+}
+.gallery-img {
+    width: 40%;
+    height: auto;
+    aspect-ratio: 1.5;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.gallery-img1 {
+    background-image: url(../study.img/2022.jpg);
+}
+.gallery-img2 {
+    background-image: url(../study.img/2023\(first\).jpg);
+}
+.gallery-img3 {
+    background-image: url(../study.img/2023\(second\).jpg);
+}
+.gallery-img4 {
+    background-image: url(../study.img/what.jpg);
+}
+
+.gallery-headline {
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+.headline-mark {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    display: flex;
+    transition: all 0.5s;
+}
+.headline-mark img {
+    width: 30px;
+}
+
+.lineup {
+    width: 100%;
+    height: 100px;
+    aspect-ratio: 1.5;
+    margin-top: 10%;
+    display: flex;
+    align-items: flex-start;
+    gap: 10%
+}
+.lineup-card {
+    width: 25%;
+    position: relative;
+    transition: all 0.5s;
+}
+.lineup-card img {
+    height: auto;
+    aspect-ratio: 1.5;
+}
+
+.headline-mark:hover {
+    transform: scale(1.3);
+}
+
+.lineup-card:hover {
+    transform: scale(1.3) translateY(-5%);
+    background: linear-gradient(270deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+}

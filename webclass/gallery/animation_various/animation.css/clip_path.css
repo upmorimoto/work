@@ -1,0 +1,158 @@
+
+.animation-hero {
+    background-image: url(../animation.img/animation-hero.jpg);
+}
+
+.main {
+    width: 100vw;
+    height: 140vh;
+}
+
+/* LOAD */
+.load {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    background-color: #ffffff;
+    animation: start 3s ease-in-out;
+}
+@keyframes start {
+    0% {
+        height: 0vh;
+    }
+    100% {
+        height: 80vh;
+    }
+}
+
+.load-over1 {
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    top: 10%;
+    left: 0%;
+    background-image: url(../../../images/image/cut4.jpg);
+    background-position: center;
+    background-size: cover;
+    clip-path: polygon(25% 0, 50% 0, 25% 100%, 0% 100%);
+    animation: load1 8s linear 4s forwards;
+    transition: all 2s linear;
+    z-index: 3;
+}
+@keyframes load1 {
+    10% {transform: translateX(-800px);}
+
+    30% {
+        transform: translateX(0px);
+        background-image: url(../../../images/image/cut2.jpg);
+    }
+    40% {
+        transform: translateX(0px);
+        background-image: url(../../../images/image/cut2.jpg);
+    }
+    50% {
+        transform: translate(580px, -800px);
+    }
+    60% {
+        transform: translateY(0px);
+        background-image: url(../../../images/image/cut3.jpg);
+    }
+    70% {
+        transform: translateY(0px);
+        background-image: url(../../../images/image/cut3.jpg);
+    }
+    80% {
+        transform: translateX(-800px);
+    }
+    90% {
+        background-image: url(../../../images/image/cut1.jpg);
+    }
+    100% {background-image: url(../../../images/image/cut1.jpg);}
+}
+.load-over2 {
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    top: 10%;
+    left: 0%;
+    background-image: url(../../../images/image/cut4.jpg);
+    background-position: center;
+    background-size: cover;
+    clip-path: polygon(49% 0, 75% 0, 50% 100%, 24% 100%);
+    animation: load2 8s linear 4s forwards;
+    transition: all 2s linear;
+    z-index: 2;
+}
+@keyframes load2 {
+    10% {transform: translate(580px, -800px);}
+    30% {
+        transform: translateY(0px);
+        background-image: url(../../../images/image/cut5.jpg);
+    }
+    40% {transform: translateY(0px);
+        background-image: url(../../../images/image/cut5.jpg);
+    }
+    50% {
+        transform: translate(-580px, 800px);
+    }
+    60% {
+        transform: translateY(0px);
+        transform: scale(100%);
+        background-image: url(../../../images/image/cut6.jpg);
+    }
+    70% {
+        transform: scale(0%);
+    }
+    80% {
+        transform: scale(600%);
+        background-image: url(../../../images/image/cut7.jpg);
+    }
+    90% {
+        transform: scale(100%);
+        background-image: url(../../../images/image/cut7.jpg);
+    }
+    100% {background-image: url(../../../images/image/cut1.jpg)}
+}
+.load-over3 {
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    top: 10%;
+    left: 0%;
+    background-image: url(../../../images/image/cut4.jpg);
+    background-position: center;
+    background-size: cover;
+    clip-path: polygon(74% 0, 100% 0, 75% 100%, 49% 100%);
+    animation: load3 8s linear 4s forwards;
+    transition: all 2s linear;
+    z-index: 1;
+}
+@keyframes load3 {
+    10% {transform: translateX(-1600px);}
+    30% {
+        transform: translateX(0px);
+        background-image: url(../../../images/image/cut8.jpg);}
+    40% {
+        transform: translateX(0px);
+    }    
+    50% {
+        transform: translateX(-1600px);
+        background-image: url(../../../images/image/cut10.jpg);
+    }
+    60% {
+        transform: translateX(0px);
+    }
+    70% {
+        transform: translateX(0px);
+        transform: rotate(0deg);
+    }
+    80% {
+        transform: translateX(800px);
+        background-image: url(../../../images/image/cut11.jpg);
+    }
+    90% {
+        transform: translateX(0px);
+        transform: rotate(360deg);
+    }
+    100% {background-image: url(../../../images/image/cut1.jpg);}
+}

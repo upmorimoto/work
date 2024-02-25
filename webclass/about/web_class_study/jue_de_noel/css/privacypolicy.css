@@ -1,0 +1,33 @@
+ol {
+  list-style-position: inside;
+  padding-left: 2em;
+}
+ol li {
+  list-style: decimal;
+}
+ol ol li {
+  list-style: lower-alpha;
+}
+
+ul {
+  width: 80%;
+  margin: auto;
+}
+
+.text {
+  width: 80%;
+  margin: auto;
+  padding-bottom: 2em;
+}
+
+.headline {
+  padding-top: 1em;
+}
+
+.access {
+  width: 100%;
+  padding-left: 1em;
+}
+.access li {
+  list-style: none;
+}/*# sourceMappingURL=privacypolicy.css.map */

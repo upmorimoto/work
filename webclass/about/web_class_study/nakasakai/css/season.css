@@ -1,0 +1,257 @@
+
+/* --------------------メイン------------------- */
+main h1 {
+  padding-top: 120px;
+  margin: 0 0 20px 50px;
+}
+
+
+/* 商品エリア全体 */
+.product {
+  padding-top: 20px;
+  background-color: #fff;
+  justify-content: center;
+  display: grid;
+  grid-template-areas: 
+  "area1 area2"
+  "area3 area4"
+  "area3 area5"  ;
+  grid-template-columns: 400px 700px;
+  grid-template-rows: 50px 220px 340px;
+}
+
+.space {
+  grid-area: area1;
+}
+
+.product-name{
+  grid-area: area2;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+
+/* 商品写真 */
+.product-img {
+  grid-area: area3;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* 説明文エリア */
+.detail {
+  grid-area: area4;
+  border-top: 1px dotted #19264A;
+  border-bottom: 1px dotted #19264A;
+}
+
+.detail-first {
+  margin: 20px 0 0 20px;
+  line-height: 2rem;
+  font-size: 1.2rem;
+}
+
+.detail-first a {
+  cursor: pointer;
+  color: #19264A;
+  text-decoration-line: underline;
+}
+
+.detail-second {
+  font-size: 1.2rem;
+  margin: 5px 0 20px 20px
+}
+
+/* お買い物エリア */
+.cart{
+  grid-area: area5;
+  display: flex;
+  column-gap: 100px;
+}
+
+.cart1 {
+  width: 250px;
+  text-align: center;
+}
+
+.cart1 p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+.cart2 {
+  width: 250px;
+  text-align: center;
+}
+
+.cart2 p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+/* 注文数量変更 */
+.orders {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 10px 0;
+}
+input {
+  width: 10%;
+  margin: 0 2%;
+  text-align: center;
+}
+
+.plus_btn, .minus_btn {
+  margin: 0 2%;
+  padding: 0 2%;
+}
+
+/* カートに追加 */
+.in_cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.in_cart img {
+  display: block;
+  width: 6%;
+  aspect-ratio: 1;
+  margin: 0 4%;
+}
+
+/* マイカートGOボタン */
+/* .cartGo {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cartGo img {
+  width: 30%;
+  aspect-ratio: 1;
+  display: block;
+  margin: 10% auto;
+} */
+
+
+
+/* フッター始まり */
+.fbutton {
+  background-image: url(../img/ロゴ下.png);
+  height: 250px;
+  padding-left: 2%;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.fbutton p {
+  color: #fff;
+  text-shadow: 2px 1px 1px #000;
+}
+
+.fbutton a :hover {
+  color: red;
+}
+
+
+/* -----------------------------------レスポンシブデザイン */
+@media (max-width: 800px) {
+   main h1 {
+   font-size: 20px;
+   
+  }
+   main h1 u-sp-only {
+   display: none;
+  }
+
+  .product {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    width: 100%;
+  }
+  .product-name {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .product-img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .detail-first {
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+  }
+
+  .detail-second {
+    font-size: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+    letter-spacing: -2px;
+    text-align: left;
+  }
+
+
+  .cart{
+    column-gap: 50px;
+  }
+
+.cart p {
+  font-size: 16px;
+}
+
+  .cart1 {
+    letter-spacing: -2px;
+    /* border-right: 1px dotted #999999; */
+  }
+  .cart2 {
+    letter-spacing: -2px;
+    /* border-right: 1px dotted #999999; */
+
+  }
+  .cartGo p {
+    letter-spacing: -2px;
+  }
+
+  .add-to-cart {
+    width: 50%;
+
+  }
+  .quantity {
+    width: 20px;
+  }
+}
+
+
+/* フッター始まり */
+.fbutton {
+  background-image: url(../img/ロゴ下.png);
+  height: 250px;
+  padding-left: 2%;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.fbutton p {
+  color: #fff;
+  text-shadow: 2px 1px 1px #000;
+}
+
+.fbutton a :hover {
+  color: red;
+}
+
+main h1 u-sp-only {
+  display: none;
+}

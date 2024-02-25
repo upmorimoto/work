@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+*,*::before,*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 商品リスト */
+
+.list-title {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    margin: 0 auto 5% auto;
+    background-image: url(../img/product-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.product_list {
+    margin: 0 auto 8% auto;
+}
+.list ul {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 0 5%;
+}
+
+.item {
+    padding: 15px;
+}
+.item img {
+    aspect-ratio: 1.5;
+}
+.item p {
+    font-size: 0.9rem;
+    margin: 10px;
+}
+
+.orders {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 10px 0;
+}
+input {
+    width: 30%;
+    margin: 0 10%;
+    text-align: center;
+}
+
+.plus_btn, .minus_btn {
+    margin: 0 5%;
+    padding: 0 5%;
+}
+
+/* カートに追加 */
+.in_cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+.in_cart img {
+    display: block;
+    width: 10%;
+    aspect-ratio: 1;
+    margin: 0 5%;
+}
+
+/* マイカートGOボタン */
+.cart {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10%;
+}
+.cart img {
+    width: 30%;
+    aspect-ratio: 1;
+    display: block;
+    margin: 10% auto;
+}
+
+@media (max-width: 600px) {
+/* 600pxより小さい場合のスタイル指定 */
+   body {
+    font-size: 0.8rem;
+   } 
+   .list ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    margin: 0 auto 5% auto;
+    }
+    .product {
+    width: 80%;
+    margin: 0 auto;
+    }
+    .item {
+        padding: 8%;
+        border-bottom: 1px dotted #ff7474c0;
+    }
+    
+
+}

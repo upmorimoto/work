@@ -1,0 +1,263 @@
+main {
+  margin: 0;
+}
+
+/* --------------季節限定----------------------- */
+#season3{
+  padding-top: 120px;
+  text-align: center;
+}
+
+#season3.is-show {
+  text-align: center;
+}
+
+.kisetsu {
+  width: 90%;
+  height: 300px;
+  margin: 20px auto 100px;
+}
+
+.kisetsu ul {
+  display: flex;
+  text-align: center;
+  column-gap: 50px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.kisetsu dt {
+  font-size: 1.2rem;
+  border-bottom: 1px dotted #19264A;
+  text-align: left;
+}
+
+.kisetsu dd {
+  width: 300px;
+  text-align: left;
+}
+
+.kisetsu img {
+  width: 300px;
+  height: 300px;
+}
+
+/* ホバー時の装飾------季節-------- */
+
+.kisetsu img:hover {
+  transform-origin: center center;
+  transform: scale(1.05);
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+
+/* ジャンプ先 */
+#kinki {
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  border: 1px solid #000;
+  position: absolute;
+  top:580px;
+}
+/* -----------近畿７種------------------------- */
+#list7{
+  margin-top: 150px;
+  text-align: center;
+}
+
+.seven {
+  width: 90%;
+  margin: 20px auto 100px;
+}
+
+.item-list {
+  width: 100%;
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(3,300px);
+  justify-content: center;
+  column-gap: 50px;
+  row-gap: 50px;
+  margin: 0 auto;
+}
+
+.item-list a {
+  margin: 0 auto;
+  width: 220px;
+}
+.item-list li img {
+  width: 220px;
+  height: 220px;
+}
+
+.item-list dt {
+  font-size: 1.2rem;
+  border-bottom: 1px dotted #19264A;
+  text-align: left;
+}
+
+.item-list dd {
+  width: 220px;
+  text-align: left;
+}
+
+
+/* ホバー時の装飾------７種---------- */
+
+.item-list img:hover {
+  transform-origin: center center;
+  transform: scale(1.05);
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/* ジャンプ先 */
+#guide {
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  border: 1px solid #000;
+  position: absolute;
+  top:2050px;
+}
+
+/* ---------------------------ショッピングガイドエリア-------------------- */
+.shop-guide {
+  margin: 0 auto 20px;
+  width: 90%;
+  text-align: center;
+}
+
+
+.shop-guide h3 { /*見出し「ショッピングガイド」*/
+  background-color: #19264A;
+  color: #fff;
+}
+
+
+.shop-info { /*「ショッピングガイド(見出し)」より下のエリア全体*/
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.shop-info h3 { /*見出し「お支払方法について」「ご注文方法について」*/
+  margin: 15px 0 6px;
+}
+
+.shop-info p {
+  display: block;
+  width: 100%;
+  margin: 0 0 10px 10px;
+}
+
+.shop-info-each {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.credit {
+  display: flex;
+  flex-direction: column;
+}
+
+.creditImage {
+  width: 300px;
+  margin: 10px 0 0 100px
+}
+
+
+
+/* ---------------フッター------------- */
+
+
+/* トップへ戻るボタン */
+.pagetop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+}
+.pagetop a {
+  display: block;
+  background-color: gray;
+  text-align: center;
+  color: #222;
+  font-size: 12px;
+  text-decoration: none;
+  padding: 5px 10px;
+  opacity: 0.8;
+  border-radius: 5px;
+}
+
+.pagetop a:hover {
+  background-color: white;
+  box-shadow: 1px 1px 10px #000;
+  color: #000000;
+}
+
+
+/* ---------------------------------レスポンシブ始まり */
+@media (max-width: 800px) {
+  .kisetsu {
+    display: flex;
+    overflow-x: auto;
+    background-color: #fff;
+    margin-bottom: 50px;
+  }
+  
+  .kisetsu img {
+    width: 220px;
+    height: 220px;
+    margin-left: 20px;
+  }
+
+.kisetsu dl {
+  margin-left: 20px;
+  width: 220px;  
+} 
+
+.kisetsu dd {
+  width: 220px;
+}
+
+
+/* ジャンプ先 */
+#guide {
+  top:1080px;
+}
+
+
+
+  .item-list {
+    display: flex;
+    overflow-x: auto;
+    justify-content: space-between;
+    column-gap: 50px;
+    row-gap: 20px;
+  }
+
+  .kisetsu {
+    height: 100%;
+  }
+
+  .creditImage {
+    width: 100%;
+    margin: 0;
+  }
+
+  .shop-info { 
+    display: block;
+  }
+
+  .shop-info-each {
+    display: block;
+    width: 90%;
+  }
+ }
+
+ /* レスポンシブ終わり */

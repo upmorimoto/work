@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>中坂井商店イベントページ</title>
+  <meta name="description" content="近畿地方の地酒を扱う酒店、中坂井酒店のサイトです。ここはイベントのお知らせページです"> 
+  <link rel="stylesheet" href="../css/event.css"> 
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="./img/favicon.ico" sizes="any">
+  <script src="../js/button.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+
+<!-- ------------------------------------------------ヘッター始まり -->
+<header>
+  <div class="shop-name-area">
+    <a class="shop-name-text" href="../index.html">中坂井酒店</a>
+    <a class="shop-name-image" href="./shop_cart.html"><img src="../img/cart-mark.png" alt="買い物カート"></a>
+  </div>
+  
+  <!-- ハンバーガーメニューの設定 -->
+  <div class="media-button">
+    <p class="button1"></p>
+    <p class="button2"></p>
+    <p class="button3"></p>
+  </div>
+
+  <nav class="nav2">
+    <a class="navLink" href="./menu.html"><li>メニュー</li></a>
+    <a class="navLink" href="./event.html"><li>イベント</li></a>
+    <a class="navLink" href="./concept.html"><li>コンセプト</li></a>
+  </nav>
+    <!-- ハンバーガーメニューの設定終わり -->
+  <!------------------------------------------------- ヘッター終わり -->
+</header>
+
+<main>
+  <!-- -----トップへ戻るボタン-------クリックすればここに戻ってくる -->
+  <p class="pagetop"><a href="#section1">▲</a></p>
+
+  <!-- ----------ヒーローイメージ------------ -->
+  <div class="hero">
+    <div class="heroP">
+      <p class="heroP1">～九月三十日・十月一日<br>
+        日本酒の日<br>
+        二日間限定開催～<br>
+        昼から飲んでいいんです♪<br>
+        <br>
+        <p class="heroP2">十八蔵の利き酒<br>
+        飲み蔵べ会</strong>
+      </p>
+    </div>
+      <img src="../img/kikizake.jpg" alt="">
+  </div>
+
+<!-- 　お知らせ -->
+  <div class="news">
+    <h1>イベント開催のお知らせ</h1>
+    <h2>～9月30日・10月1日（日本酒の日）の二日間限定～</h2>
+    <p>京都の伏見は、広島の西条、兵庫の灘と並んで「日本三大酒どころ」のひとつ、酒造りが
+      盛んな地として名高い伏見の酒造。こちらの厳選した18蔵から選ばれたおすすめ冷酒を飲み比べていただこうと、今回10月1日(日本酒の日)を含む2日間利き酒会を開催いたします。</p>
+    
+      <img src="../img/kikisake img.gif" alt="">
+  </div>
+
+</main>
+
+<!-- ------------------フッター-------------------------- -->
+<footer id="footer">
+  <div class="footer-area">
+    <div class="footer-top">
+      <a href="../index.html"><img class="footer-logo" src="../img/logo.png" alt="中坂井商店ロゴ"></a>
+       <h1 class="since">since2023&emsp;</h1>
+    </div>
+
+    <div class="footer-middle">
+      <div class="footer-link">
+        <div class="footer-contact">
+          <a href="./contact.html"><p>お問い合わせ</p></a>
+          <a href="./menu.html#guide"><p>ショッピングガイド</p></a>
+        </div>
+        <div class="footer-menu">
+          <a href="./menu.html"><p>メニュー</p></a>
+          <a href="./menu.html#season3"><p>季節限定商品</p></a>
+          <a href="./menu.html#kinki"><p>近畿7府県の地酒</p></a>
+        </div>
+        <div class="footer-event">
+          <a href="./event.html"><p>イベント</p></a>
+        </div>
+        <div class="footer-concept">
+          <a href="./concept.html"><p>コンセプト</p></a>
+        </div>
+        <div class="footer-add">
+          <p class="add">中坂井酒店<br>
+            定休日： 水曜日<br>
+            営業時間： 10:00～22:00<br>
+            住所： 和歌山県高野町123<br>
+            電話番号： 00-0000-0000<br>
+            駐車場： 10台</p>
+        </div>
+      </div>
+
+    </div>
+    
+    <div class="footer-bottom">
+      <a href="./privacy.html">プライバシーポリシー</a>
+      <a href="./tokutei.html">特定商取引法に基づく表記</a>
+    </div>
+    <!-- コピーライト -->
+    <div class="copyright">
+      <p>このページは職業訓練生が作成した架空のサイトです</p>
+      <p>&copy;中坂井酒店</p>
+    </div>
+  </div>
+  
+</footer>
+
+<!-- 押すと戻るボタン -->
+<script>
+  $(document).ready(function() {
+    var pagetop = $('.pagetop');
+      $(window).scroll(function () {
+         if ($(this).scrollTop() > 100) {
+            pagetop.fadeIn();
+         } else {
+              pagetop.fadeOut();
+              }
+         });
+         pagetop.click(function () {
+             $('body, html').animate({ scrollTop: 0 }, 300);
+                return false;
+     });
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+@charset "UTF-8";
+/* リセットcssここから */
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* リセットcssここまで */
+/* メインここから */
+body {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-size: 18px;
+  color: #000;
+  line-height: 2;
+  background-color: #EADED0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-container img {
+  object-fit: contain;
+  width: 30%;
+  aspect-ratio: 1;
+}
+
+.header-container .bear {
+  width: 25%;
+}
+
+.header-container img:last-child {
+  transform: scale(-1, 1);
+}
+
+.section-title {
+  font-size: 250%;
+  color: #291400;
+  text-align: center;
+  padding: 50px 0;
+}
+
+section {
+  width: 90%;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2em 0;
+}
+
+table {
+  border-collapse: collapse;
+  margin: auto;
+  width: 80%;
+  padding-top: 2em;
+}
+
+th, td {
+  border: 1px solid #333;
+  text-align: center;
+  padding: 0 10px;
+}
+th a, td a {
+  text-decoration: underline;
+  color: #0400ff;
+}
+th a:hover, td a:hover {
+  color: #7a005c;
+}
+th .credit, td .credit {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+th .credit img, td .credit img {
+  width: 50%;
+}
+
+li {
+  list-style: square;
+}
+
+.shopping-guide .text {
+  text-align: start;
+}
+
+/* ボタンここから */
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 40px auto 40px auto;
+}
+.button .mainbutton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 80px;
+  background-color: #eec040;
+  border-radius: 30px;
+  z-index: 5;
+  transition: 0.5s;
+  margin: auto;
+}
+.button .mainbutton:hover {
+  transform: scale(0.98);
+  background-color: #DBB13D;
+}
+.button .mainbutton p {
+  font-size: 150%;
+  font-weight: bold;
+}
+
+/* ボタンここまで */
+
+
+/* メインここまで */
+
+/* レスポンシブ */
+@media (max-width: 700px) {
+  body {
+    margin: auto;
+  }
+  .section-title {
+    font-size: 150%;
+  }
+  table th, td {
+    display: block;
+    width: 100%;
+  }
+  .table-01 tr td:nth-child(odd) {
+    background-color: #EADED0;
+  }
+  .table-02 tr td:nth-child(1) {
+    background-color: #EADED0;
+  }
+  .table-02 tr .text:nth-child(1) {
+    background-color: #fff;
+  }
+
+  @media (max-width: 400px) {
+    .table-02 {
+      table-layout: fixed;
+      word-break: break-all;
+      word-wrap: break-all;
+   }
+  }
+}/*# sourceMappingURL=tradelaw.css.map */

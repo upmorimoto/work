@@ -1,0 +1,240 @@
+/* コンタクトarticleの設定 */
+.contact {
+  width: 80%;
+  margin: 0 10%;
+  position: relative;
+}
+.contact h1 {
+  width: 100%;
+  padding-top: 120px;
+  /* margin: 10% auto; */
+}
+
+.input-record {
+  display: flex;
+  margin: 5%;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.input-record button {
+  background-color: #19264a;
+  color: rgb(255, 255, 255);
+  display: block;
+  margin: 0 auto;
+  width: 30%;
+  padding: 2%;
+  cursor: pointer;
+}
+.input-record button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+form {
+  width: 70%;
+  margin: 0 auto;
+}
+form label {
+  display: block;
+  width: 30%;
+  text-align: left;
+  margin-right: 5%;
+}
+form input, textarea, select {
+  display: block;
+  line-height: 2;
+  width: 60%;
+  margin: 0 auto;
+}
+
+textarea {
+  height: 250px;
+}
+
+/* 確認フォーム */
+.in-form {
+  width: 80%;
+  box-shadow: 3px 3px 5px #333333de;
+  position: fixed;
+  top: 10%;
+  left: -100%;
+  transform: translateX(-50%);
+  z-index: 1;
+  background-color: #19264a;
+  padding: 3%;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+.in-form dl {
+  padding: 2%;
+}
+.in-form dd {
+  margin-left: 15%;
+}
+.sendButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 0 2%;
+  margin: 0 auto;
+  text-align: center;
+}
+.sendButton button {
+  width: 30%;
+  padding: 2%;
+  cursor: pointer;
+}
+
+.message dd {
+  white-space: pre-wrap;
+}
+
+.hissu {
+  width: 60px;
+  height: 25px;
+  font-size: 1rem;
+  text-align: center;
+  background-color: red;
+  color: wheat;
+  border-radius: 20px;
+  margin: auto 10px auto 0;
+}
+
+.none {
+  opacity: 0;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem
+}
+
+.input-record label {
+  display: flex;
+  align-items: center; 
+}
+
+/* アクティブ時の配置 */
+.in-form.active1 {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+/* マップと住所 */
+.map1 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.map1 iframe {
+  width: 600px;
+  height: 300px;
+}
+
+.address {
+  margin-left: 30px;
+}
+
+.address p {
+  line-height: 2;
+  font-size: 1.1rem;
+}
+
+.logo1 {
+  width: 200px;
+}
+
+@media (max-width: 800px) {  /* 600pxより小さい場合のスタイル指定 */
+  
+/* コンタクトarticleの設定 */
+.contact {
+  width: 100%;
+  margin: 0 ;
+  position: relative;
+}
+.contact h1 {
+  width: 100%;
+  padding-top: 120px;
+  /* margin: 10% auto; */
+}
+
+#dateForm {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  width: 100%;
+  margin: 0 auto;
+}
+form label {
+  font-size: 16px;
+  display: block;
+  width: 30%;
+  text-align: left;
+  margin-right: 5%;
+}
+form input, textarea, select {
+  display: block;
+  line-height: 2;
+  width: 60%;
+  margin: 0 auto;
+}
+
+textarea {
+  height: 250px;
+}
+
+
+.hissu {
+  width: 60px;
+  height: 25px;
+  font-size: 1rem;
+  text-align: center;
+  background-color: red;
+  color: wheat;
+  border-radius: 20px;
+  margin: auto 10px auto 0;
+}
+
+/* マップと住所 */
+.map1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 50px auto;
+}
+
+.map1 iframe {
+  width: 95%;
+  margin: 0 auto;
+  height: 200px;
+}
+
+.address {
+  width: 90%;
+  display: flex;
+  justify-content: start;
+  margin-top: 20px;
+  column-gap: 15px;
+  margin-left: 20px;
+}
+
+
+.logo1 {
+  width: 150px;
+margin: 0;
+}
+
+.address p {
+  line-height: 2;
+  font-size: 1rem;
+}
+
+
+
+}

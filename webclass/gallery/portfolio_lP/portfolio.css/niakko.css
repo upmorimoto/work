@@ -1,0 +1,46 @@
+.portfolio-hero {
+    background-image: url(../../portfolio_lP/portfolio_lp.img/portfolio-hero.jpg);
+}
+.main-all {
+    width: 100%;
+    height: 200vh;
+    background: rgb(255,255,255);
+background: linear-gradient(0deg, rgba(255,255,255,0.9220938375350141) 0%, rgba(255,181,181,0.6559873949579832) 35%, rgba(230,233,96,0.6559873949579832) 65%, rgba(233, 160, 96, 0.593) 100%);
+}
+
+.main {
+    width: 90%;
+    height: 80%;
+    background: #ffffff83;
+    margin: 10% auto;
+}
+
+.self-introduction {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.my-photo {
+    width: 30%;
+    height: auto;
+    aspect-ratio: 1;
+}
+.introduction {
+    width: 50%;
+    height: 40%;
+
+}
+.introduction dl {
+    display: flex;
+    align-items: flex-end;
+    padding: 20px 0 5px 0;
+    border-bottom: 2px dotted var(--active-color);
+}
+.introduction dt {
+    font-size: 1.2rem;
+    width: 50%;
+}
+.introduction dd {
+    width: 50%;
+}
+

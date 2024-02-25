@@ -1,0 +1,99 @@
+
+/*------ -------------------------------ヒーローイメージ--------- */
+.hero {
+  padding-top: 80px;
+}
+
+.hero img {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+  object-position: center,bottom;
+}
+
+.hero p {
+  width: 85%;
+  font-family: "HG行書体","HGP行書体",cursive;
+  position: absolute;
+  z-index: 20;
+  color: #ff8800;
+  line-height: 1.7;
+  text-shadow: 2px 2px 1px #000000;
+}
+
+.hero p:nth-child(2) {
+  font-size: 23px;
+  top: 555px;
+  /* left: 340px; */
+  right: 5%;
+}
+.hero p:nth-child(3) {
+  font-size: 45px;
+  top: 720px;
+  text-align: right;
+}
+/*------ ------------------------ヒーローイメージ終わり--------- */
+
+/* --------------------------------------------------説明文 */
+.conceprP {
+  height: 300px;
+}
+
+.conceptP p {
+  line-height: 1.8;
+  margin: 50px 2%;
+  font-size: 1.6rem;
+  font-family: "HG行書体","HGP行書体",cursive;
+}
+
+/* -----------------------------------------------レスポンシブデザイン */
+@media (max-width: 800px) {
+/*--------------ヒーローイメージ--------- */
+.hero {
+  padding-top: 80px;
+}
+
+.hero img {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+  object-position: center,bottom;
+}
+
+.hero p {
+  font-family: serif;
+  font-weight: bold;
+  /* font-family: "HG行書体","HGP行書体",cursive; */
+  position: absolute;
+  z-index: 20;
+  color: #ff8800;
+  line-height: 1.7;
+  text-shadow: 2px 2px 1px #000000;
+}
+
+.hero p:nth-child(2) {
+  font-size: 18px;
+  top: 500px;
+  /* left: 340px; */
+  right: 5%;
+}
+.hero p:nth-child(3) {
+  font-size: 25px;
+  top: 800px;
+  right: 10%;
+}
+/*------ ------------------------ヒーローイメージ終わり--------- */
+
+/* --------------------------------------------------説明文 */
+
+.conceptP p {
+  line-height: 1.8;
+  margin: 50px 6%;
+  font-size: 16px;
+  /* font-family: serif; */
+  /* font-family: "HG行書体","HGP行書体",cursive; */
+}
+
+}

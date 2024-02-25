@@ -1,0 +1,168 @@
+.hero-hero {
+  background-image: url(../hero_various.img/hero-hero.jpg);
+  object-fit: scale-down;
+  object-position: top;
+  
+  position: relative;
+}
+.hero-hero::after {
+  content: "";
+  width: 100%;
+  height: 200%;
+  position: absolute;
+  top: -40%;
+  left: -30%;
+  background-image: url(../hero_various.img/hero-accet.png);
+  z-index: 100;
+}
+
+.main {
+  width: 100%;
+  height: 160vh;
+}
+
+.hero {
+    width: 100%;
+    height: 90vh;
+    background-color: var(--accent-color);
+    position: relative;
+}
+
+
+
+.message1 {
+    font-size: 2rem;
+    color: var(--font-color);
+    position: absolute;
+    bottom: 15%;
+    left: 2.5%;
+    transform-origin: center;
+    transform: rotate(270deg);
+    z-index: 5;
+}
+.message2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+.message2 span {
+    top: 10%;
+    left: 5%;
+    font-size: 7rem;
+    font-weight: 600;
+    color: var(--font-color);
+    display: inline-block;
+    text-shadow: 3px 5px 15px #0000008d;
+    z-index: 5;
+    animation: massage2 6s ease-in alternate-reverse infinite;
+}
+
+@keyframes massage2 {
+    0% {
+        font-size: 1rem;
+        opacity: 0;
+        left: 5%;
+        color: var(--active-color);
+    }
+    100% {
+        opacity: 1;
+        left: 80%;
+    }
+}
+
+.hero .section-images {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.hero-image {
+    position: absolute;
+}
+
+.left-img {
+    width: 60%;
+    height: 70%;
+    background-image: url(../hero_various.img/hero-img1.jpg);
+    background-size: cover;
+    background-position: center;
+    top: 25%;
+    left: 10%;
+    z-index: 2;
+    transform-origin: center;
+    animation: slide1 20s ease-in-out infinite;
+}
+
+.right-img {
+    width: 60%;
+    height: 70%;
+    background-image: url(../hero_various.img/hero-img6.jpg);
+    background-size: cover;
+    background-position: center;
+    top: 10%;
+    right: 5%;
+    z-index: 2;
+    transform-origin: center;
+    animation: slide2 20s ease-in-out infinite;
+    animation-delay: 1s;
+
+}
+
+@keyframes slide1 {
+    0% {
+        transform: rotateX(360deg);
+        opacity: 0.8;
+        background-image: url(../hero_various.img/hero-img1.jpg);
+    }
+    20% {
+        opacity: 0.8;
+        background-image: url(../hero_various.img/hero-img2.jpg);
+    }
+    40% {
+        opacity: 0.8;
+        background-image: url(../hero_various.img/hero-img3.jpg);
+    }
+    60% {
+        opacity: 0.8;
+        background-image: url(../hero_various.img/hero-img4.jpg);
+    }
+    80% {
+        opacity: 0.8;
+        background-image: url(../hero_various.img/hero-img5.jpg);
+    }
+    100% {
+        opacity: 0.8;
+        background-image: url(../hero_various.img/hero-img1.jpg);
+    }
+}
+@keyframes slide2 {
+    0% {
+        transform: rotateY(360deg);
+        opacity: 0.8;
+        background-image: url(../hero_various.img/hero-img6.jpg);
+    }
+    20% {
+        opacity: 0.8;
+        background-image: url(../hero_various.img/hero-img7.jpg);
+    }
+    40% {
+        opacity: 0.8;
+        background-image: url(../hero_various.img/hero-img8.jpg);
+    }
+    60% {
+        opacity: 0.8;
+        background-image: url(../hero_various.img/hero-img9.jpg);
+    }
+    80% {
+        opacity: 0.8;
+        background-image: url(../hero_various.img/hero-img10.jpg);
+    }
+    100% {
+        opacity: 0.8;
+        background-image: url(../hero_various.img/hero-img6.jpg);
+    }
+}
+

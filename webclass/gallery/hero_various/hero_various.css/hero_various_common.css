@@ -1,0 +1,73 @@
+.hero-hero {
+    background-image: url(../hero_various.img/hero-hero.jpg);
+    object-fit: scale-down;
+    object-position: top;
+    
+    position: relative;
+  }
+  .hero-hero::after {
+    content: "";
+    width: 100%;
+    height: 200%;
+    position: absolute;
+    top: -40%;
+    left: -30%;
+    background-image: url(../hero_various.img/hero-accet.png);
+    z-index: 100;
+  }
+    
+
+.main {
+    width: 100vw;
+    height: 140vh;
+}
+
+.various-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 20%);
+    gap: 8%;
+    place-items: start;
+    justify-content: center;
+}
+.various-gallery .img {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.various-gallery .card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    aspect-ratio: 1.5;
+    border-radius: 5%;
+    overflow: hidden;
+    box-shadow: 3px 3px 10px #000000a2;
+    transition: transform 0.5s;
+}
+.various-gallery .card .img::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5%;
+    background: linear-gradient(270deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+    opacity: 0;
+    transition: all 0.5;
+}
+.tips_title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 3% auto;
+}
+
+.various-gallery .card:hover img {
+    transform: scale(1.3) translateY(-5%);
+    background: linear-gradient(270deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+}
+.various-gallery .card:hover .img::after {
+    transform: scale(1.3) translateY(-5%);
+    opacity: 1;
+}

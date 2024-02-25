@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de Noël-商品詳細ページ-</title>
+    <meta name="discription" content="Jeu de Noël（ジュー ド ノエル）特設サイト">
+    <link rel="stylesheet" href="css/item.css">
+    <script src="./js/product_list.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="../image/icon.png" sizes="any">
+</head>
+<body>
+  <main>
+    <div class="title">
+        <h1>-Detail-</h1>
+    </div>
+    <div class="item">
+        <div class="item-img"><img src="../image/c9.jpg" alt="img"></div>
+        <div class="item-content">
+            <dl>
+                <dt>9.デ・リシャ・スー　ホワイト</dt>
+                <dd>イチゴペーストを練りこんだクリーム生地のピンクが女性に人気です。ホワイトチョコとの相性も良く、くちどけのいいケーキです。</dd>
+            </dl>
+            <div class="select-button">
+                <label class="radio-button"><input type="radio" name="user-type" value="4号" checked>4号 2,500 yen</label>
+                <label class="radio-button"><input type="radio" name="user-type" value="5号">5号 3,500 yen</label>
+                <label class="radio-button"><input type="radio" name="user-type" value="6号">6号 4,500 yen</label>
+                <label class="radio-button"><input type="radio" name="user-type" value="7号">7号 6,000 yen</label>
+            </div>
+            <p class="price"><span>※下記にサイズ表あります <br>
+                ※掲載がないサイズについては<a href="../contact.html">お問い合わせ</a>ください</span></p>
+
+<!-- カートここから -->
+            <div class="orders">
+                <button class="minus_btn">-</button>
+                <input type="text" class="quantity" value="0">
+                <button class="plus_btn">+</button>
+            </div>
+            <div class="in_cart">
+                <button class="add-to-cart" data-product="c9.デ・リシャ・スー　ホワイト" data-image="./img/product_list/c9.jpg" data-price="￥2500">カートに追加</button>
+            </div>
+
+<!-- カートここまで -->
+
+        </div>
+    </div>
+    <div class="cart">
+        <a href="./shop_cart.html" target="_blank">
+            <p>マイカート => GO!</p>
+            <img src="./img/icon/cart-shopping-fast.png" alt="">
+        </a>
+    </div>
+    <a href="../couple.html">
+        <div class="back-button">
+            <p>戻る</p>
+        </div>
+    </a>
+    <div class="cake-size"><img src="../image/cakesize.jpg" alt="size"></div>
+  </main>
+  
+</body>
+</html>

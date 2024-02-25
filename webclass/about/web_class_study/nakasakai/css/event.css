@@ -1,0 +1,121 @@
+/* ヒーローイメージ */
+.hero {
+  width: 100%;
+  margin: 0 auto;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  line-height: 2;
+}
+
+.heroP {
+  width: 60%;
+  font-family: "HG行書体","HGP行書体",cursive;
+  position: absolute;
+  height: 700px;
+  z-index: 10;
+  text-orientation: upright;
+  text-align: center;
+  background-color: #ffffff6c;
+  margin-top: 15%;
+  padding: 40px;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+}
+
+.heroP1 {
+  font-size: 2rem;
+}
+.heroP2 {
+  font-size: 5rem;
+  text-align: left;
+}
+
+
+.hero img {
+  width: 100%;
+  height: 900px;
+  object-fit: cover;
+  position: relative;
+}
+
+
+/* --------お知らせ----------------- */
+.news {
+  width: 800px;
+  margin: 100px auto 0;
+  text-align: center;
+  font-family: "HG行書体","HGP行書体",cursive;
+}
+
+.news h1{
+  font-size: 3.5rem;
+  color: rgb(235, 0, 0);
+}
+
+.news h2{
+  font-size: 2rem;
+  margin-top: 30px;
+  color: #19264A;
+}
+
+.news p {
+  font-size: 1.4rem;
+  margin: 20px auto 50px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.news img {
+  margin-bottom: 100px;
+  border: 2px solid #19264A;
+}
+
+
+/* -----------------------レスポンシブデザイン */
+@media (max-width: 800px) {
+
+
+  .hero img {
+    height: 290px;
+  }
+  .hero {
+    height: 300px;
+    padding-top: 80px;
+  }
+  .heroP {
+    width: 70%;
+    font-family: "HG行書体","HGP行書体",cursive;
+    position: absolute;
+    z-index: 10;
+    text-orientation: upright;
+    text-align: center;
+    background-color: #ffffff6c;
+    margin-top: 15%;
+    padding: 20px;
+    /* top: 50%; */
+    /* left: 50%; */
+    transform:translate(-50%,-140%);
+    height: 200px;
+    letter-spacing: -1px;
+  }
+  .news {
+    width: 80%;
+   padding-right: 20px;
+  }
+  .news p {
+    font-size: 14px;
+  }
+  .news h1 {
+    font-size: 20px;
+  }
+  .news h2 {
+    font-size: 18px;
+  }
+  .heroP1 {
+    font-size: 14px;
+  }
+  .heroP2 {
+    font-size: 14px;
+  }
+}

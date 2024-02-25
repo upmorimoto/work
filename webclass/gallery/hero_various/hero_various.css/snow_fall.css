@@ -1,0 +1,109 @@
+.hero-hero {
+  background-image: url(../hero_various.img/hero-hero.jpg);
+  object-fit: scale-down;
+  object-position: top;
+  
+  position: relative;
+}
+.hero-hero::after {
+  content: "";
+  width: 100%;
+  height: 200%;
+  position: absolute;
+  top: -40%;
+  left: -30%;
+  background-image: url(../hero_various.img/hero-accet.png);
+  z-index: 100;
+}
+
+.main {
+  width: 100vw;
+  height: 160vh;
+}
+
+.snow-container {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../hero_various.img/snow-fall.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.snow-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0000004b;
+}
+.snow-container h1 {
+  font-family: 'Caprasimo', cursive;
+    font-size: 7rem;
+    text-shadow: 5px 5px 10px #0000004e;
+    color: white;
+    letter-spacing: 6px;
+    font-weight: 700;
+    z-index: 3;
+    margin-top: 90px;
+}
+
+.snow {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  border-radius: 50%;
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,0.9220938375350141) 0%, rgba(255,255,255,0.499124649859944) 50%, rgba(255,255,255,0) 100%);
+  animation: fall 10s linear;
+}
+@keyframes fall {
+  0% {
+    opacity: 0;
+    transform: translateX(-5px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(5px);
+  }
+  20% {
+        transform: translateX(-5px);
+
+  }
+  30% {
+        transform: translateX(5px);
+
+  }
+  40% {
+        transform: translateX(-5px);
+
+  }
+  50% {
+        transform: translateX(5px);
+
+  }
+  60% {
+        transform: translateX(-5px);
+
+  }
+  70% {
+        transform: translateX(5px);
+
+  }
+  80% {
+        transform: translateX(-5px);
+
+  }
+  90% {
+    transform: translateX(5px);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 100%;
+  }
+}
