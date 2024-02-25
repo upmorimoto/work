@@ -1,0 +1,446 @@
+@charset "utf-8";
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  width: 100%;
+}
+
+main {
+  width: 100vw;
+  position: relative;
+}
+
+.banner-inner {
+  position: relative;
+}
+/* HERO */
+.hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #ffd2fe;
+  background-image: url(../img/item/1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* position: sticky;
+  top: 0;
+  left: 0; */
+  transform: translateZ(1px);
+  position: relative;
+}
+
+.hero h1 {
+  font-size: calc((var(--index)) * 3.2);
+}
+.hero p {
+  color: #fff;
+  margin-top: 3%;
+  font-size: calc((var(--index)) * 0.9);
+}
+.hero h1 {
+  transform: translateY(-1000%);
+  animation: load 2s ease-in 0.5s forwards;
+}
+.hero p {
+  transform: translateY(1000%);
+  animation: load 1.5s ease-in 2s forwards;
+}
+
+@keyframes load {
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.message {
+  width: 100%;
+  height: 20vh;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateZ(-1px);
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+.message h1 {
+  font-size: calc(var(--index) * 2);
+  color: var(--accent);
+}
+
+/* ARTICLES */
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-image: url(../img/item/candy.png);;
+  background-position: 0 0;
+  background-repeat: repeat;
+  background-size: cover;
+  background-color: #fff;
+  z-index: 2;
+  position: relative;
+}
+
+
+.title {
+  font-size: calc(var(--index) * 1.4);
+  font-weight: 400;
+  position: relative;
+  margin-bottom: 10px;
+}
+.title span {
+  font-size: calc(var(--index) * 1.2);
+  display: inline-block;
+  margin-right: 5px;
+}
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 70%;
+  height: 2px;
+  background-color: var(--accent);
+}
+
+/* main(左側) */
+
+.about {
+  width: 80%;
+  height: fit-content;
+  padding: 5% 0 5% 2%;
+}
+.about-contents {
+  margin: 8% auto;
+  text-align: center;
+}
+.about-contents h3 {
+  width: 90%;
+  margin: 0 auto;
+}
+.about figure {
+  display: flex;
+  margin: 5%;
+}
+.about figure img {
+  width: 30%;
+  aspect-ratio: 1.5;
+  box-shadow: 3px 3px 10px #333333cf;
+}
+.about figure figcaption {
+  padding: 5%;
+}
+.about figure:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.about figcaption h4 {
+  margin-bottom: 3%;
+}
+
+
+
+
+/* side(右側) */
+.side {
+  width: 20%;
+  height: fit-content;
+  padding: 5% 2% 5% 0;
+  font-size: calc(var(--index) * 0.8);
+  position: sticky;
+  top: 0;
+  right: 0;
+}
+
+/* SHOP */
+.shop {
+  width: 100%;
+  height: fit-content;
+  margin: 0 auto;
+  padding-top: 10%;
+  background-color: #cc4d4d3d;
+  background-image: url(../img/item/kirakira.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  margin-bottom: 10%;
+  border-radius: 20px;
+  box-shadow: 3px 3px 10px #333333cf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.side .title {
+  font-size: calc(var(--index) * 1.4);
+  font-weight: 400;
+  position: relative;
+  margin-bottom: 10px;
+}
+.side .title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  height: 2px;
+  background-color: var(--accent);
+}
+
+.amazon-shop {
+  width: 90%;
+  margin: 15% auto 15% auto;
+}
+.amazon-shop img {
+  width: 30%;
+}
+
+.shop-p {
+  font-size: calc(var(--index) * 0.8);
+  margin-top: 10%;
+}
+
+.shop-go img {
+  width: 30%;
+}
+
+.shop-go button {
+  width: 90%;
+  border: 1px solid #cc4d4d;
+  border-radius: 20px;
+  line-height: 2;
+  background-color: #cc4d4d;
+  color: #fff;
+}
+.shop-go button:hover {
+  background-color: transparent;
+  color: #cc4d4d;
+}
+
+
+/* ブログ */
+.blog {
+  width: 100%;
+  height: fit-content;
+  margin: 0 auto;
+  padding-top: 10%;
+  background-color: #cc4d4d3d;
+  background-image: url(../img/item/kirakira.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  margin-bottom: 10%;
+  border-radius: 20px;
+  box-shadow: 3px 3px 10px #333333cf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.blog-contents {
+  width: 90%;
+  margin: 15% auto 15% auto;
+}
+.blog img {
+  width: 30%;
+}
+.blog-contents button {
+  width: 90%;
+  border: 1px solid #cc4d4d;
+  border-radius: 20px;
+  line-height: 2;
+  background-color: #cc4d4d;
+  color: #fff;
+}
+.blog-contents button:hover {
+  background-color: transparent;
+  color: #cc4d4d;
+}
+
+
+/* RECOMMENDED */
+
+.recommend-contents {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #fff;
+  transform: translateZ(-2px);
+}
+.recommend-contents .recommend-title {
+  padding-top: 8%;
+}
+
+.recommend-contents .contents {
+  width: 90%;
+  height: fit-content;
+  margin: 5% auto;
+  text-align: center;
+}
+
+.recommend-contents .illust {
+  box-shadow: 3px 3px 10px #333333cf;
+}
+.recommend-contents .text {
+  text-align: center;
+  padding: 10% auto 10% auto;
+}
+
+.amazon-pick {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 3%;
+}
+.amazon-pick .pick-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.amazon-pick img {
+  width: 30%;
+  transition: all 0.5s ease-in;
+}
+.amazon-pick img:hover {
+  transform: scale(2);
+}
+
+/* GO-BANNER */
+.go-banner {
+  width: 100%;
+  height: 7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff7171b9;
+  color: #fff;
+  opacity: 0;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+}
+.go-banner button {
+  width: 30%;
+  border: 1px solid #cc4d4d;
+  border-radius: 20px;
+  line-height: 2;
+  background-color: #cc4d4d;
+  color: #fff;
+}
+.go-banner a {
+  width: 50%;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.go-banner a img {
+  width: 20%;
+}
+.go-banner a p {
+  width: 100%;
+  margin-top: 0;
+  margin-left: 5%;
+}
+
+
+
+
+/* レスポンシブ(720px) */
+@media screen and (max-width: 720px) {
+
+  .hero p {
+    width: 90%;
+    margin: 0 auto;
+    font-size: calc((var(--index)) * 1.2);
+  }
+  
+  .message h1 {
+    font-size: calc(var(--index) * 1.8);
+    text-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .main {
+    display: block;
+    font-size: calc(var(--index) * 1.2);
+    width: 100%;
+  }
+  .about {
+    width: 100%;
+  }
+  .about-contents h3 {
+    text-wrap: wrap;
+  }
+  .about figure {
+    display: block;
+    margin: 5%;
+  }
+  .about figure img {
+    width: 70%;
+  }
+  .about figure figcaption {
+    padding: 5%;
+  }
+  .about figure:nth-child(even) {
+    flex-direction: row;
+  }
+  
+  .side {
+    width: 100%;
+    height: fit-content;
+    padding: 5%;
+  }
+
+  .amazon-shop {
+    margin: 5% auto 5% auto;
+  }
+  .amazon-shop .store-img {
+    display: none;
+  }
+  
+  .recommend-contents .contents {
+    width: 95%;
+    margin: 10% auto;
+  }
+  .amazon-pick {
+    flex-wrap: wrap;
+  }
+  .amazon-pick .pick-card {
+    width: 35%;
+  }
+  .amazon-pick img {
+    width: 100%;
+  }
+
+  .go-banner {
+    opacity: 1;
+  }
+  
+}
