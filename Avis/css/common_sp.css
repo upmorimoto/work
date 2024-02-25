@@ -1,0 +1,45 @@
+@media screen and (max-width: 768px) {
+  
+  body {
+    font-size: 12px;
+  }
+  .header-inner .logo {
+    width: 30%;
+  }
+  .header-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translate(-10px, 30px);
+    width: 25%;
+    display: grid;
+    place-items: center;
+  }
+  .header-menu .toggle {
+    filter: invert(100%);
+  }
+  header .menu-list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: all 0.6s ease-in-out;
+    line-height: 2;
+    font-size: calc((var(--index)) * 1.6);
+  }
+  .menu-list.show {
+    opacity: 1;
+    transform: translateX(-20%);
+  }
+  
+
+  .toggle {
+    display: block;
+  }
+
+  footer .logo {
+    width: 50%;
+  }
+  
+  
+}
