@@ -34,18 +34,18 @@ const smoothScrollTrigger = document.querySelectorAll('a[href^="#"]');
   }
 
   // FADE
+  const targets = document.querySelectorAll('.fade');
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      } else {
+        entry.target.classList.remove('active');
+      }
+    });
+  });
   
-  
-  const targets = document.getElementsByClassName('fade');
-  for(let i = targets.length; i--;){
-   let observer = new IntersectionObserver((entries, observer) => {
-    for(let j = entries.length; j--;){
-     if (entries[j].isIntersecting) {
-      entries[j].target.classList.add('active');
-     } else{
-      entries[j].target.classList.remove('active');
-     }
-    }
-   });
-   observer.observe(targets[i]);
-  }
+  targets.forEach(target => {
+    observer.observe(target);
+  });

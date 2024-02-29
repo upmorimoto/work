@@ -115,6 +115,12 @@ header {
 /* MAIN */
 main {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  width: 100%;
   height: 100vh;
   position: relative;
 }
@@ -180,7 +186,7 @@ main {
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translate(-50%, 100%);
+  transform: translateY(100%);
   animation: button-load 0.5s ease-in 0.2s forwards;
 }
 @keyframes button-load {
@@ -190,7 +196,7 @@ main {
 }
 
 .button-container button {
-  margin: 0 5px;
+  margin: 0 auto;
   padding: 10px 20px;
   background-color: transparent;
   border: none;
@@ -205,18 +211,12 @@ main {
   color: #cc2121;
 }
 
-/* Fade */
-.fade {
-	opacity: 0;
-	transform: translateY(50px);
-	transition: opacity 1.5s, transform 1s;
-}.fade.active {
-	opacity: 1;
-	transform: translateY(0px);
+/* FOOTER */
+footer {
+  width: 100%;
+  height: 50vh;
+  background-color: #ff6b6b;
 }
-
-
-
 
 @media screen and (max-width: 720px) {
   
