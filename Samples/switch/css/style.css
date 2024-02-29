@@ -24,18 +24,6 @@ body {
   background-color: #fab7e6;
 }
 
-header {
-  z-index: 100;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 3% 10%;
-}
-
 header .brand {
   color: #fff;
   font-size: 1.5rem;
@@ -43,54 +31,113 @@ header .brand {
   text-transform: uppercase;
   transition: 0.5s ease;
 }
-header .brand:hover {
-  color: #cc2121;
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8vh;
+  z-index: 100;
+  transform: translateY(-120%);
+  transition: all 0.8s;
+  /* background-color: var(--BG); */
+  animation: open 0.8s ease-in 0.2s forwards;
 }
 
-nav .nav-items a {
-  margin-left: 30px;
+@keyframes open {
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.header-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
 }
-nav .nav-items a>span {
-  position: absolute;
-  background: #cc2121;
+
+.header-inner .brand {
+  transform: translate(20%, 40%);
+}
+
+.toggle {
+  display: none;
+  width: 35%;
+  aspect-ratio: 1;
+  background-image: url(../img/menu_FILL0_wght400_GRAD0_opsz24.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: none;
+  background-color: transparent;
+}
+.toggle.show {
+  background-image: url(../img/close_FILL0_wght400_GRAD0_opsz24.png);
+}
+
+.menu-list {
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 30px;
+}
+.list {
+  margin-left: 30px;
+  color: var(--pop);
+  font-weight: 600;
+  position: relative;
+}
+
+.list span {
   width: 0%;
   height: 2px;
+  position: absolute;
   bottom: 0;
   left: 0;
-  transition: 0.3s ease;
+  transform: translateY(3px);
+  background-color: #cc4d4d;
+  transition: all 0.3s;
 }
-nav .nav-items a:hover span {
+.list:hover {
+  color: #fff;
+}
+.list:hover span {
   width: 100%;
 }
-/* nav .nav-items a:hover {
-  color: #fff;
-} */
 
+
+/* MAIN */
 main {
   width: 100%;
   height: 100vh;
   position: relative;
 }
 .container {
-  width: 60%;
-  aspect-ratio: 1.8;
+  width: 70%;
+  height: fit-content;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #f5f5f5;
-  box-shadow: 0 10px 30px #dbdbdb;
 }
 .slider {
   width: 100%;
-  height: 100%;
+  height: 80%;
   margin: auto;
+
 }
 .slides {
-  aspect-ratio: 1.8;
-  object-fit: cover;
   display: flex;
   overflow-x: auto; /* 横スクロールを有効にする */
   scroll-snap-type: x mandatory; /* 横スクロールでスナップするようにする */
@@ -103,6 +150,9 @@ main {
 	 display: none;
 }
 .slides img {
+  object-fit: cover;
+  aspect-ratio: 2.3;
+  object-position: center;
   flex: 0 0 auto;
   width: 100%; /* スライダーの幅に合わせる */
   height: auto;
@@ -110,11 +160,11 @@ main {
 }
 
 .button-area {
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  
 }
 .prev, .next {
   background-color: transparent;
@@ -125,13 +175,20 @@ main {
 
 
 .button-container {
+  width: 100%;
   text-align: center;
-  margin-top: 10px;
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, 100%);
+  animation: button-load 0.5s ease-in 0.2s forwards;
 }
+@keyframes button-load {
+  to {
+    transform: translate(-50%, -100%);
+  }
+}
+
 .button-container button {
   margin: 0 5px;
   padding: 10px 20px;
@@ -146,6 +203,63 @@ main {
 }
 .button-container button:hover {
   color: #cc2121;
+}
+
+/* Fade */
+.fade {
+	opacity: 0;
+	transform: translateY(50px);
+	transition: opacity 1.5s, transform 1s;
+}.fade.active {
+	opacity: 1;
+	transform: translateY(0px);
+}
+
+
+
+
+@media screen and (max-width: 720px) {
+  
+  body {
+    font-size: 12px;
+  }
+  .header-inner .logo {
+    width: 30%;
+  }
+  .header-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translate(-10px, 30px);
+    width: 25%;
+    display: grid;
+    place-items: center;
+  }
+  .header-menu .toggle {
+    filter: invert(100%);
+  }
+  header .menu-list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: all 0.6s ease-in-out;
+    line-height: 2;
+    font-size: calc((var(--index)) * 1.6);
+  }
+  .menu-list.show {
+    opacity: 1;
+    transform: translateX(-20%);
+  }
+  
+
+  .toggle {
+    display: block;
+  }
+
+  .container {
+    width: 90%;
+  }
 }
 
 

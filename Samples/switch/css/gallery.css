@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+.gallery {
+  width: 100%;
+  height: fit-content;
+}
+
+.section-headline {
+  width: 100%;
+  height: fit-content;
+}
