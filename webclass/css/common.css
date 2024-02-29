@@ -33,12 +33,12 @@ body {
 
 :root {
     --primary-color: #222222;
-    --border-color: #837802;
+    --border-color: #881b36d2;
     --main-width: 100%;
     --main-hight: 100vh;
-    --font-color: #837802;
-    --accent-color: #e4e4e4;
-    --active-color: #e79090;
+    --font-color: #cc3198;
+    --accent-color: #8c2e8f;
+    --active-color: #9e192f;
     }
 
 /* ヘッダー */
@@ -472,6 +472,7 @@ footer {
 
 @media screen and (max-width: 768px) {
     /* スタイルのプロパティと値 */
+    
   }    
 
     
