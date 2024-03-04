@@ -7,5 +7,42 @@
 
 .section-headline {
   width: 100%;
-  height: fit-content;
+  color: #fff;
+  margin: 8vh 0;
+  font-size: 2.5rem;
+}
+
+.gallery .section-headline {
+  text-align: center;
+}
+.gallery .grid-container {
+  width: 90%;
+  margin: 0 auto;
+}
+.gallery .various-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5%;
+  row-gap: 25px;
+}
+
+.gallery .card {
+  width: 25%;
+
+}
+
+.gallery .card a {
+  display: block;
+}
+
+/* Fade */
+.fade {
+	opacity: 0;
+	transform: translateY(50px);
+	transition: opacity 1.5s, transform 1s;
+}.fade.active {
+	opacity: 1;
+	transform: translateY(0px);
 }
