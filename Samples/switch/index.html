@@ -13,188 +13,189 @@
 </head>
 <body>
 
-  <header>
-    <div class="header-inner">
-      <a href="#top" class="brand">Switch</a>
-      <nav class="header-menu">
-        <button class="toggle"></button>
-        <ul class="menu-list nav-items">
-          <li class="list"><a href="#"><span></span><box-icon class='bx bx-tada bx-lg' type='logo' name='html5'></box-icon></a></li>
-          <li class="list"><a href="#"><span></span><box-icon class='bx bx-tada bx-lg' type='logo' name='css3'></box-icon></a></li>
-          <li class="list"><a href="#"><span></span><box-icon class='bx bx-tada bx-lg' name='javascript' type='logo' ></box-icon></a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<header>
+  <div class="header-inner">
+    <a href="#top" class="brand">Switch</a>
+    <nav class="header-menu">
+      <button class="toggle"></button>
+      <ul class="menu-list nav-items">
+        <li class="list"><a href="#"><span></span><box-icon class='bx bx-tada bx-lg' type='logo' name='html5'></box-icon></a></li>
+        <li class="list"><a href="#"><span></span><box-icon class='bx bx-tada bx-lg' type='logo' name='css3'></box-icon></a></li>
+        <li class="list"><a href="#"><span></span><box-icon class='bx bx-tada bx-lg' name='javascript' type='logo' ></box-icon></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
 <main>
-  <section class="container" id="top">
-    <div class="slider" id="slider1">
-      <div class="slides scrollbar_hidden">
-        <img src="./img/b1.jpg" alt="Slide 1">
-        <img src="./img/b2.jpg" alt="Slide 2">
-        <img src="./img/b3.jpg" alt="Slide 3">
-        <img src="./img/b4.jpg" alt="Slide 4">
+  <section class="hero">
+    <section class="container" id="top">
+      <div class="slider" id="slider1">
+        <div class="slides scrollbar_hidden">
+          <img src="./img/b1.jpg" alt="Slide 1">
+          <img src="./img/b2.jpg" alt="Slide 2">
+          <img src="./img/b3.jpg" alt="Slide 3">
+          <img src="./img/b4.jpg" alt="Slide 4">
+        </div>
+        <div class="button-area">
+          <button class="prev" onclick="changeSlide(-1, 1)"><box-icon class='bx bx-tada bx-lg' name='chevron-left'></box-icon>Prev</button>
+          <button class="next" onclick="changeSlide(1, 1)">Next<box-icon class='bx bx-tada bx-lg' name='chevron-right'></box-icon></button>
+        </div>
       </div>
-      <div class="button-area">
-        <button class="prev" onclick="changeSlide(-1, 1)"><box-icon class='bx bx-tada bx-lg' name='chevron-left'></box-icon>Prev</button>
-        <button class="next" onclick="changeSlide(1, 1)">Next<box-icon class='bx bx-tada bx-lg' name='chevron-right'></box-icon></button>
+      
+      <div class="slider" id="slider2" style="display: none;">
+        <div class="slides scrollbar_hidden">
+          <img src="./img/r1.jpg" alt="Slide 1">
+          <img src="./img/r2.jpg" alt="Slide 2">
+          <img src="./img/r3.jpg" alt="Slide 3">
+          <img src="./img/r4.jpg" alt="Slide 4">
+        </div>
+        <div class="button-area">
+          <button class="prev" onclick="changeSlide(-1, 2)"><box-icon class='bx bx-tada bx-lg' name='chevron-left'></box-icon>Prev</button>
+          <button class="next" onclick="changeSlide(1, 2)">Next<box-icon class='bx bx-tada bx-lg' name='chevron-right'></box-icon></button>
+        </div>
       </div>
-    </div>
-    
-    <div class="slider" id="slider2" style="display: none;">
-      <div class="slides scrollbar_hidden">
-        <img src="./img/r1.jpg" alt="Slide 1">
-        <img src="./img/r2.jpg" alt="Slide 2">
-        <img src="./img/r3.jpg" alt="Slide 3">
-        <img src="./img/r4.jpg" alt="Slide 4">
+      
+      <div class="slider" id="slider3" style="display: none;">
+        <div class="slides scrollbar_hidden">
+          <img src="./img/y1.jpg" alt="Slide 1">
+          <img src="./img/y2.jpg" alt="Slide 2">
+          <img src="./img/y3.jpg" alt="Slide 3">
+          <img src="./img/y4.jpg" alt="Slide 4">
+        </div>
+        <div class="button-area">
+          <button class="prev" onclick="changeSlide(-1, 3)"><box-icon class='bx bx-tada bx-lg' name='chevron-left'></box-icon>Prev</button>
+          <button class="next" onclick="changeSlide(1, 3)">Next<box-icon class='bx bx-tada bx-lg' name='chevron-right'></box-icon></button>
+        </div>
       </div>
-      <div class="button-area">
-        <button class="prev" onclick="changeSlide(-1, 2)"><box-icon class='bx bx-tada bx-lg' name='chevron-left'></box-icon>Prev</button>
-        <button class="next" onclick="changeSlide(1, 2)">Next<box-icon class='bx bx-tada bx-lg' name='chevron-right'></box-icon></button>
+    </section>
+
+    <section class="button-container">
+      <button onclick="changeSlider(1)">BLUE</button>
+      <button onclick="changeSlider(2)">RED</button>
+      <button onclick="changeSlider(3)">YELLOW</button>
+    </section> 
+  </section>  
+  <section class="gallery">
+      <!-- ギャラリー             -->
+    <h1 class="section-headline">Banner display</h1>
+
+    <section class="grid-container">
+      <div class="various-gallery">
+
+        <div class="card">
+            <a href="http://indigotsuji.starfree.jp/">
+                <img src="img/2023second-banner/Ikoma-indigo-banner.png" alt="">
+            </a>
+        </div>
+        <div class="card">
+            <a href="http://wkym.starfree.jp/mason-kitani/index.html">
+                <img src="img/2023second-banner/banner-inoue.png" alt="">
+            </a>
+        </div>
+        <div class="card">
+            <a href="http://iiiiup0075.starfree.jp/">
+                <img src="img/2023second-banner/iwasakinanako.png" alt="">
+            </a>
+        </div>
+        <div class="card">
+            <a href="http://norinori33.starfree.jp/">
+                <img src="img/2023second-banner/urakawa.png" alt="">
+            </a>
+        </div>
+        <div class="card">
+            <a href="http://area15.starfree.jp/">
+                <img src="img/2023second-banner/WPDBaner1.png" alt="">
+            </a>
+        </div>
+        <div class="card">
+            <a href="#">
+                <img src="img/2023second-banner/ohama.png" alt="">
+            </a>
+        </div>
+        <div class="card">
+            <a href="http://cf441755.cloudfree.jp/index.html">
+                <img src="img/2023second-banner/Okazaki.png" alt="">
+            </a>
+        </div>
+        <div class="card">
+            <a href="http://mk0511k.starfree.jp/cafe_site/">
+                <img src="img/2023second-banner/kawaguchi.png" alt="">
+            </a>
+        </div>
+        <div class="card">
+            <a href="http://cf040807.cloudfree.jp/">
+                <img src="img/2023second-banner/kanzaki.png" alt="">
+            </a>
+        </div>
+        <div class="card">
+            <a href="http://myweb178.starfree.jp/">
+                <img src="img/2023second-banner/catcafe_kanba.png" alt="">
+            </a>
+        </div>
+        <div class="card">
+            <a href="http://myweb178.starfree.jp/">
+                <img src="img/2023second-banner/kobata.png" alt="">
+            </a>
+        </div>
+        <div class="card">
+            <a href="http://tt0715.cloudfree.jp/">
+                <img src="img/2023second-banner/bana-sakane.png" alt="">
+            </a>
+        </div>
+        <div class="card">
+            <a href="http://tt0715.cloudfree.jp/">
+                <img src="img/2023second-banner/takemoto.png" alt="">
+            </a>
+        </div>
+        <div class="card">
+            <a href="http://hrhr001116.cloudfree.jp/index.html">
+                <img src="img/2023second-banner/naka_banner.png" alt="">
+            </a>
+        </div>
+        <div class="card">
+            <a href="http://cf168620.cloudfree.jp/">
+                <img src="img/2023second-banner/Negoro.png" alt="">
+            </a>
+        </div>
+        <div class="card">
+            <a href="http://hiraweb25.starfree.jp/">
+                <img src="img/2023second-banner/hatai-confidence-banner.png" alt="">
+            </a>
+        </div>
+        <div class="card">
+            <a href="http://tt0715.cloudfree.jp/">
+                <img src="img/2023second-banner/fujji.png" alt="">
+            </a>
+        </div>
+        <div class="card">
+            <a href="https://poppo-fashionstore.com/">
+                <img src="img/2023second-banner/kazuki-matsuura.png" alt="">
+            </a>
+        </div>
+        <div class="card">
+            <a href="http://cf212317.cloudfree.jp/">
+                <img src="img/2023second-banner/morita-banner.png" alt="">
+            </a>
+        </div>
+        <div class="card">
+            <a href="http://atsukiweb.starfree.jp/gannryuujima/gannryuujima-koukou/home.html">
+                <img src="img/2023second-banner/morimoto-site-banner.png" alt="">
+            </a>
+        </div>
+        <div class="card">
+            <a href="http://naoko70ya.starfree.jp/">
+                <img src="img/2023second-banner/Yamada.png" alt="">
+            </a>
+        </div>
+                  <div class="card">
+            <a href="http://eeemmmiii15.starfree.jp/">
+                <img src="img/2023second-banner/yokoo.png" alt="">
+            </a>
+        </div>
       </div>
-    </div>
-    
-    <div class="slider" id="slider3" style="display: none;">
-      <div class="slides scrollbar_hidden">
-        <img src="./img/y1.jpg" alt="Slide 1">
-        <img src="./img/y2.jpg" alt="Slide 2">
-        <img src="./img/y3.jpg" alt="Slide 3">
-        <img src="./img/y4.jpg" alt="Slide 4">
-      </div>
-      <div class="button-area">
-        <button class="prev" onclick="changeSlide(-1, 3)"><box-icon class='bx bx-tada bx-lg' name='chevron-left'></box-icon>Prev</button>
-        <button class="next" onclick="changeSlide(1, 3)">Next<box-icon class='bx bx-tada bx-lg' name='chevron-right'></box-icon></button>
-      </div>
-    </div>
+    </section>
   </section>
-
-  <section class="button-container">
-    <button onclick="changeSlider(1)">BLUE</button>
-    <button onclick="changeSlider(2)">RED</button>
-    <button onclick="changeSlider(3)">YELLOW</button>
-  </section> 
-
-<section class="gallery">
-    <!-- ギャラリー             -->
-  <h1 class="section-headline">Banner display</h1>
-
-  <section class="grid-container">
-    <div class="various-gallery">
-
-      <div class="card">
-          <a href="http://indigotsuji.starfree.jp/">
-              <img src="img/2023second-banner/Ikoma-indigo-banner.png" alt="">
-          </a>
-      </div>
-      <div class="card">
-          <a href="http://wkym.starfree.jp/mason-kitani/index.html">
-              <img src="img/2023second-banner/banner-inoue.png" alt="">
-          </a>
-      </div>
-      <div class="card">
-          <a href="http://iiiiup0075.starfree.jp/">
-              <img src="img/2023second-banner/iwasakinanako.png" alt="">
-          </a>
-      </div>
-      <div class="card">
-          <a href="http://norinori33.starfree.jp/">
-              <img src="img/2023second-banner/urakawa.png" alt="">
-          </a>
-      </div>
-      <div class="card">
-          <a href="http://area15.starfree.jp/">
-              <img src="img/2023second-banner/WPDBaner1.png" alt="">
-          </a>
-      </div>
-      <div class="card">
-          <a href="#">
-              <img src="img/2023second-banner/ohama.png" alt="">
-          </a>
-      </div>
-      <div class="card">
-          <a href="http://cf441755.cloudfree.jp/index.html">
-              <img src="img/2023second-banner/Okazaki.png" alt="">
-          </a>
-      </div>
-      <div class="card">
-          <a href="http://mk0511k.starfree.jp/cafe_site/">
-              <img src="img/2023second-banner/kawaguchi.png" alt="">
-          </a>
-      </div>
-      <div class="card">
-          <a href="http://cf040807.cloudfree.jp/">
-              <img src="img/2023second-banner/kanzaki.png" alt="">
-          </a>
-      </div>
-      <div class="card">
-          <a href="http://myweb178.starfree.jp/">
-              <img src="img/2023second-banner/catcafe_kanba.png" alt="">
-          </a>
-      </div>
-      <div class="card">
-          <a href="http://myweb178.starfree.jp/">
-              <img src="img/2023second-banner/kobata.png" alt="">
-          </a>
-      </div>
-      <div class="card">
-          <a href="http://tt0715.cloudfree.jp/">
-              <img src="img/2023second-banner/bana-sakane.png" alt="">
-          </a>
-      </div>
-      <div class="card">
-          <a href="http://tt0715.cloudfree.jp/">
-              <img src="img/2023second-banner/takemoto.png" alt="">
-          </a>
-      </div>
-      <div class="card">
-          <a href="http://hrhr001116.cloudfree.jp/index.html">
-              <img src="img/2023second-banner/naka_banner.png" alt="">
-          </a>
-      </div>
-      <div class="card">
-          <a href="http://cf168620.cloudfree.jp/">
-              <img src="img/2023second-banner/Negoro.png" alt="">
-          </a>
-      </div>
-      <div class="card">
-          <a href="http://hiraweb25.starfree.jp/">
-              <img src="img/2023second-banner/hatai-confidence-banner.png" alt="">
-          </a>
-      </div>
-      <div class="card">
-          <a href="http://tt0715.cloudfree.jp/">
-              <img src="img/2023second-banner/fujji.png" alt="">
-          </a>
-      </div>
-      <div class="card">
-          <a href="https://poppo-fashionstore.com/">
-              <img src="img/2023second-banner/kazuki-matsuura.png" alt="">
-          </a>
-      </div>
-      <div class="card">
-          <a href="http://cf212317.cloudfree.jp/">
-              <img src="img/2023second-banner/morita-banner.png" alt="">
-          </a>
-      </div>
-      <div class="card">
-          <a href="http://atsukiweb.starfree.jp/gannryuujima/gannryuujima-koukou/home.html">
-              <img src="img/2023second-banner/morimoto-site-banner.png" alt="">
-          </a>
-      </div>
-      <div class="card">
-          <a href="http://naoko70ya.starfree.jp/">
-              <img src="img/2023second-banner/Yamada.png" alt="">
-          </a>
-      </div>
-                <div class="card">
-          <a href="http://eeemmmiii15.starfree.jp/">
-              <img src="img/2023second-banner/yokoo.png" alt="">
-          </a>
-      </div>
-    </div>
-  </section>
-</section>
-  
+</main>  
 </body>
 </html>
