@@ -31,3 +31,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+// body-color変更
+document.addEventListener("DOMContentLoaded", function() {
+  // HTML要素をクリックしたときの処理
+  document.querySelector(".html").parentElement.addEventListener("click", function() {
+    document.body.style.backgroundColor = getComputedStyle(document.body).getPropertyValue("--html");
+  });
+
+  // CSS要素をクリックしたときの処理
+  document.querySelector(".css").parentElement.addEventListener("click", function() {
+    document.body.style.backgroundColor = getComputedStyle(document.body).getPropertyValue("--css");
+  });
+
+  // JavaScript要素をクリックしたときの処理
+  document.querySelector(".js").parentElement.addEventListener("click", function() {
+    document.body.style.backgroundColor = getComputedStyle(document.body).getPropertyValue("--js");
+  });
+});
+

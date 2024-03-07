@@ -166,6 +166,7 @@
     margin: 5% auto;
 }
 .various-gallery .card {
+    width: 40%;
     background: #ffffff8d;
     padding: 7%;
     border-radius: 30px;
