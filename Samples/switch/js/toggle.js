@@ -49,3 +49,34 @@ const smoothScrollTrigger = document.querySelectorAll('a[href^="#"]');
   targets.forEach(target => {
     observer.observe(target);
   });
+
+  // CARD description
+  // すべての親要素を取得
+  const cards = document.querySelectorAll('.card');
+
+// 各カードに対してイベントリスナーを追加
+  cards.forEach(function(card) {
+    // カード内の close ボタンを取得
+    const closeButton = card.querySelector('.description .close');
+
+    // カードの description 要素を取得
+    const description = card.querySelector('.description');
+
+    // カードがクリックされたときの処理
+    card.addEventListener('click', function() {
+      // description が存在する場合にのみ active クラスを追加
+      if (description) {
+          description.classList.add('active');
+      }
+    });
+
+    // close ボタンがクリックされたときの処理
+    if (closeButton) {
+        closeButton.addEventListener('click', function(event) {
+            // 親要素のクリックイベントを停止する
+            event.stopPropagation();
+            // description の active クラスを削除
+            description.classList.remove('active');
+        });
+    }
+});

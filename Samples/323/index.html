@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>323マルシェ</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/gallery.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>  <script src="switch.js" defer></script>
+  <script src="js/switch.js" defer></script>
+  <script src="js/toggle.js" defer></script>
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="brand">323</a>
+      <nav class="header-menu">
+        <button class="toggle"></button>
+        <ul class="menu-list nav-items">
+          <li class="list"><a href="#space">開催地<span></span></a></li>
+          <li class="list"><a href="pdf.html">PDFチラシ<span></span></a></li>
+          <li class="list"><a href="pdfichiran.html">PDF出展者<span></span></a></li>
+          <li class="list icon"><a href="https://www.instagram.com/323marche/"><img src="img/icon/instagram-logo-24.png" alt=""><span></span>instagram</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<main>
+  <section class="top">
+    <div class="parallax-wrap">
+      <!-- <div class="back"></div>
+      <div class="mid"></div>
+      <div class="front"></div> -->
+      <img class="assets cloud" src="img/assets/cloud.png" alt="">
+      <img class="assets house" src="img/assets/house.png" alt="">
+      <img class="assets leaf" src="img/assets/leaf.png" alt="">
+      <div class="assets date">
+        <img class="knban" src="img/assets/kanban.png" alt="">
+        <div class="description">
+          <p>開催日</p>
+          <p>3月23日(土)</p>
+          <p>時間</p>
+          <p>10:30~15:30</p>
+        </div>
+      </div>
+      <img class="assets logo" src="img/assets/logo.png" alt="">
+      <img class="assets tori" src="img/assets/tori.png" alt="">
+      <img class="assets hatu" src="img/assets/hatu-syuxtutenn.png" alt="">
+    </div>
+  </section>
+  <section class="hero">
+    <section class="container" id="top">
+      <div class="slider" id="slider1">
+        <div class="slides scrollbar_hidden">
+            <img src="img/323.png" alt="Slide 1">
+            <img src="img/Manacapua2.jpg" alt="Slide 2">
+          <img src="img/smile1.jpg" alt="Slide 3">
+          <img src="img/mutuan.png" alt="Slide 4">
+          <img src="img/FPhirabayashi.jpg" alt="Slide 5">
+          <img src="img/okane.jpg" alt="Slide 6">
+          <img src="img/hachi.JPG" alt="Slide 7">
+          <img src="img/cosmespace.jpg" alt="Slide 8">
+          <img src="img/ygrace.jpg" alt="Slide 9">
+        </div>
+        <div class="button-area">
+          <button class="prev" onclick="changeSlide(-1, 1)"><box-icon class='bx bx-tada bx-lg' name='chevron-left'></box-icon>Prev</button>
+          <button class="next" onclick="changeSlide(1, 1)">Next<box-icon class='bx bx-tada bx-lg' name='chevron-right'></box-icon></button>
+        </div>
+      </div>
+      
+      <div class="slider" id="slider2" style="display: none;">
+        <div class="slides scrollbar_hidden">
+          <img src="img/rosy flowerworks2.jpg" alt="Slide 1">
+          <img src="img/souju.jpg" alt="Slide 2">
+          <img src="img/ruri.jpg" alt="Slide 3">
+          <img src="img/Yroom.jpg" alt="Slide 4">
+          <img src="img/ippo2.jpg" alt="Slide 5">
+          <img src="img/takenoco.jpg" alt="Slide 6">
+          <img src="img/Lykke Aroma.jpg" alt="Slide 7">
+          <img src="img/kobito1.jpg" alt="Slide 8">
+          <img src="img/wannnaka.jpg" alt="Slide 9">
+          <img src="img/flannel.jpg" alt="Slide 10">
+        </div>
+        <div class="button-area">
+          <button class="prev" onclick="changeSlide(-1, 2)"><box-icon class='bx bx-tada bx-lg' name='chevron-left'></box-icon>Prev</button>
+          <button class="next" onclick="changeSlide(1, 2)">Next<box-icon class='bx bx-tada bx-lg' name='chevron-right'></box-icon></button>
+        </div>
+      </div>
+      
+      <div class="slider" id="slider3" style="display: none;">
+        <div class="slides scrollbar_hidden">
+          <img src="img/wafuka.jpg" alt="Slide 1">
+          <img src="img/pomRubia.jpg" alt="Slide 2">
+          <img src="img/cocora.jpg" alt="Slide 3">
+        </div>
+        <div class="button-area">
+          <button class="prev" onclick="changeSlide(-1, 3)"><box-icon class='bx bx-tada bx-lg' name='chevron-left'></box-icon>Prev</button>
+          <button class="next" onclick="changeSlide(1, 3)">Next<box-icon class='bx bx-tada bx-lg' name='chevron-right'></box-icon></button>
+        </div>
+      </div>
+    </section>
+  
+    <section class="button-container">
+      <button onclick="changeSlider(1)">体験コーナー</button>
+      <button onclick="changeSlider(2)">販売コーナー</button>
+      <button onclick="changeSlider(3)">食べ物コーナー</button>
+    </section> 
+  </section>
+
+  <!-- ギャラリー             -->
+  <section class="gallery">
+    <h1 class="section-headline">Banner display</h1>
+
+    <section class="grid-container">
+      <div class="various-gallery">
+        <p class="tap">写真をタップしてね！</p>
+
+        <div class="card fade">
+          <h2 class="card-title">キッチン和福香</h2>
+          <img src="img/wafuka.jpg" alt="">
+          <div class="description">
+            <button class="close"><img src="img/icon/close_FILL0_wght400_GRAD0_opsz24.png" alt=""></button>
+            <h3>キッチン和福香</h3>
+            <p>日替わり各種弁当700円　自家製米、無農薬野菜を使ったお弁当を販売♪</p>
+            <button class="site">
+              <a href="https://www.instagram.com/wafuka0514/?igsh=bGNhN2Fxa2R1dXA2" target="blank" rel="noreferrer noopener">
+                <img class="insta" src="img/icon/instagram-logo-24.png" alt="">
+                <p>Instagram or SiteへGo!</p>
+              </a>
+            </button>
+          </div>
+        </div>
+        <div class="card fade">
+            <h2 class="card-title">ippo</h2>
+            <img src="img/ippo2.jpg" alt="">
+            <div class="description">
+              <button class="close"><img src="img/icon/close_FILL0_wght400_GRAD0_opsz24.png" alt=""></button>
+              <h3>ippo</h3>
+              <p>暮らしの動線づくりをしながら癒しのグッズを販売！</p>
+              <p>お掃除グッズ／ヒンメリ／藁書の販売。藁書のワークショップ1,000円～</p>
+              <button class="site">
+                <a href="https://www.instagram.com/ippo_7oco/?igsh=MWQ1a3liaWU4bmJwbA%3D%3D&utm_source=qr" target="blank" rel="noreferrer noopener">
+                  <img class="insta" src="img/icon/instagram-logo-24.png" alt="">
+                  <p>Instagram or SiteへGo!</p>
+                </a>
+              </button>
+            </div>
+        </div>
+        <div class="card fade">
+          <h2 class="card-title">颯樹~soujyu~</h2>
+          <img src="img/souju.jpg" alt="">
+          <div class="description">
+            <button class="close"><img src="img/icon/close_FILL0_wght400_GRAD0_opsz24.png" alt=""></button>
+            <h3>颯樹~soujyu~</h3>
+            <p>1点ものを心掛けています。みなさんにしあわせのお手伝いが出来ればと思い制作させていただいております</p>
+            <p>ハンドメイドアクセサリー、雑貨、天然石、ブリザーブドフラワー、陶芸、ステンドグラス。</p>
+            <button class="site">
+              <a href="https://www.instagram.com/soujyu_3/?igsh=eXZlenFob2pub2Qz" target="blank" rel="noreferrer noopener">
+                <img class="insta" src="img/icon/instagram-logo-24.png" alt="">
+                <p>Instagram or SiteへGo!</p>
+              </a>
+            </button>
+          </div>
+        </div>
+        <div class="card fade">
+          <h2 class="card-title">Y.room</h2>
+          <img src="img/Yroom.jpg" alt="">
+          <div class="description">
+            <button class="close"><img src="img/icon/close_FILL0_wght400_GRAD0_opsz24.png" alt=""></button>
+            <h3>Y.room</h3>
+            <img src="img/Yroom2.jpg" alt="">
+            <img src="img/Yroom3.jpg" alt="">
+            <p>手織りでオリジナルのアクセサリー、マフラー、ターバン等々つくっています。</p>
+            <button class="site">
+              <a href="https://www.instagram.com/yumirin1112/?igsh=MWF5cjA2dDNnampkbw%3D%3D" target="blank" rel="noreferrer noopener">
+                <img class="insta" src="img/icon/instagram-logo-24.png" alt="">
+                <p>Instagram or SiteへGo!</p>
+              </a>
+            </button>
+          </div>
+        </div>
+        <div class="card fade">
+          <h2 class="card-title">藍染工房 瑠璃</h2>
+          <img src="img/ruri.jpg" alt="">
+          <div class="description">
+            <button class="close"><img src="img/icon/close_FILL0_wght400_GRAD0_opsz24.png" alt=""></button>
+            <h3>藍染工房 瑠璃</h3>
+            <p>工房では、藍染め体験を受け付けております。</p>
+            <p>今回の出展内容は、本藍を使って工房で染めたショールや洋服などです。</p>
+            <button class="site">
+              <a href="https://yoshikonatu.wixsite.com/ruri" target="blank" rel="noreferrer noopener">
+                <img class="insta" src="img/icon/instagram-logo-24.png" alt="">
+                <p>Instagram or SiteへGo!</p>
+              </a>
+            </button>
+          </div>
+        </div>
+        <div class="card fade">
+          <h2 class="card-title">FP平林</h2>
+          <img src="img/FPhirabayashi.jpg" alt="">
+          <div class="description">
+            <button class="close"><img src="img/icon/close_FILL0_wght400_GRAD0_opsz24.png" alt=""></button>
+            <h3>FP平林</h3>
+            <p>金融機関でFP（ファイナンシャル・プランナー）という仕事をしています。</p>
+            <p>お客様との接点づくりの一つでアンケートご回答の方に、名入れオリジナルキーホルダーを無料プレゼント！</p>
+            <button class="site">
+              <a href="#">
+                <img class="insta" src="img/icon/instagram-logo-24.png" alt="">
+                <p>Instagram or SiteへGo!</p>
+              </a>
+            </button>
+          </div>
+        </div>
+        <div class="card fade">
+          <h2 class="card-title">スマイルダイレクション</h2>
+          <img src="img/smile2.jpg" alt="">
+          <div class="description">
+            <button class="close"><img src="img/icon/close_FILL0_wght400_GRAD0_opsz24.png" alt=""></button>
+            <h3>スマイルダイレクション</h3>
+            <img src="img/smile1.jpg" alt="">
+            <p>波動の器械を使って臓器の不調をお調べします！</p>
+            <p>20分2,000円／45分4,000円</p>
+            <button class="site">
+              <a href="https://www.instagram.com/mibyoshidan_yosshi/?igsh=dDVnNGR6bWhwcHRj" target="blank" rel="noreferrer noopener">
+                <img class="insta" src="img/icon/instagram-logo-24.png" alt="">
+                <p>Instagram or SiteへGo!</p>
+              </a>
+            </button>
+          </div>
+        </div>
+        <div class="card fade">
+          <h2 class="card-title">Manacapua</h2>
+          <img src="img/Manacapua2.jpg" alt="">
+          <div class="description">
+            <button class="close"><img src="img/icon/close_FILL0_wght400_GRAD0_opsz24.png" alt=""></button>
+            <h3>Manacapua</h3>
+            <img src="img/Manacapua3.jpg" alt="">
+            <p>インナーチャイルドセラピー。気づくことのなかった自分の本当の気持ちを知って自分の力で海運していこう。</p>
+            <p>20分3枚引き2,000円／30分6枚引き3,000円</p>
+            <button class="site">
+              <a href="https://www.instagram.com/manacapua.kirara/?igsh=MW1lM2VuZzE4ZHNvYg%3D%3D" target="blank" rel="noreferrer noopener">
+                <img class="insta" src="img/icon/instagram-logo-24.png" alt="">
+                <p>Instagram or SiteへGo!</p>
+              </a>
+            </button>
+          </div>
+        </div>
+        <div class="card fade">
+          <h2 class="card-title">Lykke Aroma</h2>
+          <img src="img/Lykke Aroma.jpg" alt="">
+          <div class="description">
+            <button class="close"><img src="img/icon/close_FILL0_wght400_GRAD0_opsz24.png" alt=""></button>
+            <h3>Lykke Aroma</h3>
+            <img src="img/Lykke Aroma2.jpg" alt="">
+            <p>いつもの部屋に手づくりのアロマストーンとキャンドル。香りとゆらぐ灯で癒やされるよ。</p>
+            <p>アロマストーンとキャンドルの雑貨。キャンドルのワークショップ。料金1,200円～</p>
+            <button class="site">
+              <a href="https://www.instagram.com/lykke_aroma/?igsh=MXU3Zzc5MXowNTEwaA%3D%3D" target="blank" rel="noreferrer noopener">
+                <img class="insta" src="img/icon/instagram-logo-24.png" alt="">
+                <p>Instagram or SiteへGo!</p>
+              </a>
+            </button>
+          </div>
+        </div>
+        <div class="card fade">
+          <h2 class="card-title">Rosy flowerworks</h2>
+          <img src="img/rosy flowerworks2.jpg" alt="">
+          <div class="description">
+            <button class="close"><img src="img/icon/close_FILL0_wght400_GRAD0_opsz24.png" alt=""></button>
+            <h3>Rosy flowerworks</h3>
+            <p>日々の暮らしの中にお気に入りのお花を飾ってみませんか？</p>
+            <p>ブリザーブドフラワーや、ドライフラワー、アーティフィシャルフラワーなどでお花の雑貨を作っています。</p>
+            <button class="site">
+              <a href="https://www.instagram.com/rosysweetdays/?igsh=MXNydXd2djJ3dmxtMg%3D%3D" target="blank" rel="noreferrer noopener">
+                <img class="insta" src="img/icon/instagram-logo-24.png" alt="">
+                <p>Instagram or SiteへGo!</p>
+              </a>
+            </button>
+          </div>
+        </div>
+        <div class="card fade">
+          <h2 class="card-title">コスメスペース</h2>
+          <img src="img/cosmespace.jpg" alt="">
+          <div class="description">
+            <button class="close"><img src="img/icon/close_FILL0_wght400_GRAD0_opsz24.png" alt=""></button>
+            <h3>コスメスペース</h3>
+            <img src="img/cosmespace2.jpg" alt="">
+            <p>リバースエイジング体験。お肌診断＆遺伝子コスメお試し</p>
+            <p>体験された方に遺伝子コスメのミニサンプルプレゼント！</p>
+            <button class="site">
+              <a href="#">
+                <img class="insta" src="img/icon/instagram-logo-24.png" alt="">
+                <p>Instagram or SiteへGo!</p>
+              </a>
+            </button>
+          </div>
+        </div>
+        <div class="card fade">
+          <h2 class="card-title">coin.Labo</h2>
+          <img src="img/okane.jpg" alt="">
+          <div class="description">
+            <button class="close"><img src="img/icon/close_FILL0_wght400_GRAD0_opsz24.png" alt=""></button>
+            <h3>coin.Labo</h3>
+            <p>未来のお金の増やし方勉強会！これから始める新しい革命Web3.0の世界を紐解きます。</p>
+            <button class="site">
+              <a href="https://www.instagram.com/coin.labo/?igsh=cmVjcHBrdmp0Mm1l" target="blank" rel="noreferrer noopener">
+                <img class="insta" src="img/icon/instagram-logo-24.png" alt="">
+                <p>Instagram or SiteへGo!</p>
+              </a>
+            </button>
+          </div>
+        </div>
+        <div class="card fade">
+          <h2 class="card-title">ワイヤーアートと和雑貨の店 和んなか</h2>
+          <img src="img/wannnaka.jpg" alt="">
+          <div class="description">
+            <button class="close"><img src="img/icon/close_FILL0_wght400_GRAD0_opsz24.png" alt=""></button>
+            <h3>和んなか</h3>
+            <p>ワイヤーアートで製作したインテリア雑貨を中心に、生活を彩るアイテムをお届けします。</p>
+            <p>ワイヤーアート雑貨、水引細工のポチ袋・祝儀袋、ビーズアクセサリー</p>
+            <button class="site">
+              <a href="https://www.instagram.com/wannaka_wireart_wazakka/?igsh=cHlla2RkcGV4MzZ0" target="blank" rel="noreferrer noopener">
+                <img class="insta" src="img/icon/instagram-logo-24.png" alt="">
+                <p>Instagram or SiteへGo!</p>
+              </a>
+            </button>
+          </div>
+        </div>
+        <div class="card fade">
+          <h2 class="card-title">こびとの森</h2>
+          <img src="img/kobito1.jpg" alt="">
+          <div class="description">
+            <button class="close"><img src="img/icon/close_FILL0_wght400_GRAD0_opsz24.png" alt=""></button>
+            <h3>こびとの森</h3>
+            <img src="img/kobito2.jpg" alt="">
+            <p>小人や妖精が暮らす森をイメージした作品を製作、販売しています</p>
+            <p>森の番人ノームたちが皆さまをお出迎えしております。ぜひこびとたちに会いに来てください♥</p>
+            <p>✼ノーム人形<br>
+              ✼粘土細工、モルタル雑貨の販売<br>
+              ✼ミニチュアガーデンのワークショップ(¥1000)</p>
+            <button class="site">
+              <a href="https://www.instagram.com/ko_9928/?igsh=Y3UzcWh4YzF1M2ho" target="blank" rel="noreferrer noopener">
+                <img class="insta" src="img/icon/instagram-logo-24.png" alt="">
+                <p>Instagram or SiteへGo!</p>
+              </a>
+            </button>
+          </div>
+        </div>
+        <div class="card fade">
+          <h2 class="card-title">FLOWER FLANNEL</h2>
+          <img src="img/flannel.jpg" alt="">
+          <div class="description">
+            <button class="close"><img src="img/icon/close_FILL0_wght400_GRAD0_opsz24.png" alt=""></button>
+            <h3>FLOWER FLANNEL</h3>
+            <img src="img/flannel2.jpg" alt="">
+            <p>“やさしい”をテーマにプリザーブドフラワーやドライフラワー等のお花をアレンジし、お届けしています。</p>
+            <p>プリザーブドフラワーやドライフラワー、アーティフィシャルフラワー等のリースやスワッグ、アレンジ等</p>
+            <button class="site">
+              <a href="https://www.instagram.com/flannel6262/?igsh=emV6eWhkbTNzeDUy" target="blank" rel="noreferrer noopener">
+                <img class="insta" src="img/icon/instagram-logo-24.png" alt="">
+                <p>Instagram or SiteへGo!</p>
+              </a>
+            </button>
+          </div>
+        </div>
+        <div class="card fade">
+          <h2 class="card-title">Y.GRACE</h2>
+          <img src="img/ygrace.jpg" alt="">
+          <div class="description">
+            <button class="close"><img src="img/icon/close_FILL0_wght400_GRAD0_opsz24.png" alt=""></button>
+            <h3>Y.GRACE</h3>
+            <img src="img/ygrace2.jpg" alt="">
+            <p>純粋で安全な医療グレードのエッセンシャルオイルを使って、心や身体の不調を癒してみませんか？
+              忙しい日々に植物の香りを…</p>
+            <p>お好きな香りの精油を使ってお守りアロマやお悩みに合わせたクリームをお作り頂けます</p>
+            <p>ご希望の方には癒しのハンドマッサージも※お子様も一緒に楽しく作れます♡</p>
+            <p>◎お守りアロマ/お悩みクリーム　500円
+              ◎ハンドマッサージ　1,000円</p>
+            <button class="site">
+              <a href="#">
+                <img class="insta" src="img/icon/instagram-logo-24.png" alt="">
+                <p>Instagram or SiteへGo!</p>
+              </a>
+            </button>
+          </div>
+        </div>
+        <div class="card fade">
+          <h2 class="card-title">Pom Rubia</h2>
+          <img src="img/pomRubia.jpg" alt="">
+          <div class="description">
+            <button class="close"><img src="img/icon/close_FILL0_wght400_GRAD0_opsz24.png" alt=""></button>
+            <h3>Pom Rubia</h3>
+            <img src="img/PomRubia2.jpg" alt="">
+            <p>小麦、卵、乳製品不使用のお菓子を作っています🌱
+              アレルギーをお持ちの方や、健康に気を使っている方、全ての方に心ゆくまでPomRubiaのお菓子を楽しんでいただきたいです🌷</p>
+            <button class="site">
+              <a href="https://www.instagram.com/pom_rubia/?igsh=MW1vNDRjbmdncmUxMg%3D%3D" target="blank" rel="noreferrer noopener">
+                <img class="insta" src="img/icon/instagram-logo-24.png" alt="">
+                <p>Instagram or SiteへGo!</p>
+              </a>
+            </button>
+          </div>
+        </div>
+        <div class="card fade">
+          <h2 class="card-title">aimin</h2>
+          <img src="img/ai.jpg" alt="">
+          <div class="description">
+            <button class="close"><img src="img/icon/close_FILL0_wght400_GRAD0_opsz24.png" alt=""></button>
+            <h3>aimin</h3>
+            <p>可愛いをコンセプトに製作しています。是非、手に取って頂ければ嬉しいです♪</p>
+            <p>ハンドメイドピアス・クラフトテープ小物販売</p>  
+            
+            <button class="site">
+              <a href="https://www.instagram.com/aimin927/?igsh=ZnB4a2dxb2g5NXFl&utm_source=qr" target="blank" rel="noreferrer noopener">
+                <img class="insta" src="img/icon/instagram-logo-24.png" alt="">
+                <p>Instagram or SiteへGo!</p>
+              </a>
+            </button>
+          </div>
+        </div>
+        <div class="card fade">
+          <h2 class="card-title">COCORAE</h2>
+          <img src="img/cocora.jpg" alt="">
+          <div class="description">
+            <button class="close"><img src="img/icon/close_FILL0_wght400_GRAD0_opsz24.png" alt=""></button>
+            <h3>COCORA</h3>
+            <p>焼き菓子と少しドールを作っています。</p>
+            <p>今回は焼き菓子をメインでさんかさせていただきたいとおもいます。</p>
+            <p>お砂糖はきび糖、バターを使わないでコメ油を使用し、ドライフルーツやチョコやナッツを入れて、食べて楽しいお菓子を作って行きたいと思ってます😍</p>
+            <button class="site">
+              <a href="#">
+                <img class="insta" src="img/icon/instagram-logo-24.png" alt="">
+                <p>Instagram or SiteへGo!</p>
+              </a>
+            </button>
+          </div>
+        </div>
+        <div class="card fade">
+          <h2 class="card-title">hachi</h2>
+          <img src="img/hachi.JPG" alt="">
+          <div class="description">
+            <button class="close"><img src="img/icon/close_FILL0_wght400_GRAD0_opsz24.png" alt=""></button>
+            <h3>hachi</h3>
+            <img src="img/hachi.png" alt="">
+            <p>和歌山県を拠点にマタニティペイントやフェイスペイントをしています♪イベントにも少しずつ進出中です^^</p>
+            <button class="site">
+              <a href="#">
+                <img class="insta" src="img/icon/instagram-logo-24.png" alt="">
+                <p>Instagram or SiteへGo!</p>
+              </a>
+            </button>
+          </div>
+        </div>
+        <div class="card fade">
+          <h2 class="card-title">takenoco</h2>
+          <img src="img/takenoco.jpg" alt="">
+          <div class="description">
+            <button class="close"><img src="img/icon/close_FILL0_wght400_GRAD0_opsz24.png" alt=""></button>
+            <h3>takenoco</h3>
+            <img src="img/takenoco2.jpg" alt="">
+            <p>プラスティック粘土で楽しい、ワクワク、かっこいいを追及しています！ポリマークレイを中心にハンドメイドアクセサリー、雑貨を販売♪</p>
+            <button class="site">
+              <a href="https://www.instagram.com/takenoco_2000/?igsh=MTJ4NncyZXBscnUzbQ%3D%3D" target="blank" rel="noreferrer noopener">
+                <img class="insta" src="img/icon/instagram-logo-24.png" alt="">
+                <p>Instagram or SiteへGo!</p>
+              </a>
+            </button>
+          </div>
+        </div>
+        <div class="card fade">
+          <h2 class="card-title">無痛庵</h2>
+          <img src="img/mutuan.png" alt="">
+          <div class="description">
+            <button class="close"><img src="img/icon/close_FILL0_wght400_GRAD0_opsz24.png" alt=""></button>
+            <h3>無痛庵</h3>
+            <p>石の波動を利用して電磁波、ブルーライト対策や整体をしています♪</p>
+            <p>立ったまま！その場で整体体験！家の電磁波対策相談や携帯電話等の電磁波対応グッズ等の販売。</p>
+            <button class="site">
+              <a href="#">
+                <img class="insta" src="img/icon/instagram-logo-24.png" alt="">
+                <p>Instagram or SiteへGo!</p>
+              </a>
+            </button>
+          </div>
+        </div>
+        <div class="card fade">
+          <h2 class="card-title">Alba</h2>
+          <img src="img/alba1.png" alt="">
+          <div class="description">
+            <button class="close"><img src="img/icon/close_FILL0_wght400_GRAD0_opsz24.png" alt=""></button>
+            <h3>Alba</h3>
+            <p>日常にひとつ「新しい」を取り入れ、普段とは違う自分を過ごしてみませんか？変わらなくていい、そのままでいい。</p>
+            <p>ただ「少し」昨日より新しいだけ♪</p>
+            <button class="site">
+              <a href="#">
+                <img class="insta" src="img/icon/instagram-logo-24.png" alt="">
+                <p>Instagram or SiteへGo!</p>
+              </a>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </section>
+</main>
+<footer>
+  <div class="footer-inner">
+    <a href="index.html">
+      <img class="footer-logo" src="img/assets/logo.png" alt="">
+    </a>
+    <nav class="footer-menu">
+      <ul class="footer-menu-list nav-items">
+        <li class="list"><a href="#space">開催地<span></span><i class='bx bx-run'></i></a></li>
+        <li class="list"><a href="pdf.html">PDFチラシ<span></span><i class='bx bx-cart'></i></a></li>
+        <li class="list"><a href="pdfichiran.html">PDF出展者<span></span><i class='bx bxs-bowl-rice'></i></a></li>
+        <li class="list icon"><a href="https://www.instagram.com/323marche/"><img src="img/icon/instagram-logo-24.png" alt=""><span></span>instagram</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="space-k" id="space">
+    <a href="https://rentalspacek.com/" target="blank" rel="noreferrer noopener">
+      <p>レンタルスペースK サイトへ</p>
+      <img src="img/icon/space-k.png" alt="">
+    </a>
+    <p>0120-455-335</p>
+    <a href="https://rentalspacek.com/access.html" target="blank" rel="noreferrer noopener">
+      <p>MAP <i class='bx bx-map' ></i>マップへGo！</p>
+    </a>
+  </div>
+
+
+</footer>  
+</body>
+</html>
