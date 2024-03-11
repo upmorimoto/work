@@ -1,0 +1,62 @@
+/* 個人情報保護方針ページ */
+.privacy-policy {
+    margin-top: 80px;
+    margin-bottom: 125px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.privacy-policy h2 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 90px;
+    font-size: 35px;
+}
+
+.privacy-item {
+    margin-bottom: 57px;
+}
+
+.privacy-policy h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.privacy-item {
+    border-left: 2px solid #5A9F4D; /* 線のスタイルを定義 */
+    padding-left: 57px;
+}
+.footer-inner {
+    width: 100%;
+}
+
+
+
+@media (max-width: 800px) {
+    .privacy-policy h2 {
+        font-size: 25px;
+        margin-bottom: 50px;
+    }
+
+    .privacy-policy {
+        margin-top: 50px;
+        margin-bottom: 90px;
+        margin-left: 8%;
+        margin-right: 8%;    
+    }
+
+    .privacy-item {
+        padding-left: 30px;
+    }
+    
+    .privacy-policy h3 {
+        font-size: 19px;
+        margin-bottom: 20px;
+    }
+    
+
+    .wrap {
+        overflow: hidden;
+    }
+}

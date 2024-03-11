@@ -1,0 +1,140 @@
+@charset "utf-8";
+
+
+/* ギフトページ */
+.season-fv-img {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 530px;
+}
+
+.season-img {
+    width: 1000px;
+    height: 530px;
+    object-fit: cover;
+}
+
+.season-label {
+    width: 300px;
+    height: auto;
+    position: absolute;
+    top: 2%;
+    left: 14%;
+}
+
+/* 特集 */
+.feature {
+    background-color: transparent;
+}
+
+.feature .limitedTime {
+    transform: scale(1.5);
+    border: 10px solid #5A9F4D;
+    border-radius: 50%;
+}
+
+.feature .gift,
+.feature .recommendation,
+.feature .review {
+    opacity: 50%;
+}
+
+/* 期間限定商品一覧 */
+.breadcrumb {
+    margin-left: 10%;
+    margin-bottom: 50px;
+}
+
+.season-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 250px);
+    column-gap: 40px;
+    row-gap: 30px;
+    place-content: center;
+    margin-bottom: 100px;
+    margin-left: 9%;
+    margin-right: 9%;
+}
+
+.season-content img {
+    width: 100%;
+    height: 210px;
+    margin-bottom: 16px;
+}
+
+.season-content .name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.season-content a {
+    display: block;
+}
+
+.season-content a:hover {
+    transform: scale(1.05);
+    transition-duration: 0.3s;
+}
+
+
+
+/* レスポンシブ */
+@media (max-width: 800px) {
+    /* .season-fv-img {
+        height: calc(100vh - 150px);
+        position: relative;
+    } */
+
+    .season-fv-img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    .season-img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* .a {
+        height: calc(100vh - 150px);
+        background-image: url(./img/season-responsive-img.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    } */
+
+    .season-label {
+        width: 120px;
+        left: 0%;
+    }
+
+    /* .season-img {
+        display: none;
+    } */
+
+    .feature {
+        display: none;
+    }
+}
+
+@media (max-width: 675px) {
+    .season-content .name {
+        font-size: 10px;
+        font-weight: bold;
+        margin-bottom: 6px;
+    }
+
+    .season-content {
+        grid-template-columns: repeat(auto-fit, 133px);
+    }
+
+    .season-content img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 8px;
+    }
+    
+}

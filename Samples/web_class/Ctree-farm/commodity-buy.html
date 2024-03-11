@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-tree-farm|【A級品】しらぬい商品詳細</title>
+    <link rel="icon" href="img/favicon.png">
+
+    <meta name="description" content="C-tree-farm通販サイト、しらぬいの商品詳細ページです。">
+
+    <link rel="stylesheet" href="destyle.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="commodity.css">
+ 
+<!-- カート機能 -->
+    <script src="js/cart_notice.js" defer></script>
+</head>
+
+<body>
+<!-- マウスストーカー -->
+  <div id="js-mouse">
+    <img src="img/kobito.png" alt="小人">
+  </div>
+
+  <header class="header">
+    <div class="header-inner">
+        <a href="index.html">
+            <img src="img/logo.png" alt="C-tree-farmの企業ロゴ" class="header-logo">
+        </a>
+        
+        <div class="PC-only">
+            <p class="tel">tel：0736－●●－〇〇〇〇</p>
+        </div>
+
+        <div class="header-icon">
+            <a href="tel:+ #" class="SP-only">
+                <img src="img/tel-icon.png" alt="電話で問い合わせるボタン" class="telephone">
+            </a>
+
+            <a href="contact.html">
+                <img src="img/mail-icon.png" alt="問い合わせページへアクセスするボタン" class="mail">
+            </a>
+
+            <!-- カートボタン -->
+            <div class="header-cart">
+                <a href="cart.html">
+                    <img src="img/cart-icon.png" alt="購入商品の内容をみるボタン" class="cart-button">
+                </a>
+                <div class="popup"></div>
+            </div>
+
+            <!-- SP-only　ハンバーガーメニュー -->
+            <div class="openbtn SP-only"><span></span><span></span><span></span></div>
+            <nav id="g-nav" class="SP-only">
+                <ul>
+                    <li><a href="index.html#all-items">商品一覧</a></li> 
+                    <li><a href="#">ランキング</a></li> 
+                    <li><a href="gift.html">ギフト</a></li> 
+                    <li><a href="season.html">期間限定</a></li>
+                    <li><a href="recommend.html">おすすめ</a></li> 
+                    <li><a href="review.html">口コミ</a></li> 
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="header-bottom-line"></div>
+</header>
+
+<main>
+
+        
+<!-- 特集 -->
+<div class="PC-only">
+    <ul class="feature">
+        <a href="gift.html"><li class="gift">
+            <p>ギフト</p>
+        </li></a>
+
+        <a href="season.html"><li class="limitedTime">
+            <p>期間限定</p>
+        </li></a>
+
+        <a href="recommend.html"><li class="recommendation">
+            <p>おすすめ</p>
+        </li></a>
+
+        <a href="review.html"><li class="review">
+            <p>口コミ</p>
+        </li></a>
+    </ul>
+</div>
+
+
+
+<!-- 2カラム -->
+  <section class="top">
+    <div class="sidebar Tablet-only">
+        <div class="category">
+            <div class="heading">
+                <img src="img/categorybook.png" alt="本の形をしたアイコン画像">
+                <h2 class="title">Category</h2>
+            </div>
+
+            <ul>
+                <li><a href="#orange">みかん</a></li>
+                <li><a href="#sweets">お菓子</a></li>
+                <li><a href="#process">加工品</a></li>
+                <li><a href="#seasoning">調味料</a></li>
+                <li><a href="#daily">日用品</a></li>
+            </ul>
+        </div>
+
+        <div class="ranking">
+            <div class="heading">
+                <img src="img/rankingoukan.png" alt="王冠の形をしたアイコン画像">
+                <h2 class="title">Ranking</h2>
+            </div>
+
+            <ul>
+                <li>
+                    <a href="#">
+                        <div class="ranking-photo">
+                            <img src="img/ranking/ranking01.PNG" alt="ランキング1位の王冠" class="rank-crown">
+                            <img src="img/shop-item/m5.png" alt="ランキング1位の商品画像" class="picture">
+                        </div>
+
+                        <div class="ranking-content">
+                            <p class="number">NO.1</p>
+                            <p class="text">【A級品】清美オレンジ1kg<br>1㎏（約4～8個）</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="ranking-photo">
+                            <img src="img/ranking/ranking02.PNG" alt="ランキング2位の王冠" class="rank-crown">
+                            <img src="img/shop-item/k4.png" alt="ランキング1位の商品画像" class="picture">
+                        </div>
+
+                        <div class="ranking-content">
+                            <p class="number">NO.2</p>
+                            <p class="text">みかん寒天（ジュレ）<br>100g×3個</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="ranking-photo">
+                            <img src="img/ranking/ranking03.PNG" alt="ランキング3位の王冠" class="rank-crown">
+                            <img src="img/shop-item/t2.png" alt="ランキング1位の商品画像" class="picture">
+                        </div>
+
+                        <div class="ranking-content">
+                            <p class="number">NO.3</p>
+                            <p class="text">みぽん<br>みかんポン酢200ml×4本</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+      <!-- 商品リスト -->
+      <div class="buy-commodity-detail">
+        <img src="img/shop-item/m1.png" alt="A級品しらぬいの商品画像" class="commodity-photo">
+        
+        <div class="buy-commodity-text">
+            <h2 class="commodity-name">【A級品】しらぬい1kg</h2>
+            <p class="code">商品コード：A001</p>
+            <p class="shipping">出荷予定：2月～3月中旬</p>
+            <p class="pr-text">和歌山産のしらぬい（デコポン）1㎏のA級品をお届けし
+                ます。<br>甘みが強い割にさっぱりとした後味が特徴。<br>水分たっぷりジューシーです。</p>
+            <p class="price">2,200<span>円</span><span class="tax">（税込）</span></p>
+  
+            <div class="orders">
+                <p>数量</p>
+                <input type="text" class="quantity" value="1">
+            </div>
+  
+            <div class="in_cart">
+                <img src="img/cart-icon_white.png" alt="購入カートの画像">
+                <button class="add-to-cart" data-product="【A級品】しらぬい1kg" data-image="img/shop-item/m1.png" data-price="2,200円">カートに入れる</button>
+            </div>
+
+        <!-- カートボタン -->
+            <div class="cart">
+                <a href="cart.html" target="_blank">
+                    <p>マイカート</p>
+                </a>
+            </div>
+        </div>
+    </div>
+      <!-- 商品リスト終わり -->
+  
+      <div class="important">
+        <div class="point">
+            <div class="content01">
+                <h3>送料方法・送料</h3>
+                <p>オンラインサイト上では「１個口・常温の送料」にて自動計算させていただきます。<br>ご注文完了後、常温以外の温度帯での配送、また２個口以上での配送の場合には、送料・手数料を修正させていただきます。<br>予めご了承いただきますようお願いいたします。</p>
+            </div>
+  
+            <div class="content02">
+                <h3>返品・交換・キャンセル</h3>
+                <p>取扱商品が生ものですので、細心の注意をして出荷検査を行っています。<br>万一商品に欠陥、配送途中事故などで破損・損傷が生じた場合、ご注文頂いた物と異なるものがございましたら、お手数ですが商品受け取り後、3日以内にご連絡ください。新しい商品とお取り替えさせていただきます。<br>贈答先のお客さまの商品につきましても、同様の対応を行っております。<br>※お客様のご都合による返品・着荷後のキャンセルは<br>ご遠慮ください。</p>
+            </div>
+        </div>
+  
+        <div class="point">
+            <div class="content03">
+                <h3>商品の発送について</h3>
+                <p>商品はご注文を受け付けた後に在庫を確認のうえ、原則として1週間以内に当社より発送いたします。<br>商品によって出荷予定日に多少のずれが生じる場合がございます。予めご了承いただきますようお願いいたします。</p>
+            </div>
+  
+            <ul>
+                <li>
+                    <p class="payment-method method01">クレジットカード決済</p>
+                    <img src="img/method.png" alt="決済可能なクレジットカードの画像一覧">
+                </li>
+  
+                <li>
+                    <p class="payment-method method02">代金引換</p>
+                    <p>商品代金＋送料の合計金額に、別途代引き手数料が加算されます。商品到着時に発送業者の配送者にお支払いください。</p>
+                </li>
+  
+                <li>
+                    <p class="payment-method method03">コンビニ／郵便振込</p>
+                    <p>振込用紙を商品と同梱または、郵送させていただきます。※送付先が別のご注文の場合は、基本ご注文者様宛に送付いたします。<br>商品到着後「10日以内」にコンビニまたは郵便局でお振込ください。手数料無料。</p>
+                </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <a href="index.html">
+            <img src="img/footer-logo.png" alt="C-tree-farmの企業ロゴ" class="footer-logo">
+        </a>
+    
+        <ul>
+            <li><a href="cart.html">会社情報</a></li>
+            <li><a href="privacy-policy.html">プライバシーポリシー</a></li>
+            <li><a href="tokuteishotorihiki.html">特定商取引法</a></li>
+        </ul>
+    </div>
+</footer>
+
+<!-- マウスストーカー -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<!-- 自作js -->
+<script src="js/Ctree-farm.js"></script>
+
+</body>
+</html>

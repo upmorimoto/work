@@ -1,0 +1,883 @@
+@charset "utf-8";
+
+
+/* *{
+    outline: 2px red solid;
+} */
+
+
+:root {
+    --font-color: #333;
+    --accent-color: #5A9F4D;
+    --main-color: #F2BF08;
+}
+
+/* ファーストビュー */
+.first-view {
+    background-image: url(./img/orangetree.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-view-text {
+    background-color: #fff;
+    writing-mode: vertical-rl;
+    width: 60px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-view-text p {
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--font-color);
+}
+
+.first-view-text span:first-child {
+    margin-top: 6px;
+}
+
+.first-view-text span:last-child {
+    margin: 6px;
+}
+
+/* ファーストビュー終わり */
+
+
+/* 会社案内ページ共通項目 */
+
+.content-area {
+    padding-top: 300px;
+    width: 100%;
+}
+
+.content-heading {
+    color: var(--font-color);
+    border-left: 3px solid var(--accent-color);
+    padding-left: 25px;
+    overflow: hidden;
+
+}
+
+.content-heading h2 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.content-heading p {
+    font-size: 22px;
+    color: var(--accent-color);
+}
+
+.all-content-area {
+    margin: 0 0 0 12%;
+}
+
+
+/* 会社案内ページ共通項目終わり */
+
+/* 代表ご挨拶 */
+
+.greeting-area {
+    height: 100%;
+    padding-right: 5%;
+}
+
+.greeting-container {
+    width: 100%;
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.greeting-text {
+    width: 80%;
+}
+
+.greeting-text p {
+    font-size: 18px;
+    color: var(--font-color);
+    line-height: 1.8;
+}
+
+
+.first-greeting-text p {
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+/* 写真・名前 */
+.greeting-container img {
+    width: 480px;
+    height: 450px;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.greeting-img-name dl {
+    font-weight: bold;
+    color: var(--font-color);
+    font-size: 20px;
+    padding-top: 25px;
+    text-align: center;
+}
+
+.greeting-img-name dl dt {
+    padding-bottom: 5px;
+    font-size: 16px;
+}
+
+
+/* 写真・名前おわり */
+
+.career-text {
+    padding-top: 40px;
+}
+
+.career-text p:first-of-type,
+.motto-text p:first-of-type {
+    font-weight: bold;
+}
+
+.career-text p:nth-of-type(2) {
+    text-indent: -1em;
+    padding-left: 1em;
+}
+
+.career-text p:nth-of-type(3) {
+    text-indent: -1em;
+    padding-left: 1em;
+}
+
+.motto-text {
+    padding-top: 10px;
+}
+
+/* 見出しフェードイン */
+.content-heading-wrapper {
+    overflow: hidden;
+}
+
+.content-heading-wrapper.active .content-heading {
+    transform: translateY(0);
+}
+
+.content-heading {
+    transform: translateY(100%);
+    transition: transform 1.5s;
+}
+/* 見出しフェードイン終わり */
+
+
+/* 代表ご挨拶フェードイン */
+
+/* 左テキスト */
+.first-greeting-text {
+    display: inline-block;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+.first-greeting-text.active {
+    transform: translateY(0);
+    opacity: 1;
+
+}
+
+.gree-text-inner {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: transform 1s ease-in-out, opacity 2s ease-in-out;
+    display: inline-block;
+}
+
+.gree-text-inner.active {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0;
+}
+
+.career-text,
+.motto-text {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.career-text.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.motto-text.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* 左テキスト終わり */
+
+/* img下name */
+
+.daihyou,
+.kusu-name { 
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 1.2s ease-in-out, opacity 1.2s ease-out;
+}
+
+.kusu-box.active .daihyou {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.kusu-box.active .kusu-name {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* img下name 終わり*/
+
+/* 代表img */
+.kusu-box {
+    overflow: hidden;
+}
+
+.kusu-tu {
+    transform: scale(1.3);
+    opacity: 0;
+    transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+}
+
+.greeting-img-name {
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 1s;
+}
+.greeting-img-name.active {
+    opacity: 1;
+}
+
+.greeting-img-name.active .kusu-tu {
+    transform: scale(1);
+    opacity: 1;
+}
+/* 代表img終わり */
+
+/* 代表ご挨拶フェードイン終わり */
+
+/* 代表ご挨拶終わり */
+
+
+/* 会社概要 */
+
+.outline-area {
+    height: 100%;
+}
+
+.outline-img {
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+    padding-top: 80px;
+}
+
+.outline-detail {
+    width: 100%;
+    padding-top: 100px;
+}
+
+.outline-detail table {
+    width: 100%;
+    color: #222222;
+    white-space: nowrap;
+
+}
+
+.outline-detail table tr {
+    border-bottom: 1px solid #b4b4b4;
+    width: 100%;
+}
+
+.outline-detail table tr th {
+    padding: 30px 0;
+    font-weight: bold;
+}
+
+.outline-detail table tr td {
+    padding: 30px 0;
+}
+
+.td-text {
+    line-height: 1.5;
+}
+
+/* 会社概要終わり */
+
+/* 沿革 */
+
+.history-area {
+    height: 100%;
+    padding-bottom: 300px;
+    padding-right: 170px;
+}
+
+.history-detail-area {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 150px;
+}
+
+
+.history-detail {
+    position: relative;
+}
+
+.history-detail::before {
+    content: "";
+    display: block;
+    background-image: url(./img/line-9-1.svg);
+    background-repeat: repeat-y;
+    background-position: center;
+    height: 100%;
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.history-content {
+    width: 700px;
+    height: 170px;
+    display: flex;
+    border: 1px solid #333;
+    border-radius: 20px;
+    background-color: #fff;
+    align-items: center;
+    color: var(--font-color);
+    margin-top: 90px;
+    line-height: 1.3;
+}
+
+.history-content:first-of-type {
+    margin-top: 0;
+}
+
+.history-content img {
+    width: 200px;
+    height: 170px;
+    padding-top: 0;
+    border-radius: 20px 0 0 20px;
+    object-fit: cover;
+}
+
+.year-box {
+    padding-left: 50px;
+    padding-right: 15px;
+}
+
+.year-box p {
+    margin-top: 8px;
+    margin-left: 10px;
+    line-height: 1.3;
+}
+
+.year-heading {
+    font-weight: bold;
+    position: relative;
+    padding-left: 15px;
+    font-size: 20px;
+}
+
+.year-heading::before {
+    content: "";
+    background-color: var(--main-color);
+    width: 4px;
+    height: 90%;
+    position: absolute;
+    left: 0;
+    border-radius: 15%;
+}
+
+
+/* 会社概要・沿革フェードイン */
+
+.outline-img-wrap {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.outline-img-wrap.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.outline-detail {
+    opacity: 0;
+    transform: translateX(250px);
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+}
+
+.outline-detail.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.history-content:nth-of-type(even) {
+    opacity: 0;
+    transform:  translateX(200px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+.history-content:nth-of-type(odd) {
+    opacity: 0;
+    transform:  translateX(-200px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.history-content:nth-of-type(1) {
+    transition-delay: .2s;
+}
+
+.history-content.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+/* 会社概要・沿革フェードイン終わり */
+
+
+
+/* 沿革終わり */
+
+@media (max-width: 1080px) {
+    .all-content-area {
+        margin: 0 0 0 100px;
+    }
+
+    .greeting-area {
+        padding-right: 50px;
+    }
+
+    .greeting-container img {
+        width: 500px;
+        height: 450px;
+    }
+    
+    .history-area {
+        padding-right: 50px;
+    }
+    
+}
+
+@media (max-width: 950px) {
+    .history-content {
+        width: 600px;
+        height: 150px;
+    }
+
+    .history-content img {
+        width: 180px;
+        height: 150px;
+    }
+
+    .history-content:nth-of-type(18) {
+        padding: 100px 0;
+    }
+
+    .history-content:nth-of-type(18) img {
+        height: 200px;
+    }
+
+    
+    .year-box {
+        padding-left: 26px;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .year-box p {
+        font-size: 16px;
+    }
+    
+
+    .history-content {
+        width: 500px;
+        height: 150px;
+    }
+
+    .history-content img {
+        width: 180px;
+        height: 150px;
+    }
+
+    .history-content:nth-of-type(5) {
+        padding: 80px 0;
+    }
+
+    .history-content:nth-of-type(5) img {
+        height: 160px;
+    }
+
+    .history-content:nth-of-type(11) {
+        padding: 100px 0;
+    }
+
+    .history-content:nth-of-type(11) img {
+        height: 200px;
+    }
+
+    .history-content:nth-of-type(18) {
+        padding: 105px 0;
+    }
+
+    .history-content:nth-of-type(18) img {
+        height: 210px;
+    }
+
+    .history-content:nth-of-type(21) {
+        padding: 100px 0;
+    }
+
+    .history-content:nth-of-type(21) img {
+        height: 200px;
+    }
+
+    .history-content:nth-of-type(24) {
+        padding: 100px 0;
+    }
+
+    .history-content:nth-of-type(24) img {
+        height: 200px;
+    }
+}
+
+
+@media (max-width: 750px) {
+
+    .content-area {
+        padding-top: 200px;
+        width: 100%;
+    }
+
+
+    .greeting-area {
+        padding-right: 0;
+    }
+
+    .greeting-container {
+        width: 100%;
+        flex-direction: column;
+        display: grid;
+        place-items: center;
+    }
+
+
+    .greeting-container img {
+        width: 280px;
+        height: 400px;
+        padding-top: 70px;
+        object-fit: cover;
+    }
+
+
+    .year-box p {
+        font-size: 14px;
+    }
+    
+    .all-content-area {
+        margin: 0 0 0 80px;
+    }
+
+    .history-area {
+        padding-right: 0;
+    }
+
+
+    .history-content {
+        width: 500px;
+        height: 150px;
+    }
+
+    .history-content img {
+        width: 180px;
+        height: 150px;
+    }
+
+    .history-content:nth-of-type(5) {
+        padding: 80px 0;
+    }
+
+    .history-content:nth-of-type(5) img {
+        height: 160px;
+    }
+
+    .history-content:nth-of-type(11) {
+        padding: 80px 0;
+    }
+
+    .history-content:nth-of-type(11) img {
+        height: 160px;
+    }
+
+    .history-content:nth-of-type(18) {
+        padding: 90px 0;
+    }
+
+    .history-content:nth-of-type(18) img {
+        height: 180px;
+    }
+
+    .history-content:nth-of-type(21) {
+        padding: 80px 0;
+    }
+
+    .history-content:nth-of-type(21) img {
+        height: 160px;
+    }
+
+    .history-content:nth-of-type(24) {
+        padding: 70px 0;
+    }
+
+    .history-content:nth-of-type(24) img {
+        height: 140px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+
+    .gree-text-inner p br {
+        display: none;
+    }
+
+
+    .year-box p {
+        font-size: 14px;
+    }
+    
+    .all-content-area {
+        margin: 0 0 0 60px;
+    }
+
+    .history-area {
+        padding-right: 0;
+    }
+
+
+    .history-content {
+        width: 400px;
+        height: 130px;
+    }
+
+    .history-content img {
+        width: 120px;
+        height: 130px;
+    }
+
+    .history-content:nth-of-type(5) {
+        padding: 80px 0;
+    }
+
+    .history-content:nth-of-type(5) img {
+        height: 160px;
+    }
+
+    .history-content:nth-of-type(11) {
+        padding: 90px 0;
+    }
+
+    .history-content:nth-of-type(11) img {
+        height: 180px;
+    }
+
+    .history-content:nth-of-type(21) {
+        padding: 100px 0;
+    }
+
+    .history-content:nth-of-type(21) img {
+        height: 200px;
+    }
+
+}
+
+
+
+
+@media (max-width: 530px) {
+
+    .content-area {
+        padding-top: 200px;
+        width: 100%;
+    }
+
+
+    .all-content-area {
+        transform: none;
+        margin: 0 20px;
+    }
+
+    .greeting-area {
+        padding-right: 0;
+    }
+
+    .greeting-container {
+        width: 100%;
+        flex-direction: column;
+        display: grid;
+        place-items: center;
+    }
+
+    .greeting-text p {
+        font-size: 16px;
+    }
+
+
+    .first-greeting-text p {
+        font-size: 18px;
+    }
+
+    .greeting-container img {
+        width: 280px;
+        height: 400px;
+        padding-top: 70px;
+        object-fit: cover;
+    }
+
+    .greeting-img-name {
+        width: 280px;
+    }
+
+
+    .greeting-img-name dl {
+        font-weight: bold;
+        color: var(--font-color);
+        font-size: 20px;
+        padding-top: 25px;
+        text-align: center;
+    }
+
+    .greeting-img-name dl dt {
+        padding-bottom: 5px;
+        font-size: 16px;
+    }
+
+    .outline-img {
+        height: 100%;
+        width: 100%;
+    }
+
+
+    .outline-detail table tr td {
+        padding: 30px 0 30px 8px;
+    }
+
+
+    .history-area {
+        padding-right: 0;
+    }
+
+    .history-detail {
+        transform: translateX(0);
+    }
+
+    .history-detail-area {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding-top: 150px;
+    }
+
+
+
+    .history-content {
+        width: 320px;
+        height: 130px;
+    }
+
+    .history-content img {
+        width: 120px;
+        height: 130px;
+    }
+
+
+    .year-heading {
+        padding-left: 10px;
+    }
+
+    .year-box {
+        padding-left: 13px;
+    }
+
+    .history-content:nth-of-type(5) {
+        padding: 80px 0;
+    }
+
+    .history-content:nth-of-type(5) img {
+        height: 160px;
+    }
+
+    .history-content:nth-of-type(11) {
+        padding: 110px 0;
+    }
+
+    .history-content:nth-of-type(11) img {
+        height: 220px;
+    }
+
+    .history-content:nth-of-type(18) {
+        padding: 120px 0;
+    }
+
+    .history-content:nth-of-type(18) img {
+        height: 240px;
+    }
+
+    .history-content:nth-of-type(21) {
+        padding: 120px 0;
+    }
+
+    .history-content:nth-of-type(21) img {
+        height: 240px;
+    }
+
+    .history-content:nth-of-type(24) {
+        padding: 90px 0;
+    }
+
+    .history-content:nth-of-type(24) img {
+        height: 180px;
+    }
+
+    .history-content:nth-of-type(even) {
+        opacity: 0;
+        transform:  translateX(100px);
+        transition: all 1s;
+    }
+    .history-content:nth-of-type(odd) {
+        opacity: 0;
+        transform:  translateX(-100px);
+        transition: all 1s;
+    }
+    
+    .history-content.active {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+}

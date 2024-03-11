@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-tree-farm|お問い合わせ</title>
+    <link rel="icon" href="img/favicon.png">
+
+    <meta name="description" content="C-tree-farmのお問い合わせページです。お問い合わせはこちらからお願いいたします。">
+
+    <link rel="stylesheet" href="destyle.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+
+</head>
+
+<body>
+<!-- マウスストーカー -->
+    <div id="js-mouse">
+        <img src="img/kobito.png" alt="小人">
+    </div>
+
+    <header class="header">
+        <div class="header-inner">
+            <a href="index.html">
+                <img src="img/logo.png" alt="C-tree-farmの企業ロゴ" class="header-logo">
+            </a>
+            
+            <div class="PC-only">
+                <p class="tel">tel：0736－●●－〇〇〇〇</p>
+            </div>
+    
+            <div class="header-icon">
+                <a href="tel:+ #" class="SP-only">
+                    <img src="img/tel-icon.png" alt="電話で問い合わせるボタン" class="telephone">
+                </a>
+    
+                <a href="contact.html">
+                    <img src="img/mail-icon.png" alt="問い合わせページへアクセスするボタン" class="mail">
+                </a>
+    
+                <!-- カートボタン -->
+                <div class="header-cart">
+                    <a href="cart.html">
+                        <img src="img/cart-icon.png" alt="購入商品の内容をみるボタン" class="cart-button">
+                    </a>
+                    <div class="popup"></div>
+                </div>
+    
+                <!-- SP-only　ハンバーガーメニュー -->
+                <div class="openbtn SP-only"><span></span><span></span><span></span></div>
+                <nav id="g-nav" class="SP-only">
+                    <ul>
+                        <li><a href="index.html#all-items">商品一覧</a></li> 
+                        <li><a href="#">ランキング</a></li> 
+                        <li><a href="gift.html">ギフト</a></li> 
+                        <li><a href="season.html">期間限定</a></li>
+                        <li><a href="recommend.html">おすすめ</a></li> 
+                        <li><a href="review.html">口コミ</a></li> 
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+<main>
+    <div class="contact-area">
+        <img src="./img/privacy.png" alt="空とミカンの画像" class="contact-photo">
+    
+        <div class="contact-title">
+          <div class="contact">
+            <h2>お問い合わせフォーム</h2>
+            <form action="#">
+              <dl class="form-area">
+                <dt><span class="required">お名前</span></dt>
+                <dd><input type="text" class="input-text" name="name" required></dd>
+    
+                <dt><span class="required">メールアドレス</span></dt>
+                <dd><input type="email" class="input-text" name="email" required></dd>
+    
+                <dt>お電話番号</dt>
+                <dd><input type="tel" class="input-text" name="tel"></dd>
+    
+                <dt>お問い合わせ種別</dt>
+                <dd>
+                  <select name="genre" class="select-box">
+                    <option value="ご予約について" selected>ご予約について</option>
+                    <option value="メニューについて" selected>メニューについて</option>
+                    <option value="営業時間について" selected>営業時間について</option>
+                  </select>
+                </dd>
+    
+                <dt><span class="required">お問い合わせ内容</span></dt>
+              <dd>
+                <textarea class="message" name="message" required></textarea>
+              </dd>
+              </dl>
+    
+              <p class="confirm-text">入力内容をご確認の上、お間違いがなければ送信ボタンを押してください。</p>
+              <button class="submit-button" type="submit">送信する</button>
+            </form>
+           </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <a href="index.html">
+            <img src="img/footer-logo.png" alt="C-tree-farmの企業ロゴ" class="footer-logo">
+        </a>
+    
+        <ul>
+            <li><a href="company.html">会社情報</a></li>
+            <li><a href="privacy-policy.html">プライバシーポリシー</a></li>
+            <li><a href="tokuteishotorihiki.html">特定商取引法</a></li>
+        </ul>
+    </div>
+</footer>
+
+
+<!-- マウスストーカー -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+
+<!-- 自作js -->
+<script src="js/Ctree-farm.js"></script>
+</body>
+</html>

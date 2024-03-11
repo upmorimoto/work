@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flam</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/page.css">
+    <link rel="shortcut icon" href="./images/flamlogo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap" rel="stylesheet">
+    <script src="./js/slide.js"></script>
+</head>
+<body>
+    <header class="header-inner" id="top">
+        <a href="index.html"><img src="./images/flamlogo.png" alt="logo" class="logo"></a>
+        <div class="menubutton" onclick="toggle()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="menu">
+            <ul>
+                <details name="accordion">
+                    <summary>季節限定</summary>
+                    <ul>
+                        <li><a href="./page-hanami.html">花見～hanami～</a></li>
+                    </ul>
+                </details>
+                <details name="accordion">
+                    <summary>定番商品</summary>
+                    <ul>
+                        <li><a href="./page-ka.html">褒美・果～houbi・ka～</a></li>
+                        <li><a href="./page-cha.html">褒美・茶～houbi・cha～</a></li>
+                        <li><a href="./page-sake.html">褒美・酒～houbi・shu～</a></li>
+                    </ul>
+                </details>
+                <details name="accordion">
+                    <summary>アソート</summary>
+                    <ul>
+                        <li><a href="./page-takara.html">ちいさな宝石箱</a></li>
+                    </ul>
+                </details>
+                <li><a href="concept.html" onclick="toggle()">Flamについて</a></li>
+                <li><a href="information.html" onclick="toggle()">お知らせ</a></li>
+                <li><a href="inoquery.html" onclick="toggle()">お問い合わせ</a></li>
+
+            </ul>         
+        </nav>
+        <a href="./cart.html"><div class="cart-icon"></div></a>
+    </div>
+    </header>
+    <main>
+        <div id="slider">
+            <div class="slides">
+              <div class="slider">
+                <img src="./images/index/top-view1.png">
+              </div>
+              <div class="slider">
+                    <img src="./images/index/top-view2.png">
+              </div>
+              <div class="slider">
+                  <img src="./images/index/top-view3.png">
+              </div>
+            </div>
+          </div>    
+        <button class="top-button"><a href="#top">top</a></button>
+        <h1 class="title">Product&nbsp;List</h1>
+        <div class="shop-contents">
+            <div class="shop-item">
+                <div class="banner"></div>
+                <h2>-ちいさな宝石箱-</h2>
+                <ul class="item-list">
+                    <li>
+                        <a href="./hanami.html"><img src="./images/index/spring-assort12.png" alt="">
+                        <p>「花見～hanami～」<br>アソート</p></a>
+                    </li>
+                    <li>
+                        <a href="./kudamono.html"><img src="./images/item/bbbassort12.png" alt="">
+                        <p>「褒美・果～houbi・ka～」<br>アソート</p></a>
+                    </li>
+                </ul>
+                <ul class="item-list2">
+                    <li>
+                        <a href="./cha-houbi.html"><img src="./images/item/cccassort12.png" alt="">
+                        <p>「褒美・茶～houbi・cha～」<br>アソート</p></a>
+                    </li>
+                    <li><a href="./sake.html"><img src="./images/item/dddassort12.png" alt="">
+                    <p>褒美・酒～houbi・shu～」<br>アソート</p></a></li>
+                </ul>
+            </div>            
+            <aside class="shop-menu">
+                <div class="shop-menu-inner">
+                    <h2 class="sub-title">ItemList</h2>
+                    <details name="accordion">
+                        <summary>季節限定</summary>
+                        <ul>
+                            <li><a href="./page-hanami.html">花見～hanami～</a></li>
+                        </ul>
+                    </details>
+                    <details name="accordion">
+                        <summary>定番商品</summary>
+                        <ul>
+                            <li><a href="./page-ka.html">褒美・果～houbi・ka～</a></li>
+                            <li><a href="./page-cha.html">褒美・茶～houbi・cha～</a></li>
+                            <li><a href="./page-sake.html">褒美・酒～houbi・shu～</a></li>
+                        </ul>
+                    </details>
+                    <details name="accordion">
+                        <summary>アソート</summary>
+                        <ul>
+                            <li><a href="./page-takara.html">ちいさな宝石箱</a></li>
+                        </ul>
+                    </details>
+    
+    
+                </div>
+            </aside>
+        </div>
+    </main>
+    <div class="banner2">
+        <div class="banner-img"></div>
+        <div class="banner-img2"></div>
+    </div>            
+    <footer>
+        <div class="section-footer-menu">
+            <nav class="site-menu1">
+                <h3><a href="">メニュー</a></h3>
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="concept.html">flamについて</a></li>
+                    <li><a href="information.html">お知らせ</a></li>
+                    <li><a href="./inoquery.html">お問い合わせ</a></li>
+                   </ul>
+            </nav>
+            <nav class="site-menu2">
+                <h3>商品一覧</a></h3>
+                <ul>
+                    <li><a href="./page-hanami.html">季節限定商品<br>
+                         花見~hanami~</a></li>
+                    <li><a href="./page-ka.html">定番商品<br>
+                      褒美~houbi~</a></li>
+                    <li><a href="./page-takara.html">アソート<br>
+                      ちいさな宝石箱</a></li>
+                   </ul>
+            </nav>
+                <nav class="site-menu3">
+                    <h3>ご利用について</a></h3>
+                    <ul>
+                        <li><a href="./term.html">利用規約</a></li>
+                        <li><a href="./privacy.html">プライバシーポリシー</a></li>
+                        <li><a href="./legal.html">特定商取引法について</a></li>
+                    </ul>
+                </nav>
+        </div>
+            <nav class="side-menu3">
+            </nav>
+            <a href="index.html"><img src="./images/flamlogo.png" alt="logo" ></a>
+            <div class="icon">
+                <div class="x-icon1"></div>
+                <div class="inst-icon1"></div>
+            </div>
+            <p class="copyright">&copy;2024&nbsp;Flam</p>
+    </footer>    
+        <script src="./js/script.js"></script>
+    </body>
+</html>

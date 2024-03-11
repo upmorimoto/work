@@ -1,0 +1,125 @@
+.gazo {
+    background-image: url(../images/img/IMG_8594\ \(1\).JPG);
+    z-index: 1;
+    width: 100%;
+    height: 60vh;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+h1 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: #fff;
+    z-index: 2;
+    text-align: left;
+    justify-content: center;
+    height: 50vh;
+}
+
+h2 {
+    margin-bottom: 30px;
+}
+
+body {
+    width: 100%;
+}
+
+.feature {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 100px auto;
+    line-height: 30px;
+    align-items: center;
+}
+
+.feature:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.feature-text {
+    width: 500px;
+}
+
+.no1 {
+    width: 300px;
+}
+
+.message {
+    justify-content: center;
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.banana {
+    justify-content: center;
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.banana2 {
+    justify-content: center;
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+/* レスポンシブ */
+
+@media(max-width:768px) {
+    main {
+        width: 100%
+    }
+    .gazo {
+        height: 30vh;
+    }
+    .gazo h1 {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        color: #fff;
+        z-index: 2;
+        text-align: left;
+        justify-content: center;
+        height: 30vh;
+    }
+    .feature {
+        height: 300px;
+    }
+    .feature img {
+        width: 300px;
+        margin: 0 auto;
+    }
+    .feature-text {
+        margin: 20px 10px;
+        max-width: 300px;
+        line-height: 30px;
+    }
+    .feature-text h2 {
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: small;
+    }
+    .feature-text p {
+        font-size: small;
+    }
+    .banana img {
+        width: 80%;
+    }
+    .banana2 img {
+        width: 80%;
+    }
+}

@@ -1,0 +1,105 @@
+/* 商品リスト */
+.cart-title {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    margin: 0 auto 5% auto;
+    
+}
+.shopping_list {
+  margin: 10% auto 5% auto;
+}
+.cart_list {
+  width: 80%;
+  margin: 0 auto;
+}
+.cart-item {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+.cart-item img {
+  width: 25%;
+  margin-right: 5%;
+}
+.cart-item h3 {
+  width: 25%;
+  font-size: 20px;
+}
+.cart-item p {
+  width: 20%;
+  text-align: end;
+  padding-right: 5%;
+}
+.cart-item button {
+  padding: 3px;
+  background-color: #fff;
+}
+
+.remove {
+  width: 10%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 3px;
+  margin-top: 5%;
+  margin-left: 80%;
+}
+.price-all, .quantity-all {
+  width: 80%;
+  text-align: right;
+  padding: 5px;
+  margin-left: 10%;
+}
+.return {
+  margin: 10% auto 10% 20%;
+  font-size: 1.3rem;
+}
+.kounyuu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.kounyuu #btn {
+  background-color: #ef9a9a;
+  color: #fff;
+  margin: 30px 0 70px 0;
+  width: 15%;
+}
+
+
+
+@media (max-width: 600px) {
+  /* 600pxより小さい場合のスタイル指定 */
+     body {
+      font-size: 0.6rem;
+     }
+     .cart_list button {
+      font-size: 0.5rem;
+    }    
+     .list ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      text-align: center;
+      margin: 0 auto 5% auto;
+      }
+      .product {
+      width: 80%;
+      margin: 0 auto;
+      }
+      .item {
+          padding: 8%;
+          border-bottom: 1px dotted #ff7474c0;
+      }
+      .remove {
+        width: 45%;
+        margin-left: 60%;
+      }
+      
+  
+  }

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flam</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/information.css" />
+    <link
+      rel="shortcut icon"
+      href="./images/flamlogo.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- web-font読み込み -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap"
+      rel="stylesheet"
+    />
+    <!--↑web-font読み込み -->
+  </head>
+  <body>
+    <header class="header-inner">
+      <a href="index.html"
+        ><img src="./images/flamlogo.png" alt="logo" class="logo"
+      /></a>
+      <div class="menubutton" onclick="toggle()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="menu">
+        <ul>
+          <details name="accordion">
+            <summary>季節限定</summary>
+            <ul>
+                <li><a href="./page-hanami.html">花見～hanami～</a></li>
+            </ul>
+        </details>
+        <details name="accordion">
+            <summary>定番商品</summary>
+            <ul>
+                <li><a href="./page-ka.html">褒美・果～houbi・ka～</a></li>
+                <li><a href="./page-cha.html">褒美・茶～houbi・cha～</a></li>
+                <li><a href="./page-sake.html">褒美・酒～houbi・shu～</a></li>
+            </ul>
+        </details>
+        <details name="accordion">
+            <summary>アソート</summary>
+            <ul>
+                <li><a href="./page-takara.html">ちいさな宝石箱</a></li>
+            </ul>
+        </details>
+          <li><a href="concept.html" onclick="toggle()">Flamについて</a></li>
+          <li><a href="information.html" onclick="toggle()">お知らせ</a></li>
+          <li><a href="inoquery.html" onclick="toggle()">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <a href="./cart.html"><div class="cart-icon"></div></a>
+    </header>
+    <main>
+      <section id="information_box">
+        <h1 class="title info">お知らせ</h1>
+        <div class="info_area">
+          <p class="date"><time datetime="2024-03-15">2024/03/15</time></p>
+          <dl>
+            <dt class="info_label">
+              当店のショコラが、 雑誌「chocolate book」にて紹介されました&#33;
+            </dt>
+            <dd>
+              <p>
+                いつも「flam」をご愛顧いただき誠にありがとうございます。<br />
+                3月20日創刊の雑誌『chocolate&nbsp;book』様にて「次世代のイチ押しショコラ」として当店が紹介されました&#33;<br />
+                実際にご紹介いただいた商品は、春季限定ショコラ「花見~hanami~」シリーズです。<br />
+                当ホームページにも掲載しておりますので、ぜひご覧くださいませ。
+              </p>
+              <p>
+                また、「株式会社flam」創業者である代表取締役社長　桝豊のインタビューも掲載されております。<br />
+                全国の書店にてお買い求めいただけますので、ぜひご購入くださいませ。
+              </p>
+            </dd>
+          </dl>
+        </div>
+        <div class="info_area">
+          <p class="date"><time datetime="2024-03-05">2024/03/05</time></p>
+          <dl>
+            <dt class="info_label">
+              【今春限定】 春のショコラキャンペーン　絶賛開催中&#33;
+            </dt>
+            <dd>
+              <p>
+                いつも「flam」をご愛顧いただき誠にありがとうございます。<br />
+                3/1より販売が開始した「花見~hanami~」シリーズですが、開始直後にもかかわらず沢山のお客様からご購入いただいております。<br />
+                誠にありがとうございます。
+              </p>
+              <dl class="about_product">
+                <dt>「さくら」</dt>
+                <dd>
+                  <span>春の訪れを告げる繊細な味わいです。</span>
+                  <span
+                    >桜の花びらのほのかな香りが、上質なチョコレートと溶け合い、一口ごとに優雅な春の風景を思わせます。</span
+                  >
+                </dd>
+              </dl>
+              <dl class="about_product">
+                <dt>「さくらんぼ」</dt>
+                <dd>
+                  <span
+                    >甘酸っぱいさくらんぼの果実を惜しみなく使用したチョコレートです。</span
+                  >
+                  <span
+                    >果実のジューシーさとチョコレートの甘みが絶妙に調和し、幸福感溢れる一品に仕上がっています。</span
+                  >
+                </dd>
+              </dl>
+              <dl class="about_product">
+                <dt>「よもぎ」</dt>
+                <dd>
+                  <span
+                    >春の味覚を代表するよもぎの爽やかな香りを閉じ込めたチョコレート。</span
+                  >
+                  <span
+                    >自然の恵みが生み出す豊かな風味が、心を落ち着かせます。</span
+                  >
+                </dd>
+              </dl>
+
+              <p>
+                「花見~hanami~」シリーズをまだご購入いただいていないお客様には、この機会に春を感じにご来店ください。<br />
+                当ホームページでも販売しておりますので、ぜひご購入くださいませ。
+              </p>
+            </dd>
+          </dl>
+        </div>
+        <div class="info_area">
+          <p class="date"><time datetime="2024-02-20">2024/02/20</time></p>
+          <dl>
+            <dt class="info_label">
+              ３日間限定&#33;<br />
+              「flam特別セール」イベントが開催します&#33;
+            </dt>
+            <dd>
+              <p>
+                いつも「flam」をご愛顧いただき誠にありがとうございます。<br />
+                お客様への日頃の感謝を込めて、2/23(金)～25(日)の3日間限定の特別セールを行います&#33;<br />
+                当店自慢の美味しいショコラやスイーツをお得に手に入れるチャンスです。
+              </p>
+              <p>
+                期間中は、人気商品から季節限定のアイテムまで、幅広い品揃えを特別価格でご提供いたします。<br />
+                お買い得なセット販売や数量限定の特別企画もございますので、お見逃しなく&#33;
+              </p>
+              <p>
+                また、親会社である「桝屋」や同系列ブランド「Quin」も対象商品となり、お得にご購入いただくことができます。<br />
+                「flam特別セール」は３日間限定の開催ですので、お早めにご来店いただき、お気に入りのショコラやスイーツを手に入れてください。<br />
+                皆様のご来店を心よりお待ちしております。
+              </p>
+            </dd>
+          </dl>
+        </div>
+        <div class="info_area">
+          <p class="date"><time datetime="2024-01-10">2024/01/10</time></p>
+          <dl>
+            <dt class="info_label">
+              「Chocolate&nbsp;Market&nbsp;in&nbsp;Kyoto」&nbsp;&nbsp;出店決定！
+            </dt>
+            <dd>
+              <p>
+                いつも「flam」をご愛顧いただき誠にありがとうございます。<br />
+                flamが、今年の「Chocolate&nbsp;Market&nbsp;in&nbsp;Kyoto」に出店することが決定いたしました&#33;
+              </p>
+              <p>
+                「Chocolate&nbsp;Market&nbsp;in&nbsp;Kyoto」は、毎年多くのチョコレート愛好家や食通が集まるイベントで、
+                京都の美しい街並みの中で、様々なチョコレート関連の商品やグルメが楽しめるイベントです。<br />
+                当店の他にも多くのチョコレートブランドやスイーツメーカーが参加し、様々な美味しいお菓子が楽しめます。<br />
+                私たちのブースでも、特別なイベント限定商品やお得なセールをご用意しておりますので、ぜひお楽しみに&#33;
+              </p>
+              <p>
+                イベント詳細やflamのブース情報については、当社SNSをご覧いただくか、イベント公式サイトをご確認ください。<br />
+                チョコレート好きなら絶対に見逃せないこのイベントに、ぜひお越しください&#33;<br />
+                flamの美味しいショコラとスイーツをお楽しみいただけることを心よりお待ちしております。
+              </p>
+            </dd>
+          </dl>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="section-footer-menu">
+          <nav class="site-menu1">
+              <h3><a href="">メニュー</a></h3>
+              <ul>
+                  <li><a href="index.html">ホーム</a></li>
+                  <li><a href="concept.html">flamについて</a></li>
+                  <li><a href="information.html">お知らせ</a></li>
+                  <li><a href="./inoquery.html">お問い合わせ</a></li>
+                 </ul>
+          </nav>
+          <nav class="site-menu2">
+              <h3>商品一覧</a></h3>
+              <ul>
+                  <li><a href="./page-hanami.html">季節限定商品<br>
+                       花見~hanami~</a></li>
+                  <li><a href="./page-ka.html">定番商品<br>
+                    褒美~houbi~</a></li>
+                  <li><a href="./page-takara.html">アソート<br>
+                    ちいさな宝石箱</a></li>
+                 </ul>
+          </nav>
+              <nav class="site-menu3">
+                  <h3>ご利用について</a></h3>
+                  <ul>
+                      <li><a href="./term.html">利用規約</a></li>
+                      <li><a href="./privacy.html">プライバシーポリシー</a></li>
+                      <li><a href="./legal.html">特定商取引法について</a></li>
+                  </ul>
+              </nav>
+      </div>
+          <nav class="side-menu3">
+          </nav>
+          <a href="index.html"><img src="./images/flamlogo.png" alt="logo" ></a>
+          <div class="icon">
+              <div class="x-icon1"></div>
+              <div class="inst-icon1"></div>
+          </div>
+          <p class="copyright">&copy;2024&nbsp;Flam</p>
+  </footer>    
+  <script src="./js/script.js"></script>
+    <script src="./js/form.js"></script>
+  </body>
+</html>
