@@ -221,7 +221,10 @@ header {
 }
 
 .side-contents .bx {
-    font-size: 1em;
+    font-size: 1.3em;
+}
+.side-contents .icon {
+  font-size: 2rem;
 }
 
 .side-contents .ivent-card, .outgoing-card {
@@ -239,6 +242,11 @@ header {
     margin: 0.5em auto;
     aspect-ratio: 1.5;
     object-fit: cover;
+}
+
+.side-contents .outgoing-card {
+  text-align: center;
+  line-height: 2;
 }
 
 /* footer */

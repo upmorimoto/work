@@ -1,8 +1,16 @@
 @charset "utf-8";
 
 
-.handling {
-    background-image: url(../img/part/part3-bg.jpg);
+#handling3 video {
+    width: 100%;
+    height: 100%;
+}
+
+#handling3 .part-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
