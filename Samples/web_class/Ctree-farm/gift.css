@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+/* ギフトページ */
+.breadcrumb {
+    margin-left: 10%;
+    margin-bottom: 50px;
+}
+
+.gift-fv-img {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 530px;
+}
+
+.gift-img {
+    width: 1000px;
+    height: 530px;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.gift-label {
+    width: 300px;
+    height: auto;
+    position: absolute;
+    top: 2%;
+    left: 14%;
+}
+
+/* 特集 */
+.feature {
+    background-color: transparent;
+}
+
+.feature .gift {
+    transform: scale(1.5);
+    border: 10px solid #5A9F4D;
+    border-radius: 50%;
+}
+
+.feature .limitedTime,
+.feature .recommendation,
+.feature .review {
+    opacity: 50%;
+}
+
+/* ギフト商品一覧 */
+#gift-content{
+    margin-left: 10%;
+    margin-bottom: 50px;
+}
+
+.gift-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 250px);
+    column-gap: 40px;
+    row-gap: 30px;
+    place-content: center;
+    margin-bottom: 100px;
+    margin-left: 9%;
+    margin-right: 9%;
+}
+
+.gift-content img {
+    width: 100%;
+    height: 210px;
+    margin-bottom: 16px;
+}
+
+.gift-content .name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.gift-content a {
+    display: block;
+}
+
+.gift-content a:hover {
+    transform: scale(1.05);
+    transition-duration: 0.3s;
+}
+
+
+
+/* レスポンシブ */
+@media (max-width: 800px) {
+    .wrap {
+        overflow: hidden;
+    }    
+    
+    .gift-img {
+        width: 100%;
+        height: auto;
+        /* object-fit: cover;
+        object-position: center top; */
+    }
+    
+    .gift-fv-img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 30px;
+    }
+    /* .gift-fv-img {
+        height: calc(100vh - 150px);
+        position: relative;
+    } */
+
+    /* .a {
+        height: calc(100vh - 150px);
+        background-image: url(./img/gift-img-responsive.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    } */
+
+    .gift-label {
+        width: 120px;
+        left: 0%;
+    }
+
+    /* .gift-img {
+        display: none;
+    } */
+
+    .feature {
+        display: none;
+    }
+}
+
+@media (max-width: 675px) {
+    .gift-content .name {
+        font-size: 10px;
+        font-weight: bold;
+        margin-bottom: 6px;
+    }
+
+    .gift-content {
+        grid-template-columns: repeat(auto-fit, 300px);
+    }
+
+    .gift-content img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 8px;
+    }
+    
+}

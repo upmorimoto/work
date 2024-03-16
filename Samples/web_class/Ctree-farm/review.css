@@ -1,0 +1,134 @@
+@charset "utf-8";
+
+/* 口コミページ */
+body {
+	color: #555;
+    font-family: "Noto Serif JP", serif;
+	background-color: #FFF9E4;
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    font-size: 16px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+
+/* 特集 */
+.feature {
+    background-color: transparent;
+    position: relative;
+}
+
+
+.feature .review {
+    transform: scale(1.5);
+    border: 10px solid #5A9F4D;
+    border-radius: 50%;
+}
+
+.feature .gift,
+.feature .limitedTime,
+.feature .recommendation {
+    opacity: 50%;
+}
+
+.customer-review {
+    width: 100%;
+}
+
+.customer-review img {
+    width: 80%;
+}
+
+.review-1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 20px 10px;
+}
+
+.review-1 p {
+    font-size: 12px;
+}
+
+.img-p {
+    width: 200px;
+    text-align: center;
+}
+
+.link-button {
+    width: 130px;
+    height: 25px;
+    background-color: #5A9F4D;
+    color: #FFF;
+    font-size: 12px;
+    border-radius: 25px;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding-top: 7px;
+    padding: auto;
+    display: inline-block;
+}
+
+.link-button:hover {
+    background-color: #2a4b24;
+}
+
+.name::after {
+    content: '';
+    width: 1px;
+    height: 80px;
+    background-color: #000;
+}
+
+.name {
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.more-review  {
+    display: flex;
+    justify-content: right;
+}
+
+.footer-inner {
+    margin-top: 80px;
+}
+
+
+/* レスポンシブ */
+@media (max-width: 800px){
+.img-p {
+    display: none;
+} 
+
+.customer-review {
+    width: 100%;
+    padding: 30px;
+}
+
+.customer-review img {
+    display: none;
+}
+
+.link-button {
+    display: none;
+}
+
+.name::after {
+    height: 150px;
+}
+
+}

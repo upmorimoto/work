@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-tree-farm|会社情報</title>
+    <link rel="icon" href="img/favicon.png">
+    <meta name="description" content="C-tree-farm企業情報のページです。">
+
+    <link rel="stylesheet" href="destyle.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="company.css">
+
+</head>
+
+<body>
+    <!-- マウスストーカー -->
+    <div id="js-mouse">
+        <img src="img/kobito.png" alt="小人">
+    </div>
+
+    <header class="header">
+        <div class="header-inner">
+            <a href="index.html">
+                <img src="img/logo.png" alt="C-tree-farmの企業ロゴ" class="header-logo">
+            </a>
+            
+            <div class="PC-only">
+                <p class="tel">tel：0736－●●－〇〇〇〇</p>
+            </div>
+    
+            <div class="header-icon">
+                <a href="tel:+ #" class="SP-only">
+                    <img src="img/tel-icon.png" alt="電話で問い合わせるボタン" class="telephone">
+                </a>
+    
+                <a href="contact.html">
+                    <img src="img/mail-icon.png" alt="問い合わせページへアクセスするボタン" class="mail">
+                </a>
+    
+                <!-- カートボタン -->
+                <div class="header-cart">
+                    <a href="cart.html">
+                        <img src="img/cart-icon.png" alt="購入商品の内容をみるボタン" class="cart-button">
+                    </a>
+                    <div class="popup"></div>
+                </div>
+    
+                <!-- SP-only　ハンバーガーメニュー -->
+                <div class="openbtn SP-only"><span></span><span></span><span></span></div>
+                <nav id="g-nav" class="SP-only">
+                    <ul>
+                        <li><a href="#all-items">商品一覧</a></li> 
+                        <li><a href="#">ランキング</a></li> 
+                        <li><a href="gift.html">ギフト</a></li> 
+                        <li><a href="season.html">期間限定</a></li>
+                        <li><a href="recommend.html">おすすめ</a></li> 
+                        <li><a href="review.html">口コミ</a></li> 
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ファーストビュー -->
+        <div class="first-view">
+            <div class="first-view-text">
+                <p>会<span>社</span><span>案</span>内</p>
+            </div>
+        </div>
+        <!-- ファーストビュー終わり -->
+
+        <div class="all-content-area">
+            <!-- 代表ご挨拶 -->
+            <section class="greeting-area content-area">
+                <div class="content-inner">
+                    <div class="content-heading-wrapper box">
+                        <div class="content-heading box">
+                            <h2><span class="heading-text"><span class="content-text">代</span><span
+                                        class="content-text">表</span><span class="content-text">ご</span><span
+                                        class="content-text">挨</span><span class="content-text">拶</span></span></h2>
+                            <p>Greeting</p>
+                        </div>
+                    </div>
+                    <div class="greeting-container box">
+                        <div class="greeting-text">
+
+                            <span class="first-greeting-text box">
+                                <p>
+                                    「遊びが足りないから仕事ができないんだ。遊べよ！<br>
+                                    そうすれば、もっと仕事ができるようになる」
+                                </p>
+                            </span>
+
+                            <span class="gree-text-inner box">
+                                <p>私は常日頃から社員たちに話していることです。<br>
+                                    これはペンシルベニア大学で学んだ多くの学術の中でもっとも<br>
+                                    感銘を受けたのはドイツのビジネスに対する考え方です。<br>
+                                    仕事は量ではなく、仕事の質を重視します。<br>
+                                    やることをしっかりやっていれば周りは何も言わないのです。<br>
+                                    そして社風としても社員の大切なプライベートな時間を削った<br>
+                                    勤務後の飲み会などは開催しません。<br>
+                                    それなら、金曜日の午後は早めに仕事を切り上げて職場で提供<br>
+                                    されるビールやドリンクを少し飲みながら、その場で同僚と雑<br>
+                                    談をしたり、情報交換をしたりします。<br>
+                                    社員に負担のかからない関係構築の場を作りたいのです。<br>
+                                </p>
+                            </span>
+                            <div class="career-text box">
+                                <p>■経歴</p>
+                                <p>
+                                    ・1988年ペンシルベニア大学 経営学部 卒業後<br>
+                                    「Ctree-Farm株式会社」入社。
+                                </p>
+                                <p>・経営企画室長やみかん商品開発部長を経て<br>
+                                    2002年に代表取締役 社長に就任。
+                                </p>
+                            </div>
+                            <div class="motto-text box">
+                                <p>■座右の銘</p>
+                                <p>・強い者が勝つのではない。勝った者が強いのだ！</p>
+                            </div>
+                        </div>
+
+                        <div class="greeting-img-name box">
+                            <img class="kusu-tu" src="./img/kusu-syatyou/kusu-tu.png" alt="">
+                            <dl class="kusu-box box">
+                                <dt class="daihyou">代表取締役社長</dt>
+                                <dd class="kusu-name">楠 良樹</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 代表ご挨拶おわり -->
+
+            <!-- 会社概要 -->
+            <section class="outline-area content-area">
+                <div class="content-inner">
+                    <div class="content-heading-wrapper box">
+                        <div class="content-heading">
+                            <h2>会社概要</h2>
+                            <p>Outline</p>
+                        </div>
+                    </div>
+                    <div class="outline-img-wrap box">
+                        <img class="outline-img" src="./img/orange_farm02.jpg" alt="">
+                    </div>
+                    <div class="outline-detail box">
+                        <table>
+                            <tr>
+                                <th>会社名</th>
+                                <td>Ctree-Farm株式会社</td>
+                            </tr>
+                            <tr>
+                                <th>所在地</th>
+                                <td class="td-text">〒640-8033<br>和歌山県和歌山市本町1丁目1</td>
+                            </tr>
+                            <tr>
+                                <th>設立</th>
+                                <td>1950年(昭和25年) 5月</td>
+                            </tr>
+                            <tr>
+                                <th>代表者</th>
+                                <td>代表取締役社長 楠 良樹</td>
+                            </tr>
+                            <tr>
+                                <th>資本金</th>
+                                <td>500万円</td>
+                            </tr>
+                            <tr>
+                                <th>従業員数</th>
+                                <td class="td-text">単体:500名 ※出向者含まず<br>
+                                    連結:1200名 (2023年3月31日)
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>事業内容</th>
+                                <td class="td-text">
+                                    ・みかん農園<br>
+                                    ・みかん食品製造 / 販売<br>
+                                    ・みかん化粧品製造 / 販売
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>連結売上高</th>
+                                <td>1600万円 (2023年3月期)</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 沿革 -->
+            <section class="history-area content-area">
+                <div class="content-inner">
+                    <div class="content-heading-wrapper box">
+                        <div class="content-heading">
+                            <h2>沿革</h2>
+                            <p>History</p>
+                        </div>
+                    </div>
+                    <div class="history-detail-area">
+                        <ul class="history-detail">
+                            <li class="history-content box">
+                                <img src="./img/ajmal-khan-YiFH9yAojyM-unsplash.jpg" alt="">
+                                <div class="year-box">
+                                    <h3 class="year-heading">1950年</h3>
+                                    <p>和歌山県有田市郊外に「楠みかん農園」を設立</p>
+                                </div>
+                            </li>
+                            <li class="history-content box">
+                                <img src="./img/ajmal-khan-YiFH9yAojyM-unsplash.jpg" alt="">
+                                <div class="year-box">
+                                    <h3 class="year-heading">1954年</h3>
+                                    <p>和歌山県市内に「楠みかん販売所」をオープン</p>
+                                </div>
+                            </li>
+                            <li class="history-content box">
+                                <img src="./img/ajmal-khan-YiFH9yAojyM-unsplash.jpg" alt="">
+                                <div class="year-box">
+                                    <h3 class="year-heading">1960年</h3>
+                                    <p>和歌山県市内に「みかん商品研究所」を設立</p>
+                                </div>
+                            </li>
+                            <li class="history-content box">
+                                <img src="./img/ajmal-khan-YiFH9yAojyM-unsplash.jpg" alt="">
+                                <div class="year-box">
+                                    <h3 class="year-heading">1962年</h3>
+                                    <p>和歌山県紀の川市に「楠みかん販売所２号店」をオープン</p>
+                                </div>
+                            </li>
+                            <li class="history-content box">
+                                <img src="./img/ajmal-khan-YiFH9yAojyM-unsplash.jpg" alt="">
+                                <div class="year-box">
+                                    <h3 class="year-heading">1964年</h3>
+                                    <p>東京オリンピックでミカンジュースを提供したことが話題となり全国から注文が殺到し、みかんブームが到来する。
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="history-content box">
+                                <img src="./img/ajmal-khan-YiFH9yAojyM-unsplash.jpg" alt="">
+                                <div class="year-box">
+                                    <h3 class="year-heading">1965年</h3>
+                                    <p>「楠みかん株式会社」に社名を変更する。</p>
+                                </div>
+                            </li>
+                            <li class="history-content box">
+                                <img src="./img/ajmal-khan-YiFH9yAojyM-unsplash.jpg" alt="">
+                                <div class="year-box">
+                                    <h3 class="year-heading">1967年</h3>
+                                    <p>大阪証券取引所市場第二部に上場。</p>
+                                </div>
+                            </li>
+                            <li class="history-content box">
+                                <img src="./img/ajmal-khan-YiFH9yAojyM-unsplash.jpg" alt="">
+                                <div class="year-box">
+                                    <h3 class="year-heading">1972年</h3>
+                                    <p>創業者「楠 市之助」死去。二代目代表に「楠 聡一」が就任。</p>
+                                </div>
+                            </li>
+                            <li class="history-content box">
+                                <img src="./img/ajmal-khan-YiFH9yAojyM-unsplash.jpg" alt="">
+                                <div class="year-box">
+                                    <h3 class="year-heading">1973年</h3>
+                                    <p>東京証券取引所市場第二部に上場。</p>
+                                </div>
+                            </li>
+                            <li class="history-content box">
+                                <img src="./img/ajmal-khan-YiFH9yAojyM-unsplash.jpg" alt="">
+                                <div class="year-box">
+                                    <h3 class="year-heading">1976年</h3>
+                                    <p>箱根駅伝の大会協賛社になることを発表。</p>
+                                </div>
+                            </li>
+                            <li class="history-content box">
+                                <img src="./img/ajmal-khan-YiFH9yAojyM-unsplash.jpg" alt="">
+                                <div class="year-box">
+                                    <h3 class="year-heading">1979年</h3>
+                                    <p>さらなる業務拡大を目指し、「根来コンピュータ㊒」「㈱canba化粧品」「モリモト工業㈱」「㈲山田果物店」「竹本石鹸株式会社」の5社と合併し、「Ctree-Farm株式会社」を設立。
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="history-content box">
+                                <img src="./img/ajmal-khan-YiFH9yAojyM-unsplash.jpg" alt="">
+                                <div class="year-box">
+                                    <h3 class="year-heading">1980年</h3>
+                                    <p>みかんを使った生石鹸や化粧品の販売を開始。</p>
+                                </div>
+                            </li>
+                            <li class="history-content box">
+                                <img src="./img/ajmal-khan-YiFH9yAojyM-unsplash.jpg" alt="">
+                                <div class="year-box">
+                                    <h3 class="year-heading">1984年</h3>
+                                    <p>販売店を全国展開するため、本社を東京都銀座に移転。</p>
+                                </div>
+                            </li>
+                            <li class="history-content box">
+                                <img src="./img/ajmal-khan-YiFH9yAojyM-unsplash.jpg" alt="">
+                                <div class="year-box">
+                                    <h3 class="year-heading">1988年</h3>
+                                    <p>メインバンクを紀陽銀行からみずほ銀行に変更。</p>
+                                </div>
+                            </li>
+                            <li class="history-content box">
+                                <img src="./img/ajmal-khan-YiFH9yAojyM-unsplash.jpg" alt="">
+                                <div class="year-box">
+                                    <h3 class="year-heading">1990年</h3>
+                                    <p>東京証券取引所市場第一部に上場。大阪証券取引所市場第一部に上場。</p>
+                                </div>
+                            </li>
+                            <li class="history-content box">
+                                <img src="./img/ajmal-khan-YiFH9yAojyM-unsplash.jpg" alt="">
+                                <div class="year-box">
+                                    <h3 class="year-heading">1992年</h3>
+                                    <p>「楠 聡一」氏が会長に就任し「根来 和男」氏を社長に「神場 真理子」氏を副社長に指名。</p>
+                                </div>
+                            </li>
+                            <li class="history-content box">
+                                <img src="./img/ajmal-khan-YiFH9yAojyM-unsplash.jpg" alt="">
+                                <div class="year-box">
+                                    <h3 class="year-heading">1998年</h3>
+                                    <p>女優の「藤原 紀香」さんをイメージガールに起用し、みかん化粧品が美容ブームを巻き起こす。</p>
+                                </div>
+                            </li>
+                            <li class="history-content box">
+                                <img src="./img/ajmal-khan-YiFH9yAojyM-unsplash.jpg" alt="">
+                                <div class="year-box">
+                                    <h3 class="year-heading">2001年</h3>
+                                    <p>[不正融資事件]
+                                        グループ会社の売上などを計上して決算書を粉飾し、みずほ銀行から融資金約2億円を詐取したとして、根来社長と神場副社長ら2名が東京地検特捜部に逮捕された。
+                                        余罪は20億円を超える。
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="history-content box">
+                                <img src="./img/ajmal-khan-YiFH9yAojyM-unsplash.jpg" alt="">
+                                <div class="year-box">
+                                    <h3 class="year-heading">2002年</h3>
+                                    <p>新社長に「楠 良樹」氏が就任。</p>
+                                </div>
+                            </li>
+                            <li class="history-content box">
+                                <img src="./img/ajmal-khan-YiFH9yAojyM-unsplash.jpg" alt="">
+                                <div class="year-box">
+                                    <h3 class="year-heading">2005年</h3>
+                                    <p>不況により、部門を縮小して本社を和歌山市に移転。</p>
+                                </div>
+                            </li>
+                            <li class="history-content box">
+                                <img src="./img/ajmal-khan-YiFH9yAojyM-unsplash.jpg" alt="">
+                                <div class="year-box">
+                                    <h3 class="year-heading">2011年</h3>
+                                    <p>[労働基準法違反]
+                                        和歌山労働基準監督署は労働基準法の賃金台帳へ労働時間未記入の容疑で楠社長を大阪地方検察庁に書類送検。大阪高等裁判所は第3刑事部が懲役3年執行猶予5年の判決を出した。
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="history-content box">
+                                <img src="./img/ajmal-khan-YiFH9yAojyM-unsplash.jpg" alt="">
+                                <div class="year-box">
+                                    <h3 class="year-heading">2012年</h3>
+                                    <p>業務改善命令を受け、全業務を見直す。</p>
+                                </div>
+                            </li>
+                            <li class="history-content box">
+                                <img src="./img/ajmal-khan-YiFH9yAojyM-unsplash.jpg" alt="">
+                                <div class="year-box">
+                                    <h3 class="year-heading">2019年</h3>
+                                    <p>新型コロナウイルスの影響を受け、すべての販売所を閉鎖。受注生産販売にて業務展開。</p>
+                                </div>
+                            </li>
+                            <li class="history-content box">
+                                <img src="./img/ajmal-khan-YiFH9yAojyM-unsplash.jpg" alt="">
+                                <div class="year-box">
+                                    <h3 class="year-heading">2021年</h3>
+                                    <p>東京オリンピックでスポンサーシップを活用してマーケティング展開。新商品「俺んちのオレンジ石鹸」を発表し注文が殺到する。</p>
+                                </div>
+                            </li>
+                            <li class="history-content box">
+                                <img src="./img/ajmal-khan-YiFH9yAojyM-unsplash.jpg" alt="">
+                                <div class="year-box">
+                                    <h3 class="year-heading">2023年</h3>
+                                    <p>ECサイトを使った通販部門を開設。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <a href="index.html">
+                <img src="img/footer-logo.png" alt="C-tree-farmの企業ロゴ" class="footer-logo">
+            </a>
+        
+            <ul>
+                <li><a href="company.html">会社情報</a></li>
+                <li><a href="privacy-policy.html">プライバシーポリシー</a></li>
+                <li><a href="tokuteishotorihiki.html">特定商取引法</a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+    <!-- マウスストーカー -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <!-- 自作js -->
+    <script src="js/Ctree-farm.js"></script>
+    <!-- 会社案内js -->
+    <script src="js/company.js"></script>
+</body>
+
+</html>

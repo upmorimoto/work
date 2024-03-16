@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/item.css">
+    <link rel="shortcut icon" href="./images/flamlogo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header-inner">
+        <a href="index.html"><img src="./images/flamlogo.png" alt="logo" class="logo"></a>
+        <div class="menubutton" onclick="toggle()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="menu">
+            <ul>
+                <details name="accordion">
+                    <summary>季節限定</summary>
+                    <ul>
+                        <li><a href="./page-hanami.html">花見～hanami～</a></li>
+                    </ul>
+                </details>
+                <details name="accordion">
+                    <summary>定番商品</summary>
+                    <ul>
+                        <li><a href="./page-ka.html">褒美・果～houbi・ka～</a></li>
+                        <li><a href="./page-cha.html">褒美・茶～houbi・cha～</a></li>
+                        <li><a href="./page-sake.html">褒美・酒～houbi・shu～</a></li>
+                    </ul>
+                </details>
+                <details name="accordion">
+                    <summary>アソート</summary>
+                    <ul>
+                        <li><a href="./page-takara.html">ちいさな宝石箱</a></li>
+                    </ul>
+                </details>
+                
+                <li><a href="concept.html" onclick="toggle()">Flamについて</a></li>
+                <li><a href="information.html" onclick="toggle()">お知らせ</a></li>
+                <li><a href="inoquery.html" onclick="toggle()">お問い合わせ</a></li>
+
+            </ul>         
+        </nav>
+        <a href="./cart.html"><div class="cart-icon"></div></a>
+    </header>
+    <main>
+        <div class="box">
+            <div class="container">
+                <div class="item-mainvisual">
+                    <img src="./images/item/sakura10.png" alt="" id="main">
+                </div>
+                <div class="item-thumbnail">
+                    <div>
+                        <img src="./images/item/sakura10.png" alt="" class="thumb-img">
+                    </div>
+                    <div>
+                        <img src="./images/item/rapping.png" alt="" class="thumb-img">
+                    </div>
+                    <div>
+                        <img src="./images/item/a_wrapping.png" alt="" class="thumb-img">
+                    </div>
+                    <div>
+                        <img src="./images/item/b_wrapping.png" alt="" class="thumb-img">
+                    </div>
+                    <div>
+                        <img src="./images/item/c_wrapping.png" alt="" class="thumb-img">
+                    </div>
+                    <div>
+                        <img src="./images/item/d_wrapping.png" alt="" class="thumb-img">
+                    </div>
+                </div>
+            </div>
+                <div class="goods-name">
+                    <h2>さくら(10個入り)</h2>
+                    <p class="yen">&yen;3,240(税込)</p>
+                    <p class="setsumei">「さくら」は、春の訪れを告げる繊細な味わいです。桜の花びらのほのかな香りが、上質なチョコレートと溶け合い、一口ごとに優雅な春の風景を思わせます。</p>
+                        <div class="radio">
+                        <p>ラッピング</p>
+                        <label>
+                            <input type="radio" name="options" value="A" onclick="updateWrapping('A')">A
+                          </label>
+                      
+                          <label>
+                            <input type="radio" name="options" value="B" onclick="updateWrapping('B')">B
+                          </label>
+                      
+                          <label>
+                            <input type="radio" name="options" value="C" onclick="updateWrapping('C')">C
+                          </label>     
+                          <label>
+                            <input type="radio" name="options" value="D" onclick="updateWrapping('D')">D
+                          </label>                   
+                        </div>
+                    <div class="button">
+                        <p>個数&nbsp;<span id="quantity">0</span>個</p>
+                        <button onclick="decrement()">-</button>
+                        <button onclick="increment()">+</button>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart()" data-image="../images/item/sakura10.png" data-price="3240">カートに追加</button>
+                </div>
+        </div>
+    </main>
+        
+    <footer>
+        <div class="section-footer-menu">
+            <nav class="site-menu1">
+                <h3><a href="">メニュー</a></h3>
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="concept.html">flamについて</a></li>
+                    <li><a href="information.html">お知らせ</a></li>
+                    <li><a href="./inoquery.html">お問い合わせ</a></li>
+                   </ul>
+            </nav>
+            <nav class="site-menu2">
+                <h3>商品一覧</a></h3>
+                <ul>
+                    <li><a href="./page-hanami.html">季節限定商品<br>
+                         花見~hanami~</a></li>
+                    <li><a href="./page-ka.html">定番商品<br>
+                      褒美~houbi~</a></li>
+                    <li><a href="./page-takara.html">アソート<br>
+                      ちいさな宝石箱</a></li>
+                   </ul>
+            </nav>
+                <nav class="site-menu3">
+                    <h3>ご利用について</a></h3>
+                    <ul>
+                        <li><a href="./term.html">利用規約</a></li>
+                        <li><a href="./privacy.html">プライバシーポリシー</a></li>
+                        <li><a href="./legal.html">特定商取引法について</a></li>
+                    </ul>
+                </nav>
+        </div>
+            <nav class="side-menu3">
+            </nav>
+            <a href="index.html"><img src="./images/flamlogo.png" alt="logo" ></a>
+            <div class="icon">
+                <div class="x-icon1"></div>
+                <div class="inst-icon1"></div>
+            </div>
+            <p class="copyright">&copy;2024&nbsp;Flam</p>
+    </footer>    
+
+        <script src="./js/script.js" defer></script>
+        
+</body>
+</html>

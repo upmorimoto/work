@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flam</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/cart.css">
+    <link rel="shortcut icon" href="./images/flamlogo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="header-inner">
+        <a href="index.html"><img src="./images/flamlogo.png" alt="logo" class="logo"></a>
+        <div class="menubutton" onclick="toggle()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="menu">
+            <ul>
+                <details name="accordion">
+                    <summary>季節限定</summary>
+                    <ul>
+                        <li><a href="./page-hanami.html">花見～hanami～</a></li>
+                    </ul>
+                </details>
+                <details name="accordion">
+                    <summary>定番商品</summary>
+                    <ul>
+                        <li><a href="./page-ka.html">褒美・果～houbi・ka～</a></li>
+                        <li><a href="./page-cha.html">褒美・茶～houbi・cha～</a></li>
+                        <li><a href="./page-sake.html">褒美・酒～houbi・shu～</a></li>
+                    </ul>
+                </details>
+                <details name="accordion">
+                    <summary>アソート</summary>
+                    <ul>
+                        <li><a href="./page-takara.html">ちいさな宝石箱</a></li>
+                    </ul>
+                </details>
+                <li><a href="concept.html" onclick="toggle()">Flamについて</a></li>
+                <li><a href="information.html" onclick="toggle()">お知らせ</a></li>
+                <li><a href="inoquery.html" onclick="toggle()">お問い合わせ</a></li>
+
+            </ul>         
+        </nav>
+        <a href="./cart.html"><div class="cart-icon"></div></a>
+    </div>
+    </header>
+<!-- Cart List -->
+
+<h2 class="cart-title">Cart List</h2>
+<div class="cart_list">
+  <div class="shopping">
+    <div class="shopping_list">
+      <ul id="cart-items"></ul>
+    </div>
+  </div>
+</div>
+
+<button class="remove" onclick="removeAll()">Remove All</button>
+
+<div class="kounyuu">
+    <label><input type="checkbox" id="check">カート内確認</label>
+    <input type="submit" id="btn" value="購入する" disabled>
+</div>
+<a href="index.html"><h4 class="return">Product Listへ戻る</h4></a>
+
+
+
+</main>
+<footer>
+    <div class="section-footer-menu">
+        <nav class="site-menu1">
+            <h3><a href="">メニュー</a></h3>
+            <ul>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="concept.html">flamについて</a></li>
+                <li><a href="information.html">お知らせ</a></li>
+                <li><a href="./inoquery.html">お問い合わせ</a></li>
+               </ul>
+        </nav>
+        <nav class="site-menu2">
+            <h3>商品一覧</a></h3>
+            <ul>
+                <li><a href="./page-hanami.html">季節限定商品<br>
+                     花見~hanami~</a></li>
+                <li><a href="./page-ka.html">定番商品<br>
+                  褒美~houbi~</a></li>
+                <li><a href="./page-takara.html">アソート<br>
+                  ちいさな宝石箱</a></li>
+               </ul>
+        </nav>
+            <nav class="site-menu3">
+                <h3>ご利用について</a></h3>
+                <ul>
+                    <li><a href="./term.html">利用規約</a></li>
+                    <li><a href="./privacy.html">プライバシーポリシー</a></li>
+                    <li><a href="./legal.html">特定商取引法について</a></li>
+                </ul>
+            </nav>
+    </div>
+        <nav class="side-menu3">
+        </nav>
+        <a href="index.html"><img src="./images/flamlogo.png" alt="logo" ></a>
+        <div class="icon">
+            <div class="x-icon1"></div>
+            <div class="inst-icon1"></div>
+        </div>
+        <p class="copyright">&copy;2024&nbsp;Flam</p>
+</footer>    
+<script>
+    // ハンバーガーメニュー
+function toggle() {
+    document.querySelector('.menubutton').classList.toggle('open');
+    document.querySelector('.menu').classList.toggle('open');
+}
+</script>
+<script>
+    const isAgreed = document.querySelector('#check');
+    const btn = document.querySelector('#btn');
+    isAgreed.addEventListener('change', () => {
+        if (isAgreed.checked) {
+            btn.disabled = false;
+        } else {
+            btn.disabled = true;
+        }
+    });
+    // ボタンが押されたときの処理
+document.getElementById('btn').addEventListener('click', function() {
+    alert('お買い上げありがとうございました。');
+});
+
+function displayCartItems() {
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartList = document.getElementById('cart-items-list');
+  
+    cartList.innerHTML = ''; // カートリストを一旦クリア
+  
+    cartItems.forEach(item => {
+        const li = document.createElement('li');
+        li.classList.add('cart-item');
+  
+        const itemName = document.createElement('h3');
+        itemName.textContent = item.name;
+  
+        const itemPrice = document.createElement('p');
+        itemPrice.textContent = `値段: ￥${item.price.toLocaleString()}`;
+  
+        const itemQuantity = document.createElement('p');
+        itemQuantity.textContent = `個数: ${item.quantity}`;
+  
+        const itemWrapping = document.createElement('p');
+        itemWrapping.textContent = `ラッピング: ${item.wrapping}`;
+  
+        li.appendChild(itemName);
+        li.appendChild(itemPrice);
+        li.appendChild(itemQuantity);
+        li.appendChild(itemWrapping);
+  
+        cartList.appendChild(li);
+    });
+  
+    // 合計金額と合計数量を計算して表示
+    let totalPrice = 0;
+    let totalQuantity = 0;
+  
+    cartItems.forEach(item => {
+        totalPrice += item.price * item.quantity;
+        totalQuantity += item.quantity;
+    });
+  
+    const totalPriceElement = document.getElementById('total-price');
+    totalPriceElement.textContent = '合計金額: ￥' + totalPrice.toLocaleString();
+  
+    const totalQuantityElement = document.getElementById('total-quantity');
+    totalQuantityElement.textContent = '合計数量: ' + totalQuantity + '個';
+}
+
+// ページ読み込み時にカート内の商品情報を表示
+window.addEventListener('load', () => {
+    displayCartItems();
+});
+
+</script>
+
+<script src="./js/cart.js"></script>
+<script src="./js/cart_list.js"></script>
+<script>
+ // ページ読み込み時にカート内の商品情報を表示
+ window.addEventListener('load', () => {
+      displayCartItems();
+    });
+
+    function displayCartItems() {
+      const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+      const cartList = document.getElementById('cart-items');
+
+      // カートアイテムを一旦クリア
+      cartList.innerHTML = '';
+
+      // カートアイテムを表示
+      cartItems.forEach(item => {
+        const cartItemElement = document.createElement('li');
+        cartItemElement.classList.add('cart-item');
+
+        const itemImage = document.createElement('img');
+        itemImage.src = item.imageThumbnail; // サムネイル画像のパス
+        itemImage.alt = item.name;
+
+        const itemName = document.createElement('h3');
+        itemName.textContent = item.name;
+
+        const itemPrice = document.createElement('p');
+        itemPrice.textContent = `値段: ￥${item.price.toLocaleString()}`;
+
+        const itemQuantity = document.createElement('p');
+        itemQuantity.textContent = `個数: ${item.quantity}`;
+
+        const itemWrapping = document.createElement('p');
+        itemWrapping.textContent = `ラッピング: ${item.wrapping}`;
+
+        cartItemElement.appendChild(itemImage);
+        cartItemElement.appendChild(itemName);
+        cartItemElement.appendChild(itemPrice);
+        cartItemElement.appendChild(itemQuantity);
+        cartItemElement.appendChild(itemWrapping);
+
+        cartList.appendChild(cartItemElement);
+      });
+
+      // 合計金額と合計数量を計算して表示
+      let totalPrice = 0;
+      let totalQuantity = 0;
+
+      cartItems.forEach(item => {
+        totalPrice += item.price * item.quantity;
+        totalQuantity += item.quantity;
+      });
+
+      const totalPriceElement = document.createElement('p');
+      totalPriceElement.textContent = '合計金額: ￥' + totalPrice.toLocaleString();
+
+      const totalQuantityElement = document.createElement('p');
+      totalQuantityElement.textContent = '合計数量: ' + totalQuantity + '個';
+
+      cartList.appendChild(totalPriceElement);
+      cartList.appendChild(totalQuantityElement);
+    }
+    </script>
+</body>
+</html>

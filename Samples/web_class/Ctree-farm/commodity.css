@@ -1,0 +1,507 @@
+@charset "utf-8";
+
+/* *{
+    outline: 2px red solid;
+} */
+
+/* 商品購入　買い物かごページ */
+body {
+	color: #555;
+    font-family: "Noto Serif JP", serif;
+	background-color: #FFF9E4;
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    font-size: 16px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+.PC-only {
+    display: block;
+}
+
+.SP-only {
+    display: none;
+}
+
+
+/* 特集 */
+.feature {
+    background-color: transparent;
+    padding: 0;
+}
+
+
+/* 商品詳細画面 */
+.buy-commodity-detail {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 68px;
+}
+
+.buy-commodity-detail img {
+    width: 380px;
+    height: auto;
+    border-radius: 25px;
+}
+
+.commodity-name {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.buy-commodity-detail .code {
+    font-size: 13px;
+    margin-bottom: 22px;
+}
+
+.buy-commodity-detail .shipping {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.buy-commodity-detail .pr-text {
+    font-size: 15px;
+    margin: 38px 0;
+}
+
+.buy-commodity-detail .price {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.buy-commodity-detail .price span {
+    font-size: 23px;
+}
+
+.buy-commodity-detail .price .tax {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.buy-commodity-detail .orders {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 28px;
+}
+
+.buy-commodity-detail .orders input {
+    width: 100px;
+    height: 45px;
+    background-color: #d9d9d9;
+    border-radius: 5px;
+    text-align: right;
+    padding-right: 15px;
+}
+
+.buy-commodity-detail .in_cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 320px;
+    height: 62px;
+    background-color: #1D891B;
+    border-radius: 30px;
+    margin-top: 30px;
+}
+
+.buy-commodity-detail .in_cart img {
+    width: 30px;
+    height: auto;
+}
+
+.buy-commodity-detail .in_cart button {
+    color: #fff;
+    font-weight: 18px;
+    font-weight: bold;
+}
+
+.buy-commodity-detail .cart p {
+    display: none;
+}
+
+.important {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 90px;
+    margin-top: 65px;
+}
+
+.important .point h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.important .point p {
+    font-size: 12px;
+    letter-spacing: 1.7px;
+}
+
+.important .point .content01 {
+    margin-bottom: 50px;
+}
+
+.important .point .content03 p {
+    margin-bottom: 30px;
+}
+
+.important .point li {
+    margin-bottom: 22px;
+}
+
+.important .point li .payment-method {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.important .point li img {
+    width: 100%;
+}
+
+/* ***************************************************
+    買い物かごのページ
+*************************************************** */
+.breadcrumb {
+    margin-bottom: 30px;
+}
+
+.cart-title {
+    font-size: 24px;
+    color: #AB764F;
+    margin-bottom: 55px;
+}
+
+.shopping_list .cart-item {
+    width: 100%;
+    background-color: #fff;
+    padding: 50px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+} 
+
+.shopping_list .cart-item img {
+    width: 205px;
+    height: auto;
+}
+
+.shopping_list .cart-item h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.price-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.price-label {
+    font-size: 24px;
+}
+
+.shopping_list .cart-item .cart-price {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.cart-tax,
+.tax-included {
+    font-size: 16px;
+}
+
+.cart-quantText {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.minus-btn {
+    display: block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-right: none;
+    border-radius: 25px 0 0 25px;
+    font-size: 30px;
+    margin-left: 16px;
+}
+
+.cart-quantity {
+    display: block;
+    width: 70px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #d9d9d9;
+    border: 1px solid #000;
+}
+
+.plus-btn {
+    display: block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-left: none;
+    border-radius: 0 25px 25px 0;
+    font-size: 24px;
+}
+
+.remove-item-button {
+    display: block;
+    margin-left: auto;
+    margin-top: 16px;
+}
+
+.main-content table {
+    width: 100%;
+    margin-top: 16px;
+}
+
+.main-content table tr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 16px;
+}
+
+.main-content table tr th {
+    width: 20%;
+    font-size: 24px;
+    text-align: right;
+}
+
+.main-content table tr td {
+    width: 40%;
+    font-size: 30px;
+    text-align: right;
+}
+
+.main-content table tr .yen {
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+.main-content table tr .tax {
+    font-size: 16px;
+}
+
+.postage {
+    font-size: 30px;
+}
+
+.formality-b {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 76px;
+    font-size: 28px;
+    font-weight: bold;
+    background-color: #d9d9d9;
+    border-radius: 30px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.formality-b:hover {
+    color: #fff;
+    background-color: #D52912;
+}
+
+
+/* 購入後のお礼message */
+.message {
+    width: 600px;
+    background-color: #F57B11;
+    padding: 40px;
+    margin: 0 auto;
+    margin-bottom: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+}
+
+
+/* ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
+    SP版レスポンシブ
+＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊*/
+@media (max-width: 1024px) {
+    .Tablet-only {
+        display: none;
+    }
+}
+
+/* commodity-buy.html */
+
+@media (max-width: 800px) {
+    
+    p {
+        font-size: 16px;
+    }
+    
+    h2 {
+        font-size: 32px;
+    }
+    
+    .PC-only {
+        display: none;
+    }
+    
+    .SP-only {
+        display: block;
+    }
+
+    .top {
+        max-width: initial;
+        margin-bottom: 60px;
+    }
+
+    .main-content {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+
+/* 商品詳細画面 */
+.buy-commodity-detail {
+    flex-direction: column;
+    gap: 40px;
+}
+
+.buy-commodity-detail .commodity-photo {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.buy-commodity-text {
+    margin: 0 auto;
+}
+
+.buy-commodity-detail .pr-text {
+    font-size: 15px;
+    margin: 25px 0 30px;
+}
+
+.buy-commodity-detail .price {
+    text-align: right;
+}
+
+.buy-commodity-detail .orders {
+    justify-content: flex-end;
+}
+
+.buy-commodity-detail .in_cart {
+    margin: 30px auto 0;
+}
+
+.important {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+}
+
+.important .point h3 {
+    margin-bottom: 24px;
+}
+
+.important .point .content02 {
+    margin-bottom: 50px;
+}
+
+
+
+
+
+/* ***************************************************
+    買い物かごのページ
+*************************************************** */
+.shopping_list .cart-item {
+    gap: 30px;
+}
+
+.price-info {
+    gap: 30px;
+    margin-bottom: 24px;
+}
+
+.shopping_list .cart-item h3 {
+    margin-bottom: 16px;
+}
+
+.price-label {
+    font-size: 16px;
+}
+
+.shopping_list .cart-item .cart-price {
+    font-size: 24px;
+}
+
+.cart-tax,
+.tax-included {
+    font-size: 14px;
+}
+
+.main-content table tr {
+    gap: 30px;
+}
+
+.main-content table tr th {
+    font-size: 16px;
+}
+
+.main-content table tr td {
+    font-size: 24px;
+}
+
+.main-content table tr .yen {
+    font-size: 16px;
+}
+
+.main-content table tr .tax {
+    font-size: 12px;
+}
+
+.message {
+    margin: 60px auto;
+}
+
+.message .thankyou {
+    width: 100%;
+}
+
+}
+
+

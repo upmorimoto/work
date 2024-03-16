@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+/* 特定商取引法に基づく表記ページ */
+.tokuteisyotorihiki {
+    margin-top: 80px;
+    margin-bottom: 125px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.tokuteisyotorihiki h2 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 90px;
+}
+
+td:first-child {
+    width: 240px;
+    vertical-align: middle;
+}
+
+td:nth-child(even) {
+    vertical-align: middle;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+@media (max-width: 800px) {
+    .wrap {
+        overflow: hidden;
+    }
+
+    .tokuteisyotorihiki h2 {
+        font-size: 25px;
+        margin-bottom: 50px;
+    }
+
+    .tokuteisyotorihiki {
+        margin-top: 50px;
+        margin-bottom: 90px;
+        margin-left: 8%;
+        margin-right: 8%;
+    }
+    
+    table td {
+        display: block;
+    }
+
+    td:first-child {
+        width: 100%;
+        font-size: 1.2rem;
+        margin-bottom: 4px;
+        background-color: #f2f2f2;
+    }
+        
+    td:nth-child(even) {
+        font-size: 1.2rem;
+    }
+    
+    tr:nth-child(odd) {
+        background-color: inherit;
+        font-size: 1.2rem;
+    }
+    
+    table tr {
+        height: 70px;
+    }
+    
+
+}

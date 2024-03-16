@@ -1,0 +1,182 @@
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.container {
+  width: 50%;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+
+}
+img {
+  max-width: 100%;
+}
+.item-thumbnail {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  padding: 0;
+}
+.thumb-img {
+  width: 100%;
+  height: 50px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.item-mainvisual {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main {
+  height: 500px;
+}
+.thumb-img:active {
+  filter:opacity(50%);
+}
+.goods-name {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  margin: 20px auto 0;
+}
+.goods-name h2 {
+font-size: 25px;
+margin: 10px 0;
+}
+.goods-name .yen {
+  font-size: 25px;
+  margin: 0;
+  padding: 20px 0;
+}
+.goods-name .setsumei {
+  font-size: 18px;
+  margin: 0;
+  padding: 0 20px 0 10px;
+
+}
+.radio {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.radio p {
+margin: 20px 15px;
+}
+label {
+margin: 0 5px;
+}
+input {
+  margin: 0 5px;
+}
+.add-to-cart {
+width: 25%;
+height: 30px;
+background-color: #fff;
+margin: 10px auto 0;
+}
+
+.button {
+display: flex;
+margin: 0;
+padding: 0 20px;
+}
+.button button {
+width: 35px;
+margin: 0 0 0 30px;
+}
+.sub-title {
+  font-size: 20px;
+}
+@media (max-width: 800px) {
+.box {
+  width: 100%;
+  flex-direction: column;
+}
+.container {
+  width: 90%;
+}
+.thumb-img {
+width: 120px;
+height: 50px;
+overflow: scroll;
+margin: 0 auto;
+padding: 0 10px;
+}
+.goods-name {
+width: 90%;
+margin: 20px auto;
+justify-content: center;
+align-items: center;
+}
+.goods-name h1 {
+  margin: 20px 0;
+  }
+  .goods-name .yen {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  .goods-name .setsumei {
+    font-size: 15px;
+    margin: 0;
+    padding: 20px 30px;
+  }
+  .radio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  .radio p {
+  margin: 20px 15px;
+  }
+  
+.add-to-cart {
+width: 25%;
+height: 30px;
+background-color: #fff;
+}
+
+.button {
+display: flex;
+margin: 0;
+padding: 0 20px;
+}
+.button button {
+margin: 0 0 0 30px;
+}
+
+.notification {
+display: none;
+position: fixed;
+top: 20px;
+right: 20px;
+background-color: #4CAF50;
+color: white;
+padding: 15px;
+border-radius: 5px;
+}
+.continue-shopping {
+position: fixed;
+bottom: 20px;
+left: 50%;
+transform: translateX(-50%);
+background-color: #3498db;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+}

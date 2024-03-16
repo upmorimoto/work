@@ -1,0 +1,318 @@
+/* スライド */
+#slider{
+  width:100%;
+  height:60vh;
+  position:relative;
+  overflow:hidden;
+}
+.slides{
+  width:300%;
+  height:100%;
+  position:relative;
+  -webkit-animation:slide 30s infinite;
+  -moz-animation:slide 30s infinite;
+  animation:slide 30s infinite;
+}
+.slider{
+  width:33.33%;
+  height:100%;
+  float:left;
+  position:relative;
+  z-index:1;
+  overflow:hidden;
+}
+.slider img {
+  width: 100%;
+  height: 60vh;
+}
+/* Animation */
+@keyframes slide{
+  0%,100%{
+    margin-left:0%;
+  }
+  21%{
+    margin-left:0%;
+  }
+  25%{
+    margin-left:-100%;
+  }
+  46%{
+    margin-left:-100%;
+  }
+  50%{
+    margin-left:-200%;
+  }
+  71%{
+    margin-left:-200%;
+  }
+  75%{
+    margin-left:-200%;
+  }
+  96%{
+    margin-left:-0%;
+  }
+}
+
+.title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #FF858C;    
+      font-size: 40px;
+      margin: 50px 0;
+      padding: 0;
+    }
+.title::after {
+  content: "";
+  display: block;
+  width: 15%;
+  height: 2px;
+  background-color: #482426;
+  margin: 15px auto;
+}
+
+    main {
+      width: 100%;
+      height: 2400px;
+      position: relative;
+    }
+    .top-button {
+      width: 50px;
+      height:50px;
+      border-radius: 50%;
+      position: fixed;
+      bottom: 5%;
+      right: 5%;
+      transform: rotate(0.75turn);
+      font-size: 25px;
+    }
+    .shop-contents {
+      width: 80%;
+      height: 1500px;
+      margin: 75px auto 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+    }
+    
+    .shop-item {
+      width: 100%;
+    }
+    .banner {
+      background-image: url(../images/index/spring-banner.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 80%;
+      height: 400px;
+      margin: 20px auto 40px;
+      padding: 0;
+    }
+    .shop-item h2 {
+      font-size: 28px;
+      font-weight: bold;
+      line-height: 30px;
+      text-align: center;
+      margin: 40px auto 0;
+      padding: 50px 0;
+    }
+    
+    .item-list {
+      margin: 40px auto;
+      padding: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .item-list img {
+      background-image: url(../images/washi.jpg);
+    }
+    .item-list li {
+      flex-shrink: 0;
+      width: 250px;
+      height: 250px;
+      margin: 10px;
+    }
+    .item-list a {
+      display: block;
+      transition-duration: 0.2s;
+    }
+    
+    .item-list a:hover {
+      transform: scale(1.05);
+    }
+    .item-list2 {
+      margin: 40px auto;
+      padding: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+    .item-list2 img {
+      background-image: url(../images/washi.jpg);
+    }
+
+    .item-list2 li {
+      flex-shrink: 0;
+      width: 250px;
+      height: 250px;
+      margin: 10px;
+    }
+    .item-list2 a {
+      display: block;
+      transition-duration: 0.2s;
+    }
+    
+    .item-list2 a:hover {
+      transform: scale(1.05);
+    }
+    .item-list p {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 15px;
+    }
+.item-list2 li {
+      flex-shrink: 0;
+      width: 250px;
+      height: 250px;
+      margin: 30px 10px;
+    }
+.item-list2 p {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 15px;
+    }
+    .shop-menu {
+      width: 20%;
+      height: 100%;
+      flex-shrink: 0;
+      margin: 0 auto;
+    }
+    
+    .shop-menu-inner {
+      position: sticky;
+      width: 100%;
+      top: 30px;
+      left: 0;
+      right: 0;
+      margin: 0 0;
+      padding: 0;
+    }
+    
+    .shop-menu-inner h2 {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 20px auto;
+    }
+    
+    .banner2 {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin: 50px auto;
+      padding: 0;
+    }
+    .banner-img {
+      background-image: url(../images/index/masuya_banner2.png);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 35%;
+      height: 300px;
+    }
+    .banner-img2 {
+      background-image: url(../images/index/quin_banner.png);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 35%;
+      height: 300px;
+      
+    }
+    @media(max-width:768px) {
+      main {
+        width: 100%;
+        height: 2500px;
+      }  
+
+      .title::after {
+        width: 25%;
+      }
+      .banner {
+        background-image: url(../images/index/spring-banner.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 300px;
+        margin: 20px auto 40px;
+        padding: 0;
+      }  
+      .item-list {
+        display: flex;
+        flex-wrap: nowrap;
+        margin: 0 auto;
+        overflow-x: scroll;
+        width: 400px;
+      }
+
+      
+      
+      .item-list li {
+        flex-shrink: -1;
+        width: 100%;
+        height: 100%;
+        margin-left: 75px;
+        padding: 0;
+      }
+      
+      .item-list li:first-child {
+        margin-left: 1000px;
+      }
+      .item-list2 {
+        display: flex;
+        flex-wrap: nowrap;
+        margin: 0 auto;
+        padding-right: 5px;
+        overflow-x: scroll;
+        width: 400px;
+      }
+      
+      .item-list2 li {
+        flex-shrink: -1;
+        width: 100%;
+        height: 100%;
+        padding: 0 0 0 0;
+      }
+      
+      .item-list2 li:first-child {
+        margin-left: 2100px;
+      }
+
+      .banner2 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 150px auto 30px;
+        padding: 0;
+      }
+      .banner-img {
+        width: 80%;
+        height: 200px;
+        margin: 0 auto 30px;
+      }
+      .banner-img2 {
+        width: 80%;
+        height: 200px;
+      }
+  
+    }  

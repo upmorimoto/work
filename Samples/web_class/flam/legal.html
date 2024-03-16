@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flam</title>
+    <link rel="stylesheet" href="./css/legal.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="shortcut icon" href="./images/flamlogo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header-inner" id="top">
+        <a href="index.html"><img src="./images/flamlogo.png" alt="logo" class="logo"></a>
+        <div class="menubutton" onclick="toggle()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="menu">
+            <ul>
+                <details name="accordion">
+                    <summary>季節限定</summary>
+                    <ul>
+                        <li><a href="./page-hanami.html">花見～hanami～</a></li>
+                    </ul>
+                </details>
+                <details name="accordion">
+                    <summary>定番商品</summary>
+                    <ul>
+                        <li><a href="./page-ka.html">褒美・果～houbi・ka～</a></li>
+                        <li><a href="./page-cha.html">褒美・茶～houbi・cha～</a></li>
+                        <li><a href="./page-sake.html">褒美・酒～houbi・shu～</a></li>
+                    </ul>
+                </details>
+                <details name="accordion">
+                    <summary>アソート</summary>
+                    <ul>
+                        <li><a href="./page-takara.html">ちいさな宝石箱</a></li>
+                    </ul>
+                </details>
+                <li><a href="concept.html" onclick="toggle()">Flamについて</a></li>
+                <li><a href="information.html" onclick="toggle()">お知らせ</a></li>
+                <li><a href="inoquery.html" onclick="toggle()">お問い合わせ</a></li>
+
+            </ul>         
+        </nav>
+        <a href="./cart.html"><div class="cart-icon"></div></a>
+    </div>
+    </header>
+   <main class="page-content">
+    <div class="shop-policy-container">
+        <div class="shop-policy-title">
+           <h1>特定商取引法に基づく表記</h1> 
+        </div>
+        <div class="shop-policy-body">
+            <div class="rte">
+                <div class="policy-table-title">
+                    <h2>店舗情報</h2>
+                </div>
+                <div class="policy-table">
+                    <tbody>
+                        <table>
+                            <tr>
+                                <th>店舗名</th>
+                                <th>Flamオンラインショップ</th>
+                            </tr>
+                            <tr>
+                                <td>販売事業者名</td>
+                                <td>株式会社Flam</td>
+                            </tr>
+                            <tr>
+                                <td>販売責任者名</td>
+                                <td>桝治世子</td>
+                            </tr>
+                            <tr>
+                                <td>所在地</td>
+                                <td>〒XXX-XXXX
+                                    <br>なにかしら県どこか市いずこXX-X</td>
+                            </tr>
+                            <tr>
+                                <td>電話番号</td>
+                                <td>0120-XXX-XXXX</td>
+                            </tr>
+                            <tr>
+                                <td>ホームページURL</td>
+                                <td>https://masu_choco.co.jp/flam/</td>
+                            </tr>
+                        </table>
+                    </tbody>
+                </div>
+                <div class="policy-title">
+                    <h2>商品の販売について</h2>
+                </div>
+                <div class="policy-table">
+                    <tbody>
+                    <table>
+                        <tr>
+                            <th>商品引渡し時期</th>
+                            <th>商品のお届けは日本国内に限らせていただきます。ご注文から4～6日後を目安にお届けいたします。
+                                <br>＊離島・一部地域へのお届けについては通常のお届け日数に加えて、1～4日程度いただく場合がございます。
+                                <br>＊繁忙期のご注文集中時には、通常のお届け日数に加えて、2、3日程度いただく場合がございます。</th>
+                        </tr>
+                    </table>
+                    </tbody>
+                </div>
+                <div class="policy-title">
+                    <h2>返品・交換について</h2>
+                </div>
+                <div class="policy-table">                 
+                    <p>原則として、お客様都合の返品はお受けできません。 ただし返品の対象が不良品、または誤配等の理由により
+                        <br>注文商品と異なる商品を納品した場合のみ、商品到着後7日以内のご連絡に限り、お受け致します。</p>
+                </div>
+
+                <div class="policy-title">
+                    <h2>支払い方法及び支払い時期</h2>
+                </div>
+                <div class="policy-table">
+                    <tbody>
+                    <table>
+                        <tr>
+                            <th>クレジットカード</th>
+                            <th>下記のお支払い方法よりお選びいただけます。
+                                <br> VISA
+                                mastercard
+                                jcb
+                                amex
+                                diners
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>銀行振込</td>
+                            <td>銀行・支店）みずほ銀行・架空支店
+                                <br>（銀行コード）0001（支店コード）XXX（口座）普通
+                                <br>（口座番号）XXXXXXX
+                                <br>（名義）カ）フラム
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>PayPay</td>
+                            <td>PayPay（オンライン決済）ではPayPayを利用してご注文いただけます。
+                                <br>ご注文を確定すると、PayPayアプリが自動的に立ち上がり、お支払い内容が表示されます。
+                                <br>お支払い内容をご確認のうえ「支払う」ボタンを押すと、PayPay残高から決済できます。
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Amazon Pay</td>
+                            <td>Amazon.co.jpにご登録の住所・クレジットカード情報を利用してご注文いただけます。
+                                <br>ご利用になるには Amazon.co.jpアカウントが必要です。
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>コンビニ前払い</td>
+                            <td>セブンイレブン・ローソン・ファミリーマート・セイコーマート・ミニストップの中から
+                                <br>ご注文時にお支払コンビニを選択いただきます。
+                                ご注文完了後にメールにて、お振込みのご案内を
+                                <br>差し上げております。
+                                お支払期限はご注文から1週間です。ご注文時に選択したコンビニにて
+                                <br>期限内にお支払くださいますよう、よろしくお願いいたします。</td>
+                        </tr>
+                        
+                    </table>
+                    </tbody>
+                </div>
+
+                <div class="policy-title">
+                    <h2>商品代金以外の必要料金</h2>
+                </div>
+                <div class="policy-table">
+                    <ul>
+                        <li>・消費税</li>
+                        <li>・送料　※1配送につき商品代金6,000円（税込）以上のお買い上げで送料無料</li>
+                        <li>・ラッピング代</li>
+                    </ul>
+                </div>
+
+                <div class="policy-title">
+                    <h2>支払い方法及び支払い時期</h2>
+                </div>
+
+                <p>お届け先1件につき</p>
+                <ul>
+                    <li>・6,000円（税込）以上のお買い上げで送料無料となります。</li>
+                    <li>・6,000円（税込）未満の場合はお届け先ごとに下記送料（税込）となります。</li>
+                </ul>
+
+                <p>北海道・九州：880円　 東北・関東・信越・北陸・中部・関西：605円　中国・四国：660円　沖縄：1,320円　
+                <br>天候不順・配送業者の都合・その他何らかの理由により遅延する場合はメール等でお知らせいたします。</p> 
+            <h2>※ご不在時の対応につきまして</h2>
+            <p>ご不在時は「不在連絡票」を配送業者が残します。
+                食品ですので、宅配ボックスへの納品は承ることは出来かねますのでご了承願います。</p>
+        </div>
+    </div>
+   </main>
+
+   <footer>
+    <div class="section-footer-menu">
+        <nav class="site-menu1">
+            <h3>メニュー</h3>
+            <ul>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="concept.html">flamについて</a></li>
+                <li><a href="information.html">お知らせ</a></li>
+                <li><a href="./inoquery.html">お問い合わせ</a></li>
+               </ul>
+        </nav>
+        <nav class="site-menu2">
+            <h3>商品一覧</h3>
+            <ul>
+                <li><a href="./page-hanami.html">季節限定商品<br>
+                     花見~hanami~</a></li>
+                <li><a href="./page-ka.html">定番商品<br>
+                  褒美~houbi~</a></li>
+                <li><a href="./page-takara.html">アソート<br>
+                  ちいさな宝石箱</a></li>
+               </ul>
+        </nav>
+        <nav class="site-menu3">
+            <h3>ご利用について</h3>
+            <ul>
+                <li><a href="./term.html">利用規約</a></li>
+                <li><a href="./privacy.html">プライバシーポリシー</a></li>
+                <li><a href="./legal.html">特定商取引法について</a></li>
+            </ul>
+        </nav>
+    </div>
+        <nav class="side-menu3">
+        </nav>
+        <a href="index.html"><img src="./images/flamlogo.png" alt="logo" ></a>
+        <div class="icon">
+            <div class="x-icon1"></div>
+            <div class="inst-icon1"></div>
+        </div>
+        <p class="copyright">&copy;2024&nbsp;Flam</p>
+</footer>    
+    <script src="./js/script.js"></script>
+</body>
+</html>
