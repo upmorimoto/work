@@ -1,0 +1,2083 @@
+@charset "utf-8";
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+img {
+    width: 100%;
+}
+body{
+    background-color: #E6E8F1;
+}
+.section{
+    width: 100%;
+    height: 100vh;
+}
+/* S--------------------ヘッダー-------------------- */
+#header{
+  width: 100%;
+  height: 15vh;
+  background-color: #E6E8F1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  visibility: hidden;
+  transition: 0.5s;
+  opacity: 0;
+  top: 0;
+  left: 0;
+}
+#header.on{
+    visibility: inherit;
+    opacity: 1;
+}
+#header img{
+  width: 200px;
+  position: fixed;	
+  top:40px;
+  left: 40px;
+  cursor: pointer;
+}
+#g-nav{
+    /*position:fixed;にし、z-indexの数値を小さくして最背面へ*/
+    position:fixed;
+	z-index: -1;
+	opacity: 0;/*はじめは透過0*/
+    /*ナビの位置と形状*/
+	top:0;
+    right: 100%;
+	width:100%;
+    height: 100vh;/*ナビの高さ*/
+	/* background:#df2e2e; */
+    background-color:rgba(255, 255, 255, 0.9);
+    background-blend-mode:lighten;
+    background-position:  center;
+    background-size: cover;
+    /*動き*/
+	transition: all 0.3s;
+  }
+
+
+/*アクティブクラスがついたら透過なしにして最前面へ*/
+#g-nav.panelactive{
+	opacity: 1;
+	right: 0;
+}
+
+@media (min-width:480px) {
+  #g-nav{
+    /*position:fixed;にし、z-indexの数値を小さくして最背面へ*/
+    position:fixed;
+	z-index: -1;
+	opacity: 0;/*はじめは透過0*/
+    /*ナビの位置と形状*/
+	top:0;
+    right: 100%;
+	width:100%;
+    height: 100vh;/*ナビの高さ*/
+	/* background:#df2e2e; */
+    background-color:rgba(255, 255, 255, 0.9);
+    background-blend-mode:lighten;
+    background-position:  center;
+    background-size: cover;
+    /*動き*/
+	transition: all 0.3s;
+  }
+}
+
+/*アクティブクラスがついたら透過なしにして最前面へ*/
+#g-nav.panelactive{
+	opacity: 1;
+	right: 0;
+}
+
+/*ナビゲーションの縦スクロール*/
+#g-nav.panelactive #g-nav-list{
+    /*ナビの数が増えた場合縦スクロール*/
+    position: fixed;
+    z-index: 999; 
+    width: 100%;
+    height: 100vh;/*表示する高さ*/
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+    display: none;
+    /*ナビゲーション天地中央揃え*/
+    position: absolute;
+    z-index: 999;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+#g-nav.panelactive ul {
+    display: block;
+}
+
+/*リストのレイアウト設定*/
+
+#g-nav li{
+	list-style: none;
+    text-align: center; 
+}
+
+#g-nav li a{
+	color: #22292C;
+	text-decoration: none;
+	padding:30px 0;
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+    font-family: "Raleway", sans-serif;
+	font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/*========= ボタンのためのCSS ===============*/
+.openbtn{
+	position:fixed;
+    z-index: 9999;/*ボタンを最前面に*/
+	top:40px;
+	right: 20px;
+	cursor: pointer;
+    width: 60px;
+    height:50px;
+}
+	
+/*×に変化*/	
+.openbtn span{
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+	background-color: #848f81;
+  	width: 45%;
+}
+
+.openbtn span:nth-of-type(1) {
+	top:15px;	
+}
+
+.openbtn span:nth-of-type(2) {
+	top:23px;
+}
+
+.openbtn span:nth-of-type(3) {
+	top:31px;
+}
+
+.openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+/* E--------------------ヘッダー-------------------- */
+
+/* S--------------------index.html.html--------------------<=479px */
+
+.first-wrap{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.firstVew-sp {
+    width: 100%;
+}
+.firstVew-sp{
+    animation:img-change 15s ease-in 1s infinite alternate forwards running ;
+    opacity: 0;
+    background-image: url(./img/top/sp-top-01.png);
+    background-position:  center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+@keyframes img-change{
+    0%{
+        background-image: url(./img/top/sp-top-01.png);
+        opacity: 1;
+        transition: 0s;
+    }
+    /* 10%{
+        opacity: 1;
+    } */
+    20%{
+        opacity: 0;
+    }
+    /* 30%{
+        opacity: 0;
+    } */
+    40%{
+        background-image: url(./img/top/sp-top-02.png);
+        transition: 5s;
+        opacity: 1;
+    }
+    /* 50%{
+        opacity: 1;
+    } */
+    60%{
+        opacity: 0;
+    }
+    /* 70%{
+        opacity: 0;
+    } */
+    80%{
+        background-image: url(./img/top/sp-top-03.png);
+        transition: 10s;
+        opacity: 1;
+    }
+    /* 90%{
+        opacity: 1;
+    } */
+    95%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.first-text{
+    width: 100%;
+    height: 20%;
+    background-color: #ccb3b798;
+    position: relative;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.first-text h1{
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: "Playfair Display", serif;
+    height: 31%;
+    width: 100%;
+    color: #E6E8F1;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+.first-text p{
+    font-size: 0.9rem;
+    font-weight: bold;
+    font-family: "Noto Serif JP", serif;
+    height: 25%;
+    width: 100%;
+    color: #E6E8F1;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+.explanation{
+    width: 100%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+}
+.explanation-text{
+    width: 88%;
+    height: 50%;
+    margin: 0 auto;
+}
+.explanation-text h2{
+    font-size: 0.9rem;
+    font-family: "Noto Serif JP", serif;
+    margin: 13% 20% 11% 20%;
+    line-height: 40px;
+    overflow-wrap: break-word;
+}
+.explanation-text{
+    width: 100%;
+}
+.explanation-text p{
+    width: 100%;
+    font-size:1rem ;
+    font-family: "Noto Serif JP", serif;
+    color: #22292C;
+    margin: 0 10px;
+}
+.Wedding-wrap{
+    width: 100%;
+    height: 100vh;
+}
+.Wedding-wrap h1{
+    font-size: 1.7rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    color: #22292C;
+    width: 100%;
+    height: 8%;
+    margin: 2% auto 2% auto;
+    display: flex;
+    justify-content: center;
+}
+.weddingWrap-img{
+    width: 70%;
+    height: 70%;
+    background-image: url(./img/top/sp-topDisplay.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 2% 15% 3% 15%;
+}
+.button{
+    width: 100%;
+    height: 8%;
+    margin: 1% auto 4% auto;
+    display: flex;
+    justify-content: center;
+}
+.button input{
+    width: 6rem;
+    height: 3rem;
+    font-size: 0.9rem;
+    color: #22292C;
+}
+.bouquet-wrap{
+    width: 100%;
+    height: 100vh;
+    padding-bottom: 6%;
+}
+.bouquet-wrap h1{
+    font-size: 1.7rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    color: #22292C;
+    width: 100%;
+    height: 8%;
+    margin: 5% auto 2% auto;
+    display: flex;
+    justify-content: center;
+}
+.bouquetWrap-img{
+    width: 70%;
+    height: 70%;
+    background-image: url(./img/top/sp-topOnlineShop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 2% 15% 3% 15%;
+}
+.bouquet-wrap img{
+    width: 70%;
+    height: 70%;
+    margin: 3% 15%;
+}
+/* E--------------------index.html.html--------------------<=479px */
+/* S--------------------index.html.html--------------------480px=> */
+@media (min-width:480px) {
+    .firstVew-sp{
+        animation:img-change 15s ease-in 1s infinite alternate forwards running ;
+        opacity: 0;
+        background-image: url(./img/top/pc-top01.jpg);
+        background-position:  center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    @keyframes img-change{
+        0%{
+            background-image: url(./img/top/pc-top01.jpg);
+            opacity: 1;
+            transition: 0s;
+        }
+        /* 10%{
+            opacity: 1;
+        } */
+        20%{
+            opacity: 0;
+        }
+        /* 30%{
+            opacity: 0;
+        } */
+        40%{
+            background-image: url(./img/top/pc-top02.jpg);
+            transition: 5s;
+            opacity: 1;
+        }
+        /* 50%{
+            opacity: 1;
+        } */
+        60%{
+            opacity: 0;
+        }
+        /* 70%{
+            opacity: 0;
+        } */
+        80%{
+            background-image: url(./img/top/pc-top03.jpg);
+            transition: 10s;
+            opacity: 1;
+        }
+        /* 90%{
+            opacity: 1;
+        } */
+        95%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+  }
+  /* E--------------------index.html.html--------------------<=767px */
+  /* S--------------------index.html.html--------------------768px=> */
+  @media (min-width:768px) {
+    .first-text h1{
+        font-size: 1.7rem;
+        border-radius: 5px;
+        margin-top: 3%;
+    }
+    .first-text p{
+        font-size: 0.8rem;
+        font-weight: bold;
+        font-family: "Noto Serif JP", serif;
+        height: 28%;
+        width: 100%;
+        margin: 0 auto 0 auto;
+    }
+    .weddingWrap-img{
+        width: 70%;
+        height: 70%;
+        background-image: url(./img/top/pc-topOnlineShop.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 2% 15% 3% 15%;
+    }
+    .bouquetWrap-img{
+        width: 70%;
+        height: 70%;
+        background-image: url(./img/top/pc-display.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 2% 15% 3% 15%;
+    }
+  }
+  /* E--------------------index.html.html--------------------<=1023px */
+  /* S--------------------index.html.html--------------------1024px=> */
+  @media (min-width:1024px) {
+    .first-text h1{
+        margin-top: 1%;
+    }
+    .explanation-text h2{
+        font-size: 1.2rem;
+        font-family: "Noto Serif JP", serif;
+        margin: 7% 20% 7% 20%;
+        line-height: 40px;
+    }
+    .weddingWrap-img{
+        margin-bottom: 2%;
+    }
+    .bouquetWrap-img{
+        margin-bottom: 2%;
+    }
+}
+  /* E--------------------index.html.html--------------------1024px=> */
+/* S--------------------about.html--------------------<=479px */
+.about-wrap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin-top: 10%;
+}
+.about-wrap h1{
+    font-size: 1.7rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    color: #22292C;
+    width: 100%;
+    height: 8%;
+    display: flex;
+    justify-content: center;
+}
+.about-wrap img{
+    width: 80%;
+    margin: 4% 10% 4% 10%;
+}
+.about-wrap h2{
+    font-size: 1.2rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    color: #22292C;
+    width: 100%;
+    height: 8%;
+    margin:0 auto ;
+    display: flex;
+    justify-content: center;
+}
+.about-wrap h3{
+    font-size: 1rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    color: #22292C;
+    width: 100%;
+    height: 8%;
+    margin: 4% auto 0 auto ;
+    display: flex;
+    justify-content: center;
+}
+.about-wrap p{
+    font-size: 1rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    color: #22292C;
+    width: 65%;
+    height: 8%;
+    margin: 6% 10% 6% 10% ;
+    line-height: 40px;
+}
+.about-wrap p span{
+    margin-bottom: 3%;
+}
+/* S--------------------about.html--------------------480px=> */
+@media (min-width:480px) {
+    .about-wrap:nth-child(2){
+        margin-top: 0;
+    }
+    .about-wrap:nth-child(3){
+        margin-top: 0;
+    }
+}
+/* E--------------------about.html--------------------<=767px */
+/* S--------------------about.html--------------------768px=> */
+@media (min-width:768px) {
+    .about-wrap{
+        margin-top: 14%;
+    }
+}
+/* E--------------------about.html--------------------<=1023px */
+/* S--------------------wedding.html--------------------<=479px */
+.wedding{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin-top: 25%;
+    margin-bottom: 8%;
+}
+.wedding h1{
+    font-size: 1.7rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    color: #22292C;
+    width: 100%;
+    height: 8%;
+    margin: 0 auto 8%;
+    margin-top: 7%;
+    display: flex;
+    justify-content: center;
+}
+.wedding-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.wedding-wrap{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10% 5% 0 5%;
+}
+.weddingContainer-wrap:nth-child(3){
+    width: 45%;
+    margin: 2% 45% 0 1%;
+}
+
+.wedding-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.wedding-container img{
+    width: 91%;
+}
+/* .shop-container a{
+    position: relative;
+    display: block;
+}
+.shop-container a span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: transparent;
+} */
+
+.wedding-container p{
+    font-size: 0.7rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    color: #22292C;
+    width: 100%;
+    height: 8%;
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width:1024px) {
+    .wedding-container p{
+        font-size: 1.2rem;
+    }
+}
+/* E--------------------wedding.html--------------------<=479px */
+/* S--------------------wedding.html--------------------480px=> */
+@media (min-width:480px) {
+    .wedding{
+        margin-top: 10%;
+        margin-bottom: 3%;
+    }
+    .wedding h1{
+        margin-top: 3%;
+    }
+    .wedding-container p{
+        font-size: 1rem;
+    }
+    
+}
+/* E--------------------wedding.html--------------------<=767px */
+/* S--------------------wedding.html--------------------768px=> */
+@media (min-width:768px) {
+    .wedding h1{
+        font-size: 1.9rem;
+    }
+    .wedding-container p{
+        font-size: 1.1rem;
+    }
+    .wedding{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-top: 15%;
+        margin-bottom: 0;
+
+    }
+    .wedding-wrap{
+        width: 90%;
+        height: 60%;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    
+    }
+    .weddingDisplay-container{
+        width: 40%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+}
+/* E--------------------wedding.html--------------------<=1023px */
+/* S--------------------wedding.html--------------------1024px=> */
+    @media (min-width:1024px) {
+        .wedding{
+            margin-top: 15%;
+            margin-bottom: 0;
+        }
+        
+}
+    /*.wedding-wraper{
+        display: flex ;
+        justify-content: space-around;
+        align-items: center;
+        width: 45%;
+        height: 30%;
+    }
+    .weddingDisplay-container{
+        width: 20%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+    }*/
+
+
+
+/* S--------------------wedding.html--------------------<=479px */
+.wedding{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin-top: 16%;
+    margin-bottom: 21%;
+}
+.wedding h1{
+    font-size: 1.7rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    color: #22292C;
+    width: 100%;
+    height: 8%;
+    margin: 1% 7% 3%;
+    display: flex;
+    justify-content: center;
+}
+.wedding-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5%;
+}
+.wedding-wrap{
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 4% 5% 0% 5%;
+}
+.weddingContainer-wrap:nth-child(3){
+    width: 45%;
+    margin: 2% 45% 0 1%;
+}
+.wedding-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.wedding-container img{
+    width: 91%;
+}
+/* .shop-container a{
+    position: relative;
+    display: block;
+}
+.shop-container a span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: transparent;
+} */
+.wedding-container p{
+    font-size: 0.6rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    color: #22292C;
+    width: 100%;
+    height: 8%;
+    display: flex;
+    justify-content: center;
+}
+@media (min-width:1024px) {
+    .wedding-container p{
+        font-size: 1.2rem;
+    }
+}
+/* E--------------------wedding.html--------------------<=479px */
+/* S--------------------wedding.html--------------------480px=> */
+@media (min-width:480px) {
+    .wedding{
+        margin-top: 10%;
+        margin-bottom: 20%;
+    }
+    .wedding h1{
+        margin-top: 1% 7% 3%;
+    }
+    .wedding-container p{
+        font-size: 1rem;
+    }
+    .wedding-wrap{
+        margin: 4% 5% -2% 5%;
+    }
+    
+}
+/* E--------------------wedding.html--------------------<=767px */
+/* S--------------------wedding.html--------------------768px=> */
+@media (min-width:768px) {
+    .wedding h1{
+        font-size: 1.9rem;
+        
+    }
+    .wedding-container p{
+        font-size: 1.1rem;
+    }
+    .wedding{
+        width: 100%;
+        margin-top: 12%;
+        margin-bottom: 8%;
+    }
+    .wedding-wrap{
+        width: 90%;
+        height: 60%;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        margin: -2% 5% 0 5%;
+    }
+    .weddingDisplay-container{
+        width: 40%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+    }     
+}
+/* E--------------------wedding.html--------------------<=1023px */
+/* S--------------------wedding.html--------------------1024px=> */
+    @media (min-width:1024px) {
+        .wedding{
+            margin-top: 8%;
+            margin-bottom: 3%;
+        }
+        
+    }
+    /*.wedding-wraper{
+        display: flex ;
+        justify-content: space-around;
+        align-items: center;
+        width: 45%;
+        height: 30%;
+    }
+    .weddingDisplay-container{
+        width: 20%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+    }*/
+
+/*S --------------------weddingDisplay.html--------------------<=479px */
+.display-wrap {
+    position: relative;
+    width: 100%;
+    margin-top: 20%;
+}
+.page-title  {
+    text-align: center;
+    width: 100%;
+    height: 10%;
+    font-size: 1.2rem;
+    margin-bottom: 3%;
+}
+.page-sub-title {
+    text-align: center;
+    width: 100%;
+    height: 10%;
+    font-size: 1.7rem;
+    margin-bottom: 3%;
+}
+/* 画像スライダー全体 */
+.carousel {
+    /* 水平方向中央寄せ */
+    display: flex;
+    justify-content: center;
+}
+  /* カルーセル内容 */
+.contains {
+    /* サイズは自由に変更してください。*/
+    /* 下の.slideも同じサイズにしてください。 */
+    max-width: 500px;
+    height: 401px;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+    list-style: none;
+    min-width: 100%;
+    object-fit: cover;
+}
+  /* スライド切り換え用ラジオボタンは常に非表示 */
+.slide_select {
+    display: none;
+}
+  /* 各スライド */
+.slide {
+/* サイズは自由に変更してください。*/
+/* 上の.containsも同じサイズにしてください。 */
+    max-height: 500px;
+    min-width: 100%;
+    object-fit: cover;
+    position: absolute;
+/* スライドの初期値は選択されていないので透明にしておく */
+    opacity: 0;
+}
+.slide .alt1 {
+    width: 68%;
+    position: absolute;
+    top: 0;
+    left: 17%;
+}
+.slide .alt2 {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 17%;
+}
+.slide .alt2{
+    opacity: 0;
+}
+  /* スクロールボタン */
+.scroll_button {
+    position: absolute;
+    display: block;
+    height: 30px;
+    width: 30px;
+    /* 縦中央から20px上の位置 */
+    top: 50%;
+    margin-top: 41%;
+  /* 上辺と右辺のみ幅5pxの枠線 */
+    border-width: 5px 5px 0 0;
+    border-style: solid;
+    border-color: #d67a7a;
+    cursor: pointer;
+    /* 普段はボタンはやや薄くする */
+    opacity: 0.5;
+    /* スライドよりも前面にする */
+    z-index: 3;
+}
+  /* ホバー時にボタンを強調 */
+.scroll_button:hover {
+    opacity: 1;
+}
+  /* 前へボタン */
+.scroll_prev {
+    left: 6%;
+    /* 上辺と右辺の枠線を回転して"＜"にする */
+    transform: rotate(-135deg);
+}
+  /* 進むボタン */
+.scroll_next {
+    right: 6%;
+    /* 上辺と右辺の枠線を回転して"＞"にする */
+    transform: rotate(45deg);
+}
+  /* スライド移動ボタンエリア */
+.move_controler {
+    position: absolute;
+    bottom: 23%;
+    width: 100%;
+    text-align: center;
+}
+  /* スライド移動の各ボタン */
+.button_move {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    border-radius: 100%;
+    cursor: pointer;
+    /* 普段はやや薄くする */
+    opacity: 0.5;
+    /* スライドより前面にする */
+    z-index: 2;
+}
+  /* ホバー時はやや明るくする */
+.button_move:hover {
+    opacity: 0.75;
+}
+  /* スライド移動ボタンの色 */
+.button_move {
+    background-color: #d41e1e;
+}
+  /* 1番目のスライド選択時 */
+  /* 1番目のスライドの透明度を0にして表示する */
+.slide_select:nth-of-type(1):checked ~ .slide:nth-of-type(1) {
+    opacity: 1;
+}
+  /* 1番目のスライドの前へ次へボタンの領域を */
+.slide_select:nth-of-type(1):checked
+    ~ .move_controler
+    .button_move:nth-of-type(1) {
+    opacity: 1;
+}
+.slide_select:nth-of-type(2):checked ~ .slide:nth-of-type(2) {
+    opacity: 1;
+}
+.slide_select:nth-of-type(2):checked
+    ~ .move_controler
+    .button_move:nth-of-type(2) {
+    opacity: 1;
+}
+.slide_select:nth-of-type(3):checked ~ .slide:nth-of-type(3) {
+    opacity: 1;
+}
+.slide_select:nth-of-type(3):checked
+    ~ .move_controler
+    .button_move:nth-of-type(3) {
+    opacity: 1;
+}
+.slide_select:nth-of-type(4):checked ~ .slide:nth-of-type(4) {
+    opacity: 1;
+}
+.slide_select:nth-of-type(4):checked
+    ~ .move_controler
+    .button_move:nth-of-type(4) {
+    opacity: 1;
+}
+  /* 画像スライダー 終わり*/
+.splide-slide img {
+    width: 100%;
+    height: auto;
+}
+.merchandise-para {
+    text-align: left;
+    width: 80%;
+    margin: 10%;
+    font-size: 0.8rem;
+}
+.merchandise-para p {
+    margin-bottom: 2%;
+}
+.classification {
+    text-align: center;
+    padding: 0px 70px 10px;
+    font-size: .7rem;
+    margin: 3% auto;
+}
+.price {
+    margin: 3% auto 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.price-left {
+    line-height: 15px;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 5px;
+}
+.price-right {
+    font-weight: bold;
+    padding-left: 15px;
+}
+/*E --------------------weddingDisplay.html--------------------<=479px */
+/*S --------------------weddingDisplay.html--------------------480px=> */
+@media (min-width:480px){
+    .display-wrap {
+        margin-top: 15%;
+    }
+    .classification {
+        font-size: .9rem;
+    }
+    .price {
+        margin: 3% auto 12%;
+    }
+    .scroll_button {
+        margin-top: 33%;
+    }
+    .slide .alt1{
+        opacity: 0;
+    }
+    .slide .alt2{
+        opacity: 1;
+        width: 60%;
+        margin: 5% 5% 0;
+    }
+    .move_controler {
+        bottom: 4%;
+    }
+    
+    
+}
+/*E --------------------weddingDisplay.html--------------------<=767px */
+/*S --------------------weddingDisplay.html--------------------768px=> */
+@media (min-width:768px) {
+    .contains {
+        /* サイズは自由に変更してください。*/
+        /* 下の.slideも同じサイズにしてください。 */
+        max-width: 500px;
+        height: 88vh;
+        overflow: hidden;
+        position: relative;
+        padding: 0;
+        list-style: none;
+        min-width: 100%;
+        object-fit: cover;
+    }
+    
+    .merchandise-para {
+        font-size: 1rem;
+    }
+    .scroll_button {
+        margin-top: 25%;
+    }
+    .slide .alt2{
+        opacity: 1;
+        width: 60%;
+        margin: 5% 5% 0;
+    }
+
+}
+/*E --------------------weddingDisplay.html--------------------<=1023px */
+/*S --------------------weddingDisplay.html--------------------1024px=> */
+@media (min-width:1024px) {
+    .wedding h1{
+        font-size: 1.7rem;
+        font-family: "Raleway", sans-serif;
+        font-weight: bold;
+        color: #22292C;
+        width: 100%;
+        height: 8%;
+        margin: 1% 7% 3%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .wedding-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* flex-direction: column; */
+    }
+    .weddingContainer-wrap{
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 0;
+    }
+    .weddingContainer-wrap:nth-child(3){
+        width: 90%;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        margin: 5%;
+    }
+    .weddingContainer-wrap:nth-child(3){
+        width: 90%;
+        margin: 2% 45% 0 1%;
+    }
+    .wedding-wrap{
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10%  5% 5% 5%;
+    }
+    .wedding-wrap:nth-child(odd){
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0  0.5% 5% 0;
+    }
+    .wedding-wrap:nth-child(even){
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: -7%  0 5% 0.5%;
+    }
+    .wedding-wrap:nth-child(5){
+        width: 22%;
+        margin-right: 6%;
+        margin-bottom: 2%;
+    }
+    
+    .wedding-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .wedding-container img{
+        width: 91%;
+    }
+    .wedding-container p{
+        font-size: 0.9rem;
+    }
+}
+/*E --------------------onlineshop.html--------------------1024px=> *//* S--------------------onlineshop.html--------------------<=479px */
+.onlineShop{
+    width: 100%;
+    margin-bottom: 10%;
+}
+.onlineShop-wrap{
+    width: 100%;
+    height: 100vh;
+    background-image: url(./img/onlineShopPage/online-top.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display:flex ;
+    justify-content: center;
+    flex-direction: column;
+}
+.onlineShop-wrap h1{
+    font-size: 2rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    color: #E6E8F1;
+    width: 100%;
+    height: 8%;
+    margin: 10% auto 0 auto;
+    position: absolute;
+    top: 10%;
+    display: flex;
+    justify-content: center;
+}
+.online-text p{
+    font-size: 0.8rem;
+    font-family: "Noto Serif JP", serif;
+    font-weight: bold;
+    color: #22292C;
+    width: 80%;
+    height: 8%;
+    margin: 0 10% 5% 10%;
+    text-align: left;
+}
+.online-text p:nth-child(1)
+{
+    margin-top: 15%;
+}
+.onlineShop-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.shop-wrap{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10% 5% 0 5%;
+}
+.shop-wrap:nth-child(2){
+    margin: 3% 5% 0 5%;
+}
+.shop-wrap:nth-child(3){
+    margin: 3% 5% 0 5%;
+}
+.shopContainer-wrap:nth-child(3){
+    width: 45%;
+    margin: 2% 45% 0 1%;
+}
+
+.shop-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.shop-container img{
+    width: 91%;
+}
+/* .shop-container a{
+    position: relative;
+    display: block;
+}
+.shop-container a span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: transparent;
+} */
+
+.shop-container h5{
+    font-size: 0.6rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    color: #22292C;
+    width: 100%;
+    height: 8%;
+    margin: 0%;
+    display: flex;
+    justify-content: center;
+}
+.shop-container p{
+    font-size: 0.7rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    color: #22292C;
+    width: 100%;
+    height: 8%;
+    display: flex;
+    justify-content: center;
+}
+/* E--------------------onlineshop.html--------------------<=479px */
+/* S--------------------onlineshop.html--------------------480px=> */
+@media (min-width:480px) {
+    .onlineShop-wrap{
+        background-image: url(./img/onlineShopPage/online-top-pc.png);
+    }
+    .online-text p{
+        font-size: 1.1rem;
+        width: 76%;
+        margin: 0 12% 4% 12%;
+    }
+    .shop-container h5{
+        font-size: 1rem;
+    }
+    .shop-container p{
+        font-size: 0.9rem;
+    }
+}
+/* E--------------------onlineshop.html--------------------<=767px */
+/* S--------------------onlineshop.html--------------------768px=> */
+@media (min-width:768px){
+    .onlineShop-wrap{
+        background-image: url(./img/onlineShopPage/online-top-pc.png);
+    }
+    .onlineShop-wrap h1{
+        font-size: 2.2rem;
+    }
+    .online-text p{
+        font-size: 1rem;
+        width: 72%;
+        margin: 0 14% 3% 14%;
+    }
+    .online-text p:nth-child(4) {
+        margin-bottom: 9%;
+    }
+    .shop-container h5{
+        font-size: 1rem;
+    }
+    .shop-container p{
+        font-size: 0.9rem;
+    }
+    .shop-wrap{
+        margin: 5% 5% 0 5%;
+    }
+    
+}
+/* E--------------------onlineshop.html--------------------<=1023px */
+/* S--------------------onlineshop.html--------------------1024px=> */
+@media (min-width:1024px) {
+    .onlineShop-wrap{
+        background-image: url(./img/onlineShopPage/online-top-pc2.png);
+    }
+    .onlineShop-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* flex-direction: column; */
+    }
+    .shopContainer-wrap{
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 5%;
+    }
+    .shopContainer-wrap:nth-child(3){
+        width: 90%;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        margin: 5%;
+    }
+    .shopContainer-wrap:nth-child(3){
+        width: 90%;
+        margin: 2% 45% 0 1%;
+    }
+    .shop-wrap{
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10%  5% 5% 5%;
+    }
+    .shop-wrap:nth-child(odd){
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2%  0.5% 5% 0;
+    }
+    .shop-wrap:nth-child(even){
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2%  0 5% 0.5%;
+    }
+    .shop-wrap:nth-child(5){
+        width: 22%;
+        margin-right: 6%;
+        margin-bottom: 2%;
+    }
+    
+    .shop-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .shop-container img{
+        width: 91%;
+    }
+    .shop-container h5{
+        font-size: 1rem;
+    }
+    .shop-container p{
+        font-size: 0.9rem;
+    }
+    .online-text p{
+        width: 64%;
+        margin: 0 18% 3% 18%;
+    }
+    .online-text p{
+        font-size: 1.5rem;
+    }
+
+}
+/* E--------------------onlineshop.html--------------------<=1024px */
+/* S--------------------onlineshop-000.html--------------------<=479px */
+.product_wrap{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 7%;
+}
+.product_wrap h1{
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: "Noto Serif JP", serif;
+    height: 7%;
+    width: 100%;
+    margin: 12% auto 10% auto;
+    display: flex;
+    justify-content: center;
+    color: #22292C;
+}
+.product_wrap img{
+    width: 100%;
+    aspect-ratio: 3 / 3.5;
+    object-fit: cover;
+}
+.product_list {
+    margin: 0 auto 5% auto;
+  }
+  .list ul {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 0 5%;
+  }
+  
+  .item {
+    padding: 9% 0 7%;
+  }
+  .item img {
+    aspect-ratio: 1.5;
+  }
+  .item p {
+    font-size: 0.9rem;
+    margin: 6% 7% 7%;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  .orders {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 7% 0;
+  }
+  input {
+    width: 30%;
+    margin: 0 10%;
+    text-align: center;
+  }
+  
+  .plus_btn, .minus_btn {
+    margin: 0 5%;
+    padding: 0 5%;
+  }
+.orders .minus_btn{
+    position: relative;
+    display: block;
+}
+.orders .minus_btn span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: transparent;
+}
+.orders .plus_btn{
+    position: relative;
+    display: block;
+}
+.orders .plus_btn span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: transparent;
+}
+  
+  /* カートに追加 */
+  .in_cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+  }
+  .in_cart img {
+    display: block;
+    width: 10%;
+    aspect-ratio: 1;
+    margin: 0 5%;
+  }
+  .in_cart button{
+    position: relative;
+    display: block;
+}
+.in_cart button span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: transparent;
+}
+  /* マイカートGOボタン */
+  .cart {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10%;
+  }
+  .cart img {
+    width: 30%;
+    aspect-ratio: 1;
+    display: block;
+    margin: 10% auto;
+  }
+/* E--------------------onlineshop-000.html--------------------<=479px */
+/* S--------------------onlineshop-000.html--------------------480px=> */
+@media (min-width:480px){
+    .product_wrap{
+        margin-top: 9%;
+    }
+    .product-contence {
+      display: flex;
+      margin-bottom: 18%;
+    }
+    .product-img {
+      width: 125%;
+    }
+    .product-img img {
+        margin: 8% 0 0 8%;
+        width: 100%;
+        height: 101%;
+        object-fit: cover;
+        object-view-box: inset(0 0 15% 0);
+    }
+    .product-explanation {
+        flex-direction: column;
+        width: 160%;
+    }
+    .product_list {
+        margin: 0 auto 6% auto;
+    }
+    
+    .list ul {
+        margin: 4% 5% 0%;
+    }
+    .product_wrap h1{
+        font-size: 2.9rem;
+        font-weight: bold;
+        font-family: "Noto Serif JP", serif;
+        height: 7%;
+        width: 100%;
+        margin: 6% auto 5% auto;
+        display: flex;
+        justify-content: center;
+        color: #22292C;
+    }
+    .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .item-price h3 {
+        font-size: 1.8rem;
+        margin: 10%;
+      }
+      .orders {
+        width: 60%;
+        margin-left: 5%;
+      }
+      .in_cart {
+        margin-top: 5%;
+      }
+      .in_cart img {
+        width: 30%;
+      }
+      .item p {
+        font-size: 1.05rem;
+        line-height: 2rem;
+        margin: 10% 10% 4%;
+        text-align: left;
+        font-weight: bold;
+      }
+      .cart {
+        margin-bottom: 2%;
+      }
+    
+}
+/* E--------------------onlineshop-000.html--------------------480px=> */
+/* S--------------------onlineshop-000.html--------------------768px=> */
+@media (min-width:768px){
+      
+      .product_wrap {
+        margin-top: 8%;
+      }
+       
+      .product-explanation {
+        width: 155%;
+      }
+      
+      .product-img {
+        width: 105%;
+        margin: 0 0 0 5%;
+      }
+}
+/* E--------------------onlineshop-000.html--------------------<=1023px*/
+/* S--------------------onlineshop-000.html--------------------1024px=>*/
+
+@media (min-width:1024px){
+      
+      .product_wrap {
+        margin-top: 5%;
+      }
+}
+/* E--------------------onlineshop-000.html--------------------1024px=> */
+  /* --------------------privacyPolicy.html-------------------- */
+/* .privacyPolicy{
+    width: 100%;
+    margin-top: 5%;
+}
+.privacyPolicy-title{
+    width: 100%;
+}
+.privacyPolicy-title h1{
+    color: #22292C;
+    font-size: 1.7rem;
+    font-weight: bold;
+    font-family: "Noto Serif JP", serif;
+    width: 11rem;    
+    margin: 1em auto;
+}
+.privacyPolicy-text h3{
+    color: #22292C;
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: "Noto Serif JP", serif;
+    width: 90%;    
+    margin: 5%;
+}
+.privacyPolicy-text h4{
+    color: #22292C;
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: "Noto Serif JP", serif;
+    width: 90%;    
+    margin: 5%;
+}
+.privacyPolicy-text p{
+    color: #22292C;
+    font-size: 0.9rem;
+    font-weight: bold;
+    font-family: "Noto Serif JP", serif;
+    width: 80%;    
+    margin: 1% 10%;
+}
+.privacyPolicy-text:nth-child(8){
+    margin-bottom: 10%;
+}
+@media screen and (min-width:1024px) { */
+    .privacyPolicy{
+        width: 100%;
+        margin-top: 5%;
+    }
+    .privacyPolicy-title{
+        width: 100%;
+    }
+    .privacyPolicy-title h1{
+        color: #22292C;
+        font-size: 1.7rem;
+        font-weight: bold;
+        font-family: "Noto Serif JP", serif;
+        width: 11rem;    
+        margin: 4em auto 3em auto;
+    }
+    .privacyPolicy-text h3{
+        color: #22292C;
+        font-size: 1.3rem;
+        font-weight: bold;
+        font-family: "Noto Serif JP", serif;
+        width: 90%;    
+        margin: 5%;
+        text-align: center;
+    }
+    .privacyPolicy-text h4{
+        color: #22292C;
+        font-size: 1.3rem;
+        font-weight: bold;
+        font-family: "Noto Serif JP", serif;
+        width: 90%;    
+        margin: 5%;
+        text-align: center;
+    }
+    .privacyPolicy-text p{
+        color: #22292C;
+        font-size: 0.9rem;
+        font-weight: bold;
+        font-family: "Noto Serif JP", serif;
+        width: 60%;    
+        margin: 1% 20%;
+    }
+    .privacyPolicy-text:nth-child(8){
+        margin-bottom: 10%;
+    }
+/* } */
+/* S--------------------stcl.html--------------------<=479px */
+.SpecifiedCommercialTransactionLaw{
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.SpecifiedCommercialTransactionLaw h1{
+    color: #22292C;
+    font-size: 1.7rem;
+    font-weight: bold;
+    font-family: "Noto Serif JP", serif;
+    width: 21rem;    
+    margin: 4em auto 3em auto;
+}
+.table-responsive{
+    width: 90%;
+    margin: 0 auto; 
+}
+.table{
+    /* border: 1px solid #22292C ;
+    border-collapse: collapse; */
+}
+.table tr{
+    height: 3em;
+    background-color: #E6E8F1;
+}
+.table td{
+    width: 15em;
+    color: #22292C;
+    font-size: 0.8rem;
+    font-weight: bold;
+    font-family: "Noto Serif JP", serif;
+    /* border: 1px solid #22292C ;
+    border-collapse: collapse; */
+    padding: 0 0 0 3%;
+}
+.table td:nth-child(even){
+    width: 22em;
+    color: #22292C;
+    font-size: 0.8rem;
+    font-weight: bold;
+    font-family: "Noto Serif JP", serif;
+}
+/* E--------------------stcl.html--------------------<=479px */
+/* S--------------------stcl.html--------------------<=480px */
+@media (min-width:480px) {
+    .table-responsive{
+        width: 80%;
+        margin: 0 20%; 
+    }
+}
+/* E--------------------stcl.html--------------------<=767px */
+/* S--------------------stcl.html--------------------<=768px */
+@media (min-width:768px) {
+    .table-responsive{
+        width: 70%;
+        margin: 0 30%; 
+    }
+}
+/* E--------------------stcl.html--------------------<=1023px */
+/* S--------------------stcl.html--------------------<=1024px */
+@media (min-width:1024px) {
+    .table-responsive{
+        width: 65%;
+        margin: 0 35%; 
+    }
+}
+/* E--------------------stcl.html--------------------<=1024px *//* --------------------メイン-------------------- */
+
+/* --------------------フッター-------------------- */
+
+footer{
+    width: 100%;
+    height: 33vh;
+    background-color: #CCB3B7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.footer-top{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:  1% auto;
+}
+.footer-logo img{
+    width: 170px;
+    margin: 20px 30px 0 0;
+
+}
+/* .footer-logo a{
+    position: relative;
+    display: block;
+}
+.footer-logo a span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: transparent;
+} */
+
+.icon{
+    color: #22292C;
+    font-size: 2rem;
+    margin-top: 30px;
+}
+.footer-bottom{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-bottom h3{
+    font-size: 0.6rem;
+    color: #22292C;
+    margin: 2% 2% 2% auto;
+}
+.footer-bottom h3:nth-child(2){
+    font-size: 0.6rem;
+    color: #22292C;
+    margin: 2% auto 2% 2%;
+}
+/* .footer-bottom a{
+    position: relative;
+    display: block;
+}
+.footer-bottom a:nth-child(2){
+    position: relative;
+    display: block;
+}
+.footer-bottom a span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: transparent;
+} */
+.footer-bottom a span:nth-child(2){
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* --------------------フッター-------------------- */
+/* --------------------フッター--------------------<=1349px */
+@media (min-width:1349px) {
+    .footer-bottom h3{
+        margin: 6% 2% 9% auto;
+    }
+    .footer-bottom h3:nth-child(2){
+        margin: 6% auto 9% 2%;
+    }
+    
+}
+/* S--------------------contact.html--------------------<=479px*/
+.contact {
+    width: 90%;
+    margin: 4% auto 0 auto;
+    padding: 60px 0;
+}
+.contact-title{
+    font-size: 1.7rem;
+    font-weight: bold;
+    font-family: "Playfair Display", serif;
+    margin-bottom: 9%;
+    text-align: center;
+}
+.contact-table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.contact-item,
+.contact-body {
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.contact-item {
+    text-align: left; 
+    width: 30%; 
+    background-color: #eee; 
+    font-family: "Noto Serif JP", serif;
+    font-size: 0.8rem;
+}
+
+.contact-body {
+    width: 70%;
+}
+.form-text {
+    width: 87%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.contact-sex + .contact-sex {
+    margin-left: 10px;
+}
+
+.contact-sex-txt {
+    margin-left: 5px;
+}
+.contact-sex input{
+    width: 10%;
+    margin: 0 auto;
+}
+.form-textarea {
+    width: 100%;
+    padding: 10px;
+    height: 30vh;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.contact-submit {
+    width: 30%; 
+    background-color: #CCB3B7; 
+    color: #fff;
+    font-weight: bold; 
+    font-family: "Noto Serif JP", serif;
+    display: block; 
+    margin: 0 auto; 
+    font-size: 1rem; 
+    padding: 4%; 
+    border-radius: 100vh; 
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    margin-top: 10%;
+}
+/* E--------------------contact.html--------------------<=479px*/
+/* S--------------------contact.html--------------------480px=>*/
+
+@media screen and (min-width:480px) {
+    .contact-title{
+        font-size: 2rem;
+    }
+    .contact-item {
+        font-size: 1rem;
+    }
+    .contact-submit {
+        font-size: 1.4rem; 
+    }
+}
+/* E--------------------contact.html--------------------<=1023px*/
+/* S--------------------contact.html--------------------1024px=>*/
+@media screen and (min-width:1024px) {
+    .contact-title{
+        font-size: 2.2rem;
+    }
+    .contact-item {
+        font-size: 1.2rem;
+    }
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ホワイトメリア/つつむ flower farm & shop</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ce4c0d3f05.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/5-2-4.css">
+    <link rel="stylesheet" type="text/css" href="css/5-1-15.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;700&family=Noto+Sans+JP&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+</head>
+<body id="weddingDisplay01">
+    <!-- ----------header---------- -->
+    <header id="header" class="on">
+      <a href="index.html"><img src="./img/top/logo.png" alt="logo-img"></a>
+      <div class="openbtn"><span></span><span></span><span></span></div>
+      <nav id="g-nav">
+          <div id="g-nav-list"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
+              <ul>
+                  <li><a href="index.html" target="_blank" rel="noopener noreferrer">TOP</a></li> 
+                  <li><a href="about.html" target="_blank" rel="noopener noreferrer">ABOUT</a></li> 
+                  <li><a href="wedding.html" target="_blank" rel="noopener noreferrer">WEDDING DISPLAY</a></li> 
+                  <li><a href="onlineshop.html" target="_blank" rel="noopener noreferrer">ONLINE SHOP</a></li> 
+                  <li><a href="contact.html" target="_blank" rel="noopener noreferrer">CONTACT</a></li> 
+              </ul>
+          </div>
+      </nav>    
+  </header>
+      <!-- ----------header---------- -->
+        <!-- ----------main---------- -->
+        <main>
+            <section class="display-wrap">
+                <div class="page-title">
+                  <h4>
+                      WEDDING DISPLAY
+                  </h4>
+                </div>
+                <div class="page-sub-title">
+                  <h5>
+                    ホワイトメリア
+                  </h5>
+                </div>
+                <div class="carousel">
+                  <!-- スライドのリスト -->
+                  <div class="contains">
+                    <!-- スライドを選択するためのラジオボタンリスト。 -->
+                    <!-- 数は増減しても構わないです。 最初は1番目を選択状態(checked)にします。-->
+                    <!-- Slide各ラジオボタンに個別のidを定義して、nameはすべて同じ値にします。 -->
+                    <input class="slide_select" type="radio" id="SlideA" name="slide_check" checked />
+                    <input class="slide_select" type="radio" id="SlideB" name="slide_check" />
+                    <input class="slide_select" type="radio" id="SlideC" name="slide_check" />
+                    <input class="slide_select" type="radio" id="SlideD" name="slide_check" />
+                    <!-- スライド -->
+                    <!-- 上のラジオボックスと同じ数だけ記述します。-->
+                    <div class="slide">
+                      <!-- スライドの前へ、次へとスクロールさせるボタン -->
+                      <div class="scroll_controler">
+                        <!-- 前へボタン forで戻る先のラジオボタンのidを書きます。-->
+                        <!-- 先頭要素なので、最後のスライドのidである"SlideD"を書いています。 -->
+                        <label class="scroll_button scroll_prev" for="SlideD"></label>
+                        <!-- 次へボタン 上と同様にforで進む先のラジオボタンのidを書きます。-->
+                        <!-- 進み先は2番目の要素なので、2番目のスライドのid"SlideB"を書いています。 -->
+                        <label class="scroll_button scroll_next" for="SlideB"></label>
+                      </div>
+                      <!-- スライドの内容（ここでは画像）を記述します。 -->
+                      <!-- div要素に変えれば文字を加えることもできます。 -->
+                      <img class="alt1" src="./img/weddingDisplayPage/weddingDisplay6-1.jpg">
+                      <img class="alt2" src="./img/weddingDisplayPage/display6-1p.png">
+                    </div>
+                    <!-- スライド（2番目）内容は1個めと同じ -->
+                    <div class="slide">
+                        <div class="controler_scroll">
+                          <label class="scroll_button scroll_prev" for="SlideA"></label>
+                          <label class="scroll_button scroll_next" for="SlideC"></label>
+                        </div>
+                        <img class="alt1" src="./img/weddingDisplayPage/weddingDisplay6-2.jpg">
+                        <img class="alt2" src="./img/weddingDisplayPage/display6-2p.png">
+                    </div>
+                    <!-- スライド（3番目）内容は1個めと同じ -->
+                    <div class="slide">
+                        <div class="controler_scroll">
+                          <label class="scroll_button scroll_prev" for="SlideB"></label>
+                          <label class="scroll_button scroll_next" for="SlideD"></label>
+                        </div>
+                        <img class="alt1" src="./img/weddingDisplayPage/weddingDisplay6-4.jpg">
+                        <img class="alt2" src="./img/weddingDisplayPage/display6-3p.png">
+                    </div>
+                    <!-- スライド（4番目）内容は1個めと同じ -->
+                    <div class="slide">
+                        <div class="controler_scroll">
+                          <label class="scroll_button scroll_prev" for="SlideC"></label>
+                          <label class="scroll_button scroll_next" for="SlideA"></label>
+                        </div>
+                        <img class="alt1" src="./img/weddingDisplayPage/weddingDisplay6-5.jpg">
+                        <img class="alt2" src="./img/weddingDisplayPage/display6-4p.png">
+                    </div>
+                    <!-- スライド移動用ボタン -->
+                    <div class="move_controler">
+                      <!-- 1個目のスライドのボタン -->
+                      <!-- 一番上のラジオボタンの1個目のスライドのid”A”をforに定義します-->
+                      <label class="button_move" for="SlideA"></label>
+                      <label class="button_move" for="SlideB"></label>
+                      <label class="button_move" for="SlideC"></label>
+                      <label class="button_move" for="SlideD"></label>
+                    </div>
+                  </div>
+                </div>
+              <div class="merchandise-para">
+                <p>大好きなご家族と友人、職場の方々と過ごすバリでの温かなウェディング。テーマカラーはオレンジ×グリーン。アクセントで赤や濃いピンクを入れて、元気なイメージを表現。</p>
+                <p>ご家族は淡いブルーの衣装で揃え、バリの雰囲気を引き立てるような素敵なコーディネートに。ガーデンにはテントを設営して華やかなパーティースペースを用意。 </p>
+                <p>ドレスは挙式時に着用したドレスの袖を取り外しパーティースタイルにチェンジ。 １つのドレスでも、違った印象を感じてもらえるようなスタイリングの工夫を◎</p>
+                <p>バリの非日常な空気を感じながらゲスト全員との時間を大切にした心温まるリゾートウェディング。</p>
+              </div>
+              <div class="classification">
+                ブーケ・会場装飾・ケーキ装飾
+              </div>
+              <div class="price">
+                <div class="price-left">
+                  TOTAL
+                </div>
+                <div class="price-right">
+                  ￥289,000
+                </div>
+              </div>
+          </section>
+        </main>
+            <!-- ----------main---------- -->
+        <!-- ----------footer---------- -->
+        <footer>
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <a href="#weddingDisplay01"><span></span><img src="./img/top/logo.png" alt="footer-logo"></a>
+                </div>
+                <div class="icon">
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+            <div class="footer-bottom">
+              <h3><a href="privacyPolicy.html" target="_blank" rel="noopener noreferrer"><span></span>プライバシーポリシー</a></h3>
+              <h3><a href="sctl.html" target="_blank" rel="noopener noreferrer"><span></span>特定商取引法に基づく表記</a></h3>
+          </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!--自作のJS-->
+    <script src="index.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener( 'DOMContentLoaded', function () {
+          new Splide( '#image-carousel' ).mount();
+        } );
+      </script>
+    </body>
+    </html>

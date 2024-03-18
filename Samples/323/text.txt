@@ -1,0 +1,83 @@
+フォルダー パスの一覧:  ボリューム TIH0375400B
+ボリューム シリアル番号は F1B3-464C です
+C:.
+│  index.html
+│  pdf.html
+│  pdfichiran.html
+│  text.txt
+│  
+├─css
+│      gallery.css
+│      pdf.css
+│      style.css
+│      
+├─img
+│  │  323.png
+│  │  ai.jpg
+│  │  alba1.png
+│  │  cocora.jpg
+│  │  cosmespace.jpg
+│  │  cosmespace2.jpg
+│  │  flannel.jpg
+│  │  flannel2.jpg
+│  │  FPhirabayashi.jpg
+│  │  hachi.JPG
+│  │  hachi.png
+│  │  ippo2.jpg
+│  │  kobito1.jpg
+│  │  kobito2.jpg
+│  │  Lykke Aroma.jpg
+│  │  Lykke Aroma2.jpg
+│  │  Manacapua2.jpg
+│  │  Manacapua3.jpg
+│  │  mutuan.png
+│  │  okane.jpg
+│  │  pdf.jpg
+│  │  pdfichiran.jpg
+│  │  pomRubia.jpg
+│  │  PomRubia2.jpg
+│  │  rosy flowerworks2.jpg
+│  │  ruri.jpg
+│  │  smile1.jpg
+│  │  smile2.jpg
+│  │  souju.jpg
+│  │  takenoco.jpg
+│  │  takenoco2.jpg
+│  │  wafuka.jpg
+│  │  wannnaka.jpg
+│  │  ygrace.jpg
+│  │  ygrace2.jpg
+│  │  Yroom.jpg
+│  │  Yroom2.jpg
+│  │  Yroom3.jpg
+│  │  
+│  ├─assets
+│  │      accessory.png
+│  │      background.png
+│  │      bagel.png
+│  │      cake.png
+│  │      cloud.png
+│  │      free.png
+│  │      gohan.png
+│  │      hatu-syuxtutenn.png
+│  │      hinto.png
+│  │      house.png
+│  │      kanban.png
+│  │      leaf.png
+│  │      logo.png
+│  │      megane.png
+│  │      obi.png
+│  │      ribon.png
+│  │      tori.png
+│  │      ワタシのテッパン.ai
+│  │      
+│  └─icon
+│          close_FILL0_wght400_GRAD0_opsz24.png
+│          instagram-logo-24.png
+│          menu_FILL0_wght400_GRAD0_opsz24.png
+│          space-k.png
+│          
+└─js
+        switch.js
+        toggle.js
+        

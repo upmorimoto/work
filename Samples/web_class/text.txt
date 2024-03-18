@@ -1,0 +1,365 @@
+フォルダー パスの一覧:  ボリューム TIH0375400B
+ボリューム シリアル番号は F1B3-464C です
+C:.
+│  googleb70020de86bb3a2b.html
+│  index.html
+│  text.txt
+│  
+├─css
+│      gallery.css
+│      style.css
+│      
+├─Ctree-farm
+│  │  cart.html
+│  │  commodity-buy.html
+│  │  commodity.css
+│  │  company.css
+│  │  company.html
+│  │  contact.css
+│  │  contact.html
+│  │  destyle.css
+│  │  gift.css
+│  │  gift.html
+│  │  index.html
+│  │  norm.css
+│  │  privacy-policy.css
+│  │  privacy-policy.html
+│  │  recommend.css
+│  │  recommend.html
+│  │  review.css
+│  │  review.html
+│  │  season.css
+│  │  season.html
+│  │  style.css
+│  │  thanks.html
+│  │  tokuteishotorihiki.css
+│  │  tokuteishotorihiki.html
+│  │  
+│  ├─img
+│  │  │  ajmal-khan-YiFH9yAojyM-unsplash.jpg
+│  │  │  cart-icon.png
+│  │  │  cart-icon_white.png
+│  │  │  categorybook.png
+│  │  │  concept1.png
+│  │  │  concept2.png
+│  │  │  favicon.png
+│  │  │  footer-logo.png
+│  │  │  gift-fv.png
+│  │  │  gift-img-responsive.png
+│  │  │  gift-label.png
+│  │  │  gift-top-img .png
+│  │  │  kobito.png
+│  │  │  line-9-1.svg
+│  │  │  logo.png
+│  │  │  mail-icon.png
+│  │  │  member-icon.png
+│  │  │  method.png
+│  │  │  orangetree.jpg
+│  │  │  orange_farm02.jpg
+│  │  │  page-top02.png
+│  │  │  privacy.png
+│  │  │  rankingoukan.png
+│  │  │  recommend-fv.jpg
+│  │  │  recommend-img-responsive.jpg
+│  │  │  recommend-label.png
+│  │  │  season-fv.jpg
+│  │  │  season-label.png
+│  │  │  season-responsive-img.jpg
+│  │  │  tel-icon.png
+│  │  │  
+│  │  ├─feature
+│  │  │      category_gift.png
+│  │  │      category_limitedTime.png
+│  │  │      category_osusume.png
+│  │  │      category_review.png
+│  │  │      
+│  │  ├─kusu-syatyou
+│  │  │      IMG_5450.jpg
+│  │  │      IMG_5451.jpg
+│  │  │      kusu-tu.png
+│  │  │      kusu-tu2.png
+│  │  │      
+│  │  ├─mainvisual
+│  │  │      top-ribbon.png
+│  │  │      top-ribbon01.png
+│  │  │      top01.png
+│  │  │      top02.png
+│  │  │      top03.png
+│  │  │      top04.png
+│  │  │      
+│  │  ├─orangeGrowth
+│  │  │      mikan_a.png
+│  │  │      mikan_b.png
+│  │  │      mikan_c.png
+│  │  │      mikan_d.png
+│  │  │      mikan_e.png
+│  │  │      
+│  │  ├─ranking
+│  │  │      ranking01.PNG
+│  │  │      ranking02.PNG
+│  │  │      ranking03.PNG
+│  │  │      
+│  │  ├─shop-item
+│  │  │      k1.png
+│  │  │      k10.png
+│  │  │      k11.png
+│  │  │      k12.png
+│  │  │      k13.png
+│  │  │      k2.png
+│  │  │      k3.png
+│  │  │      k4.png
+│  │  │      k5.png
+│  │  │      k6.png
+│  │  │      k7.png
+│  │  │      k8.png
+│  │  │      k9.png
+│  │  │      m1.png
+│  │  │      m2.png
+│  │  │      m3.png
+│  │  │      m4.png
+│  │  │      m5.png
+│  │  │      m6.png
+│  │  │      n1.png
+│  │  │      n2.png
+│  │  │      n3.png
+│  │  │      n4.png
+│  │  │      n5.png
+│  │  │      n6.png
+│  │  │      n7.png
+│  │  │      o1.png
+│  │  │      o2.png
+│  │  │      o3.png
+│  │  │      t1.png
+│  │  │      t2.png
+│  │  │      t3.png
+│  │  │      t4.png
+│  │  │      
+│  │  └─thanks
+│  │          thankyou.mp4
+│  │          
+│  └─js
+│          cart_list.js
+│          cart_notice.js
+│          company.js
+│          Ctree-farm.js
+│          
+├─flam
+│  │  burann.html
+│  │  burann10.html
+│  │  cart.html
+│  │  cha-houbi.html
+│  │  cofee10.html
+│  │  cofee5.html
+│  │  concept.html
+│  │  hanami.html
+│  │  ichigo.html
+│  │  ichigo10.html
+│  │  index.html
+│  │  information.html
+│  │  inoquery.html
+│  │  item.html
+│  │  koucha.html
+│  │  koucha5.html
+│  │  kudamono.html
+│  │  legal.html
+│  │  mattya5.html
+│  │  matya10.html
+│  │  momo.html
+│  │  momo10.html
+│  │  page-cha.html
+│  │  page-hanami.html
+│  │  page-ka.html
+│  │  page-sake.html
+│  │  page-takara.html
+│  │  privacy.html
+│  │  ramu.html
+│  │  ramu10.html
+│  │  sake.html
+│  │  sake10.html
+│  │  sake5.html
+│  │  sakura.html
+│  │  sakura10.html
+│  │  sakurannbo.html
+│  │  sakurannbo10.html
+│  │  term.html
+│  │  yomogi.html
+│  │  yomogi10.html
+│  │  yuzu.html
+│  │  yuzu10.html
+│  │  
+│  ├─css
+│  │      cart.css
+│  │      concept.css
+│  │      index.css
+│  │      information.css
+│  │      inoquery.css
+│  │      item.css
+│  │      legal.css
+│  │      page.css
+│  │      privacy.css
+│  │      style.css
+│  │      term.css
+│  │      
+│  ├─images
+│  │  │  cart.png
+│  │  │  concept_quin_banner.png
+│  │  │  flamlogo.png
+│  │  │  goods2.png
+│  │  │  goods3.png
+│  │  │  goods4.png
+│  │  │  goods5.png
+│  │  │  goods6.png
+│  │  │  logo.png
+│  │  │  main1.png
+│  │  │  main2.png
+│  │  │  main3.png
+│  │  │  main4.png
+│  │  │  m_concept_banner2.png
+│  │  │  Rectangle 21.png
+│  │  │  twtter-X-removebg-preview.png
+│  │  │  washi.jpg
+│  │  │  white1.jpg
+│  │  │  white2.jpg
+│  │  │  white3.jpg
+│  │  │  
+│  │  ├─img
+│  │  │      banner.png
+│  │  │      chocolate_wall.jpg
+│  │  │      concept3 (1).png
+│  │  │      concept_img.png
+│  │  │      IMG_8594 (1).JPG
+│  │  │      main3.png
+│  │  │      原本concept3 (1).png
+│  │  │      原本concept_img.png
+│  │  │      原本main3.png
+│  │  │      
+│  │  ├─index
+│  │  │      alcohol-assort12.png
+│  │  │      fruit-assort12..png
+│  │  │      fruit-assort12.png
+│  │  │      ichigo10.png
+│  │  │      main4_Image Enhancer.jpg
+│  │  │      masuya_banner2.png
+│  │  │      nihonshu10.png
+│  │  │      quin_banner.png
+│  │  │      sakura5.png
+│  │  │      spring-assort12.png
+│  │  │      spring-banner.png
+│  │  │      tea-assort12.png
+│  │  │      top-view1.png
+│  │  │      top-view2.png
+│  │  │      top-view3.png
+│  │  │      top_company_img.png
+│  │  │      
+│  │  └─item
+│  │          aaaassort12.png
+│  │          a_wrapping.png
+│  │          bbbassort12.png
+│  │          brandy10.png
+│  │          brandy5.png
+│  │          b_wrapping.png
+│  │          cccassort12.png
+│  │          coffee10.png
+│  │          coffee5.png
+│  │          c_wrapping.png
+│  │          dddassort12.png
+│  │          d_wrapping.png
+│  │          goods.png
+│  │          goods2.png
+│  │          goods3.png
+│  │          goods4.png
+│  │          goods5.png
+│  │          goods6.png
+│  │          hako.png
+│  │          hako2.png
+│  │          ichigo10.png
+│  │          ichigo5.png
+│  │          koucha10.png
+│  │          koucha5.png
+│  │          matcha10.png
+│  │          matcha5.png
+│  │          momo10.png
+│  │          momo5.png
+│  │          nihonshu10.png
+│  │          nihonshu5.png
+│  │          rapping.png
+│  │          rum10.png
+│  │          rum5.png
+│  │          sakura-chocolate.png
+│  │          sakura10.png
+│  │          sakura5.png
+│  │          sakuranbo10.png
+│  │          sakuranbo5.png
+│  │          yomogi10.png
+│  │          yomogi5.png
+│  │          yuzu10.png
+│  │          yuzu5.png
+│  │          
+│  └─js
+│          cart.js
+│          cart_list.js
+│          cart_notice.js
+│          form.js
+│          item.js
+│          script.js
+│          slide.js
+│          
+├─img
+│  │  autamn.jpg
+│  │  b1.jpg
+│  │  b2.jpg
+│  │  b3.jpg
+│  │  b4.jpg
+│  │  close_FILL0_wght400_GRAD0_opsz24.png
+│  │  g1.jpg
+│  │  g2.jpg
+│  │  g3.jpg
+│  │  g4.jpg
+│  │  menu_FILL0_wght400_GRAD0_opsz24.png
+│  │  r1.jpg
+│  │  r2.jpg
+│  │  r3.jpg
+│  │  r4.jpg
+│  │  spring.jpg
+│  │  summer.jpg
+│  │  winter.jpg
+│  │  y1.jpg
+│  │  y2.jpg
+│  │  y3.jpg
+│  │  y4.jpg
+│  │  
+│  ├─2023second-banner
+│  │      bana-sakane.png
+│  │      banner-inoue.png
+│  │      catcafe_kanba.png
+│  │      enomoto.png
+│  │      fujji.png
+│  │      hatai-confidence-banner.png
+│  │      Ikoma-indigo-banner.png
+│  │      inoue.png
+│  │      iwasakinanako.png
+│  │      kanzaki.png
+│  │      kawaguchi.png
+│  │      kazuki-matsuura.png
+│  │      kobata.png
+│  │      kusu.png
+│  │      morimoto-site-banner.png
+│  │      morita-banner.png
+│  │      naka_banner.png
+│  │      Negoro.png
+│  │      ohama.png
+│  │      Okazaki.png
+│  │      takemoto.png
+│  │      urakawa.png
+│  │      WPDBaner1.png
+│  │      y-matsuura.png
+│  │      Yamada.png
+│  │      yokoo.png
+│  │      
+│  └─team-site
+│          ctreefarm_banner_amended.png
+│          
+└─js
+        switch.js
+        toggle.js
+        
