@@ -70,6 +70,10 @@
     line-height: 2;
 }
 
+.contents-description {
+    margin-top: 10%;
+}
+
 
 @media screen and (max-width: 600px) {
     
