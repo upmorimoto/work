@@ -1,0 +1,308 @@
+@charset "utf-8";
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  width: 100%;
+}
+video {
+  width: 100%;
+}
+
+
+:root {
+  --bgColor: #f95b566e;
+  --accentColor: #f95b56;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  color: #333;
+}
+
+/* headerセクション */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fd3a3a93;
+  backdrop-filter: blur(5px);
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transform: translateY(-100%);
+  transition: all 0.5s;
+}
+nav {
+  width: 100%;
+}
+nav a {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  line-height: 2.5;
+  /* text-align: center; */
+  color: #fff;
+  font-size: 1.2rem;
+}
+.menu.active nav a span {
+  margin-left: 15%;
+  font-size: 0.8rem;
+  transform: translateX(-200px);
+  opacity: 0;
+  animation: appearance 1.5s ease-in forwards;
+  transition: all 1.5s;
+}
+
+@keyframes appearance {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.menu.active {
+  transform: translateY(0);
+}
+
+.close-button {
+  margin-top: 20px;
+  filter: invert(100%);
+}
+
+/* mainセクション */
+
+/* HEADLINE */
+.main-headline {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(../img/bg/nordwood-themes-bp1ydkAtwFI-unsplash.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  perspective: 300px;
+}
+
+.logo-space {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/bg/marche-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 2vh;
+  transform-style: preserve-3d;
+  transform: translateZ(0px);
+  transform-origin: top center;
+  animation: load 1s ease-in 0.3s forwards;
+}
+.main-headline .title1 {
+  width: 80%;
+  transform-style: preserve-3d;
+  transform: translateZ(0px);
+  animation: load2 0.8s ease-in 0.5s forwards;
+  opacity: 1;
+
+}
+@keyframes load {
+  from {
+    width: 0%;
+    transform: translateZ(-500px);
+  }
+}
+@keyframes load2 {
+  from {
+    width: 0%;
+    opacity: 0;
+    transform: translateZ(500px);
+  }
+}
+
+/* homeボタン */
+.home-button {
+  width: 25%;
+  position: fixed;
+  top: 80%;
+  left: 36%;
+  z-index: 10;
+  animation: purupuru 4s infinite;
+}
+@keyframes purupuru {
+  0%,100% {
+      transform: rotate(0);
+      transform-origin: left bottom
+  }
+  20% {
+      transform: rotate(5deg);
+      transform-origin: right bottom
+  }
+  30% {
+      transform: rotate(-4.5deg);
+      transform-origin: left bottom
+  }
+  40% {
+      transform: rotate(4deg);
+      transform-origin: right bottom
+  }
+  45% {
+      transform: rotate(-3.5deg);
+      transform-origin: left bottom
+  }
+  50% {
+      transform: rotate(3deg);
+      transform-origin: right bottom
+  }
+  55% {
+      transform: rotate(-2.5deg);
+      transform-origin: left bottom
+  }
+  65% {
+      transform: rotate(2deg);
+      transform-origin: right bottom
+  }
+  70% {
+      transform: rotate(-1.5deg);
+      transform: scaleY(1.3);
+      transform-origin: left bottom
+  }
+  75% {
+      transform: rotate(1deg);
+      transform-origin: right bottom
+  }
+  80% {
+      transform: rotate(-0.8deg);
+      transform-origin: left bottom
+  }
+  85% {
+      transform: rotate(0.5deg);
+      transform-origin: right bottom
+  }
+  90% {
+      transform: rotate(-0.3deg);
+      transform-origin: left bottom
+  }
+  95% {
+      transform: rotate(0.2deg);
+      transform-origin: right bottom
+  }
+}
+
+.menu-introduction {
+  font-size: 0.8rem;
+  text-wrap: nowrap;
+  text-align: center;
+}
+
+.main-headline .title2 {
+  font-size: 1.6rem;
+  margin-top: 10vh;
+  color: var(--accentColor);
+}
+
+/* moveボタン */
+.arrows {
+  width: 50px;
+  position: sticky;
+  bottom: 5%;
+  left: 3%;
+}
+.arrow {
+  width: 50px;
+  height: 50px;
+  clip-path: polygon(50% 0%, 90% 50%, 60% 45%, 70% 100%, 30% 100%, 40% 45%, 10% 50%);
+  background-color: var(--accentColor);
+  animation: arrow 0.8s linear alternate-reverse infinite;
+}
+.arrow2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 48px;
+  height: 48px;
+  clip-path: polygon(50% 0%, 90% 50%, 60% 45%, 70% 100%, 30% 100%, 40% 45%, 10% 50%);
+  background-color: #ffffffde;
+  transform: translate(3px, 3px);
+  border: none;
+  animation: arrow2 0.5s linear 0.5s alternate-reverse infinite;
+}
+
+@keyframes arrow {
+  to {
+    transform: translateY(20px);
+  }
+}
+@keyframes arrow2 {
+  to {
+    transform: translateY(25px);
+  }
+}
+
+/* FOOTERセクション */
+footer {
+  width: 100%;
+  background: var(--bgColor);
+  background-image: url(../img/bg/nordwood-themes-bp1ydkAtwFI-unsplash.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer {
+  width: 80%;
+  margin: 0 auto;
+  padding: 5% 0 5% 0;
+}
+
+.marche {
+  margin-bottom: 5%;
+  line-height: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.line {
+  width: 100%;
+  height: 0.3vh;
+  background-color: var(--accentColor);
+}
+
+.guidance {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  line-height: 2;
+}
+
+.copy {
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 2%;
+  color: var(--accentColor);
+}
+

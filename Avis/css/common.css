@@ -76,6 +76,7 @@ header {
 }
 .header-inner .logo {
   width: 10%;
+
 }
 
 .toggle {
@@ -159,20 +160,19 @@ header {
   position: absolute;
   top: 50%;
   left: 90%;
-  transform: translateY(0);
-  animation: bar 5s linear infinite;
+  animation: bar 8s linear alternate infinite;
 }
 
 @keyframes bar {
   60% {
-    height: 35%;
-    transform: translateY(10px);
+    height: 25%;
   }
   80% {
     height: 0;
   }
   100% {
     height: 0;
+    
   }
 }
 

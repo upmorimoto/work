@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+@media screen and (min-width:428px) {
+/*タブレット用として画面幅を768pxまでに設定*/
+
+/* menuセクション */
+  .menu nav {
+    text-align: center;
+  }
+
+/* headlineセクション */
+  #headline {
+    height: 200vh;
+  }
+
+  #headline .logo-space {
+    width: 80%;
+    height: 100vh;
+    transform: translateZ(-50px);
+  }
+
+  #headline .title1 {
+    width: 50%;
+    transform: translateZ(0px);
+  }
+
+/* homeセクション */
+  #headline .home-button {
+    width: 20%;
+    top: -10%;
+    left: -10%;
+  }
+
+  #headline .title2 {
+    font-size: 2rem;
+  }
+
+/* moveボタン */
+  #main .arrows {
+    left: 90%;
+  }
+
+
+
+  
+
+}
+
+@media screen and (min-width:1024px) {
+/*PC用として画面幅を1024pxまでに設定*/
+
+}
